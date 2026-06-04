@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Brand Theme Colors */
+  --color-brand-red: #B22222;
+  --color-brand-green: #1F5E3B;
+  --color-brand-gold: #C8A96A;
+  
+  --color-bg-light: #F8F8F8;
+  --color-bg-gray: #F4F4F4;
+
+  --color-text-dark: #1A1A1A;
+  --color-text-gray: #555555;
+  --color-text-muted: #777777;
+
+  /* Typography Families */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Theme Presets */
+  --radius-card: 16px;
+  
+  /* Shadows */
+  --shadow-premium-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 8px -1px rgba(0, 0, 0, 0.03);
+  --shadow-premium-hover: 0 20px 40px -5px rgba(0, 0, 0, 0.08), 0 8px 16px -2px rgba(0, 0, 0, 0.04);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-body);
+    color: var(--color-text-dark);
+    background-color: #FFFFFF;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #FFFFFF;
+    color: var(--color-text-dark);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-text-dark);
+    font-weight: 700;
+  }
+
+  /* Responsive Typography Scale (specified in prompt: H1=56px, H2=42px, H3=32px, H4=24px on desktop) */
+  h1 {
+    font-size: 36px;
+    line-height: 1.15;
+  }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 46px;
+    }
+  }
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 56px;
+    }
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 34px;
+    }
+  }
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 42px;
+    }
+  }
+
+  h3 {
+    font-size: 22px;
+    line-height: 1.25;
+  }
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 26px;
+    }
+  }
+  @media (min-width: 1024px) {
+    h3 {
+      font-size: 32px;
+    }
+  }
+
+  h4 {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+  @media (min-width: 768px) {
+    h4 {
+      font-size: 20px;
+    }
+  }
+  @media (min-width: 1024px) {
+    h4 {
+      font-size: 24px;
+    }
+  }
+
+  /* Body Text Scales (specified in prompt: 16px - 18px) */
+  p, body, li {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  @media (min-width: 1024px) {
+    p, body, li {
+      font-size: 18px;
+    }
+  }
+}
+
+@layer utilities {
+  /* Layout: Max-width 1200px container */
+  .container-custom {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  /* Spacing: 100px Section Padding */
+  .section-padding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  }
+
+  /* Buttons Design Foundation */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-brand-red);
+    color: #FFFFFF;
+    font-family: var(--font-body);
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 9999px; /* rounded shape */
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 12px rgba(178, 34, 34, 0.2);
+    cursor: pointer;
+    border: 2px solid transparent;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(178, 34, 34, 0.35);
+    background-color: #901a1a;
+  }
+
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-brand-green);
+    color: #FFFFFF;
+    font-family: var(--font-body);
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 9999px; /* rounded shape */
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 12px rgba(31, 94, 59, 0.2);
+    cursor: pointer;
+    border: 2px solid transparent;
+  }
+
+  .btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(31, 94, 59, 0.35);
+    background-color: #17482d;
+  }
+
+  .btn-secondary:active {
+    transform: translateY(0);
+  }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: var(--color-text-dark);
+    font-family: var(--font-body);
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 9999px;
+    border: 2px solid var(--color-brand-gold);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+  }
+
+  .btn-outline:hover {
+    transform: translateY(-2px);
+    background-color: var(--color-brand-gold);
+    color: var(--color-text-dark);
+    box-shadow: 0 8px 20px rgba(200, 169, 106, 0.25);
+  }
+
+  .btn-outline:active {
+    transform: translateY(0);
+  }
+
+  /* Cards Design Foundation */
+  .card-premium {
+    background-color: #FFFFFF;
+    border-radius: var(--radius-card);
+    padding: 32px;
+    box-shadow: var(--shadow-premium-soft);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-premium:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-premium-hover);
+    border-color: rgba(200, 169, 106, 0.2);
+  }
+}
