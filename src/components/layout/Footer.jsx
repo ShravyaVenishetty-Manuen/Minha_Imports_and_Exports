@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiLinkedin, FiGlobe, FiInstagram, FiFacebook, FiPhone, FiMail, FiMapPin, FiClock } from 'react-icons/fi';
+import { FiLinkedin, FiGlobe, FiInstagram, FiFacebook, FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="max-w-[1280px] mx-auto px-6 md:px-12 pt-16 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12">
           
-          {/* Column 1: Brand Info (5 cols on lg) */}
+          {/* Column 1: Brand Info (4 cols on lg) */}
           <div className="lg:col-span-4 space-y-6 text-left">
             <div className="flex items-center gap-3">
               {/* Tractor Icon SVG */}
@@ -22,12 +22,12 @@ const Footer = () => {
                 </svg>
               </div>
               <span className="font-['Montserrat'] font-bold text-[20px] md:text-[22px] text-white leading-tight">
-                Minha Imports & Exports
+                MINHA IMPORTS & EXPORT
               </span>
             </div>
 
             <p className="text-[14px] leading-[1.6] text-[#a0a5ad]/80 max-w-sm">
-              Delivering premium Guntur dry red chillies with quality, reliability and global export standards. We bridge the gap between Indian spice heritage and international markets.
+              Premium Guntur dry red chillies exporter committed to global standards of purity and reliability.
             </p>
 
             {/* Social Icons */}
@@ -60,9 +60,7 @@ const Footer = () => {
                 { name: 'Chilli Varieties', path: '/varieties' },
                 { name: 'Our Company', path: '/about' },
                 { name: 'Quality Assurance', path: '/quality' },
-                { name: 'Facility', path: '/facility' },
-                { name: 'Certification', path: '/certifications' },
-                { name: 'Contact', path: '/contact' }
+                { name: 'Certifications', path: '/certifications' }
               ].map((link, idx) => (
                 <li key={idx}>
                   <Link to={link.path} className="hover:text-white transition-colors duration-200 block">
@@ -84,7 +82,7 @@ const Footer = () => {
                 { name: 'Chilli Powder', path: '/powder' }
               ].map((product, idx) => (
                 <li key={idx} className="flex items-center gap-2 group">
-                  <span className="w-1 h-1 rounded-full bg-[#1F5E3B] transition-transform duration-200 group-hover:scale-150" />
+                  <span className="w-1 h-1 rounded-full bg-[#cca72f] transition-transform duration-200 group-hover:scale-150" />
                   <Link to={product.path} className="hover:text-white transition-colors duration-200 block">
                     {product.name}
                   </Link>
@@ -93,71 +91,49 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 4: Stay Connected (3 cols on lg) */}
+          {/* Column 4: Contact Us (3 cols on lg) */}
           <div className="lg:col-span-3 space-y-6 text-left">
             <h4 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
-              Stay Connected
+              Contact Us
             </h4>
-            <p className="text-[13px] leading-[1.5] text-[#a0a5ad]/80">
-              Subscribe to our trade updates and harvest reports.
-            </p>
-
-            {/* Newsletter Input */}
-            <form onSubmit={(e) => e.preventDefault()} className="flex items-center w-full max-w-sm rounded-lg overflow-hidden bg-white/[0.03] border border-white/10 focus-within:border-[#cca72f]/50 transition-all">
-              <input 
-                type="email" 
-                placeholder="Email Address" 
-                className="bg-transparent text-[13px] text-white px-4 py-3 w-full focus:outline-none placeholder-text-gray/50"
-                required
-              />
-              <button 
-                type="submit"
-                className="bg-[#8f000d] text-white font-['Montserrat'] font-bold text-[12px] px-6 py-3 hover:bg-[#72000a] transition-colors uppercase tracking-wider"
-              >
-                Join
-              </button>
-            </form>
-
-            {/* Contact Details Info */}
-            <div className="space-y-3.5 text-[13px] pt-2">
+            <div className="space-y-4 text-[14px]">
+              <div className="flex items-start gap-3">
+                <FiMapPin className="w-4 h-4 text-[#cca72f] mt-1 shrink-0" />
+                <span className="text-[#a0a5ad]/95 leading-relaxed">
+                  Guntur Chilli Yard, <br />
+                  Andhra Pradesh, India
+                </span>
+              </div>
+              <a href="mailto:exports@minhaexports.com" className="flex items-center gap-3 hover:text-white transition-colors">
+                <FiMail className="w-4 h-4 text-[#cca72f]" />
+                <span className="text-[#a0a5ad]/95">exports@minhaexports.com</span>
+              </a>
               <a href="tel:+919876543210" className="flex items-center gap-3 hover:text-white transition-colors">
                 <FiPhone className="w-4 h-4 text-[#cca72f]" />
-                <span>+91 98765 43210</span>
+                <span className="text-[#a0a5ad]/95">+91 98765 43210</span>
               </a>
-              <a href="mailto:trade@minhaexports.com" className="flex items-center gap-3 hover:text-white transition-colors">
-                <FiMail className="w-4 h-4 text-[#cca72f]" />
-                <span>trade@minhaexports.com</span>
-              </a>
-              <div className="flex items-start gap-3">
-                <FiMapPin className="w-4 h-4 text-[#cca72f] mt-0.5 shrink-0" />
-                <span>Market Yard Road, Guntur,<br />Andhra Pradesh, India</span>
-              </div>
             </div>
           </div>
 
         </div>
       </div>
 
-      {/* Decorative Red-Gold-Green Gradient Stripe */}
-      <div className="w-full h-[3px] bg-gradient-to-r from-[#8f000d] via-[#cca72f] to-[#1F5E3B]" />
+      {/* Decorative Red-Gold Gradient Stripe (No Green) */}
+      <div className="w-full h-[3px] bg-gradient-to-r from-[#8f000d] to-[#cca72f]" />
 
       {/* Bottom Bar Area */}
-      <div className="bg-[#0b0c0d] text-[13px] text-[#a0a5ad]/60 py-6 px-6 md:px-12">
+      <div className="bg-[#0b0c0d] text-[12px] text-[#a0a5ad]/50 py-6 px-6 md:px-12 font-['Montserrat']">
         <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           
           {/* Copyright */}
           <div>
-            Copyright © 2026 Minha Imports & Exports. All Rights Reserved.
+            © 2026 Minha Imports & Exports. All Rights Reserved.
           </div>
 
-          {/* Secondary Links & Hours */}
-          <div className="flex flex-wrap items-center justify-center gap-6">
-            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link>
-            <div className="flex items-center gap-1.5 border-l border-white/10 pl-6 text-[#a0a5ad]/50">
-              <FiClock className="w-3.5 h-3.5" />
-              <span>Mon - Sat: 9:00 - 18:00 IST</span>
-            </div>
+          {/* Designer Credit & Secure Badge */}
+          <div className="flex items-center gap-6 uppercase tracking-wider text-[11px] font-semibold text-[#a0a5ad]/40">
+            <span>Designed by Global Trade Media</span>
+            <span className="border-l border-white/10 pl-6">Secure Site</span>
           </div>
 
         </div>

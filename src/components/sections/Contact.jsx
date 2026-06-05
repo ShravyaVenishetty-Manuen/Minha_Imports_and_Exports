@@ -2,20 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
-  /*
-  const premiumGradientStyle = {
+  const redBgStyle = {
     backgroundImage: `
-      radial-gradient(rgba(255, 255, 255, 0.06) 1.5px, transparent 1.5px),
-      linear-gradient(180deg, #8f000d 0%, #540008 50%, #111315 100%)
-    `,
-    backgroundSize: '24px 24px, 100% 100%',
-  };
-  */
-
-  const lightRedGradientStyle = {
-    backgroundImage: `
-      radial-gradient(rgba(143, 0, 13, 0.04) 1.5px, transparent 1.5px),
-      linear-gradient(180deg, #fff0f0 0%, #ffffff 100%)
+      radial-gradient(rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px),
+      linear-gradient(135deg, #9B111E 0%, #B22222 100%)
     `,
     backgroundSize: '24px 24px, 100% 100%',
   };
@@ -23,9 +13,10 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      style={lightRedGradientStyle}
-      className="relative py-24 px-6 md:px-12 text-center overflow-hidden border-t border-[#8f000d]/10"
+      style={redBgStyle}
+      className="relative py-[90px] px-6 md:px-12 text-center overflow-hidden border-t border-[#B22222]/10"
     >
+
       <div className="max-w-3xl mx-auto relative z-10 space-y-8">
 
         {/* Animated Text Container */}
@@ -36,11 +27,14 @@ const Contact = () => {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="space-y-4"
         >
-          <h2 className="font-['Montserrat'] font-bold text-[24px] sm:text-[30px] md:text-[34px] leading-tight text-[#1F5E3B] tracking-wide">
-            Looking for a Reliable Chilli Buying Partner?
+          <h2 className="font-['Montserrat'] font-bold text-[28px] sm:text-[36px] md:text-[42px] leading-tight text-white tracking-wide">
+            Looking for a Reliable <br className="hidden sm:inline" /> Chilli Buying Partner?
           </h2>
 
-          <p className="font-['Inter'] font-normal text-[#5a403e] text-[14px] sm:text-[15px] md:text-[16px] leading-[1.6] max-w-2xl mx-auto">
+          <p 
+            className="font-['Inter'] font-normal text-[14px] sm:text-[15px] md:text-[16px] leading-[1.6] max-w-2xl mx-auto"
+            style={{ color: 'rgba(255, 255, 255, 0.85)' }}
+          >
             Looking to buy premium dry red chillies or high-quality chilli powder? Get in touch with us today for customized wholesale quotes, bulk orders, and direct sourcing inquiries.
           </p>
         </motion.div>
@@ -55,13 +49,16 @@ const Contact = () => {
         >
           <a
             href="#contact"
-            className="inline-block bg-[#8f000d] text-white font-['Montserrat'] font-bold text-[14px] sm:text-[15px] py-4 px-8 sm:px-10 rounded-xl shadow-lg hover:bg-[#72000a] hover:translate-y-[-2px] active:scale-98 transition-all duration-300 uppercase tracking-wider"
+            className="inline-block bg-white text-[#B22222] font-['Montserrat'] font-bold text-[14px] sm:text-[15px] py-[16px] px-[36px] rounded-full shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)] hover:bg-neutral-50 hover:translate-y-[-2px] active:scale-98 transition-all duration-300 uppercase tracking-wider"
           >
             Contact Us
           </a>
         </motion.div>
 
       </div>
+
+      {/* Thin Divider to Footer */}
+      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-white/10 z-20" />
     </section>
   );
 };
