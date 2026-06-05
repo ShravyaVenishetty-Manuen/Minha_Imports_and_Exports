@@ -99,14 +99,14 @@ const Hero = () => {
             className="flex flex-col md:flex-row gap-4 pt-8 justify-center w-full md:w-auto"
           >
             <Link
-              to="/products"
+              to="/varieties"
               className="bg-[#8f000d] text-white font-['Montserrat'] font-bold text-lg py-4 px-10 rounded hover:shadow-xl hover:-translate-y-1 transition-all duration-200 text-center"
             >
               Explore Varieties
             </Link>
 
             <Link
-              to="/contact"
+              to="/#contact"
               className="border-2 border-white text-white font-['Montserrat'] font-bold text-lg py-4 px-10 rounded hover:bg-white hover:text-[#8f000d] transition-all duration-200 text-center"
             >
               Contact Us

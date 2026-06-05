@@ -9,28 +9,34 @@ import GlobalPresence from './components/sections/GlobalPresence'
 import WhyChooseUs from './components/sections/WhyChooseUs'
 import Contact from './components/sections/Contact'
 import Footer from './components/layout/Footer'
+import Varieties from './pages/Varieties'
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div className="min-h-screen bg-bg-light font-body text-text-dark">
-              <Hero />
-              <About />
-              <WhyChooseUs />
-              <Products />
-              <OurProcess />
-              <GlobalPresence />
-              <Contact />
-              <Footer />
-            </div>
-          }
-        />
-      </Routes>
+      <div className="min-h-screen bg-bg-light font-body text-text-dark flex flex-col justify-between">
+        <Navbar />
+        <div className="flex-grow">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Hero />
+                  <About />
+                  <WhyChooseUs />
+                  <Products />
+                  <OurProcess />
+                  <GlobalPresence />
+                  <Contact />
+                </>
+              }
+            />
+            <Route path="/varieties" element={<Varieties />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
     </Router>
   )
 }

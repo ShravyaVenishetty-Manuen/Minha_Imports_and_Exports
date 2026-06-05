@@ -63,7 +63,7 @@ const WhyChooseUs = () => {
   };
 
   return (
-    <section className="relative pt-12 pb-8 bg-white overflow-hidden">
+    <section id="why-choose-us" className="relative pt-12 pb-8 bg-white overflow-hidden">
 
       {/* Red Header Section */}
       <div className="relative pt-14 pb-22 px-6 text-center text-white bg-[#8f000d]">
