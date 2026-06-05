@@ -11,6 +11,7 @@ import Contact from './components/sections/Contact'
 import Footer from './components/layout/Footer'
 import Varieties from './pages/Varieties'
 import ChilliDetail from './pages/ChilliDetail'
+import ChilliPowder from './pages/ChilliPowder'
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
             />
             <Route path="/varieties" element={<Varieties />} />
             <Route path="/varieties/:id" element={<ChilliDetail />} />
+            <Route path="/powder" element={<ChilliPowder />} />
           </Routes>
         </div>
         <Footer />
