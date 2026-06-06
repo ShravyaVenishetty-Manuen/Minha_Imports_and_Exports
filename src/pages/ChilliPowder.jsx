@@ -49,10 +49,8 @@ const ChilliPowder = () => {
             />
           </div>
           <div className="text-left space-y-6">
-            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#2c6a46] uppercase block">
-              MANUFACTURING EXCELLENCE
-            </span>
-            <h2 className="font-headline-lg text-headline-lg text-primary border-l-4 border-primary pl-6">
+            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Manufacturing Excellence</span>
+            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Hygienic Production & Global Supply
             </h2>
             <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed text-justify">
@@ -76,11 +74,9 @@ const ChilliPowder = () => {
       <section className="py-12 bg-surface-container-low">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
           <div className="text-center mb-12">
-            <div className="inline-block px-3 py-1 bg-[#8f000d]/10 text-[#8f000d] font-['Montserrat'] font-semibold text-[10px] uppercase tracking-[0.15em] rounded-md mb-3">
-              Catalog Grades
-            </div>
-            <h2 className="font-headline-lg text-headline-lg text-primary font-heading text-center">Our Premium Export Grades</h2>
-            <p className="text-neutral-500 font-body text-sm max-w-2xl mx-auto mt-2">
+            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Catalog Grades</span>
+            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight text-center">Our Premium Export Grades</h2>
+            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] max-w-2xl mx-auto mt-3">
               Selected variants tailored for culinary excellence and industrial applications across the globe.
             </p>
           </div>
@@ -177,10 +173,8 @@ const ChilliPowder = () => {
       <section className="py-12 bg-white">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="lg:w-1/3 text-left flex flex-col justify-center">
-            <div className="inline-block px-3 py-1 bg-[#8f000d]/10 text-[#8f000d] font-['Montserrat'] font-semibold text-[10px] uppercase tracking-[0.15em] rounded-md mb-3 self-start">
-              Datasheet
-            </div>
-            <h2 className="font-headline-lg text-headline-lg text-primary mb-6">Technical Specifications</h2>
+            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Datasheet</span>
+            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight mb-6">Technical Specifications</h2>
             <p className="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
               Detailed chemical and physical analysis parameters to ensure consistency for bulk buyers and importers.
             </p>
@@ -330,10 +324,8 @@ const ChilliPowder = () => {
       <section className="py-12 bg-white">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="text-left space-y-6">
-            <div className="inline-block px-3 py-1 bg-[#2c6a46]/10 text-[#2c6a46] font-['Montserrat'] font-semibold text-[10px] uppercase tracking-[0.15em] rounded-md self-start">
-              Delivery Standards
-            </div>
-            <h2 className="font-headline-lg text-headline-lg text-primary border-l-4 border-brand-green pl-6">
+            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Delivery Standards</span>
+            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Global Packaging & Logistics
             </h2>
             <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">

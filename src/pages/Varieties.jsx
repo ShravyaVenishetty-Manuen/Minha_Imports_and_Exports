@@ -357,9 +357,9 @@ const Varieties = () => {
             transition={{ duration: 0.6 }}
             className="text-center max-w-2xl mx-auto mb-16 space-y-4"
           >
-            <div className="inline-block px-5 py-1.5 bg-[#8f000d] text-white font-['Montserrat'] font-semibold text-[11px] uppercase tracking-[0.15em] rounded-md mb-2 shadow-sm">
+            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-2">
               Quality Standards
-            </div>
+            </span>
             <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Uncompromising Sourcing Ethics
             </h2>

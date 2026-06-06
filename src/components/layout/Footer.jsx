@@ -21,12 +21,12 @@ const Footer = () => {
                   <path d="M6 16h6v-4H8V8h4V6h4v6h2v4" />
                 </svg>
               </div>
-              <span className="font-['Montserrat'] font-bold text-[20px] md:text-[22px] text-white leading-tight">
+              <span className="font-['Montserrat'] font-bold text-[16px] md:text-[17px] tracking-wide text-white leading-tight">
                 MINHA IMPORTS & EXPORT
               </span>
             </div>
 
-            <p className="text-[14px] leading-[1.6] text-[#a0a5ad]/80 max-w-sm">
+            <p className="text-[12.5px] leading-[1.6] text-[#a0a5ad]/65 max-w-sm">
               Premium Guntur dry red chillies exporter committed to global standards of purity and reliability.
             </p>
 
@@ -54,7 +54,7 @@ const Footer = () => {
             <h4 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
               Quick Links
             </h4>
-            <ul className="space-y-3.5 text-[14px]">
+            <ul className="space-y-2">
               {[
                 { name: 'Home', path: '/' },
                 { name: 'Chilli Varieties', path: '/varieties' },
@@ -63,7 +63,7 @@ const Footer = () => {
                 { name: 'Certifications', path: '/certifications' }
               ].map((link, idx) => (
                 <li key={idx}>
-                  <Link to={link.path} className="hover:text-white transition-colors duration-200 block">
+                  <Link to={link.path} className="text-[13px] text-[#a0a5ad]/75 hover:text-white transition-colors duration-200 block font-normal">
                     {link.name}
                   </Link>
                 </li>
@@ -76,14 +76,14 @@ const Footer = () => {
             <h4 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
               Our Products
             </h4>
-            <ul className="space-y-3.5 text-[14px]">
+            <ul className="space-y-2">
               {[
                 { name: 'Dry Red Chillies', path: '/varieties' },
                 { name: 'Chilli Powder', path: '/powder' }
               ].map((product, idx) => (
                 <li key={idx} className="flex items-center gap-2 group">
-                  <span className="w-1 h-1 rounded-full bg-[#cca72f] transition-transform duration-200 group-hover:scale-150" />
-                  <Link to={product.path} className="hover:text-white transition-colors duration-200 block">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#cca72f] transition-transform duration-200 group-hover:scale-150" />
+                  <Link to={product.path} className="text-[13px] text-[#a0a5ad]/75 hover:text-white transition-colors duration-200 block font-normal">
                     {product.name}
                   </Link>
                 </li>
@@ -96,7 +96,7 @@ const Footer = () => {
             <h4 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
               Contact Us
             </h4>
-            <div className="space-y-4 text-[14px]">
+            <div className="space-y-3 text-[12px]">
               <div className="flex items-start gap-3">
                 <FiMapPin className="w-4 h-4 text-[#cca72f] mt-1 shrink-0" />
                 <span className="text-[#a0a5ad]/95 leading-relaxed">

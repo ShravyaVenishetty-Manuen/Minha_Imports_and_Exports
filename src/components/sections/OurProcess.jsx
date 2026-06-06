@@ -78,9 +78,9 @@ const OurProcess = () => {
 
         {/* Top Process Badge & Headings */}
         <div className="text-center mb-16">
-          <div className="inline-block px-5 py-1.5 bg-[#8f000d] text-white font-['Montserrat'] font-semibold text-[11px] uppercase tracking-[0.15em] rounded-md mb-4 shadow-sm">
+          <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
             Our Process
-          </div>
+          </span>
 
           <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
             From <span className="text-[#B22222]">Guntur Farms</span> to <span className="text-[#1F5E3B]">Global Markets</span>

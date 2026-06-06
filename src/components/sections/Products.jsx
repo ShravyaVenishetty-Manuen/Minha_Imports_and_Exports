@@ -42,7 +42,7 @@ const Products = () => {
 
         {/* Section Header */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <span className="inline-block px-5 py-1.5 bg-[#8f000d] text-white font-['Montserrat'] font-bold text-[11px] uppercase tracking-[0.15em] rounded-md mb-4 shadow-sm">
+          <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
             Our Products
           </span>
           <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight mb-4">
