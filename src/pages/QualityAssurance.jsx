@@ -16,8 +16,20 @@ import {
 } from 'react-icons/fi';
 
 import dryChilliSortingFacility from '../assets/dry_chilli_sorting_facility.png';
-import chilliProcessingFacility from '../assets/chilli-processing-facility.png';
-import aboutHeroBg from '../assets/about_hero_bg.png';
+import qaInspector from '../assets/qa_inspector.png';
+
+// Import custom generated step timeline images
+import qaStepFarm from '../assets/qa_step_farm.png';
+import qaStepAcquisition from '../assets/qa_step_acquisition.png';
+import qaStepProcessing from '../assets/qa_step_processing.png';
+import qaStepShipping from '../assets/qa_step_shipping.png';
+import chilliExportCta from '../assets/chilli-export-cta.png';
+import glowingChilliPremiumRemoveBg from '../assets/glowing-chilli-premium-remove-bg-io.png';
+import fssaiLogo from '../assets/3fssai-logo-png.png';
+import brcLogo from '../assets/brc-food-certification-logo-Photoroom.png';
+import fieoLogo from '../assets/fieo-Photoroom.png';
+
+
 
 const QualityAssurance = () => {
   // Scroll to top on page mount
@@ -48,72 +60,46 @@ const QualityAssurance = () => {
     {
       num: '01',
       title: 'Farm Visits',
-      icon: <FiMapPin className="text-2xl" />,
-      desc: 'Our journey begins at the origin. We conduct on-site inspections at partner farms to monitor crop health and chemical-free growth cycles.'
+      image: qaStepFarm,
+      desc: 'Our journey begins at the origin. We conduct on-site inspections at partner farms to monitor crop health.',
+      colorClass: 'border-[#2c6a46]/40',
+      dotBgClass: 'bg-[#2c6a46]',
+      badgeBgClass: 'bg-[#2c6a46]'
     },
     {
       num: '02',
       title: 'Acquisition',
-      icon: <FiCheckSquare className="text-2xl" />,
-      desc: 'Strict procurement protocols ensure only the top 10% of harvested yield enters our supply chain. Initial grading happens on-site.'
+      image: qaStepAcquisition,
+      desc: 'Strict procurement protocols ensure only the top 10% of harvested yield enters our supply chain.',
+      colorClass: 'border-[#8f000d]/40',
+      dotBgClass: 'bg-[#8f000d]',
+      badgeBgClass: 'bg-[#8f000d]'
     },
     {
       num: '03',
       title: 'Processing',
-      icon: <FiSettings className="text-2xl" />,
-      desc: 'Cleaning, stem removal, and moisture control are performed in our climate-controlled, hygienic facility before final packing.'
+      image: qaStepProcessing,
+      desc: 'Cleaning, stem removal, and moisture control are performed in our climate-controlled facility.',
+      colorClass: 'border-[#2c6a46]/40',
+      dotBgClass: 'bg-[#2c6a46]',
+      badgeBgClass: 'bg-[#2c6a46]'
     },
     {
       num: '04',
       title: 'Shipping',
-      icon: <FiTruck className="text-2xl" />,
-      desc: 'Final export clearance and container loading under supervised inspection. We ensure global logistics compliance for timely delivery.'
+      image: qaStepShipping,
+      desc: 'Final export clearance and container loading under supervised inspection for timely global delivery.',
+      colorClass: 'border-[#8f000d]/40',
+      dotBgClass: 'bg-[#8f000d]',
+      badgeBgClass: 'bg-[#8f000d]'
     }
   ];
 
-  const benchmarks = [
-    {
-      title: 'Moisture Control',
-      icon: <FiThermometer className="text-3xl" />,
-      desc: 'Maintained strictly between 10-12% to prevent mold while preserving natural oils and potency.',
-      colorClass: 'text-[#2c6a46]'
-    },
-    {
-      title: 'Cleanliness',
-      icon: <FiDroplet className="text-3xl" />,
-      desc: 'Advanced sieving and dust removal systems ensure a product free from foreign matter.',
-      colorClass: 'text-[#8f000d]'
-    },
-    {
-      title: 'Product Grading',
-      icon: <FiAward className="text-3xl" />,
-      desc: 'Categorized by heat levels (SHU) and color intensity (ASTA) for specific market requirements.',
-      colorClass: 'text-[#2c6a46]'
-    },
-    {
-      title: 'Packaging Safety',
-      icon: <FiPackage className="text-3xl" />,
-      desc: 'Food-grade jute, PP bags, or custom boxes with protective liners to maintain freshness during transit.',
-      colorClass: 'text-[#8f000d]'
-    },
-    {
-      title: 'Export Compliance',
-      icon: <FiShield className="text-3xl" />,
-      desc: 'Adhering to international phytosanitary standards and pesticide residue limits (MRL).',
-      colorClass: 'text-[#2c6a46]'
-    },
-    {
-      title: 'Global Trust',
-      icon: <FiStar className="text-3xl" />,
-      desc: 'Consistently delivering premium quality that meets the expectations of international spice hubs.',
-      colorClass: 'text-[#2c6a46]',
-      isStar: true
-    }
-  ];
+
 
   return (
     <div className="bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container min-h-screen relative overflow-hidden">
-      
+
       {/* 1. Hero Section */}
       <section className="relative h-[350px] md:h-[420px] w-full flex items-center justify-center text-center text-white overflow-hidden bg-neutral-900 pt-20">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
@@ -138,9 +124,9 @@ const QualityAssurance = () => {
       </section>
 
       {/* 2. Quality Commitment Section */}
-      <section className="py-10 md:py-16 bg-surface">
+      <section className="py-8 md:py-12 bg-surface">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
-          
+
           {/* Left Column (Image with secondary accent background glow) */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -153,7 +139,7 @@ const QualityAssurance = () => {
             <img
               alt="Expert Quality Grading Red Chillies"
               className="relative rounded-xl shadow-xl w-full h-[400px] md:h-[500px] object-cover transition-transform duration-500 hover:scale-[1.01]"
-              src={chilliProcessingFacility}
+              src={qaInspector}
             />
           </motion.div>
 
@@ -173,7 +159,7 @@ const QualityAssurance = () => {
                 Premium Standards for Global Markets
               </h2>
             </div>
-            
+
             <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
               At Minha Imports & Exports, quality is not just a department—it is our core identity. We specialize in the high-stakes export of Guntur Dry Red Chillies, where precision in grading and hygiene determines global competitiveness.
             </p>
@@ -207,15 +193,15 @@ const QualityAssurance = () => {
       </section>
 
       {/* 3. 4-Stage Quality Process */}
-      <section className="bg-surface-container-low py-10 md:py-16">
+      <section className="bg-surface-container-low py-8 md:py-12 relative overflow-hidden">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 text-center">
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-12"
+            className="mb-8"
           >
             <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
               Our Process
@@ -226,62 +212,77 @@ const QualityAssurance = () => {
             <div className="w-24 h-[3px] bg-[#8f000d] mx-auto mt-4 rounded-full"></div>
           </motion.div>
 
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
-          >
-            {processStages.map((stage, idx) => (
-              <motion.div
-                key={stage.num}
-                variants={fadeUpVariants}
-                className="bg-white p-8 rounded-2xl border border-neutral-100/85 shadow-premium-soft hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group"
-              >
-                {/* Background Large Stage Number */}
-                <div
-                  className="absolute -right-4 -top-4 font-['Montserrat'] font-black text-[96px] leading-none select-none pointer-events-none opacity-[0.03] group-hover:opacity-[0.07] transition-all duration-300"
-                  style={{ color: idx % 2 === 0 ? '#2c6a46' : '#8f000d' }}
-                >
-                  {stage.num}
-                </div>
+          <div className="relative mt-8">
+            {/* Horizontal connecting line with midpoint dots (Desktop only) */}
+            <div className="absolute top-[80px] left-[12.5%] right-[12.5%] h-[2px] border-t border-dashed border-neutral-300 hidden md:block -z-10">
+              {/* Mid-segment dots */}
+              <div className="absolute left-[25%] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#2c6a46]"></div>
+              <div className="absolute left-[50%] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#2c6a46]"></div>
+              <div className="absolute left-[75%] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#2c6a46]"></div>
+            </div>
 
-                {/* Animated Icon Circle */}
-                <div
-                  className={`w-14 h-14 rounded-full flex items-center justify-center mb-6 transition-all duration-300 ${
-                    idx % 2 === 0
-                      ? 'bg-[#2c6a46]/10 text-[#2c6a46] group-hover:bg-[#2c6a46] group-hover:text-white'
-                      : 'bg-[#8f000d]/10 text-[#8f000d] group-hover:bg-[#8f000d] group-hover:text-white'
-                  }`}
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-6 lg:gap-8"
+            >
+              {processStages.map((stage, idx) => (
+                <motion.div
+                  key={stage.num}
+                  variants={fadeUpVariants}
+                  className="flex flex-col items-center text-center group"
                 >
-                  {stage.icon}
-                </div>
+                  {/* Outer circle frame with compass dots */}
+                  <div className={`relative w-40 h-40 rounded-full border p-1.5 bg-white shadow-premium-soft flex items-center justify-center ${stage.colorClass}`}>
 
-                {/* Content */}
-                <h3 className="font-['Montserrat'] font-bold text-[18px] md:text-[20px] text-neutral-900 mb-3 text-left">
-                  {stage.title}
-                </h3>
-                <p className="font-['Inter'] font-normal text-[#5a403e] text-[14px] leading-relaxed text-left">
-                  {stage.desc}
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
+                    {/* Compass-style boundary dots */}
+                    <div className={`absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full ${stage.dotBgClass}`}></div>
+                    <div className={`absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full ${stage.dotBgClass}`}></div>
+                    <div className={`absolute -left-1 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full ${stage.dotBgClass}`}></div>
+                    <div className={`absolute -right-1 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full ${stage.dotBgClass}`}></div>
+
+                    {/* Circular Image Container */}
+                    <div className="w-[144px] h-[144px] rounded-full overflow-hidden relative">
+                      <img
+                        alt={stage.title}
+                        className="w-full h-full object-cover"
+                        src={stage.image}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Stage status badge */}
+                  <div className={`w-6 h-6 rounded-full text-white flex items-center justify-center font-['Montserrat'] font-bold text-[11px] mt-6 shadow-md ${stage.badgeBgClass}`}>
+                    {stage.num}
+                  </div>
+
+                  {/* Heading & text */}
+                  <h3 className="font-['Montserrat'] font-bold text-[16px] text-neutral-900 mt-4 mb-2 uppercase tracking-wide">
+                    {stage.title}
+                  </h3>
+                  <p className="font-['Inter'] font-normal text-[#5a403e] text-[13px] md:text-[14px] leading-relaxed max-w-xs px-2">
+                    {stage.desc}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
 
         </div>
       </section>
 
       {/* 4. Quality Standards Checklist (Benchmarks) */}
-      <section className="py-10 md:py-16 bg-surface">
+      <section className="py-8 md:py-12 bg-surface">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-12 text-left"
+            className="mb-8 text-left"
           >
             <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
               Our Benchmarks
@@ -299,146 +300,324 @@ const QualityAssurance = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-4 gap-6"
           >
-            {benchmarks.map((item, idx) => (
-              <motion.div
-                key={item.title}
-                variants={fadeUpVariants}
-                className={`p-8 border rounded-2xl flex gap-6 items-start transition-all duration-300 bg-white border-neutral-100 hover:shadow-premium-soft hover:-translate-y-0.5 ${
-                  item.isStar ? 'bg-[#2c6a46]/5 border-[#2c6a46]/10' : ''
-                }`}
-              >
-                {/* Benchmark Icon */}
-                <div className={`${item.colorClass} shrink-0`}>
-                  {item.isStar ? (
-                    <FiStar className="text-3xl fill-current" />
-                  ) : (
-                    item.icon
-                  )}
+            {/* 1. Quality First Always Left Card (Spans 2 rows) */}
+            <motion.div
+              variants={fadeUpVariants}
+              className="md:col-span-1 md:row-span-2 bg-[#123e25] text-white p-6 rounded-2xl flex flex-col justify-between text-left overflow-hidden relative shadow-premium-soft min-h-[420px] md:min-h-full"
+            >
+              <div className="space-y-6 relative z-10">
+                {/* Shield Icon and Heading Inline */}
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center bg-white/5 shrink-0">
+                    <FiShield className="text-white text-lg" />
+                  </div>
+                  <h3 className="font-['Montserrat'] font-bold text-[18px] leading-tight text-white">
+                    Quality First<br />Always
+                  </h3>
                 </div>
+                
+                <p className="font-['Inter'] font-normal text-white/80 text-[13.5px] leading-relaxed">
+                  Every step is controlled, tested and certified.
+                </p>
+              </div>
 
-                {/* Text content */}
-                <div>
-                  <h4 className="font-['Montserrat'] font-bold text-[18px] md:text-[20px] text-neutral-900 mb-2">
-                    {item.title}
+              {/* Background removed chilli bowl image at bottom part of card */}
+              <div className="absolute bottom-0 left-0 right-0 h-[48%] pointer-events-none select-none z-0">
+                <img
+                  src={glowingChilliPremiumRemoveBg}
+                  alt="Quality Red Chillies Bowl"
+                  className="w-full h-full object-contain object-bottom"
+                />
+              </div>
+            </motion.div>
+
+            {/* 2. Moisture Control Card */}
+            <motion.div
+              variants={fadeUpVariants}
+              className="md:col-span-1 bg-white border border-neutral-100/80 shadow-premium-soft rounded-2xl p-6 flex flex-col justify-between text-left hover:shadow-md transition-shadow"
+            >
+              <div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#2c6a46]/10 text-[#2c6a46] flex items-center justify-center shrink-0">
+                    <FiThermometer className="text-lg" />
+                  </div>
+                  <h4 className="font-['Montserrat'] font-bold text-[15px] text-neutral-900 leading-tight">
+                    Moisture Control
                   </h4>
-                  <p className="font-['Inter'] font-normal text-[#5a403e] text-[14px] leading-relaxed">
-                    {item.desc}
-                  </p>
                 </div>
-              </motion.div>
-            ))}
+                <p className="font-['Inter'] font-normal text-[#5a403e] text-[13px] leading-relaxed mt-4">
+                  10-12% maintained to prevent mold.
+                </p>
+              </div>
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-['Montserrat'] font-bold w-max mt-4 text-[#2c6a46] bg-[#2c6a46]/10">
+                <span>✓</span> Controlled
+              </div>
+            </motion.div>
+
+            {/* 3. Cleanliness Card */}
+            <motion.div
+              variants={fadeUpVariants}
+              className="md:col-span-1 bg-white border border-neutral-100/80 shadow-premium-soft rounded-2xl p-6 flex flex-col justify-between text-left hover:shadow-md transition-shadow"
+            >
+              <div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#8f000d]/10 text-[#8f000d] flex items-center justify-center shrink-0">
+                    <FiDroplet className="text-lg" />
+                  </div>
+                  <h4 className="font-['Montserrat'] font-bold text-[15px] text-neutral-900 leading-tight">
+                    Cleanliness
+                  </h4>
+                </div>
+                <p className="font-['Inter'] font-normal text-[#5a403e] text-[13px] leading-relaxed mt-4">
+                  Product free from foreign matter.
+                </p>
+              </div>
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-['Montserrat'] font-bold w-max mt-4 text-[#2c6a46] bg-[#2c6a46]/10">
+                <span>✓</span> Verified
+              </div>
+            </motion.div>
+
+            {/* 4. Product Grading Card */}
+            <motion.div
+              variants={fadeUpVariants}
+              className="md:col-span-1 bg-white border border-neutral-100/80 shadow-premium-soft rounded-2xl p-6 flex flex-col justify-between text-left hover:shadow-md transition-shadow"
+            >
+              <div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#2c6a46]/10 text-[#2c6a46] flex items-center justify-center shrink-0">
+                    <FiAward className="text-lg" />
+                  </div>
+                  <h4 className="font-['Montserrat'] font-bold text-[15px] text-neutral-900 leading-tight">
+                    Product Grading
+                  </h4>
+                </div>
+                <p className="font-['Inter'] font-normal text-[#5a403e] text-[13px] leading-relaxed mt-4">
+                  SHU & ASTA standards for markets.
+                </p>
+              </div>
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-['Montserrat'] font-bold w-max mt-4 text-[#2c6a46] bg-[#2c6a46]/10">
+                <span>✓</span> Certified
+              </div>
+            </motion.div>
+
+            {/* 5. Packaging Safety Card */}
+            <motion.div
+              variants={fadeUpVariants}
+              className="md:col-span-1 bg-white border border-neutral-100/80 shadow-premium-soft rounded-2xl p-6 flex flex-col justify-between text-left hover:shadow-md transition-shadow"
+            >
+              <div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#8f000d]/10 text-[#8f000d] flex items-center justify-center shrink-0">
+                    <FiPackage className="text-lg" />
+                  </div>
+                  <h4 className="font-['Montserrat'] font-bold text-[15px] text-neutral-900 leading-tight">
+                    Packaging Safety
+                  </h4>
+                </div>
+                <p className="font-['Inter'] font-normal text-[#5a403e] text-[13px] leading-relaxed mt-4">
+                  Food-grade packaging for long freshness.
+                </p>
+              </div>
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-['Montserrat'] font-bold w-max mt-4 text-[#8f000d] bg-[#8f000d]/10">
+                <span>✓</span> Validated
+              </div>
+            </motion.div>
+
+            {/* 6. Export Compliance Card */}
+            <motion.div
+              variants={fadeUpVariants}
+              className="md:col-span-1 bg-white border border-neutral-100/80 shadow-premium-soft rounded-2xl p-6 flex flex-col justify-between text-left hover:shadow-md transition-shadow"
+            >
+              <div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#2c6a46]/10 text-[#2c6a46] flex items-center justify-center shrink-0">
+                    <FiShield className="text-lg" />
+                  </div>
+                  <h4 className="font-['Montserrat'] font-bold text-[15px] text-neutral-900 leading-tight">
+                    Export Compliance
+                  </h4>
+                </div>
+                <p className="font-['Inter'] font-normal text-[#5a403e] text-[13px] leading-relaxed mt-4">
+                  Phytosanitary & MRL compliant.
+                </p>
+              </div>
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-['Montserrat'] font-bold w-max mt-4 text-[#2c6a46] bg-[#2c6a46]/10">
+                <span>✓</span> Compliant
+              </div>
+            </motion.div>
+
+            {/* 7. Global Trust Card */}
+            <motion.div
+              variants={fadeUpVariants}
+              className="md:col-span-1 relative overflow-hidden bg-gradient-to-br from-neutral-900 to-[#122e1d] text-white p-6 rounded-2xl flex flex-col justify-between text-left shadow-premium-soft min-h-[200px]"
+            >
+              {/* Vessel overlay ship graphic */}
+              <img
+                src={chilliExportCta}
+                alt="Cargo logistics overlay"
+                className="absolute right-0 bottom-0 w-1/2 h-full object-cover opacity-15 pointer-events-none"
+              />
+              <div className="relative z-10">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center bg-white/5 shrink-0">
+                    <FiStar className="text-white text-lg fill-current" />
+                  </div>
+                  <h4 className="font-['Montserrat'] font-bold text-[15px] text-white leading-tight">
+                    Global Trust
+                  </h4>
+                </div>
+                <p className="font-['Inter'] font-normal text-white/80 text-[13px] leading-relaxed mt-4">
+                  Delivering premium quality to international spice hubs.
+                </p>
+              </div>
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-['Montserrat'] font-bold w-max mt-4 text-emerald-400 bg-emerald-500/10 relative z-10">
+                <span>✓</span> Trusted
+              </div>
+            </motion.div>
+
           </motion.div>
 
         </div>
       </section>
 
       {/* 5. Trust Highlight Section */}
-      <section className="relative py-16 md:py-24 overflow-hidden text-white bg-black">
-        <div className="absolute inset-0 bg-[#8f000d]/85 mix-blend-multiply z-10"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/90 via-transparent to-transparent z-15"></div>
-        <img
-          alt="Ripening Dry Chillies Field"
-          className="absolute inset-0 w-full h-full object-cover opacity-60"
-          src={aboutHeroBg}
-        />
-        
-        <div className="relative z-20 max-w-[1280px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+      <section className="py-8 md:py-12 bg-surface-container-low relative overflow-hidden text-center">
+        <div className="max-w-[1000px] mx-auto px-6 relative z-10">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-7 text-left space-y-6"
+            className="space-y-8"
           >
-            <h2 className="font-['Montserrat'] font-bold text-[36px] md:text-[46px] leading-[1.1] tracking-tight text-white">
-              Quality You Can Trust
-            </h2>
-            <p className="font-['Inter'] font-normal text-white/90 text-[15px] md:text-[17px] leading-relaxed max-w-2xl">
+            {/* Heading */}
+            <div className="space-y-3">
+              <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase block">
+                Global Sourcing Partner
+              </span>
+              <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[42px] leading-[1.2] tracking-tight text-[#1a1c1e]">
+                Quality You Can Trust
+              </h2>
+              <div className="w-16 h-[2.5px] bg-[#8f000d] mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            {/* Description */}
+            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[17px] leading-relaxed max-w-3xl mx-auto">
               Our legacy is built on the consistency of our supply. By integrating technology with traditional farming wisdom, we provide a transparent bridge between Indian agriculture and global commerce. When you choose Minha, you choose a partner committed to your brand's integrity.
             </p>
+
+            {/* Stats Divider Line */}
+            <div className="border-t border-neutral-200/60 my-5"></div>
+
+            {/* 3-Column Stats Row */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-neutral-200/80">
+              
+              {/* Stat 1 */}
+              <div className="space-y-2 py-4 md:py-0 md:px-4 text-center">
+                <div className="font-['Montserrat'] font-black text-[40px] md:text-[48px] leading-none text-[#8f000d]">
+                  100%
+                </div>
+                <div className="font-['Montserrat'] font-bold text-[10.5px] tracking-[0.15em] text-neutral-800 uppercase">
+                  Certified Quality
+                </div>
+                <p className="text-[12.5px] text-[#5a403e]/80 font-['Inter'] max-w-[220px] mx-auto leading-relaxed mt-1">
+                  Every batch passes strict ASTA & chemical residue limits.
+                </p>
+              </div>
+
+              {/* Stat 2 */}
+              <div className="space-y-2 py-4 md:py-0 md:px-4 text-center">
+                <div className="font-['Montserrat'] font-black text-[40px] md:text-[48px] leading-none text-[#8f000d]">
+                  50+
+                </div>
+                <div className="font-['Montserrat'] font-bold text-[10.5px] tracking-[0.15em] text-neutral-800 uppercase">
+                  Global Destinations
+                </div>
+                <p className="text-[12.5px] text-[#5a403e]/80 font-['Inter'] max-w-[220px] mx-auto leading-relaxed mt-1">
+                  Delivering dry red chilli imports to global port hubs.
+                </p>
+              </div>
+
+              {/* Stat 3 */}
+              <div className="space-y-2 py-4 md:py-0 md:px-4 text-center">
+                <div className="font-['Montserrat'] font-black text-[40px] md:text-[48px] leading-none text-[#2c6a46] flex items-center justify-center gap-2">
+                  24/7
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 border border-emerald-600 animate-pulse shrink-0"></span>
+                </div>
+                <div className="font-['Montserrat'] font-bold text-[10.5px] tracking-[0.15em] text-neutral-800 uppercase">
+                  Supply Chain Visibility
+                </div>
+                <p className="text-[12.5px] text-[#5a403e]/80 font-['Inter'] max-w-[220px] mx-auto leading-relaxed mt-1">
+                  Real-time batch trace reports from farm blocks to delivery.
+                </p>
+              </div>
+
+            </div>
+
           </motion.div>
-
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="lg:col-span-5 flex flex-col sm:flex-row lg:flex-col gap-8 lg:gap-10 lg:pl-12 text-left"
-          >
-            <motion.div variants={fadeUpVariants} className="space-y-1">
-              <div className="font-['Montserrat'] font-black text-[44px] md:text-[50px] leading-none text-[#cca72f]">
-                100%
-              </div>
-              <div className="font-['Montserrat'] font-bold text-[10px] tracking-[0.2em] text-white/80 uppercase">
-                Certified Quality
-              </div>
-            </motion.div>
-
-            <motion.div variants={fadeUpVariants} className="space-y-1">
-              <div className="font-['Montserrat'] font-black text-[44px] md:text-[50px] leading-none text-[#cca72f]">
-                50+
-              </div>
-              <div className="font-['Montserrat'] font-bold text-[10px] tracking-[0.2em] text-white/80 uppercase">
-                Global Destinations
-              </div>
-            </motion.div>
-
-            <motion.div variants={fadeUpVariants} className="space-y-1">
-              <div className="font-['Montserrat'] font-black text-[44px] md:text-[50px] leading-none text-[#cca72f]">
-                24/7
-              </div>
-              <div className="font-['Montserrat'] font-bold text-[10px] tracking-[0.2em] text-white/80 uppercase">
-                Supply Chain Visibility
-              </div>
-            </motion.div>
-          </motion.div>
-
         </div>
       </section>
 
       {/* 6. Inquiry CTA Section */}
-      <section className="py-16 md:py-24 bg-surface-container-highest">
-        <div className="max-w-[1280px] mx-auto px-6 md:px-12 text-center space-y-8">
+      <section className="py-6 px-6 md:px-12 max-w-[850px] mx-auto z-10 relative">
+        <div className="relative rounded-[2rem] overflow-hidden text-center text-white py-12 md:py-16 shadow-2xl border border-white/10 bg-gradient-to-br from-[#2c6a46] via-[#123e25] to-[#111315] group">
+
+          {/* Subtle grid and glowing accents */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none" />
+          <div className="absolute -top-32 -left-32 w-64 h-64 bg-[#2c6a46]/20 rounded-full blur-3xl pointer-events-none group-hover:bg-[#2c6a46]/30 transition-all duration-700" />
+          <div className="absolute -bottom-32 -right-32 w-64 h-64 bg-white/5 rounded-full blur-3xl pointer-events-none" />
           
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-4"
-          >
-            <h2 className="font-['Montserrat'] font-bold text-[28px] md:text-[36px] leading-[1.2] text-[#1a1c1e] tracking-tight max-w-3xl mx-auto">
-              Looking for Premium Quality Chilli Exports?
+          {/* Cargo logistics overlay ship image */}
+          <img
+            src={chilliExportCta}
+            alt="Cargo logistics overlay"
+            className="absolute right-0 bottom-0 w-1/2 h-full object-cover opacity-10 pointer-events-none mix-blend-overlay"
+          />
+
+          <div className="relative z-10 max-w-xl mx-auto space-y-5 px-4">
+
+            {/* Tagline Badge */}
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mx-auto">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#cca72f] animate-pulse" />
+              <span className="font-['Montserrat'] font-bold text-[8.5px] tracking-[0.2em] text-[#cca72f] uppercase">
+                Premium Sourcing & Logistics
+              </span>
+            </div>
+
+            {/* Title */}
+            <h2 className="font-['Montserrat'] font-extrabold text-[24px] md:text-[32px] leading-tight text-white tracking-tight">
+              Looking for Premium <br className="hidden sm:inline" /> Quality Chilli Exports?
             </h2>
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[17px] max-w-2xl mx-auto leading-relaxed">
+
+            {/* Description */}
+            <p className="font-['Inter'] font-normal text-white/80 text-[13px] md:text-[14px] max-w-lg mx-auto leading-relaxed">
               Partner with Minha Imports & Exports for reliable, grade-A dry red chillies. Get a customized quote based on your specific requirements today.
             </p>
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col sm:flex-row justify-center items-center gap-4"
-          >
-            <Link
-              to="/contact"
-              className="bg-[#8f000d] text-white px-8 py-3.5 rounded-lg font-['Montserrat'] font-bold text-xs uppercase tracking-wider shadow-lg hover:bg-[#8f000d]/90 hover:shadow-primary/20 transition-all active:scale-95 text-center w-full sm:w-auto"
-            >
-              Send Inquiry
-            </Link>
-            <Link
-              to="/contact"
-              className="border-2 border-[#2c6a46] text-[#2c6a46] bg-white hover:bg-[#2c6a46]/5 px-8 py-3 rounded-lg font-['Montserrat'] font-bold text-xs uppercase tracking-wider transition-all active:scale-95 text-center w-full sm:w-auto"
-            >
-              Contact Us
-            </Link>
-          </motion.div>
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center pt-2 max-w-xs sm:max-w-md mx-auto">
+              <Link
+                to="/contact"
+                className="w-full sm:w-auto bg-white text-[#2c6a46] px-8 py-3.5 rounded-full font-['Montserrat'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-neutral-100 hover:text-black shadow-lg shadow-black/10 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
+              >
+                Send Inquiry
+              </Link>
+              <Link
+                to="/contact"
+                className="w-full sm:w-auto border-2 border-white/80 text-white px-8 py-[12px] rounded-full font-['Montserrat'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-white hover:text-black hover:border-white hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
+              >
+                Contact Us
+              </Link>
+            </div>
 
+            {/* Trust Guarantee */}
+            <div className="text-[8px] font-['Montserrat'] tracking-widest text-white/40 uppercase pt-1">
+              Export Desk Response Guarantee: Within 12 Hours
+            </div>
+
+          </div>
         </div>
       </section>
 
