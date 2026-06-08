@@ -13,6 +13,7 @@ import Varieties from './pages/Varieties'
 import ChilliDetail from './pages/ChilliDetail'
 import ChilliPowder from './pages/ChilliPowder'
 import AboutCompany from './pages/AboutCompany'
+import QualityAssurance from './pages/QualityAssurance'
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             <Route path="/varieties/:id" element={<ChilliDetail />} />
             <Route path="/powder" element={<ChilliPowder />} />
             <Route path="/about" element={<AboutCompany />} />
+            <Route path="/quality" element={<QualityAssurance />} />
           </Routes>
         </div>
         <Footer />
