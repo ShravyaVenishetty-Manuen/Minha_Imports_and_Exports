@@ -60,6 +60,7 @@ const Footer = () => {
                 { name: 'Chilli Varieties', path: '/varieties' },
                 { name: 'Our Company', path: '/about' },
                 { name: 'Quality Assurance', path: '/quality' },
+                { name: 'Our Facilities', path: '/facility' },
                 { name: 'Certifications', path: '/certifications' }
               ].map((link, idx) => (
                 <li key={idx}>

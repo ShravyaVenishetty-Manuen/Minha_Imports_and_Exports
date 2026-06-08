@@ -14,6 +14,8 @@ import ChilliDetail from './pages/ChilliDetail'
 import ChilliPowder from './pages/ChilliPowder'
 import AboutCompany from './pages/AboutCompany'
 import QualityAssurance from './pages/QualityAssurance'
+import Facility from './pages/Facility'
+import Certifications from './pages/Certifications'
 
 function App() {
   return (
@@ -41,6 +43,8 @@ function App() {
             <Route path="/powder" element={<ChilliPowder />} />
             <Route path="/about" element={<AboutCompany />} />
             <Route path="/quality" element={<QualityAssurance />} />
+            <Route path="/facility" element={<Facility />} />
+            <Route path="/certifications" element={<Certifications />} />
           </Routes>
         </div>
         <Footer />
