@@ -235,11 +235,11 @@ const AboutCompany = () => {
     <div className="bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container min-h-screen relative overflow-hidden">
 
       {/* 1. Hero Section */}
-      <section className="relative pt-32 pb-16 px-6 md:px-12 text-center text-white overflow-hidden bg-black/65">
+      <section className="relative h-[350px] md:h-[420px] w-full flex items-center justify-center text-center text-white overflow-hidden bg-neutral-900 pt-20">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         <img
           alt="Ripening dry red chillies field in Guntur"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-[center_35%]"
           src={aboutHeroBg}
         />
         <div className="relative z-20 w-full max-w-4xl mx-auto text-center space-y-6">

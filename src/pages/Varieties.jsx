@@ -38,14 +38,14 @@ const Varieties = () => {
       url(${chilliHeroVarieties})
     `,
     backgroundSize: 'cover',
-    backgroundPosition: 'center',
+    backgroundPosition: 'center 25%',
   };
 
   return (
     <div className="bg-[#FAF8F4] min-h-screen font-['Inter'] text-[#1a1c1e] relative overflow-hidden">
 
       {/* 1. Hero Banner */}
-      <section style={heroStyle} className="relative pt-36 pb-24 px-6 md:px-12 text-center text-white">
+      <section style={heroStyle} className="relative h-[350px] md:h-[420px] w-full flex items-center justify-center text-center text-white overflow-hidden pt-20">
         <div className="max-w-4xl mx-auto space-y-6 relative z-10">
           <nav className="flex justify-center items-center gap-2 font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#cca72f] uppercase mb-2">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
