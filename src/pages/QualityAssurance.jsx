@@ -604,12 +604,6 @@ const QualityAssurance = () => {
               >
                 Send Inquiry
               </Link>
-              <Link
-                to="/contact"
-                className="w-full sm:w-auto border-2 border-white/80 text-white px-8 py-[12px] rounded-full font-['Montserrat'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-white hover:text-black hover:border-white hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
-              >
-                Contact Us
-              </Link>
             </div>
 
             {/* Trust Guarantee */}

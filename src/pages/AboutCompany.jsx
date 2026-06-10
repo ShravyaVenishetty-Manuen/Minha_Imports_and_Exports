@@ -997,12 +997,6 @@ const AboutCompany = () => {
               >
                 Request Quote
               </Link>
-              <Link
-                to="/contact"
-                className="w-full sm:w-auto border border-white/20 hover:border-white/50 text-white px-6 py-2.5 rounded-lg font-['Montserrat'] font-bold text-[10px] uppercase tracking-wider hover:bg-white/5 transition-all duration-300 active:scale-95 text-center"
-              >
-                Send Inquiry
-              </Link>
             </div>
 
             {/* Trust Guarantee */}

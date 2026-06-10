@@ -429,13 +429,13 @@ const ChilliPowder = () => {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-5 max-w-md mx-auto pt-4">
               <a
-                href="mailto:exports@minhaexports.com?subject=Enquiry for Premium Chilli Powder&body=Hello Minha Desk,%0D%0A%0D%0AI would like to request details and wholesale pricing for Chilli Powder."
+                href="mailto:minhaimportsexports@gmail.com?subject=Enquiry for Premium Chilli Powder&body=Hello Minha Desk,%0D%0A%0D%0AI would like to request details and wholesale pricing for Chilli Powder."
                 className="flex-1 bg-[#cca72f] text-[#121315] font-['Montserrat'] font-extrabold text-[12px] tracking-wider py-4 px-6 rounded-full hover:bg-white hover:text-black shadow-lg shadow-[#cca72f]/20 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 uppercase text-center whitespace-nowrap"
               >
                 Request a Quote
               </a>
               <a
-                href="mailto:exports@minhaexports.com?subject=Request Chilli Powder Brochure"
+                href="mailto:minhaimportsexports@gmail.com?subject=Request Chilli Powder Brochure"
                 className="flex-1 border-2 border-white/80 text-white font-['Montserrat'] font-extrabold text-[12px] tracking-wider py-[14px] px-6 rounded-full hover:bg-white hover:text-black hover:border-white hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 uppercase text-center whitespace-nowrap"
               >
                 Download Brochure

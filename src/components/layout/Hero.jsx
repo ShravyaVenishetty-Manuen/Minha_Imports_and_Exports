@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { FiArrowRight } from 'react-icons/fi';
 import chilliPowderImg from '../../assets/chilli-powder-hero.png';
 
 const Hero = () => {
@@ -15,7 +16,7 @@ const Hero = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIdx((prev) => (prev + 1) % bgImages.length);
-    }, 4000);
+    }, 4500);
     return () => clearInterval(timer);
   }, []);
 
@@ -25,27 +26,27 @@ const Hero = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3
+        staggerChildren: 0.15,
+        delayChildren: 0.2
       }
     }
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 25 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.8,
         ease: [0.16, 1, 0.3, 1] // premium cubic-bezier easeOut
       }
     }
   };
 
   return (
-    <section className="relative w-full h-screen overflow-hidden flex items-end justify-center bg-black">
-
+    <section className="relative w-full h-screen overflow-hidden flex items-center justify-center bg-black">
+      
       {/* Background Image Slideshow with smooth crossfade and Ken Burns scale effect */}
       <div className="absolute inset-0 z-0">
         {bgImages.map((image, index) => {
@@ -53,42 +54,47 @@ const Hero = () => {
           return (
             <motion.div
               key={index}
-              initial={{ opacity: index === 0 ? 1 : 0 }}
+              initial={{ opacity: index === 0 ? 1 : 0, scale: 1 }}
               animate={{
-                opacity: isActive ? 1 : 0
+                opacity: isActive ? 1 : 0,
+                scale: isActive ? 1.06 : 1
               }}
               transition={{
-                opacity: { duration: 2.8, ease: "easeInOut" }
+                opacity: { duration: 2.0, ease: "easeInOut" },
+                scale: { duration: 5.0, ease: "easeOut" }
               }}
-              className="absolute inset-0 bg-cover bg-center bg-fixed"
+              className="absolute inset-0 bg-cover bg-center"
               style={{ backgroundImage: `url(${image})` }}
             />
           );
         })}
-        {/* Dark overlay (60% opacity) */}
-        <div className="absolute inset-0 bg-black/60 z-10" />
+        {/* Dark overlay (65% opacity for crisp text readability) */}
+        <div className="absolute inset-0 bg-black/65 z-10" />
       </div>
 
+      {/* Radial ambient glow to boost visual depth */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#cca72f]/5 rounded-full blur-[120px] pointer-events-none z-15" />
+
       {/* Main Content */}
-      <div className="relative z-20 w-full max-w-4xl mx-auto px-6 text-center pb-16 md:pb-24">
+      <div className="relative z-20 w-full max-w-5xl mx-auto px-6 text-center pt-10">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="flex flex-col items-center space-y-6"
+          className="flex flex-col items-center space-y-6 md:space-y-8"
         >
           {/* Main Heading */}
           <motion.h1
             variants={itemVariants}
-            className="font-['Montserrat'] font-bold text-white text-[36px] md:text-[56px] leading-[1.2] md:leading-[1.1] tracking-[-0.02em]"
+            className="font-['Montserrat'] font-extrabold text-white text-[38px] sm:text-[48px] md:text-[62px] leading-[1.15] md:leading-[1.08] tracking-tight max-w-4xl"
           >
-            Premium Guntur Dry Red Chillies <span className="text-[#ffdad6] block md:inline">Exported Worldwide</span>
+            Premium Guntur Dry Red Chillies <span className="bg-gradient-to-r from-[#ffdad6] via-[#cca72f] to-[#ffdad6] bg-clip-text text-transparent block mt-2">Exported Worldwide</span>
           </motion.h1>
 
           {/* Subheading */}
           <motion.p
             variants={itemVariants}
-            className="font-['Inter'] font-normal text-white/90 text-[18px] leading-[1.6] max-w-2xl"
+            className="font-['Inter'] font-normal text-white/85 text-[15px] sm:text-[17px] md:text-[19px] leading-relaxed max-w-2xl text-white/95"
           >
             Delivering Quality, Purity and Trust Across Global Markets. We are your premium gateway to the finest spices from India's chilli capital.
           </motion.p>
@@ -96,24 +102,26 @@ const Hero = () => {
           {/* CTA Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col md:flex-row gap-4 pt-8 justify-center w-full md:w-auto"
+            className="flex flex-col sm:flex-row gap-4 pt-4 justify-center w-full sm:w-auto"
           >
             <Link
               to="/varieties"
-              className="bg-[#8f000d] text-white font-['Montserrat'] font-bold text-lg py-4 px-10 rounded hover:shadow-xl hover:-translate-y-1 transition-all duration-200 text-center"
+              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#8f000d] to-[#b22222] text-white font-['Montserrat'] font-bold text-[13px] sm:text-[14px] py-4 px-9 rounded-full shadow-lg shadow-[#8f000d]/30 hover:shadow-[#8f000d]/50 hover:translate-y-[-2px] active:scale-98 transition-all duration-300 uppercase tracking-wider group"
             >
               Explore Varieties
+              <FiArrowRight className="text-sm transition-transform group-hover:translate-x-1 duration-300" />
             </Link>
 
             <Link
-              to="/#contact"
-              className="border-2 border-white text-white font-['Montserrat'] font-bold text-lg py-4 px-10 rounded hover:bg-white hover:text-[#8f000d] transition-all duration-200 text-center"
+              to="/contact"
+              className="inline-flex items-center justify-center border border-white/30 backdrop-blur-sm text-white font-['Montserrat'] font-bold text-[13px] sm:text-[14px] py-4 px-9 rounded-full hover:bg-white hover:text-[#8f000d] hover:border-white hover:translate-y-[-2px] active:scale-98 transition-all duration-300 uppercase tracking-wider"
             >
               Contact Us
             </Link>
           </motion.div>
         </motion.div>
       </div>
+
     </section>
   );
 };

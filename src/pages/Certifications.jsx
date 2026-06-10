@@ -101,6 +101,7 @@ const whyPoints = [
 
 const Certifications = () => {
   const [activeCert, setActiveCert] = useState(null);
+  const [activePillar, setActivePillar] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -330,56 +331,242 @@ const Certifications = () => {
         </div>
       </section>
 
-      {/* ── 4. Compliance Standards Icon Grid ───────────────────────────────── */}
-      <section className="py-10 md:py-14 bg-surface">
-        <div className="max-w-[1280px] mx-auto px-6 md:px-12">
+      {/* ── 4. Compliance Standards (Premium Shield with Four Quadrants) ────── */}
+      <section className="py-5 md:py-6 bg-[#f5f1e6] relative overflow-hidden text-[#1a1c1e] border-y border-neutral-100/50">
 
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="text-center mb-10"
-          >
-            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
-              Compliance Standards
-            </span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[38px] text-[#1a1c1e] leading-tight">
-              Built on Four Pillars of Trust
-            </h2>
-            <div className="w-20 h-1 bg-[#8f000d] mx-auto mt-4 rounded-full" />
-          </motion.div>
+        {/* Glow Accents */}
+        <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#2c6a46]/4 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-[#8f000d]/3 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#cca72f]/2 rounded-full blur-3xl pointer-events-none" />
 
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
-          >
-            {complianceItems.map((item, i) => (
-              <motion.div
-                key={i}
-                variants={fadeUp}
-                className="bg-[#f9f9fc] rounded-2xl p-6 border border-neutral-100 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group"
-              >
-                <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center shadow-sm mb-5 group-hover:scale-110 transition-transform duration-300">
-                  {item.icon}
+        <div className="max-w-[1280px] mx-auto px-6 md:px-12 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+            {/* Left side text */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-5 text-left space-y-6"
+            >
+              <div>
+                <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.25em] text-[#2c6a46] uppercase inline-block mb-2">
+                  Compliance Standards
+                </span>
+                <h2 className="font-['Montserrat'] font-extrabold text-[36px] sm:text-[46px] leading-[1.15] text-[#1a1c1e] tracking-tight">
+                  Built on Four<br />Pillars of Trust
+                </h2>
+
+                {/* Elegant separator line */}
+                <div className="flex items-center gap-3 my-5">
+                  <div className="h-[1px] w-14 bg-gradient-to-r from-[#cca72f] to-[#cca72f]/20" />
+                  <div className="w-1.5 h-1.5 rotate-45 bg-[#cca72f]" />
+                  <div className="h-[1px] flex-1 bg-gradient-to-r from-[#cca72f]/20 to-transparent" />
                 </div>
-                <h4 className="font-['Montserrat'] font-bold text-[16px] text-[#1a1c1e] mb-2">
-                  {item.title}
-                </h4>
-                <p className="font-['Inter'] font-normal text-[#5a403e] text-[13px] leading-relaxed">
-                  {item.desc}
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
+              </div>
+
+              <p className="font-['Inter'] font-normal text-[#5a403e] text-[14px] sm:text-[15px] leading-relaxed max-w-md">
+                Ensuring global quality through internationally recognized standards and rigorous processes at every stage of sourcing and export.
+              </p>
+
+              <div className="pt-2">
+                <button
+                  onClick={() => {
+                    document.getElementById('all-certificates')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }}
+                  className="inline-flex items-center gap-2 border-2 border-[#8f000d]/45 text-[#8f000d] hover:text-white hover:bg-[#8f000d] px-7 py-3 rounded-full font-['Montserrat'] font-bold text-xs uppercase tracking-wider transition-all duration-300 hover:shadow-lg hover:shadow-[#8f000d]/10 active:scale-95"
+                >
+                  Our Certifications
+                  <FiArrowRight className="text-sm" />
+                </button>
+              </div>
+            </motion.div>
+
+            {/* Right side: Interactive Shield */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="lg:col-span-7 flex justify-center items-center"
+            >
+              <div className="relative w-full max-w-[480px] aspect-[400/440]">
+                {/* SVG Shield Background and Glows */}
+                <svg
+                  viewBox="0 0 400 440"
+                  className="w-full h-full drop-shadow-[0_8px_20px_rgba(0,0,0,0.08)]"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    {/* Metallic Gold Gradient for Borders */}
+                    <linearGradient id="goldBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#8a6f27" />
+                      <stop offset="25%" stopColor="#cca72f" />
+                      <stop offset="50%" stopColor="#ffd875" />
+                      <stop offset="75%" stopColor="#cca72f" />
+                      <stop offset="100%" stopColor="#8a6f27" />
+                    </linearGradient>
+
+                    {/* Radial Glow Gradients for Hover States */}
+                    <radialGradient id="greenGlow" cx="25%" cy="25%" r="45%">
+                      <stop offset="0%" stopColor="#10b981" stopOpacity="0.35" />
+                      <stop offset="100%" stopColor="#10b981" stopOpacity="0" />
+                    </radialGradient>
+                    <radialGradient id="goldGlow" cx="75%" cy="25%" r="45%">
+                      <stop offset="0%" stopColor="#f59e0b" stopOpacity="0.32" />
+                      <stop offset="100%" stopColor="#f59e0b" stopOpacity="0" />
+                    </radialGradient>
+                    <radialGradient id="blueGlow" cx="25%" cy="75%" r="45%">
+                      <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.35" />
+                      <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
+                    </radialGradient>
+                    <radialGradient id="purpleGlow" cx="75%" cy="75%" r="45%">
+                      <stop offset="0%" stopColor="#a855f7" stopOpacity="0.35" />
+                      <stop offset="100%" stopColor="#a855f7" stopOpacity="0" />
+                    </radialGradient>
+
+                    {/* ClipPath matching the exact outer boundary of the shield */}
+                    <clipPath id="shieldClip">
+                      <path d="M 200 30 C 130 20 60 15 20 25 C 20 130 15 230 35 300 C 55 370 120 415 200 435 C 280 415 345 370 365 300 C 385 230 380 130 380 25 C 340 15 270 20 200 30 Z" />
+                    </clipPath>
+                  </defs>
+
+                  {/* ── Quadrant Backgrounds (Clipped to Shield) ── */}
+                  <g clipPath="url(#shieldClip)">
+                    {/* Top Left - Product Safety */}
+                    <rect x="0" y="0" width="200" height="220" fill="#bdeed0" />
+
+                    {/* Top Right - Hygienic Handling */}
+                    <rect x="200" y="0" width="200" height="220" fill="#f9edd0" />
+
+                    {/* Bottom Left - Export Compliance */}
+                    <rect x="0" y="220" width="200" height="220" fill="#c4ddfc" />
+
+                    {/* Bottom Right - Doc Accuracy */}
+                    <rect x="200" y="220" width="200" height="220" fill="#fcdad7" />
+
+                    {/* ── Inner Dividers ── */}
+                    <line x1="200" y1="30" x2="200" y2="435" stroke="url(#goldBorderGrad)" strokeWidth="1" opacity="0.2" />
+                    <line x1="20" y1="220" x2="380" y2="220" stroke="url(#goldBorderGrad)" strokeWidth="1" opacity="0.2" />
+                  </g>
+
+                  {/* ── Shield Gold Borders (Double Outline) ── */}
+                  {/* Outer Gold Border */}
+                  <path
+                    d="M 200 30 C 130 20 60 15 20 25 C 20 130 15 230 35 300 C 55 370 120 415 200 435 C 280 415 345 370 365 300 C 385 230 380 130 380 25 C 340 15 270 20 200 30 Z"
+                    fill="none"
+                    stroke="url(#goldBorderGrad)"
+                    strokeWidth="3.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  {/* Inner Thin Gold Border */}
+                  <path
+                    d="M 200 40 C 133 30 68 26 30 35 C 30 130 26 222 43 290 C 61 355 123 403 200 422 C 277 403 339 355 357 290 C 374 222 370 130 370 35 C 332 26 267 30 200 40 Z"
+                    fill="none"
+                    stroke="url(#goldBorderGrad)"
+                    strokeWidth="1"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    opacity="0.4"
+                  />
+
+                  {/* ── Center Golden Seal / Wax Stamp ── */}
+                  <g className="filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.15)]">
+                    {/* Scalloped outer edge polygon */}
+                    <polygon
+                      points={(() => {
+                        let pts = [];
+                        const cx = 200, cy = 220, r1 = 44, r2 = 38, points = 28;
+                        for (let i = 0; i < points * 2; i++) {
+                          const angle = (i * Math.PI) / points;
+                          const r = i % 2 === 0 ? r1 : r2;
+                          const x = cx + r * Math.cos(angle);
+                          const y = cy + r * Math.sin(angle);
+                          pts.push(`${x.toFixed(1)},${y.toFixed(1)}`);
+                        }
+                        return pts.join(' ');
+                      })()}
+                      fill="url(#goldBorderGrad)"
+                      stroke="#8a6f27"
+                      strokeWidth="1"
+                    />
+                    {/* Inner raised circle */}
+                    <circle cx="200" cy="220" r="33" fill="url(#goldBorderGrad)" stroke="#8a6f27" strokeWidth="1" />
+                    {/* Dotted decorative inner circle */}
+                    <circle cx="200" cy="220" r="29" fill="none" stroke="#fff3d1" strokeWidth="0.8" strokeDasharray="2.5 1.5" opacity="0.6" />
+                    {/* Stamp Text */}
+                    <text x="200" y="214" textAnchor="middle" fill="#311f05" fontSize="8.5" fontWeight="900" fontFamily="Montserrat" letterSpacing="1.2">TRUST</text>
+                    <text x="200" y="228" textAnchor="middle" fill="#311f05" fontSize="6" fontWeight="800" fontFamily="Montserrat" letterSpacing="0.8">ASSURED</text>
+                  </g>
+                </svg>
+
+                {/* ── Grid Overlay with Text Content ── */}
+                <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 pointer-events-none">
+                  {/* Top-Left Quadrant Text */}
+                  <div className="pointer-events-auto pl-12 sm:pl-16 pr-4 sm:pr-6 pt-10 pb-4 flex flex-col justify-center items-center text-center">
+                    <div className="text-emerald-600 mb-2 shrink-0">
+                      <FiShield className="text-[20px] sm:text-[24px] md:text-[26px]" />
+                    </div>
+                    <h4 className="font-['Montserrat'] font-bold text-[11px] sm:text-[13px] md:text-[15px] text-[#1a1c1e] tracking-wide mb-1 leading-tight">
+                      Product Safety
+                    </h4>
+                    <p className="font-['Inter'] font-normal text-[#5a403e] text-[8.5px] sm:text-[9.5px] md:text-[11px] leading-relaxed max-w-[115px] sm:max-w-[145px]">
+                      Advanced testing for safe and residue-free products.
+                    </p>
+                  </div>
+
+                  {/* Top-Right Quadrant Text */}
+                  <div className="pointer-events-auto pr-12 sm:pr-16 pl-4 sm:pl-6 pt-10 pb-4 flex flex-col justify-center items-center text-center">
+                    <div className="text-amber-600 mb-2 shrink-0">
+                      <FiCheckCircle className="text-[20px] sm:text-[24px] md:text-[26px]" />
+                    </div>
+                    <h4 className="font-['Montserrat'] font-bold text-[11px] sm:text-[13px] md:text-[15px] text-[#1a1c1e] tracking-wide mb-1 leading-tight">
+                      Hygienic Handling
+                    </h4>
+                    <p className="font-['Inter'] font-normal text-[#5a403e] text-[8.5px] sm:text-[9.5px] md:text-[11px] leading-relaxed max-w-[115px] sm:max-w-[145px]">
+                      Strict hygiene and controlled processing environments.
+                    </p>
+                  </div>
+
+                  {/* Bottom-Left Quadrant Text */}
+                  <div className="pointer-events-auto pl-12 sm:pl-16 pr-4 sm:pr-6 pt-1 sm:pt-2 pb-16 sm:pb-20 flex flex-col justify-start items-center text-center">
+                    <div className="text-blue-600 mb-2 shrink-0">
+                      <FiGlobe className="text-[20px] sm:text-[24px] md:text-[26px]" />
+                    </div>
+                    <h4 className="font-['Montserrat'] font-bold text-[11px] sm:text-[13px] md:text-[15px] text-[#1a1c1e] tracking-wide mb-1 leading-tight">
+                      Export Compliance
+                    </h4>
+                    <p className="font-['Inter'] font-normal text-[#5a403e] text-[8.5px] sm:text-[9.5px] md:text-[11px] leading-relaxed max-w-[115px] sm:max-w-[145px]">
+                      Compliant with global MRL and phytosanitary regulations.
+                    </p>
+                  </div>
+
+                  {/* Bottom-Right Quadrant Text */}
+                  <div className="pointer-events-auto pr-12 sm:pr-16 pl-4 sm:pl-6 pt-1 sm:pt-2 pb-16 sm:pb-20 flex flex-col justify-start items-center text-center">
+                    <div className="text-purple-600 mb-2 shrink-0">
+                      <FiFileText className="text-[20px] sm:text-[24px] md:text-[26px]" />
+                    </div>
+                    <h4 className="font-['Montserrat'] font-bold text-[11px] sm:text-[13px] md:text-[15px] text-[#1a1c1e] tracking-wide mb-1 leading-tight">
+                      Doc Accuracy
+                    </h4>
+                    <p className="font-['Inter'] font-normal text-[#5a403e] text-[8.5px] sm:text-[9.5px] md:text-[11px] leading-relaxed max-w-[115px] sm:max-w-[145px]">
+                      Accurate and verifiable documents for seamless clearance.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </motion.div>
+
+          </div>
         </div>
       </section>
 
       {/* ── 5. Why Certifications Matter ────────────────────────────────────── */}
-      <section className="py-10 md:py-14 bg-[#f3f3f6]">
+      <section className="py-5 md:py-6 bg-[#f3f3f6]">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* Left: Points */}
@@ -388,10 +575,10 @@ const Certifications = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="order-2 md:order-1 space-y-5"
+            className="order-2 md:order-1 space-y-4"
           >
             <motion.div variants={fadeUp}>
-              <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#2c6a46] bg-[#2c6a46]/10 px-3 py-1 rounded-sm uppercase inline-block mb-3">
+              <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#2c6a46] bg-[#2c6a46]/10 px-3 py-1 rounded-sm uppercase inline-block mb-2">
                 Why It Matters
               </span>
               <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[38px] leading-[1.2] text-[#1a1c1e] tracking-tight">
@@ -399,7 +586,7 @@ const Certifications = () => {
               </h2>
             </motion.div>
 
-            <ul className="space-y-5 pt-2">
+            <ul className="space-y-4 pt-1">
               {whyPoints.map((pt, i) => (
                 <motion.li key={i} variants={fadeUp} className="flex items-start gap-4">
                   <div className="w-8 h-8 rounded-full bg-[#2c6a46]/10 flex items-center justify-center shrink-0 mt-0.5">
@@ -425,7 +612,7 @@ const Certifications = () => {
             <div className="absolute -bottom-4 -right-4 w-28 h-28 bg-[#8f000d]/10 rounded-xl rotate-3 -z-10 group-hover:rotate-0 transition-transform duration-500" />
             <img
               alt="Global Chilli Trade Logistics"
-              className="relative rounded-xl shadow-2xl w-full h-[380px] md:h-[440px] object-cover hover:scale-[1.01] transition-transform duration-500"
+              className="relative rounded-xl shadow-2xl w-full h-[300px] md:h-[350px] object-cover hover:scale-[1.01] transition-transform duration-500"
               src={chilliExportCta}
             />
           </motion.div>
@@ -453,11 +640,11 @@ const Certifications = () => {
 
       {/* ── 7. CTA ──────────────────────────────────────────────────────────── */}
       <section className="py-8 px-6 md:px-12 max-w-[850px] mx-auto z-10 relative">
-        <div className="relative rounded-[2rem] overflow-hidden text-center text-white py-12 md:py-14 shadow-2xl border border-white/[0.04] bg-gradient-to-br from-[#3d0008] via-[#220004] to-[#140002] group">
+        <div className="relative rounded-[2rem] overflow-hidden text-center text-white py-12 md:py-14 shadow-2xl border border-white/[0.04] bg-gradient-to-br from-[#2b210e] via-[#1d1609] to-[#0f0b04] group">
 
           {/* Glows */}
           <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none" />
-          <div className="absolute -top-32 -left-32 w-72 h-72 bg-[#8f000d]/25 rounded-full blur-3xl pointer-events-none group-hover:bg-[#8f000d]/35 transition-all duration-700" />
+          <div className="absolute -top-32 -left-32 w-72 h-72 bg-[#cca72f]/15 rounded-full blur-3xl pointer-events-none group-hover:bg-[#cca72f]/25 transition-all duration-700" />
           <div className="absolute -bottom-32 -right-32 w-64 h-64 bg-[#cca72f]/8 rounded-full blur-3xl pointer-events-none" />
 
           {/* Ship image overlay */}
@@ -490,12 +677,6 @@ const Certifications = () => {
                 className="w-full sm:w-auto bg-[#cca72f] text-[#140002] px-8 py-3.5 rounded-full font-['Montserrat'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-[#e0bc55] shadow-lg shadow-[#cca72f]/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
               >
                 Send Inquiry
-              </Link>
-              <Link
-                to="/contact"
-                className="w-full sm:w-auto border-2 border-white/30 text-white px-8 py-[12px] rounded-full font-['Montserrat'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-white/10 hover:border-white/60 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
-              >
-                Contact Us
               </Link>
             </div>
 

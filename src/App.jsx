@@ -7,7 +7,8 @@ import Products from './components/sections/Products'
 import OurProcess from './components/sections/OurProcess'
 import GlobalPresence from './components/sections/GlobalPresence'
 import WhyChooseUs from './components/sections/WhyChooseUs'
-import Contact from './components/sections/Contact'
+import ContactSection from './components/sections/Contact'
+import Contact from './pages/Contact'
 import Footer from './components/layout/Footer'
 import Varieties from './pages/Varieties'
 import ChilliDetail from './pages/ChilliDetail'
@@ -34,7 +35,7 @@ function App() {
                   <Products />
                   <OurProcess />
                   <GlobalPresence />
-                  <Contact />
+                  <ContactSection />
                 </>
               }
             />
@@ -45,6 +46,7 @@ function App() {
             <Route path="/quality" element={<QualityAssurance />} />
             <Route path="/facility" element={<Facility />} />
             <Route path="/certifications" element={<Certifications />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
         <Footer />

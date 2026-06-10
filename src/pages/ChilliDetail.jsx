@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { FiChevronRight, FiCheckCircle, FiMapPin, FiDroplet, FiAward, FiTag } from 'react-icons/fi';
+import { FiCheckCircle, FiMapPin, FiDroplet, FiAward, FiTag } from 'react-icons/fi';
 import { GiChiliPepper } from 'react-icons/gi';
 import { chilliVarieties } from '../config/chilliData';
 
 // Import local assets for gallery fallback
-import chilliHeroVarieties from '../assets/chilli-hero-varieties.png';
 import chilliIntroDry from '../assets/chilli-intro-dry.png';
 import chilliSpotlightDry from '../assets/chilli-spotlight-dry.png';
 import chilliBowlTable from '../assets/chilli-bowl-table.png';
-import chilliBasketFeatured from '../assets/chilli-basket-featured.png';
 import chilliExportCta from '../assets/chilli-export-cta.png';
-import chilliPileTransparent from '../assets/chilli-pile-transparent.png';
 import chilliPremium from '../assets/glowing-chilli-premium-remove-bg-io.png';
 
 const ChilliDetail = () => {
@@ -260,9 +257,9 @@ const ChilliDetail = () => {
               <a href="#inquire" className="flex-1 bg-[#8f000d] text-white py-4 rounded font-bold hover:bg-[#72000a] transition-all active:scale-95 text-center uppercase tracking-wider text-[11px] shadow-lg shadow-[#8f000d]/10">
                 Send Inquiry
               </a>
-              <a href="mailto:exports@minhaexports.com" className="flex-1 border border-neutral-200 text-[#1a1c1e] py-4 rounded font-bold hover:bg-neutral-50 transition-all active:scale-95 text-center uppercase tracking-wider text-[11px]">
+              <Link to="/contact" className="flex-1 border border-neutral-200 text-[#1a1c1e] py-4 rounded font-bold hover:bg-neutral-50 transition-all active:scale-95 text-center uppercase tracking-wider text-[11px]">
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -400,7 +397,7 @@ const ChilliDetail = () => {
       {/* 5. Applications Section */}
       <section className="py-12 bg-[#FAF8F4] border-t border-b border-neutral-100">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-          
+
           <div className="text-center mb-8">
             <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Industrial Supply Scope</span>
             <h3 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight text-center">Industrial Applications</h3>
@@ -412,15 +409,15 @@ const ChilliDetail = () => {
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
             {applications.map((app, idx) => (
               <div key={idx} className="flex flex-col text-left space-y-5 relative">
-                
+
                 {/* Number Overlay */}
                 <div className={`font-heading font-extrabold text-[72px] leading-none ${app.numColor} select-none`}>
                   {app.idx}
                 </div>
-                
+
                 {/* Accent Top Border */}
                 <div className={`border-t-2 ${app.accentLine} w-16 pt-3`} />
-                
+
                 <div>
                   <h4 className="font-heading font-bold text-[18px] text-[#1a1c1e] mb-3">{app.title}</h4>
                   <p className="text-neutral-500 font-body text-[13.5px] leading-relaxed mb-5">{app.desc}</p>
@@ -527,13 +524,13 @@ const ChilliDetail = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <a
-                href={`mailto:exports@minhaexports.com?subject=Enquiry for ${chilli.name}&body=Hello Minha Desk,%0D%0A%0D%0AI would like to request export details, certificates, and wholesale pricing for ${chilli.name}.`}
+                href={`mailto:minhaimportsexports@gmail.com?subject=Enquiry for ${chilli.name}&body=Hello Minha Desk,%0D%0A%0D%0AI would like to request export details, certificates, and wholesale pricing for ${chilli.name}.`}
                 className="bg-[#8f000d] text-white font-['Montserrat'] font-bold text-[12px] py-4 px-8 rounded-xl hover:bg-[#72000a] transition-all uppercase tracking-wider text-center shadow-lg shadow-[#8f000d]/20 hover:-translate-y-0.5 active:translate-y-0"
               >
                 Email Enquiry
               </a>
               <a
-                href="tel:+919876543210"
+                href="tel:+918185867999"
                 className="border border-[#8f000d]/20 text-[#8f000d] font-['Montserrat'] font-bold text-[12px] py-4 px-8 rounded-xl hover:bg-[#8f000d]/5 transition-all uppercase tracking-wider text-center hover:-translate-y-0.5 active:translate-y-0"
               >
                 Call Export Desk

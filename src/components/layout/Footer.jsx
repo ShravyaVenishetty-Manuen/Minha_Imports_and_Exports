@@ -1,17 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiLinkedin, FiGlobe, FiInstagram, FiFacebook, FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
+import vchatQrImg from '../../assets/vchat-qr.jpeg';
 
 const Footer = () => {
   return (
     <footer className="bg-[#111315] text-[#a0a5ad] font-['Inter'] relative overflow-hidden border-t border-white/[0.02]">
-      
+
       {/* Top Main Footer Area */}
-      <div className="max-w-[1280px] mx-auto px-6 md:px-12 pt-16 pb-12">
+      <div className="max-w-[1280px] mx-auto px-6 md:px-12 pt-16 pb-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12">
-          
-          {/* Column 1: Brand Info (4 cols on lg) */}
-          <div className="lg:col-span-4 space-y-6 text-left">
+
+          {/* Column 1: Brand Info (3 cols on lg) */}
+          <div className="lg:col-span-3 space-y-6 text-left">
             <div className="flex items-center gap-3">
               {/* Tractor Icon SVG */}
               <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#cca72f]/10 text-[#cca72f]">
@@ -33,12 +34,11 @@ const Footer = () => {
             {/* Social Icons */}
             <div className="flex items-center gap-3 pt-2">
               {[
-                { icon: <FiLinkedin className="w-4 h-4" />, href: "#" },
-                { icon: <FiGlobe className="w-4 h-4" />, href: "#" },
-                { icon: <FiInstagram className="w-4 h-4" />, href: "#" },
-                { icon: <FiFacebook className="w-4 h-4" />, href: "#" }
+                { icon: <FiLinkedin className="w-4 h-4" />, href: "https://in.linkedin.com/company/minha-imports-and-exports" },
+                { icon: <FiInstagram className="w-4 h-4" />, href: "https://www.instagram.com/dry_chilli_exporters/" },
+                { icon: <FiFacebook className="w-4 h-4" />, href: "https://www.facebook.com/DryRedChilliesExporter/" }
               ].map((social, sIdx) => (
-                <a 
+                <a
                   key={sIdx}
                   href={social.href}
                   className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:border-[#cca72f] hover:text-white transition-all duration-300 bg-white/[0.01]"
@@ -72,8 +72,8 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 3: Our Products (3 cols on lg) */}
-          <div className="lg:col-span-3 space-y-6 text-left">
+          {/* Column 3: Our Products (2 cols on lg) */}
+          <div className="lg:col-span-2 space-y-6 text-left">
             <h4 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
               Our Products
             </h4>
@@ -101,21 +101,35 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <FiMapPin className="w-4 h-4 text-[#cca72f] mt-1 shrink-0" />
                 <span className="text-[#a0a5ad]/95 leading-relaxed">
-                  Guntur Chilli Yard, <br />
-                  Andhra Pradesh, India
+                  Arundalpet 7/1, <br />
+                  Beside SBI ATM, <br />
+                  Andhra Pradesh, 522002
                 </span>
               </div>
-              <a href="mailto:exports@minhaexports.com" className="flex items-center gap-3 hover:text-white transition-colors">
+              <a href="mailto:minhaimportsexports@gmail.com" className="flex items-center gap-3 hover:text-white transition-colors">
                 <FiMail className="w-4 h-4 text-[#cca72f]" />
-                <span className="text-[#a0a5ad]/95">exports@minhaexports.com</span>
+                <span className="text-[#a0a5ad]/95">minhaimportsexports@gmail.com</span>
               </a>
-              <a href="tel:+919876543210" className="flex items-center gap-3 hover:text-white transition-colors">
+              <a href="tel:+918185867999" className="flex items-center gap-3 hover:text-white transition-colors">
                 <FiPhone className="w-4 h-4 text-[#cca72f]" />
-                <span className="text-[#a0a5ad]/95">+91 98765 43210</span>
+                <span className="text-[#a0a5ad]/95">+91 81858 67999</span>
               </a>
             </div>
           </div>
 
+          {/* Column 5: WeChat QR Connect (2 cols on lg) */}
+          <div className="lg:col-span-2 space-y-6 text-left">
+            <h4 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
+              WeChat Connect
+            </h4>
+            <div className="inline-block p-1 bg-white rounded-lg shadow-md border border-white/5">
+              <img
+                src={vchatQrImg}
+                alt="Minha WeChat QR Contact"
+                className="w-20 h-20 object-contain rounded"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
@@ -125,16 +139,15 @@ const Footer = () => {
       {/* Bottom Bar Area */}
       <div className="bg-[#0b0c0d] text-[12px] text-[#a0a5ad]/50 py-6 px-6 md:px-12 font-['Montserrat']">
         <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          
+
           {/* Copyright */}
           <div>
             © 2026 Minha Imports & Exports. All Rights Reserved.
           </div>
 
-          {/* Designer Credit & Secure Badge */}
+          {/* Secure Badge */}
           <div className="flex items-center gap-6 uppercase tracking-wider text-[11px] font-semibold text-[#a0a5ad]/40">
-            <span>Designed by Global Trade Media</span>
-            <span className="border-l border-white/10 pl-6">Secure Site</span>
+            <span>Secure Site</span>
           </div>
 
         </div>

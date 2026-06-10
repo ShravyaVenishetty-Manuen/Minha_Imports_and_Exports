@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
 import chilliBasketImg from '../../assets/chilli-basket-featured.png';
@@ -97,10 +98,10 @@ const Products = () => {
             </ul>
 
             {/* Pill-shaped Button */}
-            <button className="bg-[#B22222] hover:bg-[#9c1e1e] text-white font-['Montserrat'] font-semibold text-[15px] tracking-wide py-4 px-10 rounded-full shadow-[0_4px_15px_rgba(178,34,34,0.15)] hover:shadow-[0_8px_25px_rgba(178,34,34,0.25)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 group cursor-pointer border-none">
+            <Link to="/varieties" className="bg-[#B22222] hover:bg-[#9c1e1e] text-white font-['Montserrat'] font-semibold text-[15px] tracking-wide py-4 px-10 rounded-full shadow-[0_4px_15px_rgba(178,34,34,0.15)] hover:shadow-[0_8px_25px_rgba(178,34,34,0.25)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 group cursor-pointer border-none">
               <span>Explore Varieties</span>
               <FiArrowRight className="text-lg transition-transform duration-300 group-hover:translate-x-1" />
-            </button>
+            </Link>
           </motion.div>
 
           {/* Center Column: Circular centerpiece image and overlap logic */}
@@ -172,10 +173,10 @@ const Products = () => {
             </ul>
 
             {/* Pill-shaped Button */}
-            <button className="bg-[#1F5E3B] hover:bg-[#184a2e] text-white font-['Montserrat'] font-semibold text-[15px] tracking-wide py-4 px-10 rounded-full shadow-[0_4px_15px_rgba(31,94,59,0.15)] hover:shadow-[0_8px_25px_rgba(31,94,59,0.25)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 group cursor-pointer border-none">
+            <Link to="/powder" className="bg-[#1F5E3B] hover:bg-[#184a2e] text-white font-['Montserrat'] font-semibold text-[15px] tracking-wide py-4 px-10 rounded-full shadow-[0_4px_15px_rgba(31,94,59,0.15)] hover:shadow-[0_8px_25px_rgba(31,94,59,0.25)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 group cursor-pointer border-none">
               <span>Explore Product</span>
               <FiArrowRight className="text-lg transition-transform duration-300 group-hover:translate-x-1" />
-            </button>
+            </Link>
           </motion.div>
 
         </div>

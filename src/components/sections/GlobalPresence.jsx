@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FiArrowRight } from 'react-icons/fi';
 import globalMapFlat from '../../assets/global-map-flat.png';
 
@@ -56,13 +57,13 @@ const GlobalPresence = () => {
             </p>
 
             <div className="pt-2">
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 className="inline-flex items-center gap-2 bg-[#1F5E3B] text-white text-xs font-['Montserrat'] font-bold py-3.5 px-8 rounded-lg shadow-md hover:bg-[#17482d] hover:translate-y-[-2px] active:scale-95 transition-all duration-300 uppercase tracking-wider"
               >
                 Contact Us
                 <FiArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
             </div>
 
             {/* Divider */}

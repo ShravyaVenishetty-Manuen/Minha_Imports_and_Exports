@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const About = () => {
@@ -55,9 +56,12 @@ const About = () => {
           </p>
 
           {/* Text CTA Link */}
-          <button className="border-b-2 border-[#8f000d] text-[#8f000d] font-['Montserrat'] font-semibold text-[14px] pb-1 hover:opacity-70 transition-opacity focus:outline-none cursor-pointer">
+          <Link
+            to="/about"
+            className="inline-block border-b-2 border-[#8f000d] text-[#8f000d] font-['Montserrat'] font-semibold text-[14px] pb-1 hover:opacity-70 transition-opacity focus:outline-none cursor-pointer"
+          >
             Learn More About Our Legacy
-          </button>
+          </Link>
         </motion.div>
 
       </div>

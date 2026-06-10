@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiArrowRight, FiCheck, FiFilter, FiInfo, FiMail, FiDroplet, FiFileText, FiShield } from 'react-icons/fi';
+import { FiArrowRight, FiCheck, FiFilter, FiInfo, FiMail, FiDroplet, FiFileText, FiShield, FiCheckCircle } from 'react-icons/fi';
 import { GiChiliPepper } from 'react-icons/gi';
 import { chilliVarieties } from '../config/chilliData';
 import chilliHeroVarieties from '../assets/chilli-hero-varieties.png';
@@ -499,48 +499,83 @@ const Varieties = () => {
       </section>
 
       {/* 6. Inquiry CTA Section */}
-      <section id="inquire" className="relative py-10 md:py-14 px-6 md:px-12 text-center overflow-hidden">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center z-0"
-          style={{
-            backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVj0qp7LLHAyv_4L6dEyYOj2XCvKhERazA8eID7bpVjaycfYjbPQKpTKuBf4fDx-CZz2ups529LoRZbW2MS__yeFS28oUR-pbeM-13_HqgpEF3SGTPZawKBezGGzyTK2b7Apkps9v1IPYPGaym3lQ0ZtfXiZeFPBcwCTuSM9H57byVU3kMFqrdQFETu9ayiU5PKkl4IwHdtA4EWSvA8Z5_4hgWSj67_o8-eyf-KIjaWK62zHmDrGHRvW440-RjZHAmj1h9UPTLX78')`
-          }}
-        />
-        {/* Dark overlay for readability */}
-        <div className="absolute inset-0 bg-black/40 z-0" />
+      <section id="inquire" className="relative bg-[#FAF8F4] py-8 px-6 md:px-12 overflow-hidden border-t border-neutral-100">
+        <div className="max-w-[960px] mx-auto relative z-10">
+          
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            whileHover={{ y: -3 }}
+            style={{
+              backgroundImage: `
+                linear-gradient(135deg, rgba(13, 24, 18, 0.45) 0%, rgba(8, 16, 12, 0.75) 100%),
+                url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVj0qp7LLHAyv_4L6dEyYOj2XCvKhERazA8eID7bpVjaycfYjbPQKpTKuBf4fDx-CZz2ups529LoRZbW2MS__yeFS28oUR-pbeM-13_HqgpEF3SGTPZawKBezGGzyTK2b7Apkps9v1IPYPGaym3lQ0ZtfXiZeFPBcwCTuSM9H57byVU3kMFqrdQFETu9ayiU5PKkl4IwHdtA4EWSvA8Z5_4hgWSj67_o8-eyf-KIjaWK62zHmDrGHRvW440-RjZHAmj1h9UPTLX78')
+              `,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+            className="relative rounded-[20px] md:rounded-[28px] overflow-hidden px-5 py-7 sm:px-8 sm:py-9 md:py-10 md:px-12 shadow-[0_15px_40px_rgba(31,94,59,0.15)] border border-[#1f5e3b]/10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 md:gap-8 transition-all duration-300"
+          >
+            {/* Decorative glows inside card */}
+            <div className="absolute top-0 right-0 w-[260px] h-[260px] bg-[#cca72f]/10 rounded-full blur-[70px] pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[180px] h-[180px] bg-white/5 rounded-full blur-[50px] pointer-events-none" />
 
-        {/* Dot pattern overlay */}
-        <div
-          className="absolute inset-0 z-0 opacity-10"
-          style={{
-            backgroundImage: 'radial-gradient(rgba(255, 255, 255, 0.15) 1.5px, transparent 1.5px)',
-            backgroundSize: '24px 24px'
-          }}
-        />
+            {/* Left: Text & badges */}
+            <div className="space-y-4 lg:max-w-xl text-left relative z-10">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 border border-white/20 text-[#cca72f] font-['Montserrat'] font-bold text-[8.5px] sm:text-[9px] tracking-widest uppercase">
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#cca72f] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#cca72f]"></span>
+                </span>
+                Bulk Procurement
+              </div>
+              
+              <h2 className="font-['Montserrat'] font-bold text-[22px] sm:text-[26px] md:text-[30px] leading-[1.25] text-white tracking-tight">
+                Need Bulk Chilli Supply for <br className="hidden sm:inline" /> Export or Processing?
+              </h2>
 
-        <div className="max-w-4xl mx-auto relative z-10 space-y-8 text-white">
-          <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[44px] leading-tight text-white tracking-wide">
-            Need Bulk Chilli Supply for <br className="hidden sm:inline" /> Export or Processing?
-          </h2>
-          <p className="font-['Inter'] text-white/90 text-[15px] sm:text-[17px] md:text-[18px] max-w-2xl mx-auto leading-relaxed">
-            Partner with India’s premier chilli export desk. Request specialized quotes, certificate reports, and booking timelines for your trade volume.
-          </p>
+              <p className="font-['Inter'] font-normal text-[13px] sm:text-[13.5px] leading-relaxed text-white/80">
+                Partner with India’s premier chilli export desk. Request specialized quotes, certificate reports, and booking timelines for your trade volume.
+              </p>
 
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
-            <a
-              href="mailto:exports@minhaexports.com"
-              className="bg-white text-[#1f5e3b] font-['Montserrat'] font-bold text-[14px] py-4 px-10 rounded-xl hover:bg-neutral-50 hover:translate-y-[-2px] transition-all duration-300 uppercase tracking-wider shadow-lg text-center"
-            >
-              Contact Us
-            </a>
-            <a
-              href="tel:+919876543210"
-              className="bg-[#8f000d] text-white font-['Montserrat'] font-bold text-[14px] py-4 px-10 rounded-xl hover:bg-[#72000a] hover:translate-y-[-2px] transition-all duration-300 uppercase tracking-wider shadow-lg text-center"
-            >
-              Send Enquiry
-            </a>
-          </div>
+              {/* Checkmark trade highlights */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-0.5">
+                {[
+                  "100% Pure & Tested",
+                  "ASTA Compliant Quality",
+                  "Custom Packing Formats"
+                ].map((text, idx) => (
+                  <div key={idx} className="flex items-center gap-1.5 bg-white/5 border border-white/10 rounded-lg px-2.5 py-1.5">
+                    <FiCheckCircle className="text-[#cca72f] text-xs shrink-0" />
+                    <span className="font-['Montserrat'] font-bold text-[8.5px] sm:text-[9px] text-white/90 uppercase tracking-wider">
+                      {text}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right: Buttons */}
+            <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row shrink-0 items-stretch sm:items-center lg:items-stretch xl:items-center justify-start gap-3 relative z-10 min-w-[180px]">
+              <a
+                href="mailto:exports@minhaexports.com"
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/25 text-white font-['Montserrat'] font-bold text-[11.5px] sm:text-[12px] py-[12px] px-[22px] rounded-full shadow-md active:scale-98 transition-all duration-300 uppercase tracking-wider text-center"
+              >
+                <FiMail className="text-sm shrink-0" />
+                Contact Us
+              </a>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#8f000d] to-[#b22222] hover:shadow-[0_6px_20px_-2px_rgba(143,0,13,0.3)] text-white font-['Montserrat'] font-bold text-[11.5px] sm:text-[12px] py-[12px] px-[22px] rounded-full shadow-lg shadow-[#8f000d]/20 hover:translate-y-[-2px] active:scale-98 transition-all duration-300 uppercase tracking-wider text-center group"
+              >
+                Send Enquiry
+                <FiArrowRight className="text-xs transition-transform group-hover:translate-x-1 duration-300" />
+              </Link>
+            </div>
+
+          </motion.div>
         </div>
       </section>
 

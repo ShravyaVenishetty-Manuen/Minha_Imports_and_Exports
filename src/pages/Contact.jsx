@@ -1,0 +1,942 @@
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import cargoShipImg from '../assets/image.png';
+import chilliBowlTable from '../assets/chilli-bowl-table.png';
+import chilliProcessingFacility from '../assets/chilli-processing-facility.png';
+import {
+  FiPhone,
+  FiMail,
+  FiMapPin,
+  FiClock,
+  FiMessageSquare,
+  FiCheckCircle,
+  FiChevronDown,
+  FiSend,
+  FiAward,
+  FiPackage,
+  FiGlobe
+} from 'react-icons/fi';
+import {
+  MdInventory2,
+  MdVerified,
+  MdLocalShipping,
+  MdPublic
+} from 'react-icons/md';
+
+const contactHeroBg = "https://lh3.googleusercontent.com/aida-public/AB6AXuBYTOWWYX2-AEwKGMeXEuiMKGJwYFQMq_0kSqSOUSHpcnvvBCs5I_5jNCxuIeHzMTGHDDWa6owpq-GVB_Rj5ZiR4NoZOKT-5zVR4PMoWarzzg19fTy-V12ePX3ga5QCJU0nllLzz7lM-tTEz8nEfVgQf5Z17rEbLHwWtdTTccE_yckslC6IPnbrJYYBapFFMiAyA8Y_c3whQhh8hp02falfMdifDkhirhArCKXjxnyVHbtojz_4pHZJGfXPJC-aQATDnMGCC1TxLwE";
+const mapPlaceholder = "https://lh3.googleusercontent.com/aida-public/AB6AXuC3x56T1qRHhq531WUCaybQlcCfcvzUrJ_gr3lLpDLNr0Xtof5QyVZVgEhVl8qlRSHmKl_LQVucdqFYOZJLe_pJvSRdFOIvsvJ3OZgQfflkXunGhpcUFhrHauTg7VhepwfcgCVrLZC5KJb4c2Vq9whmCJaXM29wVYKVkf0oAXPdEPuXOUsWqzNnJx9-oxQmpATbaKDy-ob1pZcmnBvTlLrbhsF0zizgF8OduM91d7ufGpbiRpGr1SDJpkKjJjOkMFD1CBfUv6A7M28";
+
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 25 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }
+};
+
+const stagger = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
+};
+
+const Contact = () => {
+  const [openFaq, setOpenFaq] = useState(null);
+  const [submitted, setSubmitted] = useState(false);
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    company: '',
+    country: '',
+    email: '',
+    phone: '',
+    reqType: 'Bulk Order',
+    message: ''
+  });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const toggleFaq = (index) => {
+    setOpenFaq(prev => prev === index ? null : index);
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+    setIsFlipped(true);
+    setTimeout(() => {
+      setSubmitted(false);
+      setIsFlipped(false);
+      setFormData({
+        name: '',
+        company: '',
+        country: '',
+        email: '',
+        phone: '',
+        reqType: 'Bulk Order',
+        message: ''
+      });
+    }, 4500);
+  };
+
+  const highlights = [
+    {
+      icon: <MdInventory2 className="text-[#2c6a46] text-[24px]" />,
+      title: "Bulk Order Support",
+      desc: "Capacity to fulfill high-volume seasonal demands with consistent quality standards.",
+      borderColor: "border-[#2c6a46]"
+    },
+    {
+      icon: <MdVerified className="text-[#8f000d] text-[24px]" />,
+      title: "Reliable Sourcing",
+      desc: "Direct sourcing from the heart of Guntur's finest farms and markets.",
+      borderColor: "border-[#8f000d]"
+    },
+    {
+      icon: <MdLocalShipping className="text-[#cca72f] text-[24px]" />,
+      title: "Timely Shipment",
+      desc: "End-to-end logistics tracking for prompt international delivery schedules.",
+      borderColor: "border-[#cca72f]"
+    },
+    {
+      icon: <MdPublic className="text-[#2c6a46] text-[24px]" />,
+      title: "Trade Readiness",
+      desc: "Fully compliant with international food safety and trade regulations.",
+      borderColor: "border-[#2c6a46]"
+    }
+  ];
+
+  const faqs = [
+    {
+      q: "What is the minimum order quantity for export?",
+      a: "We typically handle bulk orders starting from 1 metric ton (MT) for international shipments. For specific varieties like Teja or Byadgi, MOQs may vary based on seasonal availability."
+    },
+    {
+      q: "Do you provide product samples before large orders?",
+      a: "Yes, we provide lab-tested samples for quality verification. Shipping charges for samples are usually borne by the inquirer, which can be adjusted in the final commercial invoice."
+    },
+    {
+      q: "What packaging options are available?",
+      a: "We offer standard 5kg, 10kg, 25kg, and 50kg Gunny bags or PP bags. Customized private labeling and vacuum packaging are also available upon request for premium retail clients."
+    },
+    {
+      q: "Which international regions do you export to?",
+      a: "We currently export to North America, Europe, Southeast Asia, and the Middle East. Our logistics partners ensure compliance with regional customs and food safety import standards."
+    }
+  ];
+
+  return (
+    <div className="bg-[#f9f9fc] text-[#1a1c1e] font-body">
+      <style>{`
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus,
+        textarea:-webkit-autofill,
+        textarea:-webkit-autofill:hover,
+        textarea:-webkit-autofill:focus {
+          -webkit-text-fill-color: #1a1c1e !important;
+          box-shadow: 0 0 0px 1000px #ffffff inset !important;
+          -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+          transition: background-color 5000s ease-in-out 0s !important;
+        }
+      `}</style>
+
+      {/* ── 1. Hero Section ─────────────────────────────────────────────────── */}
+      <section className="relative h-[350px] md:h-[420px] w-full flex items-center justify-center text-center text-white overflow-hidden bg-neutral-900 pt-20">
+        <div className="absolute inset-0 bg-black/60 z-10" />
+        <img
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          alt="International Cargo Port Sourcing"
+          src={contactHeroBg}
+        />
+        <div className="relative z-20 w-full max-w-4xl mx-auto text-center space-y-5 px-6">
+          <nav aria-label="Breadcrumb" className="flex justify-center items-center gap-2 font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#cca72f] uppercase mb-2">
+            <Link className="hover:text-white transition-colors" to="/">Home</Link>
+            <span className="text-white/60">/</span>
+            <span className="text-white">Contact</span>
+          </nav>
+          <h1 className="font-['Montserrat'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
+            Contact Us
+          </h1>
+          <p className="font-['Inter'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
+            Connect With Us for Premium Guntur Chilli Exports and Business Inquiries
+          </p>
+        </div>
+      </section>
+
+      {/* ── 2. Global Export Partnerships ────────────────────────────────────── */}
+      <section className="py-8 bg-white">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+          <div className="bg-white rounded-[20px] shadow-[0_8px_50px_rgba(0,0,0,0.07)] border border-neutral-100 overflow-hidden">
+            <div className="flex flex-col lg:flex-row min-h-[360px]">
+
+              {/* LEFT: Text Content */}
+              <div className="w-full lg:w-[32%] shrink-0 flex flex-col justify-center px-8 md:px-10 py-10 border-b lg:border-b-0 lg:border-r border-neutral-100">
+                <span className="font-['Montserrat'] font-bold text-[10px] tracking-[0.25em] text-[#A50F15] uppercase mb-4 block">
+                  OUR REACH
+                </span>
+                <h2 className="font-['Montserrat'] font-extrabold text-[26px] md:text-[32px] leading-[1.2] text-[#111827] mb-4 tracking-tight">
+                  Global Export Partnerships
+                </h2>
+                <div className="w-10 h-[3px] bg-[#2E6F4F] mb-5 rounded-full" />
+                <p className="font-['Inter'] font-normal text-[#6B7280] text-[13px] md:text-[14px] leading-[1.8]">
+                  We welcome importers, wholesalers, food manufacturers, and retail distributors worldwide. Our infrastructure is designed to handle large-scale international orders while maintaining strict quality standards and logistics transparency.
+                </p>
+              </div>
+
+              {/* RIGHT: Cargo Ship Image as FULL background, cards overlaid on top */}
+              <div className="w-full lg:w-[68%] relative overflow-hidden min-h-[360px]">
+                {/* Full background image */}
+                <img
+                  src={cargoShipImg}
+                  alt="International cargo ship with airplane - Minha Export Logistics"
+                  className="absolute inset-0 w-full h-full object-cover object-left"
+                />
+                {/* Dark overlay for readability */}
+                <div className="absolute inset-0 bg-black/30 pointer-events-none" />
+
+                {/* Contact Cards overlaid on the right side of the image */}
+                <div className="absolute inset-y-0 right-0 w-full sm:w-[40%] flex flex-col justify-center gap-2 p-3 z-10">
+
+                  {/* Phone */}
+                  <div className="flex items-center gap-2.5 px-3 py-2.5 bg-white rounded-lg shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 group">
+                    <div className="w-8 h-8 rounded-full border-[2px] border-[#A50F15] flex items-center justify-center shrink-0">
+                      <FiPhone className="text-[#A50F15] text-[13px]" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="w-6 h-[2px] bg-[#2E6F4F] mb-1 rounded-full" />
+                      <h4 className="font-['Montserrat'] font-bold text-[12px] text-[#111827] mb-0.5">Phone</h4>
+                      <a href="tel:+919876543210" className="block font-['Inter'] text-[11px] text-[#374151] hover:text-[#2E6F4F] transition-colors leading-[1.5]">+91 98765 43210</a>
+                      <a href="tel:+918123456789" className="block font-['Inter'] text-[11px] text-[#374151] hover:text-[#2E6F4F] transition-colors leading-[1.5]">+91 81234 56789</a>
+                    </div>
+                  </div>
+
+                  {/* Email */}
+                  <div className="flex items-center gap-2.5 px-3 py-2.5 bg-white rounded-lg shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 group">
+                    <div className="w-8 h-8 rounded-full border-[2px] border-[#A50F15] flex items-center justify-center shrink-0">
+                      <FiMail className="text-[#A50F15] text-[13px]" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="w-6 h-[2px] bg-[#2E6F4F] mb-1 rounded-full" />
+                      <h4 className="font-['Montserrat'] font-bold text-[12px] text-[#111827] mb-0.5">Email</h4>
+                      <a href="mailto:exports@minhaexports.com" className="block font-['Inter'] text-[11px] text-[#374151] hover:text-[#2E6F4F] transition-colors leading-[1.5] break-all">exports@minhaexports.com</a>
+                      <a href="mailto:trade@minhaexports.com" className="block font-['Inter'] text-[11px] text-[#374151] hover:text-[#2E6F4F] transition-colors leading-[1.5] break-all">trade@minhaexports.com</a>
+                    </div>
+                  </div>
+
+                  {/* Office Address */}
+                  <div className="flex items-center gap-2.5 px-3 py-2.5 bg-white rounded-lg shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 group">
+                    <div className="w-8 h-8 rounded-full border-[2px] border-[#A50F15] flex items-center justify-center shrink-0">
+                      <FiMapPin className="text-[#A50F15] text-[13px]" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="w-6 h-[2px] bg-[#2E6F4F] mb-1 rounded-full" />
+                      <h4 className="font-['Montserrat'] font-bold text-[12px] text-[#111827] mb-0.5">Office Address</h4>
+                      <p className="font-['Inter'] text-[11px] text-[#374151] leading-[1.5]">Arundalpet 7/1,<br />Beside SBI ATM, Guntur, AP, India – 522002</p>
+                    </div>
+                  </div>
+
+                  {/* Working Hours */}
+                  <div className="flex items-center gap-2.5 px-3 py-2.5 bg-white rounded-lg shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 group">
+                    <div className="w-8 h-8 rounded-full border-[2px] border-[#A50F15] flex items-center justify-center shrink-0">
+                      <FiClock className="text-[#A50F15] text-[13px]" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="w-6 h-[2px] bg-[#2E6F4F] mb-1 rounded-full" />
+                      <h4 className="font-['Montserrat'] font-bold text-[12px] text-[#111827] mb-0.5">Working Hours</h4>
+                      <p className="font-['Inter'] text-[11px] text-[#374151] leading-[1.5]">Mon – Sat: 9 AM – 6 PM</p>
+                      <p className="font-['Inter'] text-[11px] text-[#A50F15] font-semibold leading-[1.5]">Closed on Sundays</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 3. Inquiry Form & Highlights (3D Flipping Card) ─────────────────── */}
+      <section className="py-10 md:py-14 bg-[#f9f9fc] border-t border-b border-neutral-100 relative overflow-hidden">
+        {/* Soft background ambient glows */}
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#cca72f]/5 rounded-full pointer-events-none blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#8f000d]/4 rounded-full pointer-events-none blur-3xl" />
+
+        <div className="max-w-[1280px] mx-auto px-6 md:px-12 relative z-10">
+
+          <div className="text-center mb-8 max-w-2xl mx-auto">
+            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.25em] text-[#8f000d] bg-[#8f000d]/10 px-4 py-1.5 rounded-full uppercase inline-block mb-3">
+              Interactive Portal
+            </span>
+            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-tight text-[#1a1c1e] tracking-tight">
+              Global Sourcing Gateway
+            </h2>
+            <div className="w-16 h-[3px] bg-[#cca72f] mx-auto my-5 rounded-full" />
+            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] leading-relaxed">
+              Experience our seamless digital procurement portal. Fill out our interactive inquiry form below to submit your custom spice requirements directly to our trade specialists.
+            </p>
+          </div>
+
+          {/* 3D Perspective Card Wrapper Container */}
+          <div
+            style={{ perspective: '2000px', width: '100%' }}
+            className="relative w-full min-h-[1140px] md:min-h-[980px] lg:min-h-[760px] transition-all duration-300"
+          >
+            <div
+              style={{
+                transformStyle: 'preserve-3d',
+                transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+                transition: 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
+                position: 'absolute',
+                inset: 0,
+                width: '100%',
+                height: '100%',
+                willChange: 'transform',
+              }}
+            >
+
+              {/* CARD FRONT FACE */}
+              <div
+                style={{
+                  backfaceVisibility: 'hidden',
+                  position: 'absolute',
+                  inset: 0,
+                  width: '100%',
+                  height: '100%',
+                  borderRadius: '2.5rem',
+                  boxShadow: '0 20px 50px rgba(0,0,0,0.06)',
+                  border: '1px solid rgba(0,0,0,0.04)',
+                  overflow: 'hidden',
+                  backgroundColor: '#ffffff'
+                }}
+                className="flex flex-col lg:flex-row h-full"
+              >
+                {/* Left Side: Sourcing highlights */}
+                <div className="w-full lg:w-5/12 bg-gradient-to-br from-[#2f0307] via-[#150204] to-[#090001] text-white p-6 sm:p-8 md:p-12 flex flex-col justify-between relative overflow-hidden">
+                  <div className="absolute -top-20 -left-20 w-60 h-60 bg-[#cca72f]/10 rounded-full blur-3xl pointer-events-none" />
+                  <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-[#8f000d]/20 rounded-full blur-3xl pointer-events-none" />
+                  <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.005)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.005)_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none" />
+
+                  <div className="relative z-10 flex flex-col h-full justify-between gap-8">
+                    <div>
+                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-['Montserrat'] font-bold text-[9px] tracking-widest uppercase mb-6 sm:mb-8">
+                        <span className="relative flex h-2 w-2">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                        </span>
+                        Trade Desk Online
+                      </div>
+
+                      <span className="font-['Montserrat'] font-semibold text-[10px] tracking-[0.2em] text-[#cca72f] uppercase block mb-1">
+                        Minha Imports & Exports
+                      </span>
+                      <h3 className="font-['Montserrat'] font-extrabold text-[26px] md:text-[30px] leading-tight text-white mb-4 sm:mb-5">
+                        Export Sourcing
+                      </h3>
+                      <p className="font-['Inter'] font-normal text-white/70 text-[13px] md:text-[14px] leading-relaxed mb-6 sm:mb-8 max-w-sm text-left">
+                        Partner with India's premier agricultural exporter. We secure premium quality dry red chilli varieties tailored to your exact specifications.
+                      </p>
+
+                      {/* Badges / Highlights */}
+                      <div className="space-y-5 sm:space-y-6">
+                        {highlights.map((hl, i) => (
+                          <div key={i} className="flex gap-4 group">
+                            <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 text-[#cca72f] group-hover:scale-105 group-hover:bg-white/10 group-hover:border-[#cca72f]/30 transition-all duration-300">
+                              {React.cloneElement(hl.icon, { className: "text-[#cca72f] text-[20px]" })}
+                            </div>
+                            <div className="text-left">
+                              <h4 className="font-['Montserrat'] font-bold text-[13px] sm:text-[14px] text-white tracking-wide">
+                                {hl.title}
+                              </h4>
+                              <p className="font-['Inter'] font-normal text-white/50 text-[11px] sm:text-[12px] leading-relaxed mt-0.5 max-w-xs">
+                                {hl.desc}
+                              </p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Bottom Trade Details */}
+                    <div className="pt-5 border-t border-white/10 flex items-center justify-between">
+                      <div className="text-left">
+                        <span className="font-['Montserrat'] text-[8px] sm:text-[9px] tracking-wider text-white/40 uppercase block">Average Response</span>
+                        <span className="font-['Montserrat'] text-[13px] sm:text-[14px] font-bold text-white leading-none mt-1 block">&lt; 12 Hours</span>
+                      </div>
+                      <div className="text-right">
+                        <span className="font-['Montserrat'] text-[8px] sm:text-[9px] tracking-wider text-[#cca72f] uppercase block">Global Sourcing</span>
+                        <span className="font-['Montserrat'] text-[13px] sm:text-[14px] font-bold text-[#cca72f] leading-none mt-1 block">ASTA Compliant</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Side: Interactive Sourcing Inquiry Form */}
+                <div className="w-full lg:w-7/12 p-6 sm:p-8 md:p-10 flex flex-col justify-center relative overflow-hidden bg-white text-left">
+                  {/* Background image watermark */}
+                  <img
+                    src={chilliBowlTable}
+                    alt="Dried red Guntur chilli exports"
+                    className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none opacity-[0.08]"
+                  />
+
+                  <div className="relative z-10">
+                    <div className="mb-5 text-left">
+                      <h3 className="font-['Montserrat'] font-extrabold text-[20px] sm:text-[22px] text-[#1a1c1e] tracking-tight">
+                        Inquiry Form
+                      </h3>
+                      <p className="font-['Inter'] font-normal text-neutral-600 text-[12px] mt-0.5">
+                        Initiate verification of specifications.
+                      </p>
+                    </div>
+
+                    <form onSubmit={handleSubmit} className="space-y-4">
+
+                      {/* Grid for inputs */}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                        {/* Full Name */}
+                        <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-2xl px-4 py-2 transition-all duration-300 bg-white text-left shadow-sm">
+                          <label className="block font-['Montserrat'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Full Name *</label>
+                          <input
+                            required
+                            name="name"
+                            value={formData.name}
+                            onChange={handleInputChange}
+                            className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Inter'] placeholder-neutral-400"
+                            placeholder="e.g. John Doe"
+                            type="text"
+                          />
+                        </div>
+
+                        {/* Company Name */}
+                        <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-2xl px-4 py-2 transition-all duration-300 bg-white text-left shadow-sm">
+                          <label className="block font-['Montserrat'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Company Name</label>
+                          <input
+                            name="company"
+                            value={formData.company}
+                            onChange={handleInputChange}
+                            className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Inter'] placeholder-neutral-400"
+                            placeholder="e.g. Spice Ltd"
+                            type="text"
+                          />
+                        </div>
+
+                        {/* Country */}
+                        <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-2xl px-4 py-2 transition-all duration-300 bg-white text-left shadow-sm">
+                          <label className="block font-['Montserrat'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Country *</label>
+                          <input
+                            required
+                            name="country"
+                            value={formData.country}
+                            onChange={handleInputChange}
+                            className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Inter'] placeholder-neutral-400"
+                            placeholder="e.g. United Kingdom"
+                            type="text"
+                          />
+                        </div>
+
+                        {/* Email */}
+                        <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-2xl px-4 py-2 transition-all duration-300 bg-white text-left shadow-sm">
+                          <label className="block font-['Montserrat'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Email Address *</label>
+                          <input
+                            required
+                            name="email"
+                            value={formData.email}
+                            onChange={handleInputChange}
+                            className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Inter'] placeholder-neutral-400"
+                            placeholder="john@company.com"
+                            type="email"
+                          />
+                        </div>
+
+                        {/* Phone Number */}
+                        <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-2xl px-4 py-2 transition-all duration-300 bg-white text-left md:col-span-2 shadow-sm">
+                          <label className="block font-['Montserrat'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Phone Number *</label>
+                          <input
+                            required
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleInputChange}
+                            className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Inter'] placeholder-neutral-400"
+                            placeholder="+1 (000) 000-0000"
+                            type="tel"
+                          />
+                        </div>
+
+                      </div>
+
+                      {/* Requirement Type Selector */}
+                      <div className="text-left space-y-2">
+                        <label className="block font-['Montserrat'] font-bold text-[9px] tracking-wider text-neutral-600 uppercase">Requirement Type *</label>
+                        <div className="flex flex-wrap gap-2">
+                          {['Bulk Order', 'Export Inquiry', 'Partnership', 'General Support'].map((type) => {
+                            const isSelected = formData.reqType === type;
+                            return (
+                              <button
+                                key={type}
+                                type="button"
+                                onClick={() => setFormData(prev => ({ ...prev, reqType: type }))}
+                                className={`px-3.5 py-2 rounded-full font-['Montserrat'] text-[9px] sm:text-[10px] font-bold tracking-wide uppercase transition-all duration-300 border focus:outline-none cursor-pointer flex items-center gap-1.5 ${isSelected
+                                  ? 'bg-[#8f000d] text-white border-[#8f000d] shadow-md shadow-[#8f000d]/10'
+                                  : 'bg-white text-neutral-700 border-neutral-300 hover:bg-neutral-50'
+                                  }`}
+                              >
+                                {isSelected && <FiCheckCircle className="text-xs" />}
+                                {type}
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </div>
+
+                      {/* Message TextArea */}
+                      <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-2xl px-4 py-3.5 transition-all duration-300 bg-white text-left shadow-sm">
+                        <label className="block font-['Montserrat'] font-bold text-[9px] tracking-wider text-neutral-600 uppercase mb-1">Your Message *</label>
+                        <textarea
+                          required
+                          name="message"
+                          value={formData.message}
+                          onChange={handleInputChange}
+                          className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Inter'] placeholder-neutral-400 resize-none"
+                          placeholder="Tell us about volume requirements, grades, target delivery dates..."
+                          rows={3}
+                        />
+                      </div>
+
+                      {/* Submit Row */}
+                      <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <button
+                          type="submit"
+                          className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-[#8f000d] to-[#b22222] text-white font-['Montserrat'] font-bold text-xs uppercase tracking-widest rounded-full hover:shadow-lg hover:shadow-[#8f000d]/20 hover:-translate-y-0.5 transition-all active:scale-95 inline-flex items-center justify-center gap-2.5 cursor-pointer group"
+                        >
+                          Send Inquiry
+                          <FiSend className="text-xs transition-transform group-hover:translate-x-1 group-hover:-translate-y-0.5 duration-300" />
+                        </button>
+                        <p className="font-['Inter'] font-normal text-neutral-600 text-[11px] leading-relaxed text-center sm:text-left max-w-xs">
+                          We respond to verified commercial inquiries within 12 business hours.
+                        </p>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              {/* CARD BACK FACE */}
+              <div
+                style={{
+                  backfaceVisibility: 'hidden',
+                  transform: 'rotateY(180deg)',
+                  position: 'absolute',
+                  inset: 0,
+                  width: '100%',
+                  height: '100%',
+                  borderRadius: '2.5rem',
+                  boxShadow: '0 20px 50px rgba(0,0,0,0.06)',
+                  border: '1px solid rgba(0,0,0,0.04)',
+                  overflow: 'hidden',
+                  backgroundColor: '#ffffff'
+                }}
+                className="flex flex-col lg:flex-row h-full"
+              >
+                {/* Left Side: Deep Green Sourcing Guidelines */}
+                <div className="w-full lg:w-5/12 bg-gradient-to-br from-[#1F5E3B] via-[#0D2E1C] to-[#05140C] text-white p-6 sm:p-8 md:p-10 flex flex-col justify-between relative overflow-hidden">
+                  <div className="absolute -top-20 -left-20 w-60 h-60 bg-[#cca72f]/10 rounded-full blur-3xl pointer-events-none" />
+                  <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-[#1F5E3B]/20 rounded-full blur-3xl pointer-events-none" />
+                  <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.005)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.005)_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none" />
+
+                  <div className="relative z-10 flex flex-col h-full justify-between gap-8">
+                    <div>
+                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-[#cca72f] font-['Montserrat'] font-bold text-[9px] tracking-widest uppercase mb-6 sm:mb-8">
+                        <FiCheckCircle className="text-xs" />
+                        Verification Phase
+                      </div>
+
+                      <span className="font-['Montserrat'] font-semibold text-[10px] tracking-[0.2em] text-[#cca72f] uppercase block mb-1">
+                        Procurement Guide
+                      </span>
+                      <h3 className="font-['Montserrat'] font-extrabold text-[24px] text-white leading-tight mb-5 sm:mb-6">
+                        Submission Steps
+                      </h3>
+
+                      {/* Timeline steps */}
+                      <div className="space-y-5 sm:space-y-6 text-left">
+                        <div className="flex gap-3">
+                          <div className="w-6 h-6 rounded-full bg-white/10 text-[#cca72f] flex items-center justify-center font-['Montserrat'] font-bold text-[11px] shrink-0">
+                            1
+                          </div>
+                          <div>
+                            <h5 className="font-['Montserrat'] font-bold text-[12px] text-white tracking-wide">Select Request Type</h5>
+                            <p className="font-['Inter'] text-[11px] text-white/50 leading-relaxed mt-0.5">Toggle between bulk buy, logistics options, or standard samples.</p>
+                          </div>
+                        </div>
+
+                        <div className="flex gap-3">
+                          <div className="w-6 h-6 rounded-full bg-white/10 text-[#cca72f] flex items-center justify-center font-['Montserrat'] font-bold text-[11px] shrink-0">
+                            2
+                          </div>
+                          <div>
+                            <h5 className="font-['Montserrat'] font-bold text-[12px] text-white tracking-wide">Provide Spec Details</h5>
+                            <p className="font-['Inter'] text-[11px] text-white/50 leading-relaxed mt-0.5">Mention custom moisture grade, ASTA standards, or packaging requirements.</p>
+                          </div>
+                        </div>
+
+                        <div className="flex gap-3">
+                          <div className="w-6 h-6 rounded-full bg-white/10 text-[#cca72f] flex items-center justify-center font-['Montserrat'] font-bold text-[11px] shrink-0">
+                            3
+                          </div>
+                          <div>
+                            <h5 className="font-['Montserrat'] font-bold text-[12px] text-white tracking-wide">Trade Review</h5>
+                            <p className="font-['Inter'] text-[11px] text-white/50 leading-relaxed mt-0.5">Our executives verify supply chains and confirm FOB/CIF pricing quotes.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="pt-5 border-t border-white/10 text-left">
+                      <p className="font-['Inter'] text-[11px] text-white/40 leading-relaxed">
+                        Confidentiality guaranteed. All specifications comply with international custom regulations.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Side: Inquiry Transmitted Success Dashboard */}
+                <div className="w-full lg:w-7/12 p-6 sm:p-8 md:p-10 flex flex-col justify-center items-center text-center relative overflow-hidden bg-white">
+                  {/* Background image watermark */}
+                  <img
+                    src={chilliBowlTable}
+                    alt="Dried red Guntur chilli exports"
+                    className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none opacity-[0.08]"
+                  />
+
+                  <div className="relative z-10 flex flex-col items-center justify-center max-w-md w-full">
+                    <div className="w-20 h-20 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 flex items-center justify-center mb-6 shadow-lg shadow-emerald-500/5">
+                      <FiCheckCircle className="text-[40px] animate-pulse" />
+                    </div>
+
+                    <h4 className="font-['Montserrat'] font-extrabold text-[22px] sm:text-[24px] text-neutral-900 mb-3 tracking-tight">
+                      Inquiry Transmitted Successfully
+                    </h4>
+
+                    <p className="font-['Inter'] font-normal text-neutral-500 text-[13px] sm:text-[14px] leading-relaxed mb-6">
+                      Thank you, <span className="font-semibold text-neutral-800">{formData.name || 'valued partner'}</span>. Our Guntur export desk trade executives have received your request and will follow up with pricing worksheets and product specifications within 12 hours.
+                    </p>
+
+                    <div className="w-full border-t border-b border-neutral-100 py-6 my-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+                      <div className="text-left w-full sm:w-auto">
+                        <span className="font-['Montserrat'] text-[9px] tracking-wider text-neutral-400 uppercase block">Submission Ref</span>
+                        <span className="font-['Montserrat'] text-[12px] font-bold text-neutral-700 leading-none mt-1 block">ME-739402</span>
+                      </div>
+                      <div className="text-right w-full sm:w-auto">
+                        <span className="font-['Montserrat'] text-[9px] tracking-wider text-neutral-400 uppercase block">Status</span>
+                        <span className="font-['Montserrat'] text-[12px] font-bold text-emerald-600 leading-none mt-1 block">Assigned to Trade Desk</span>
+                      </div>
+                    </div>
+
+                    {/* Progress Bar indicating auto-reset timeout */}
+                    <div className="w-full bg-neutral-150 h-1 rounded-full overflow-hidden mt-8">
+                      {isFlipped && (
+                        <motion.div
+                          initial={{ width: "100%" }}
+                          animate={{ width: "0%" }}
+                          transition={{ duration: 4.5, ease: "linear" }}
+                          className="bg-emerald-500 h-full"
+                        />
+                      )}
+                    </div>
+                    <span className="font-['Montserrat'] text-[9px] tracking-wider text-neutral-400 uppercase mt-2">
+                      Flipping back in a moment...
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ── 4. FAQ & Map Integrated Section (Desktop: Side-by-side Flat Split, Mobile: Clean Stacked) ──────────────────── */}
+      <section className="py-10 md:py-14 bg-gradient-to-b from-white to-[#faf8f5] border-b border-neutral-200/60 relative overflow-hidden">
+        {/* Soft background ambient decorations */}
+        <div className="absolute top-1/2 left-0 w-[300px] h-[300px] bg-[#cca72f]/3 rounded-full blur-[120px] pointer-events-none" />
+
+        <div className="max-w-[1280px] mx-auto px-6 md:px-12 relative z-10">
+
+          {/* DESKTOP VIEW: Flat Side-by-Side Layout */}
+          <div className="hidden lg:grid grid-cols-12 gap-12 items-start">
+
+            {/* LEFT PANEL: Frequently Asked Questions (Flat list of accordions) */}
+            <div className="col-span-5 text-left">
+              <span className="text-[#2c6a46] font-['Montserrat'] font-bold text-[10px] tracking-[0.25em] uppercase mb-2 block">
+                Support & Queries
+              </span>
+              <h3 className="font-['Montserrat'] font-extrabold text-[28px] text-neutral-900 mb-6 tracking-tight">
+                Frequently Asked Questions
+              </h3>
+
+              <div className="space-y-4">
+                {faqs.map((faq, index) => {
+                  const isOpen = openFaq === index;
+                  const iconConfig = [
+                    { bg: 'bg-rose-500/10 text-rose-600', icon: <FiClock /> },
+                    { bg: 'bg-emerald-500/10 text-emerald-600', icon: <FiAward /> },
+                    { bg: 'bg-amber-500/10 text-amber-600', icon: <FiPackage /> },
+                    { bg: 'bg-indigo-500/10 text-indigo-600', icon: <FiGlobe /> }
+                  ][index] || { bg: 'bg-neutral-100 text-neutral-600', icon: <FiGlobe /> };
+
+                  return (
+                    <div
+                      key={index}
+                      className={`border rounded-xl overflow-hidden bg-white transition-all duration-300 ${isOpen ? 'border-[#8f000d]/20 shadow-md' : 'border-neutral-200 shadow-sm hover:border-neutral-300'
+                        }`}
+                    >
+                      <button
+                        className="w-full flex justify-between items-center py-4 px-4 text-left cursor-pointer focus:outline-none"
+                        onClick={() => toggleFaq(index)}
+                      >
+                        <div className="flex items-center gap-3">
+                          <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-[13px] shrink-0 ${iconConfig.bg}`}>
+                            {iconConfig.icon}
+                          </div>
+                          <span className="font-['Montserrat'] font-bold text-[12.5px] text-neutral-800 leading-snug">
+                            {faq.q}
+                          </span>
+                        </div>
+                        <FiChevronDown className={`text-neutral-400 text-[14px] shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 text-[#8f000d]' : ''}`} />
+                      </button>
+                      <motion.div
+                        initial={false}
+                        animate={{ height: isOpen ? 'auto' : 0 }}
+                        transition={{ duration: 0.25 }}
+                        className="overflow-hidden"
+                      >
+                        <p className="pb-4 px-4 pl-[48px] font-['Inter'] font-normal text-neutral-500 text-[12px] leading-relaxed border-t border-neutral-100/50 pt-2.5">
+                          {faq.a}
+                        </p>
+                      </motion.div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Bottom Questions Action */}
+              <div className="mt-8 pt-4 border-t border-neutral-200 flex items-center justify-between text-[11px] font-['Montserrat'] font-bold">
+                <span className="text-neutral-400">Still have questions?</span>
+                <a
+                  href="mailto:exports@minhaexports.com"
+                  className="text-[#8f000d] hover:text-[#cca72f] transition-colors inline-flex items-center gap-1 group"
+                >
+                  Contact our team
+                  <span className="group-hover:translate-x-0.5 transition-transform">→</span>
+                </a>
+              </div>
+            </div>
+
+            {/* RIGHT PANEL: Visit Our Export Hub (Flat details & Map) */}
+            <div className="col-span-7 text-left">
+              <span className="text-[#8f000d] font-['Montserrat'] font-bold text-[10px] tracking-[0.25em] uppercase mb-2 block">
+                Corporate Location
+              </span>
+              <h3 className="font-['Montserrat'] font-extrabold text-[28px] text-neutral-900 mb-1 tracking-tight">
+                Visit Our Export Hub
+              </h3>
+              <p className="font-['Inter'] font-normal text-neutral-500 text-[14px] mb-6">
+                Located Beside SBI ATM, Arundalpet.
+              </p>
+
+              {/* Sourcing Map Block */}
+              <div className="w-full h-[360px] rounded-2xl overflow-hidden border border-neutral-200/80 shadow-md bg-neutral-100 mb-6">
+                <iframe
+                  title="Minha Sourcing Facility Map Detail"
+                  src="https://maps.google.com/maps?q=16.30355453491211,80.43951416015625+(Dry+Red+Chilli+Exporters+India+-+Minha+Imports+and+Exports)&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full grayscale-[10%] contrast-[105%]"
+                />
+              </div>
+
+              {/* Action Buttons & Address */}
+              <div className="space-y-6">
+                <div className="flex items-center gap-3">
+                  <a
+                    href="https://www.bing.com/maps/directions?ty=0&v=2&sV=1&rtp=%7Epos.16.30355453491211_80.43951416015625__Dry%2520Red%2520Chilli%2520Exporters%2520India%2520-%2520Minha%2520Imports%2520and%2520Exports_&cp=16.303555%7E80.439514&lvl=16&style=r"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-3.5 bg-[#8f000d] hover:bg-[#72000a] text-white font-['Montserrat'] font-bold text-[10px] tracking-wider uppercase rounded-xl transition-all duration-300 shadow-md text-center"
+                  >
+                    Get Directions
+                  </a>
+                  <a
+                    href="https://www.bing.com/maps/directions?ty=0&v=2&sV=1&rtp=%7Epos.16.30355453491211_80.43951416015625__Dry%2520Red%2520Chilli%2520Exporters%2520India%2520-%2520Minha%2520Imports%2520and%2520Exports_&cp=16.303555%7E80.439514&lvl=16&style=r"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-3.5 border border-neutral-200 hover:bg-neutral-50 text-neutral-700 font-['Montserrat'] font-bold text-[10px] tracking-wider uppercase rounded-xl transition-all duration-300 text-center"
+                  >
+                    View On Map
+                  </a>
+                </div>
+
+                {/* Address details */}
+                <div className="flex gap-3 items-center border-t border-neutral-200 pt-4 text-[12.5px] text-neutral-600 font-['Inter'] leading-relaxed">
+                  <FiMapPin className="text-[#2c6a46] text-[18px] shrink-0" />
+                  <span>Arundalpet 7/1, Beside SBI ATM, Guntur, Andhra Pradesh – 522002, India</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* MOBILE/TABLET VIEW: Clean Stacked Sections (No cards) */}
+          <div className="lg:hidden flex flex-col gap-12">
+
+            {/* FAQ Block */}
+            <div className="text-left">
+              <span className="text-[#2c6a46] font-['Montserrat'] font-bold text-[10px] tracking-[0.25em] uppercase mb-2 block">
+                Support & Queries
+              </span>
+              <h3 className="font-['Montserrat'] font-black text-[24px] text-neutral-900 mb-5 tracking-tight leading-none">
+                Frequently Asked Questions
+              </h3>
+
+              <div className="space-y-3.5">
+                {faqs.map((faq, index) => {
+                  const isOpen = openFaq === index;
+                  const iconConfig = [
+                    { bg: 'bg-rose-500/10 text-rose-600', icon: <FiClock /> },
+                    { bg: 'bg-emerald-500/10 text-emerald-600', icon: <FiAward /> },
+                    { bg: 'bg-amber-500/10 text-amber-600', icon: <FiPackage /> },
+                    { bg: 'bg-indigo-500/10 text-indigo-600', icon: <FiGlobe /> }
+                  ][index] || { bg: 'bg-[#cca72f]/10 text-[#cca72f]', icon: <FiGlobe /> };
+
+                  return (
+                    <div
+                      key={index}
+                      className={`border rounded-xl overflow-hidden bg-white transition-all duration-300 ${isOpen ? 'border-[#8f000d]/20 shadow-md' : 'border-neutral-200 shadow-sm'
+                        }`}
+                    >
+                      <button
+                        className="w-full flex justify-between items-center py-3.5 px-4 text-left cursor-pointer focus:outline-none"
+                        onClick={() => toggleFaq(index)}
+                      >
+                        <div className="flex items-center gap-3">
+                          <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-[13px] shrink-0 ${iconConfig.bg}`}>
+                            {iconConfig.icon}
+                          </div>
+                          <span className="font-['Montserrat'] font-bold text-[12px] sm:text-[12.5px] text-neutral-800 leading-snug">
+                            {faq.q}
+                          </span>
+                        </div>
+                        <FiChevronDown className={`text-neutral-400 text-[14px] shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 text-[#8f000d]' : ''}`} />
+                      </button>
+                      <motion.div
+                        initial={false}
+                        animate={{ height: isOpen ? 'auto' : 0 }}
+                        transition={{ duration: 0.25 }}
+                        className="overflow-hidden"
+                      >
+                        <p className="pb-4 px-4 pl-[48px] font-['Inter'] font-normal text-neutral-500 text-[11px] sm:text-[12px] leading-relaxed border-t border-neutral-100/50 pt-2.5">
+                          {faq.a}
+                        </p>
+                      </motion.div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Bottom Questions Action */}
+              <div className="mt-5 pt-4 border-t border-neutral-200 flex items-center justify-between text-[11px] font-['Montserrat'] font-bold">
+                <span className="text-neutral-400">Still have questions?</span>
+                <a
+                  href="mailto:exports@minhaexports.com"
+                  className="text-[#8f000d] hover:text-[#cca72f] transition-colors inline-flex items-center gap-1 group"
+                >
+                  Contact our team
+                  <span className="group-hover:translate-x-0.5 transition-transform">→</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Visit Our Export Hub Block */}
+            <div className="text-left border-t border-neutral-200 pt-6">
+              <span className="text-[#8f000d] font-['Montserrat'] font-bold text-[10px] tracking-[0.25em] uppercase mb-2 block">
+                Corporate Location
+              </span>
+              <h3 className="font-['Montserrat'] font-extrabold text-[24px] text-neutral-900 mb-1 tracking-tight leading-none">
+                Visit Our Export Hub
+              </h3>
+              <p className="font-['Inter'] font-normal text-neutral-500 text-[13px] mb-5">
+                Located Beside SBI ATM, Arundalpet.
+              </p>
+
+              {/* Map Block */}
+              <div className="w-full h-[260px] rounded-2xl overflow-hidden border border-neutral-200 shadow-md bg-neutral-100 mb-5">
+                <iframe
+                  title="Minha Sourcing Facility Map Mobile"
+                  src="https://maps.google.com/maps?q=16.30355453491211,80.43951416015625+(Dry+Red+Chilli+Exporters+India+-+Minha+Imports+and+Exports)&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full grayscale-[10%] contrast-[105%]"
+                />
+              </div>
+
+              {/* Action Buttons & Address details */}
+              <div className="space-y-6 mt-6">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                  <a
+                    href="https://www.bing.com/maps/directions?ty=0&v=2&sV=1&rtp=%7Epos.16.30355453491211_80.43951416015625__Dry%2520Red%2520Chilli%2520Exporters%2520India%2520-%2520Minha%2520Imports%2520and%2520Exports_&cp=16.303555%7E80.439514&lvl=16&style=r"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-3.5 bg-[#8f000d] hover:bg-[#72000a] text-white font-['Montserrat'] font-bold text-[10px] tracking-wider uppercase rounded-xl transition-all duration-300 shadow-md text-center"
+                  >
+                    Get Directions
+                  </a>
+                  <a
+                    href="https://www.bing.com/maps/directions?ty=0&v=2&sV=1&rtp=%7Epos.16.30355453491211_80.43951416015625__Dry%2520Red%2520Chilli%2520Exporters%2520India%2520-%2520Minha%2520Imports%2520and%2520Exports_&cp=16.303555%7E80.439514&lvl=16&style=r"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-3.5 border border-neutral-200 hover:bg-neutral-50 text-neutral-700 font-['Montserrat'] font-bold text-[10px] tracking-wider uppercase rounded-xl transition-all duration-300 text-center"
+                  >
+                    View On Map
+                  </a>
+                </div>
+
+                <div className="flex gap-3 items-center border-t border-neutral-200 pt-4 text-[12px] text-neutral-600 font-['Inter'] leading-relaxed">
+                  <FiMapPin className="text-[#2c6a46] text-[16px] shrink-0" />
+                  <span>Arundalpet 7/1, Beside SBI ATM, Guntur, Andhra Pradesh – 522002, India</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+    </div>
+  );
+};
+
+export default Contact;
+
+
