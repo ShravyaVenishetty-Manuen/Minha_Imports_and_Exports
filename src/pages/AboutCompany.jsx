@@ -240,10 +240,10 @@ const AboutCompany = () => {
           src={aboutHeroBg}
         />
         <div className="relative z-20 w-full max-w-4xl mx-auto text-center space-y-6">
-          <nav className="flex justify-center items-center gap-2 font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#cca72f] uppercase mb-2">
-            <Link className="hover:text-white transition-colors" to="/">Home</Link>
+          <nav className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['Montserrat'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">
+            <Link className="hover:text-white transition-colors whitespace-nowrap" to="/">Home</Link>
             <span className="text-white/60">/</span>
-            <span className="text-white">Our Company</span>
+            <span className="text-white whitespace-normal text-center">Our Company</span>
           </nav>
           <h1 className="font-['Montserrat'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             About Minha <br className="hidden md:block" />Imports & Exports
@@ -795,10 +795,13 @@ const AboutCompany = () => {
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#8f000d]/3 rounded-full pointer-events-none blur-3xl" />
 
             {/* Map Frame */}
-            <div className="relative w-full aspect-[784/459] overflow-hidden flex items-center justify-center p-2 mb-8">
+            <div
+              style={{ aspectRatio: '784.077 / 458.627' }}
+              className="relative w-full mb-8"
+            >
               <img
                 alt="Global export presence map graphic"
-                className="w-full h-full object-contain opacity-[0.85] select-none pointer-events-none"
+                className="absolute inset-0 w-full h-full opacity-[0.85] select-none pointer-events-none block"
                 src={worldMapSvg}
               />
 

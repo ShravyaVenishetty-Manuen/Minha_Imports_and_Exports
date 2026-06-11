@@ -151,10 +151,10 @@ const Contact = () => {
           src={contactHeroBg}
         />
         <div className="relative z-20 w-full max-w-4xl mx-auto text-center space-y-5 px-6">
-          <nav aria-label="Breadcrumb" className="flex justify-center items-center gap-2 font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#cca72f] uppercase mb-2">
-            <Link className="hover:text-white transition-colors" to="/">Home</Link>
+          <nav aria-label="Breadcrumb" className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['Montserrat'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">
+            <Link className="hover:text-white transition-colors whitespace-nowrap" to="/">Home</Link>
             <span className="text-white/60">/</span>
-            <span className="text-white">Contact</span>
+            <span className="text-white whitespace-normal text-center">Contact</span>
           </nav>
           <h1 className="font-['Montserrat'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             Contact Us
@@ -280,17 +280,15 @@ const Contact = () => {
           {/* 3D Perspective Card Wrapper Container */}
           <div
             style={{ perspective: '2000px', width: '100%' }}
-            className="relative w-full min-h-[1140px] md:min-h-[980px] lg:min-h-[760px] transition-all duration-300"
+            className="relative w-full transition-all duration-300"
           >
             <div
               style={{
                 transformStyle: 'preserve-3d',
                 transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
                 transition: 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
-                position: 'absolute',
-                inset: 0,
+                position: 'relative',
                 width: '100%',
-                height: '100%',
                 willChange: 'transform',
               }}
             >
@@ -299,17 +297,17 @@ const Contact = () => {
               <div
                 style={{
                   backfaceVisibility: 'hidden',
-                  position: 'absolute',
-                  inset: 0,
+                  position: isFlipped ? 'absolute' : 'relative',
+                  inset: isFlipped ? 0 : 'auto',
                   width: '100%',
-                  height: '100%',
+                  height: isFlipped ? '100%' : 'auto',
                   borderRadius: '2.5rem',
                   boxShadow: '0 20px 50px rgba(0,0,0,0.06)',
                   border: '1px solid rgba(0,0,0,0.04)',
                   overflow: 'hidden',
                   backgroundColor: '#ffffff'
                 }}
-                className="flex flex-col lg:flex-row h-full"
+                className={`flex flex-col lg:flex-row ${isFlipped ? 'h-full' : ''}`}
               >
                 {/* Left Side: Sourcing highlights */}
                 <div className="w-full lg:w-5/12 bg-gradient-to-br from-[#2f0307] via-[#150204] to-[#090001] text-white p-6 sm:p-8 md:p-12 flex flex-col justify-between relative overflow-hidden">
@@ -528,17 +526,17 @@ const Contact = () => {
                 style={{
                   backfaceVisibility: 'hidden',
                   transform: 'rotateY(180deg)',
-                  position: 'absolute',
-                  inset: 0,
+                  position: isFlipped ? 'relative' : 'absolute',
+                  inset: isFlipped ? 'auto' : 0,
                   width: '100%',
-                  height: '100%',
+                  height: isFlipped ? 'auto' : '100%',
                   borderRadius: '2.5rem',
                   boxShadow: '0 20px 50px rgba(0,0,0,0.06)',
                   border: '1px solid rgba(0,0,0,0.04)',
                   overflow: 'hidden',
                   backgroundColor: '#ffffff'
                 }}
-                className="flex flex-col lg:flex-row h-full"
+                className={`flex flex-col lg:flex-row ${isFlipped ? '' : 'h-full'}`}
               >
                 {/* Left Side: Deep Green Sourcing Guidelines */}
                 <div className="w-full lg:w-5/12 bg-gradient-to-br from-[#1F5E3B] via-[#0D2E1C] to-[#05140C] text-white p-6 sm:p-8 md:p-10 flex flex-col justify-between relative overflow-hidden">
