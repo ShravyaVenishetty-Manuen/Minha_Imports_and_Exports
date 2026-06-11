@@ -65,7 +65,7 @@ const Facility = () => {
       </section>
 
       {/* 2. Facility Intro Section */}
-      <section className="py-8 md:py-12 bg-surface">
+      <section className="py-10 md:py-14 bg-surface">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* Left Column (Commitment Text) */}
@@ -123,14 +123,14 @@ const Facility = () => {
       </section>
 
       {/* 4. Connected Vertical Process Timeline */}
-      <section className="py-8 bg-surface relative overflow-hidden">
+      <section className="py-10 md:py-14 bg-surface relative overflow-hidden">
 
         {/* Header */}
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 text-center mb-8 relative z-10">
           <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
             Workflow Stages
           </span>
-          <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] text-[#1a1c1e] leading-tight">
+          <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
             Our 4-Stage Operational Process
           </h2>
           <div className="w-20 h-1 bg-[#8f000d] mx-auto mt-4 rounded-full"></div>
@@ -407,7 +407,7 @@ const Facility = () => {
       </section>
 
       {/* 8. Operations Gallery */}
-      <section className="py-8 bg-surface">
+      <section className="py-10 md:py-14 bg-surface">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
 
           <motion.div
@@ -420,7 +420,7 @@ const Facility = () => {
             <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
               Gallery
             </span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] text-[#1a1c1e] leading-tight">
+            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Inside Our Operations
             </h2>
             <div className="w-20 h-1 bg-[#8f000d] mx-auto mt-4 rounded-full"></div>
@@ -477,7 +477,7 @@ const Facility = () => {
       </section>
 
       {/* 9. Why Our Infrastructure Matters */}
-      <section className="py-8 md:py-12 bg-[#f9f9fc]">
+      <section className="py-10 md:py-14 bg-[#f9f9fc]">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
           
           {/* Centered Header */}
@@ -485,10 +485,10 @@ const Facility = () => {
             <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase block">
               Infrastructure
             </span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] text-neutral-900 leading-tight">
+            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Built for Quality &amp; Reliability
             </h2>
-            <p className="font-['Inter'] text-[#5a403e] max-w-2xl mx-auto text-[14px] md:text-[15px] leading-relaxed">
+            <p className="font-['Inter'] font-normal text-[#5a403e] max-w-2xl mx-auto text-[15px] md:text-[16px] leading-[1.6]">
               Our infrastructure isn't just about high-tech machines; it's about the promise of safety, consistency, and promptness we deliver to your doorstep.
             </p>
             <div className="w-16 h-[2.5px] bg-[#8f000d] mx-auto mt-4 rounded-full" />
@@ -591,7 +591,7 @@ const Facility = () => {
 
       {/* 10. Business CTA */}
       <section className="py-8 px-6 md:px-12 max-w-[850px] mx-auto z-10 relative">
-        <div className="relative rounded-[2rem] overflow-hidden text-center text-white py-12 md:py-16 shadow-2xl border border-white/[0.04] bg-gradient-to-br from-[#3d0008] via-[#220004] to-[#140002] group">
+        <div className="relative rounded-[2rem] overflow-hidden text-center text-white py-10 md:py-14 shadow-2xl border border-white/[0.04] bg-gradient-to-br from-[#3d0008] via-[#220004] to-[#140002] group">
 
           {/* Subtle grid and glowing accents */}
           <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none" />

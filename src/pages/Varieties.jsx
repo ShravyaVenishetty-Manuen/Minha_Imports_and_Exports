@@ -55,28 +55,34 @@ const Varieties = () => {
           <h1 className="font-['Montserrat'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             Premium Chilli Varieties
           </h1>
-          <p className="font-['Inter'] font-normal text-white/80 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
+          <p className="font-['Inter'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
             Export-Grade Guntur Dry Red Chillies with Superior Quality and Global Standards
           </p>
         </div>
       </section>
 
       {/* 2. Intro Section */}
-      <section className="pt-24 pb-8 px-6 md:px-12 max-w-[1280px] mx-auto z-10 relative">
+      <section className="py-10 md:py-14 px-6 md:px-12 max-w-[1280px] mx-auto z-10 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
           {/* Copy content */}
-          <div className="space-y-6 text-left">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="space-y-6 text-left"
+          >
             <span className="text-[#8f000d] font-['Montserrat'] font-bold text-[12px] tracking-[0.2em] uppercase block">
               Global Sourcing Excellence
             </span>
             <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Precision-Graded for <br className="hidden sm:inline" /> Global Markets
             </h2>
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] sm:text-[16px] leading-[1.6]">
+            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
               At Minha Imports & Exports, we understand the nuances of global commodity trading. Our red chillies are sourced directly from the fertile Guntur region, processed in state-of-the-art facilities to meet stringent international food safety standards.
             </p>
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] sm:text-[16px] leading-[1.6]">
+            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
               From moisture control to stem removal and customized grading, every batch undergoes rigorous quality checks. We cater to diverse requirements including whole pods, crushed flakes, and fine powder, ensuring the SHU levels and color values match your exact technical specifications.
             </p>
 
@@ -90,10 +96,16 @@ const Varieties = () => {
                 <p className="font-['Montserrat'] font-bold text-[11px] uppercase tracking-[0.1em] text-[#a0a5ad]">Certified Sourcing</p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Graded Chillies Showcase Image */}
-          <div className="relative group">
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative group"
+          >
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-[#1F5E3B]/10 rounded-xl -z-10 transition-transform duration-300 group-hover:scale-105" />
             <img
               alt="Systematic Grading of Guntur Chillies"
@@ -101,20 +113,20 @@ const Varieties = () => {
               src={chilliIntroDry}
             />
             <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-[#8f000d]/5 rounded-xl -z-10 transition-transform duration-300 group-hover:scale-105" />
-          </div>
+          </motion.div>
 
         </div>
       </section>
 
       {/* 3. Chilli Varieties Showcase catalog */}
-      <section className="pt-12 pb-8 bg-[#f8f8fc] border-t border-[#1a1c1e]/[0.02] border-b border-[#1a1c1e]/[0.02]">
+      <section className="py-10 md:py-14 bg-[#f8f8fc] border-t border-[#1a1c1e]/[0.02] border-b border-[#1a1c1e]/[0.02]">
         <div className="px-6 md:px-12 max-w-[1280px] mx-auto">
 
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-primary tracking-tight">
               Our Core Varieties
             </h2>
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] sm:text-[16px]">
+            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
               We offer tailored grades across major varieties to suit extraction, food service, and spice blend specifications.
             </p>
 
@@ -290,14 +302,14 @@ const Varieties = () => {
       </section>
 
       {/* 4. Special Spotlight: Teja S17 */}
-      <section className="pt-12 pb-8 px-6 md:px-12 max-w-[1280px] mx-auto z-10 relative">
+      <section className="py-10 md:py-14 px-6 md:px-12 max-w-[1280px] mx-auto z-10 relative">
         <div className="bg-[#111315] text-white rounded-3xl overflow-hidden flex flex-col lg:flex-row shadow-2xl border border-white/[0.03]">
           {/* Spotlight text */}
           <div className="lg:w-1/2 p-8 md:p-12 lg:p-20 flex flex-col justify-center text-left space-y-6">
             <span className="text-[#cca72f] font-['Montserrat'] font-bold text-[11px] tracking-[0.25em] uppercase block">
               PLATINUM EXPORT GRADE
             </span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[44px] leading-tight text-white">
+            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-white tracking-tight">
               The King of Spice: <br /> Teja S17
             </h2>
             <p className="font-['Inter'] text-[#a0a5ad] text-[14px] sm:text-[15px] leading-relaxed">
@@ -342,7 +354,7 @@ const Varieties = () => {
       </section>
 
       {/* 5. Quality Standards & Sourcing Ethics */}
-      <section className="pt-12 pb-24 bg-[#FAF8F4] relative overflow-hidden">
+      <section className="py-10 md:py-14 bg-[#FAF8F4] relative overflow-hidden">
         {/* Soft elegant background blur graphics */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#B22222]/[0.02] rounded-full blur-[100px] pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#1F5E3B]/[0.02] rounded-full blur-[100px] pointer-events-none" />
@@ -499,9 +511,9 @@ const Varieties = () => {
       </section>
 
       {/* 6. Inquiry CTA Section */}
-      <section id="inquire" className="relative bg-[#FAF8F4] py-8 px-6 md:px-12 overflow-hidden border-t border-neutral-100">
+      <section id="inquire" className="relative bg-[#FAF8F4] py-10 md:py-14 px-6 md:px-12 overflow-hidden border-t border-neutral-100">
         <div className="max-w-[960px] mx-auto relative z-10">
-          
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -531,7 +543,7 @@ const Varieties = () => {
                 </span>
                 Bulk Procurement
               </div>
-              
+
               <h2 className="font-['Montserrat'] font-bold text-[22px] sm:text-[26px] md:text-[30px] leading-[1.25] text-white tracking-tight">
                 Need Bulk Chilli Supply for <br className="hidden sm:inline" /> Export or Processing?
               </h2>
@@ -560,7 +572,7 @@ const Varieties = () => {
             {/* Right: Buttons */}
             <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row shrink-0 items-stretch sm:items-center lg:items-stretch xl:items-center justify-start gap-3 relative z-10 min-w-[180px]">
               <a
-                href="mailto:exports@minhaexports.com"
+                href="mailto:minhaimportsexports@gmail.com"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/25 text-white font-['Montserrat'] font-bold text-[11.5px] sm:text-[12px] py-[12px] px-[22px] rounded-full shadow-md active:scale-98 transition-all duration-300 uppercase tracking-wider text-center"
               >
                 <FiMail className="text-sm shrink-0" />

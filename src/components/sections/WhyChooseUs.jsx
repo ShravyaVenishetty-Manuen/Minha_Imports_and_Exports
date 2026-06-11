@@ -69,7 +69,7 @@ const WhyChooseUs = () => {
       <div className="relative pt-14 pb-22 px-6 text-center text-white bg-[#8f000d]">
 
         {/* Section Heading */}
-        <h2 className="font-['Montserrat'] font-bold text-[28px] md:text-[36px] leading-[1.2] text-white mb-2">
+        <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-white tracking-tight mb-2">
           Why the World Chooses <span className="text-[#cca72f]">Minha</span>
         </h2>
 
@@ -79,7 +79,7 @@ const WhyChooseUs = () => {
         {/* Highlighted Motto Quote */}
         <div className="max-w-2xl mx-auto flex items-center justify-center gap-2">
           <span className="text-[#cca72f] text-[20px] font-bold font-serif leading-none select-none">“</span>
-          <p className="font-['Inter'] font-semibold italic text-white text-[15px] md:text-[17px] tracking-wide">
+          <p className="font-['Inter'] font-semibold italic text-white text-[15px] md:text-[16px] tracking-wide">
             In <span className="font-extrabold not-italic">MINHA</span> customer service is our prime motto
           </p>
           <span className="text-[#cca72f] text-[20px] font-bold font-serif leading-none select-none">”</span>

@@ -7,7 +7,6 @@ import {
   FiGlobe,
   FiAward,
   FiFileText,
-  FiPackage,
   FiArrowRight,
   FiX,
   FiZoomIn,
@@ -276,7 +275,7 @@ const Certifications = () => {
             <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
               Our Credentials
             </span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] text-[#1a1c1e] leading-tight">
+            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] text-[#1a1c1e] leading-[1.2] tracking-tight">
               Internationally Recognised Certifications
             </h2>
             <div className="w-20 h-1 bg-[#8f000d] mx-auto mt-4 rounded-full" />
@@ -304,7 +303,7 @@ const Certifications = () => {
                   {cert.icon}
                 </div>
 
-                <h3 className="font-['Montserrat'] font-extrabold text-[20px] text-[#1a1c1e] mb-1">
+                <h3 className="font-['Montserrat'] font-extrabold text-[18px] md:text-[20px] text-[#1a1c1e] mb-1">
                   {cert.name}
                 </h3>
                 <p className="font-['Montserrat'] font-semibold text-[10px] tracking-wider uppercase text-[#5a403e]/60 mb-3">
@@ -354,7 +353,7 @@ const Certifications = () => {
                 <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.25em] text-[#2c6a46] uppercase inline-block mb-2">
                   Compliance Standards
                 </span>
-                <h2 className="font-['Montserrat'] font-extrabold text-[36px] sm:text-[46px] leading-[1.15] text-[#1a1c1e] tracking-tight">
+                <h2 className="font-['Montserrat'] font-extrabold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
                   Built on Four<br />Pillars of Trust
                 </h2>
 
@@ -581,7 +580,7 @@ const Certifications = () => {
               <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#2c6a46] bg-[#2c6a46]/10 px-3 py-1 rounded-sm uppercase inline-block mb-2">
                 Why It Matters
               </span>
-              <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[38px] leading-[1.2] text-[#1a1c1e] tracking-tight">
+              <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
                 Why Certified Sourcing Matters
               </h2>
             </motion.div>
@@ -620,7 +619,7 @@ const Certifications = () => {
       </section>
 
       {/* ── 6. Trust Logo Strip ─────────────────────────────────────────────── */}
-      <section className="py-10 bg-surface border-y border-neutral-100">
+      <section className="py-10 md:py-14 bg-surface border-y border-neutral-100">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 text-center">
           <p className="font-['Montserrat'] font-bold text-[10px] tracking-[0.25em] text-[#1a1c1e]/40 uppercase mb-8">
             Certified Quality. Trusted Worldwide.
@@ -640,7 +639,7 @@ const Certifications = () => {
 
       {/* ── 7. CTA ──────────────────────────────────────────────────────────── */}
       <section className="py-8 px-6 md:px-12 max-w-[850px] mx-auto z-10 relative">
-        <div className="relative rounded-[2rem] overflow-hidden text-center text-white py-12 md:py-14 shadow-2xl border border-white/[0.04] bg-gradient-to-br from-[#2b210e] via-[#1d1609] to-[#0f0b04] group">
+        <div className="relative rounded-[2rem] overflow-hidden text-center text-white py-10 md:py-14 shadow-2xl border border-white/[0.04] bg-gradient-to-br from-[#2b210e] via-[#1d1609] to-[#0f0b04] group">
 
           {/* Glows */}
           <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none" />

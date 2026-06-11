@@ -12,10 +12,7 @@ import {
   FiLayers,
   FiTruck,
   FiChevronLeft,
-  FiChevronRight,
-  FiAnchor,
-  FiMapPin,
-  FiClock
+  FiChevronRight
 } from 'react-icons/fi';
 import cooDavidChen from '../assets/coo_david_chen.png';
 import aboutHeroBg from '../assets/about_hero_bg.png';
@@ -258,21 +255,33 @@ const AboutCompany = () => {
       </section>
 
       {/* 2. Company Introduction */}
-      <section className="py-10 md:py-16 bg-surface">
+      <section className="py-10 md:py-14 bg-surface">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <div className="relative group">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative group"
+          >
             <div className="absolute -inset-4 bg-[#2c6a46]/10 rounded-xl -rotate-2 group-hover:rotate-0 transition-transform duration-500"></div>
             <img
               alt="Dry red chilli processing and sorting facility"
               className="relative rounded-xl shadow-xl w-full h-[400px] md:h-[500px] object-cover transition-transform duration-500 hover:scale-[1.01]"
               src={dryChilliSortingFacility}
             />
-          </div>
-          <div className="text-left space-y-6">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-left space-y-6"
+          >
             <div>
               <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">A Legacy of Precision & Pure Spices</h2>
             </div>
-            <p className="text-on-surface-variant font-body-lg text-body-lg leading-relaxed text-justify">
+            <p className="text-on-surface-variant font-body-md text-body-md leading-relaxed text-justify">
               Minha Imports & Exports stands at the forefront of the Guntur dry red chilli trade. Our expertise is rooted in decades of agricultural knowledge, combined with a modern approach to global logistics.
             </p>
             <p className="text-on-surface-variant font-body-md text-body-md leading-relaxed text-justify">
@@ -292,12 +301,12 @@ const AboutCompany = () => {
                 Export Process
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* 3. Mission, Policy & Commitment - Immersive Switcher Card */}
-      <section className="py-10 md:py-16 bg-surface-container-low overflow-hidden">
+      <section className="py-10 md:py-14 bg-surface-container-low overflow-hidden">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
 
           <div className="text-center mb-10">
@@ -397,7 +406,7 @@ const AboutCompany = () => {
       </section>
 
       {/* 4. Our Values - Staggered Wave Grid */}
-      <section className="py-10 md:py-16 bg-surface relative overflow-hidden border-y border-neutral-100">
+      <section className="py-10 md:py-14 bg-surface relative overflow-hidden border-y border-neutral-100">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neutral-50/50 via-surface to-surface pointer-events-none z-0"></div>
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 text-center relative z-10">
 
@@ -471,7 +480,7 @@ const AboutCompany = () => {
       </section>
 
       {/* 5. Journey Timeline - Interactive Horizontal Slider */}
-      <section className="py-10 md:py-16 bg-surface-container-high relative overflow-hidden border-y border-neutral-100">
+      <section className="py-10 md:py-14 bg-surface-container-high relative overflow-hidden border-y border-neutral-100">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 relative">
 
           <div className="text-center mb-10">
@@ -633,7 +642,7 @@ const AboutCompany = () => {
       </section>
 
       {/* 6. Leadership & Management */}
-      <section className="py-10 md:py-16 bg-surface">
+      <section className="py-10 md:py-14 bg-surface">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 text-center">
           <div className="text-center mb-10">
             <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Leadership & Management</span>
@@ -764,7 +773,7 @@ const AboutCompany = () => {
       </section>
 
       {/* 7. Global Presence */}
-      <section className="py-10 md:py-16 bg-surface-container-low/40">
+      <section className="py-10 md:py-14 bg-surface-container-low/40">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 text-center">
 
           {/* Header */}
@@ -858,7 +867,7 @@ const AboutCompany = () => {
       </section>
 
       {/* 8. Why Partner With Us (Horizontal Value Chain Pipeline) */}
-      <section className="py-10 md:py-16 bg-[#fafafa] border-t border-neutral-100 overflow-hidden">
+      <section className="py-10 md:py-14 bg-[#fafafa] border-t border-neutral-100 overflow-hidden">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
 
           {/* Header */}

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { FiCheckCircle, FiAnchor, FiCompass, FiTruck, FiAward, FiCheck, FiLayers, FiTarget, FiActivity, FiShield, FiPackage } from 'react-icons/fi';
 import { GiChiliPepper } from 'react-icons/gi';
 import chilliPackagingKraft from '../assets/chilli-packaging-kraft.png';
@@ -31,24 +32,36 @@ const ChilliPowder = () => {
           <h1 className="font-['Montserrat'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             Premium Chilli Powder
           </h1>
-          <p className="font-['Inter'] font-normal text-white/80 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
+          <p className="font-['Inter'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
             Hygienically processed and export-grade chilli powder meticulously sourced from the heart of Guntur for global retail and industrial markets.
           </p>
         </div>
       </section>
 
       {/* 2. Introduction Section */}
-      <section className="py-12 bg-surface">
+      <section className="py-10 md:py-14 bg-surface">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <div className="relative">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative"
+          >
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-[#cca72f]/10 -z-10 rounded"></div>
             <img
               className="w-full h-[400px] md:h-[450px] object-cover rounded shadow-xl"
               alt="Hygienic Spice Processing"
               src={chilliProcessingFacility}
             />
-          </div>
-          <div className="text-left space-y-6">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-left space-y-6"
+          >
             <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Manufacturing Excellence</span>
             <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Hygienic Production & Global Supply
@@ -66,12 +79,12 @@ const ChilliPowder = () => {
                 <div className="font-['Montserrat'] font-semibold text-[10px] tracking-wider text-neutral-400 mt-2">CERTIFIED FACILITY</div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* 3. Product Showcase */}
-      <section className="py-12 bg-surface-container-low">
+      <section className="py-10 md:py-14 bg-surface-container-low">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
           <div className="text-center mb-12">
             <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Catalog Grades</span>
@@ -170,7 +183,7 @@ const ChilliPowder = () => {
       </section>
 
       {/* 4. Technical Specifications */}
-      <section className="py-12 bg-white">
+      <section className="py-10 md:py-14 bg-white">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="lg:w-1/3 text-left flex flex-col justify-center">
             <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Datasheet</span>
@@ -231,7 +244,7 @@ const ChilliPowder = () => {
       </section>
 
       {/* 5. Processing & Quality */}
-      <section className="py-16 px-6 md:px-12 max-w-[1280px] mx-auto z-10 relative">
+      <section className="py-10 md:py-14 px-6 md:px-12 max-w-[1280px] mx-auto z-10 relative">
         <div className="relative rounded-3xl overflow-hidden py-16 px-6 md:px-12 text-center text-white shadow-2xl border border-white/[0.05] bg-gradient-to-br from-[#121315] via-[#2A080C] to-[#121315]">
           <div className="inline-block px-3 py-1 bg-[#cca72f]/10 border border-[#cca72f]/30 text-[#cca72f] font-['Montserrat'] font-semibold text-[10px] uppercase tracking-[0.15em] rounded-md mb-4">
             Quality Assurance Flow
@@ -321,7 +334,7 @@ const ChilliPowder = () => {
       </section>
 
       {/* 6. Packaging & Export */}
-      <section className="py-12 bg-white">
+      <section className="py-10 md:py-14 bg-white">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="text-left space-y-6">
             <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Delivery Standards</span>
@@ -376,7 +389,7 @@ const ChilliPowder = () => {
       </section>
 
       {/* 7. Trust Features */}
-      <section className="py-12 bg-[#FAF8F4] border-t border-b border-neutral-100">
+      <section className="py-10 md:py-14 bg-[#FAF8F4] border-t border-b border-neutral-100">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="flex flex-col items-center text-center space-y-2">
@@ -412,8 +425,8 @@ const ChilliPowder = () => {
       </section>
 
       {/* 8. Inquiry CTA */}
-      <section id="inquire" className="py-12 px-6 md:px-12 max-w-4xl mx-auto z-10 relative">
-        <div className="relative rounded-3xl overflow-hidden text-center text-white py-12 md:py-16 shadow-2xl border border-white/[0.05]">
+      <section id="inquire" className="py-10 md:py-14 px-6 md:px-12 max-w-4xl mx-auto z-10 relative">
+        <div className="relative rounded-3xl overflow-hidden text-center text-white py-10 md:py-14 shadow-2xl border border-white/[0.05]">
           <div className="absolute inset-0 bg-black/60 z-10"></div>
           <img
             alt="Inquiry CTA Red Chilli Powder"
@@ -421,7 +434,7 @@ const ChilliPowder = () => {
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxVWr-X22A2uy8R8l86VWqrk6LutV80tBDlf-SxQqfwYsAUwxgaY3HThUezk8N2wUE6sYNEIQ491AaEyIMLEv3dSB3XiApWM9AjS3Idoj2jcDHvyGTHemKKjDa_lVPUdTY4UVh_QRm371bs1JX97m0ktKN6Rh8K_Za2O-WR1JDPfF3oDMkGUwu0QNT_wbvA3M8_SEGy67_25fKohq9O3v_tacpnlOFlh9frL1FBX6ErSOuNRuqYjyVH-9RZkcn-59_qVqTk4DWV4w"
           />
           <div className="relative z-20 w-full max-w-2xl mx-auto px-6 md:px-12 text-center space-y-6">
-            <h2 className="font-['Montserrat'] font-bold text-[26px] sm:text-[32px] md:text-[38px] leading-[1.2] tracking-tight text-white">
+            <h2 className="font-['Montserrat'] font-bold text-[22px] sm:text-[26px] md:text-[30px] leading-[1.25] tracking-tight text-white">
               Looking for Premium Chilli Powder Supply?
             </h2>
             <p className="font-['Inter'] font-normal text-white/80 text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed">

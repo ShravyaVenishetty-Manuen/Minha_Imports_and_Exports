@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { FiCheckCircle, FiMapPin, FiDroplet, FiAward, FiTag } from 'react-icons/fi';
 import { GiChiliPepper } from 'react-icons/gi';
 import { chilliVarieties } from '../config/chilliData';
@@ -120,18 +121,24 @@ const ChilliDetail = () => {
           <h1 className="font-['Montserrat'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             {chilli.name}
           </h1>
-          <p className="font-['Inter'] font-normal text-white/80 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
+          <p className="font-['Inter'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
             Premium Export Grade Guntur Dry Red Chilli
           </p>
         </div>
       </section>
 
       {/* 2. Product Overview Section */}
-      <section className="py-12 bg-surface">
+      <section className="py-10 md:py-14 bg-surface">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
 
           {/* Left: Gallery */}
-          <div className="lg:col-span-7 space-y-gutter">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-7 space-y-gutter"
+          >
             <div className="bg-white rounded p-2 ambient-shadow overflow-hidden">
               <img
                 alt={`${chilli.name} Main`}
@@ -152,10 +159,16 @@ const ChilliDetail = () => {
                 />
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Right: Key Specs Dashboard */}
-          <div className="lg:col-span-5 flex flex-col justify-center text-left">
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="lg:col-span-5 flex flex-col justify-center text-left"
+          >
             <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Export Grade {chilli.grade}</span>
             <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight mb-6">Technical Specifications</h2>
 
@@ -261,13 +274,13 @@ const ChilliDetail = () => {
                 Contact Us
               </Link>
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </section>
 
       {/* 3. About Variety */}
-      <section className="py-8 lg:py-10 bg-surface-container-low overflow-hidden">
+      <section className="py-8 md:py-12 bg-surface-container-low overflow-hidden">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="grid grid-cols-1 lg:grid-cols-[52%_48%] gap-6 lg:gap-8 items-center">
 
@@ -276,7 +289,7 @@ const ChilliDetail = () => {
               <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
                 The {isByadgi ? "Pigmentation" : "Pungency"} King
               </h2>
-              <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed text-justify">
+              <p className="font-body-md text-body-md text-[#5a403e] leading-relaxed text-justify">
                 {chilli.description} Sourced directly from Guntur’s most fertile tracts, this selection represents the best quality Indian dry red chilli available for export.
               </p>
               <p className="font-body-md text-body-md text-[#5a403e] leading-relaxed text-justify">
@@ -301,11 +314,11 @@ const ChilliDetail = () => {
       </section>
 
       {/* 4. Technical Specifications Table */}
-      <section className="py-12 bg-white border-t border-b border-neutral-100">
+      <section className="py-10 md:py-14 bg-white border-t border-b border-neutral-100">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="text-center mb-8">
             <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Technical Datasheet</span>
-            <h3 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight text-center">Export Quality Specifications</h3>
+            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight text-center">Export Quality Specifications</h2>
             <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] max-w-2xl mx-auto mt-3 text-center">
               Standardized laboratory testing parameters verified for direct trade bulk cargo.
             </p>
@@ -395,12 +408,12 @@ const ChilliDetail = () => {
       </section>
 
       {/* 5. Applications Section */}
-      <section className="py-12 bg-[#FAF8F4] border-t border-b border-neutral-100">
+      <section className="py-10 md:py-14 bg-[#FAF8F4] border-t border-b border-neutral-100">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 
           <div className="text-center mb-8">
             <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Industrial Supply Scope</span>
-            <h3 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight text-center">Industrial Applications</h3>
+            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight text-center">Industrial Applications</h2>
             <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] max-w-2xl mx-auto mt-3 text-center">
               Providing the raw material backbone for diverse food, spice processing, and extraction lines globally.
             </p>
@@ -440,7 +453,7 @@ const ChilliDetail = () => {
       </section>
 
       {/* 6. Packaging & Export */}
-      <section className="py-12 bg-white">
+      <section className="py-10 md:py-14 bg-white">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="bg-on-background text-white rounded-xl overflow-hidden flex flex-col md:flex-row-reverse">
             <div className="md:w-1/2 p-12 flex flex-col justify-center text-left">
@@ -472,7 +485,7 @@ const ChilliDetail = () => {
       </section>
 
       {/* 7. Related Varieties */}
-      <section className="py-12 bg-surface">
+      <section className="py-10 md:py-14 bg-surface">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
           <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight mb-8 text-center">Explore Other Varieties</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter max-w-4xl mx-auto">
@@ -499,7 +512,7 @@ const ChilliDetail = () => {
       </section>
 
       {/* 8. Dynamic Inquiry Form */}
-      <section id="inquire" className="py-12 px-6 md:px-12 bg-[#FAF8F4]">
+      <section id="inquire" className="py-10 md:py-14 px-6 md:px-12 bg-[#FAF8F4]">
         <div className="max-w-5xl mx-auto bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col md:flex-row border border-neutral-100">
           {/* Left: Image Showcase */}
           <div className="md:w-5/12 relative min-h-[250px] md:min-h-full">
@@ -516,7 +529,7 @@ const ChilliDetail = () => {
             <div className="inline-block px-3 py-1 bg-[#8f000d]/10 text-[#8f000d] font-['Montserrat'] font-semibold text-[10px] uppercase tracking-[0.15em] rounded-md self-start">
               Direct Trade Supply
             </div>
-            <h2 className="font-['Montserrat'] font-bold text-[28px] md:text-[34px] text-[#1a1c1e] leading-tight">
+            <h2 className="font-['Montserrat'] font-bold text-[22px] sm:text-[26px] md:text-[30px] leading-[1.25] text-[#1a1c1e] tracking-tight">
               Request Quote for <span className="text-[#8f000d] block mt-1">{chilli.name}</span>
             </h2>
             <p className="font-['Inter'] text-[#5a403e] text-[14px] leading-relaxed">

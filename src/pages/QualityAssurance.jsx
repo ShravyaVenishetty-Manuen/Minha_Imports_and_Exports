@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   FiCheckCircle,
-  FiMapPin,
-  FiCheckSquare,
-  FiSettings,
-  FiTruck,
   FiThermometer,
   FiDroplet,
   FiAward,
@@ -25,11 +21,6 @@ import qaStepProcessing from '../assets/qa_step_processing.png';
 import qaStepShipping from '../assets/qa_step_shipping.png';
 import chilliExportCta from '../assets/chilli-export-cta.png';
 import glowingChilliPremiumRemoveBg from '../assets/glowing-chilli-premium-remove-bg-io.png';
-import fssaiLogo from '../assets/3fssai-logo-png.png';
-import brcLogo from '../assets/brc-food-certification-logo-Photoroom.png';
-import fieoLogo from '../assets/fieo-Photoroom.png';
-
-
 
 const QualityAssurance = () => {
   // Scroll to top on page mount
@@ -124,7 +115,7 @@ const QualityAssurance = () => {
       </section>
 
       {/* 2. Quality Commitment Section */}
-      <section className="py-8 md:py-12 bg-surface">
+      <section className="py-10 md:py-14 bg-surface">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* Left Column (Image with secondary accent background glow) */}
@@ -193,7 +184,7 @@ const QualityAssurance = () => {
       </section>
 
       {/* 3. 4-Stage Quality Process */}
-      <section className="bg-surface-container-low py-8 md:py-12 relative overflow-hidden">
+      <section className="bg-surface-container-low py-10 md:py-14 relative overflow-hidden">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 text-center">
 
           <motion.div
@@ -274,7 +265,7 @@ const QualityAssurance = () => {
       </section>
 
       {/* 4. Quality Standards Checklist (Benchmarks) */}
-      <section className="py-8 md:py-12 bg-surface">
+      <section className="py-10 md:py-14 bg-surface">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
 
           <motion.div
@@ -317,7 +308,7 @@ const QualityAssurance = () => {
                     Quality First<br />Always
                   </h3>
                 </div>
-                
+
                 <p className="font-['Inter'] font-normal text-white/80 text-[13.5px] leading-relaxed">
                   Every step is controlled, tested and certified.
                 </p>
@@ -483,7 +474,7 @@ const QualityAssurance = () => {
       </section>
 
       {/* 5. Trust Highlight Section */}
-      <section className="py-8 md:py-12 bg-surface-container-low relative overflow-hidden text-center">
+      <section className="py-10 md:py-14 bg-surface-container-low relative overflow-hidden text-center">
         <div className="max-w-[1000px] mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -497,14 +488,14 @@ const QualityAssurance = () => {
               <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase block">
                 Global Sourcing Partner
               </span>
-              <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[42px] leading-[1.2] tracking-tight text-[#1a1c1e]">
+              <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] tracking-tight text-[#1a1c1e]">
                 Quality You Can Trust
               </h2>
               <div className="w-16 h-[2.5px] bg-[#8f000d] mx-auto mt-4 rounded-full"></div>
             </div>
 
             {/* Description */}
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[17px] leading-relaxed max-w-3xl mx-auto">
+            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] max-w-3xl mx-auto">
               Our legacy is built on the consistency of our supply. By integrating technology with traditional farming wisdom, we provide a transparent bridge between Indian agriculture and global commerce. When you choose Minha, you choose a partner committed to your brand's integrity.
             </p>
 
@@ -513,7 +504,7 @@ const QualityAssurance = () => {
 
             {/* 3-Column Stats Row */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-neutral-200/80">
-              
+
               {/* Stat 1 */}
               <div className="space-y-2 py-4 md:py-0 md:px-4 text-center">
                 <div className="font-['Montserrat'] font-black text-[40px] md:text-[48px] leading-none text-[#8f000d]">
@@ -562,13 +553,13 @@ const QualityAssurance = () => {
 
       {/* 6. Inquiry CTA Section */}
       <section className="py-6 px-6 md:px-12 max-w-[850px] mx-auto z-10 relative">
-        <div className="relative rounded-[2rem] overflow-hidden text-center text-white py-12 md:py-16 shadow-2xl border border-white/10 bg-gradient-to-br from-[#2c6a46] via-[#123e25] to-[#111315] group">
+        <div className="relative rounded-[2rem] overflow-hidden text-center text-white py-10 md:py-14 shadow-2xl border border-white/10 bg-gradient-to-br from-[#2c6a46] via-[#123e25] to-[#111315] group">
 
           {/* Subtle grid and glowing accents */}
           <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none" />
           <div className="absolute -top-32 -left-32 w-64 h-64 bg-[#2c6a46]/20 rounded-full blur-3xl pointer-events-none group-hover:bg-[#2c6a46]/30 transition-all duration-700" />
           <div className="absolute -bottom-32 -right-32 w-64 h-64 bg-white/5 rounded-full blur-3xl pointer-events-none" />
-          
+
           {/* Cargo logistics overlay ship image */}
           <img
             src={chilliExportCta}

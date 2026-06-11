@@ -48,11 +48,11 @@ const GlobalPresence = () => {
               Global Footprint
             </span>
 
-            <h2 className="font-['Montserrat'] font-bold text-[36px] md:text-[44px] leading-[1.2] text-[#1a1c1e] tracking-tight">
+            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Taking <span className="text-[#8f000d]">Guntur's Finest</span> to the World
             </h2>
 
-            <p className="font-['Inter'] font-normal text-[#5a403e]/90 text-[15px] md:text-[16px] leading-[1.6]">
+            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
               From Guntur to global markets, we ensure quality, consistency and trust in every shipment.
             </p>
 

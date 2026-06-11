@@ -42,7 +42,7 @@ const About = () => {
           </div>
 
           {/* Heading */}
-          <h2 className="font-['Montserrat'] font-bold text-[32px] leading-[1.2] text-[#1a1c1e]">
+          <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
             Our Commitment to <span className="text-[#8f000d]">Quality</span>
           </h2>
 

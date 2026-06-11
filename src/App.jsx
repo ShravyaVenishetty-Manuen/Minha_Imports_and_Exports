@@ -8,6 +8,7 @@ import OurProcess from './components/sections/OurProcess'
 import GlobalPresence from './components/sections/GlobalPresence'
 import WhyChooseUs from './components/sections/WhyChooseUs'
 import ContactSection from './components/sections/Contact'
+import Testimonials from './components/sections/Testimonials'
 import Contact from './pages/Contact'
 import Footer from './components/layout/Footer'
 import Varieties from './pages/Varieties'
@@ -35,6 +36,7 @@ function App() {
                   <Products />
                   <OurProcess />
                   <GlobalPresence />
+                  <Testimonials />
                   <ContactSection />
                 </>
               }

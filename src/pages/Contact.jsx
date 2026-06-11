@@ -3,13 +3,11 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import cargoShipImg from '../assets/image.png';
 import chilliBowlTable from '../assets/chilli-bowl-table.png';
-import chilliProcessingFacility from '../assets/chilli-processing-facility.png';
 import {
   FiPhone,
   FiMail,
   FiMapPin,
   FiClock,
-  FiMessageSquare,
   FiCheckCircle,
   FiChevronDown,
   FiSend,
@@ -25,8 +23,6 @@ import {
 } from 'react-icons/md';
 
 const contactHeroBg = "https://lh3.googleusercontent.com/aida-public/AB6AXuBYTOWWYX2-AEwKGMeXEuiMKGJwYFQMq_0kSqSOUSHpcnvvBCs5I_5jNCxuIeHzMTGHDDWa6owpq-GVB_Rj5ZiR4NoZOKT-5zVR4PMoWarzzg19fTy-V12ePX3ga5QCJU0nllLzz7lM-tTEz8nEfVgQf5Z17rEbLHwWtdTTccE_yckslC6IPnbrJYYBapFFMiAyA8Y_c3whQhh8hp02falfMdifDkhirhArCKXjxnyVHbtojz_4pHZJGfXPJC-aQATDnMGCC1TxLwE";
-const mapPlaceholder = "https://lh3.googleusercontent.com/aida-public/AB6AXuC3x56T1qRHhq531WUCaybQlcCfcvzUrJ_gr3lLpDLNr0Xtof5QyVZVgEhVl8qlRSHmKl_LQVucdqFYOZJLe_pJvSRdFOIvsvJ3OZgQfflkXunGhpcUFhrHauTg7VhepwfcgCVrLZC5KJb4c2Vq9whmCJaXM29wVYKVkf0oAXPdEPuXOUsWqzNnJx9-oxQmpATbaKDy-ob1pZcmnBvTlLrbhsF0zizgF8OduM91d7ufGpbiRpGr1SDJpkKjJjOkMFD1CBfUv6A7M28";
-
 
 const fadeUp = {
   hidden: { opacity: 0, y: 25 },
@@ -211,8 +207,7 @@ const Contact = () => {
                     <div className="flex-1 min-w-0">
                       <div className="w-6 h-[2px] bg-[#2E6F4F] mb-1 rounded-full" />
                       <h4 className="font-['Montserrat'] font-bold text-[12px] text-[#111827] mb-0.5">Phone</h4>
-                      <a href="tel:+919876543210" className="block font-['Inter'] text-[11px] text-[#374151] hover:text-[#2E6F4F] transition-colors leading-[1.5]">+91 98765 43210</a>
-                      <a href="tel:+918123456789" className="block font-['Inter'] text-[11px] text-[#374151] hover:text-[#2E6F4F] transition-colors leading-[1.5]">+91 81234 56789</a>
+                      <a href="tel:+918185867999" className="block font-['Inter'] text-[11px] text-[#374151] hover:text-[#2E6F4F] transition-colors leading-[1.5]">+91 81858 67999</a>
                     </div>
                   </div>
 
@@ -224,8 +219,7 @@ const Contact = () => {
                     <div className="flex-1 min-w-0">
                       <div className="w-6 h-[2px] bg-[#2E6F4F] mb-1 rounded-full" />
                       <h4 className="font-['Montserrat'] font-bold text-[12px] text-[#111827] mb-0.5">Email</h4>
-                      <a href="mailto:exports@minhaexports.com" className="block font-['Inter'] text-[11px] text-[#374151] hover:text-[#2E6F4F] transition-colors leading-[1.5] break-all">exports@minhaexports.com</a>
-                      <a href="mailto:trade@minhaexports.com" className="block font-['Inter'] text-[11px] text-[#374151] hover:text-[#2E6F4F] transition-colors leading-[1.5] break-all">trade@minhaexports.com</a>
+                      <a href="mailto:minhaimportsexports@gmail.com" className="block font-['Inter'] text-[11px] text-[#374151] hover:text-[#2E6F4F] transition-colors leading-[1.5] break-all">minhaimportsexports@gmail.com</a>
                     </div>
                   </div>
 
@@ -410,7 +404,7 @@ const Contact = () => {
                             value={formData.name}
                             onChange={handleInputChange}
                             className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Inter'] placeholder-neutral-400"
-                            placeholder="e.g. John Doe"
+                            placeholder="Enter Name"
                             type="text"
                           />
                         </div>
@@ -423,7 +417,7 @@ const Contact = () => {
                             value={formData.company}
                             onChange={handleInputChange}
                             className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Inter'] placeholder-neutral-400"
-                            placeholder="e.g. Spice Ltd"
+                            placeholder="Enter Company Name"
                             type="text"
                           />
                         </div>
@@ -437,7 +431,7 @@ const Contact = () => {
                             value={formData.country}
                             onChange={handleInputChange}
                             className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Inter'] placeholder-neutral-400"
-                            placeholder="e.g. United Kingdom"
+                            placeholder="Enter Country Name"
                             type="text"
                           />
                         </div>
@@ -451,7 +445,7 @@ const Contact = () => {
                             value={formData.email}
                             onChange={handleInputChange}
                             className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Inter'] placeholder-neutral-400"
-                            placeholder="john@company.com"
+                            placeholder="Enter Email Address"
                             type="email"
                           />
                         </div>
@@ -465,7 +459,7 @@ const Contact = () => {
                             value={formData.phone}
                             onChange={handleInputChange}
                             className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Inter'] placeholder-neutral-400"
-                            placeholder="+1 (000) 000-0000"
+                            placeholder="Enter Phone Number"
                             type="tel"
                           />
                         </div>
@@ -733,7 +727,7 @@ const Contact = () => {
               <div className="mt-8 pt-4 border-t border-neutral-200 flex items-center justify-between text-[11px] font-['Montserrat'] font-bold">
                 <span className="text-neutral-400">Still have questions?</span>
                 <a
-                  href="mailto:exports@minhaexports.com"
+                  href="mailto:minhaimportsexports@gmail.com"
                   className="text-[#8f000d] hover:text-[#cca72f] transition-colors inline-flex items-center gap-1 group"
                 >
                   Contact our team
@@ -861,7 +855,7 @@ const Contact = () => {
               <div className="mt-5 pt-4 border-t border-neutral-200 flex items-center justify-between text-[11px] font-['Montserrat'] font-bold">
                 <span className="text-neutral-400">Still have questions?</span>
                 <a
-                  href="mailto:exports@minhaexports.com"
+                  href="mailto:minhaimportsexports@gmail.com"
                   className="text-[#8f000d] hover:text-[#cca72f] transition-colors inline-flex items-center gap-1 group"
                 >
                   Contact our team

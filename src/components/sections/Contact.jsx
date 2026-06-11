@@ -18,7 +18,7 @@ const Contact = () => {
       className="relative bg-white py-8 px-6 md:px-12 overflow-hidden border-t border-neutral-100"
     >
       <div className="max-w-[960px] mx-auto relative z-10">
-        
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ const Contact = () => {
               </span>
               Partnership Opportunities
             </div>
-            
+
             <h2 className="font-['Montserrat'] font-bold text-[22px] sm:text-[26px] md:text-[30px] leading-[1.25] text-white tracking-tight">
               Looking for a Reliable <br className="hidden sm:inline" /> Chilli Buying Partner?
             </h2>
