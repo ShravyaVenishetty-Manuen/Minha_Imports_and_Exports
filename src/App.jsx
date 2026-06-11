@@ -21,7 +21,7 @@ import Certifications from './pages/Certifications'
 
 function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="min-h-screen bg-bg-light font-body text-text-dark flex flex-col justify-between">
         <Navbar />
         <div className="flex-grow">
