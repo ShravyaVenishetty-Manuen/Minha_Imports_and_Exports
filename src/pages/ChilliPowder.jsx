@@ -24,10 +24,10 @@ const ChilliPowder = () => {
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-Pwhv_1Pe7m0cj8GkhYAEFGC1s95Hl2BSEP1FJjMy0XnVkWqIXY6ux1Kl0uInepg-XV5rFQ-XppBEmc5FA7covRwwQvElF3nyqa2P8ILWNyTvPaX9naEGrOiagugstnAcpD7CmW_QQXmptNMLwm35h41mbo8Kpt9MrKPp1WVsIoF6p0_8YDRNzou_XhznQiIO0tbqt4IUKO3Nojt5WSe7axGywQNRBIRTSAIxXgzpjk0sIgUlrKw1QPw4_opJq8XVq-r5f3dLPXg"
         />
         <div className="relative z-20 w-full max-w-4xl mx-auto text-center space-y-6">
-          <nav className="flex justify-center items-center gap-2 font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#cca72f] uppercase mb-2">
-            <Link className="hover:text-white transition-colors" to="/">Home</Link>
+          <nav className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['Montserrat'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">
+            <Link className="hover:text-white transition-colors whitespace-nowrap" to="/">Home</Link>
             <span className="text-white/60">/</span>
-            <span className="text-white">Chilli Powder</span>
+            <span className="text-white whitespace-normal text-center">Chilli Powder</span>
           </nav>
           <h1 className="font-['Montserrat'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             Premium Chilli Powder

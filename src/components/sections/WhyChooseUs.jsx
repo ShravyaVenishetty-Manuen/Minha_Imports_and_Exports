@@ -63,10 +63,10 @@ const WhyChooseUs = () => {
   };
 
   return (
-    <section id="why-choose-us" className="relative pt-12 pb-8 bg-white overflow-hidden">
+    <section id="why-choose-us" className="relative pt-6 md:pt-12 pb-4 md:pb-8 bg-white overflow-hidden">
 
       {/* Red Header Section */}
-      <div className="relative pt-14 pb-22 px-6 text-center text-white bg-[#8f000d]">
+      <div className="relative pt-10 md:pt-14 pb-14 md:pb-22 px-6 text-center text-white bg-[#8f000d]">
 
         {/* Section Heading */}
         <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-white tracking-tight mb-2">
@@ -99,12 +99,12 @@ const WhyChooseUs = () => {
       </div>
 
       {/* Bottom Section / Grid */}
-      <div className="pt-16 pb-12 px-6 md:px-16 relative overflow-hidden">
+      <div className="pt-10 md:pt-16 pb-8 md:pb-12 px-6 md:px-16 relative overflow-hidden">
 
         {/* World Map Watermark Background */}
         <img
           src={worldMap}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-[300px] opacity-[0.04] pointer-events-none select-none object-contain z-0"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] h-[300px] opacity-[0.04] pointer-events-none select-none object-contain z-0"
           alt="World Map"
         />
 

@@ -60,7 +60,7 @@ const OurProcess = () => {
   };
 
   return (
-    <section id="our-process" className="relative py-28 px-6 md:px-12 bg-white overflow-hidden">
+    <section id="our-process" className="relative py-10 md:py-28 px-6 md:px-12 bg-white overflow-hidden">
 
       {/* Decorative leaf illustrations in margins */}
       <div className="absolute top-12 left-2 w-[180px] h-[180px] opacity-[0.02] text-[#1F5E3B] pointer-events-none z-0 select-none hidden lg:block">
@@ -77,7 +77,7 @@ const OurProcess = () => {
       <div className="max-w-[1280px] mx-auto relative z-10">
 
         {/* Top Process Badge & Headings */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 md:mb-16">
           <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
             Our Process
           </span>

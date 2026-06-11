@@ -47,10 +47,10 @@ const Varieties = () => {
       {/* 1. Hero Banner */}
       <section style={heroStyle} className="relative h-[350px] md:h-[420px] w-full flex items-center justify-center text-center text-white overflow-hidden pt-20">
         <div className="max-w-4xl mx-auto space-y-6 relative z-10">
-          <nav className="flex justify-center items-center gap-2 font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#cca72f] uppercase mb-2">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-white">Chilli Varieties</span>
+          <nav className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['Montserrat'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">
+            <Link to="/" className="hover:text-white transition-colors whitespace-nowrap">Home</Link>
+            <span className="text-white/60">/</span>
+            <span className="text-white whitespace-normal text-center">Chilli Varieties</span>
           </nav>
           <h1 className="font-['Montserrat'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             Premium Chilli Varieties

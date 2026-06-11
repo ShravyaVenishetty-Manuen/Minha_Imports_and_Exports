@@ -6,7 +6,7 @@ const About = () => {
   const imageUrl = "https://lh3.googleusercontent.com/aida-public/AB6AXuB7n60bLqPyZwqgbpMX2yMZa4LSMOMywtGECuYtVsZXz_0XptT8Dp1tBo4wd1uAr2v2z7XvNc-MDFbGYxGE8puXpFEafoq7x2zGUmPQiGD04SkCqjaHLCiIQ-qw5zQVAMDRnHJSjxvRYMTsvx6RzNOUT-2PKxZyamylPy6TXwgz9qnV4GRtl9ZqX0kliZ2MP58-sVCKZoj1Bvs1KaEGUCI6mWis76f8Mw-ZSyWk8YdTABD1LpNKyV3xrFA3vamc6kAJThv2vFQowCA";
 
   return (
-    <section id="about" className="py-24 px-6 md:px-16 bg-[#f9f9fc]">
+    <section id="about" className="py-10 md:py-24 px-6 md:px-16 bg-[#f9f9fc]">
       <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
         {/* Left Side: Animated Image Showcase */}

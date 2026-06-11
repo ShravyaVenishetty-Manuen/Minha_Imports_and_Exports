@@ -45,7 +45,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative w-full h-screen overflow-hidden flex items-center justify-center bg-black">
+    <section className="relative w-full min-h-screen md:h-screen overflow-hidden flex items-center justify-center bg-black pt-20 md:pt-0">
       
       {/* Background Image Slideshow with smooth crossfade and Ken Burns scale effect */}
       <div className="absolute inset-0 z-0">
@@ -76,7 +76,7 @@ const Hero = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#cca72f]/5 rounded-full blur-[120px] pointer-events-none z-15" />
 
       {/* Main Content */}
-      <div className="relative z-20 w-full max-w-5xl mx-auto px-6 text-center pt-10">
+      <div className="relative z-20 w-full max-w-5xl mx-auto px-6 text-center pt-4 pb-12 md:py-0">
         <motion.div
           variants={containerVariants}
           initial="hidden"

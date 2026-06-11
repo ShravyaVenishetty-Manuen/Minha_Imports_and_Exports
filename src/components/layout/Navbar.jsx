@@ -28,6 +28,18 @@ const Navbar = () => {
     setIsOpen(false);
   }, [location]);
 
+  // Prevent background scrolling when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Chilli Varieties', path: '/varieties' },
@@ -112,56 +124,72 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-white/98 backdrop-blur-lg z-40 flex flex-col justify-center items-center lg:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 bg-white z-50 flex flex-col lg:hidden"
           >
-            <div className="flex flex-col items-center space-y-6 text-center px-6 w-full max-w-sm">
-
-              {/* Logo in Mobile Menu */}
-              <div className="mb-6">
+            {/* Overlay Header Bar */}
+            <div className="w-full px-6 py-4 flex items-center justify-between border-b border-neutral-100 bg-white/95 backdrop-blur-md">
+              <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center">
                 <img
                   src={logoImg}
                   alt="Minha Imports & Exports"
-                  className="h-12 object-contain"
+                  className="h-8 object-contain"
                 />
-              </div>
-
-              {navLinks.map((link, idx) => {
-                const isActive = location.pathname === link.path;
-                return (
-                  <motion.div
-                    key={link.name}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: idx * 0.05 }}
-                  >
-                    <Link
-                      to={link.path}
-                      className={`font-body text-lg font-medium tracking-[0.08em] transition-all py-2 block ${isActive ? 'text-brand-red font-bold border-b-2 border-brand-red' : 'text-text-gray hover:text-brand-red'
-                        }`}
-                    >
-                      {link.name}
-                    </Link>
-                  </motion.div>
-                );
-              })}
-
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: navLinks.length * 0.05 }}
-                className="w-full pt-6"
+              </Link>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="p-2 text-brand-red hover:text-brand-red/80 transition-colors focus:outline-none"
+                aria-label="Close Navigation Menu"
               >
-                <Link
-                  to="/contact"
-                  className="block bg-brand-red text-white text-base font-heading font-semibold py-3 px-8 rounded-lg shadow-lg text-center"
+                <FiX size={24} />
+              </button>
+            </div>
+
+            {/* Overlay Scrollable Content Container */}
+            <div className="flex-grow overflow-y-auto px-6 py-6 flex flex-col">
+              <div className="my-auto flex flex-col items-center space-y-4 text-center w-full max-w-sm mx-auto">
+                {navLinks.map((link, idx) => {
+                  const isActive = location.pathname === link.path;
+                  return (
+                    <motion.div
+                      key={link.name}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: idx * 0.05 }}
+                      className="w-full"
+                    >
+                      <Link
+                        to={link.path}
+                        onClick={() => setIsOpen(false)}
+                        className={`font-body text-base font-semibold tracking-[0.08em] transition-all py-2 block rounded-lg ${isActive
+                            ? 'text-brand-red bg-brand-red/5 font-bold'
+                            : 'text-text-gray hover:text-brand-red hover:bg-neutral-50'
+                          }`}
+                      >
+                        {link.name}
+                      </Link>
+                    </motion.div>
+                  );
+                })}
+
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: navLinks.length * 0.05 }}
+                  className="w-full pt-3"
                 >
-                  Enquire Now
-                </Link>
-              </motion.div>
+                  <Link
+                    to="/contact"
+                    onClick={() => setIsOpen(false)}
+                    className="block bg-brand-red text-white text-sm font-heading font-semibold py-3 px-8 rounded-lg shadow-lg text-center hover:opacity-95 transition-opacity"
+                  >
+                    Enquire Now
+                  </Link>
+                </motion.div>
+              </div>
             </div>
           </motion.div>
         )}

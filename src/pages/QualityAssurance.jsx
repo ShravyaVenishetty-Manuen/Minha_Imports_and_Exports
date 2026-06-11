@@ -100,10 +100,10 @@ const QualityAssurance = () => {
           src={dryChilliSortingFacility}
         />
         <div className="relative z-20 w-full max-w-4xl mx-auto text-center space-y-6">
-          <nav className="flex justify-center items-center gap-2 font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#cca72f] uppercase mb-2">
-            <Link className="hover:text-white transition-colors" to="/">Home</Link>
+          <nav className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['Montserrat'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">
+            <Link className="hover:text-white transition-colors whitespace-nowrap" to="/">Home</Link>
             <span className="text-white/60">/</span>
-            <span className="text-white">Quality Assurance</span>
+            <span className="text-white whitespace-normal text-center">Quality Assurance</span>
           </nav>
           <h1 className="font-['Montserrat'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             Quality Assurance
@@ -310,7 +310,7 @@ const QualityAssurance = () => {
                 </div>
 
                 <p className="font-['Inter'] font-normal text-white/80 text-[13.5px] leading-relaxed">
-                  Every step is controlled, tested and certified.
+                  Every step is controlled, tested and certified. We implement strict multi-stage sorting, moisture management (10-12%), and laboratory inspection to meet international food safety benchmarks and preserve natural color and heat.
                 </p>
               </div>
 

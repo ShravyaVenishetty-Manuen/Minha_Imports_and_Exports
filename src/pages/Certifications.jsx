@@ -180,10 +180,10 @@ const Certifications = () => {
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUFP4lXWY2N9ZZnMljSsoM6tmA9LoA-hRA2LWZxX1PBwuu5u1EReljIm1QHf2w-fcIqwhPJeJ5PDiKQSISSwNKl4tGg7e2AiyECz13F5lCexzj9iBiJe2QgqjLznWEHUrTvyxQ7W6fVUZ6rAZ1FZS8FudIvpnvl6i0Klr23bCvl_53WA9Klbi9FImUYI9W2AGXwRl7kKkee7vuHX_9P3Yu2jRgi60ooXCzsSa9Fgh5eAH0Bt3oli16WzCaiZcVj3w7PJ66oEOdUkA"
         />
         <div className="relative z-20 w-full max-w-4xl mx-auto text-center space-y-5 px-6">
-          <nav className="flex justify-center items-center gap-2 font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#cca72f] uppercase mb-2">
-            <Link className="hover:text-white transition-colors" to="/">Home</Link>
+          <nav className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['Montserrat'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">
+            <Link className="hover:text-white transition-colors whitespace-nowrap" to="/">Home</Link>
             <span className="text-white/60">/</span>
-            <span className="text-white">Certifications</span>
+            <span className="text-white whitespace-normal text-center">Certifications</span>
           </nav>
           <h1 className="font-['Montserrat'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             Certifications &amp; Compliance

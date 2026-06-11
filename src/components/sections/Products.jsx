@@ -25,7 +25,7 @@ const Products = () => {
   };
 
   return (
-    <section id="products" className="py-24 px-6 md:px-12 bg-[#FAF8F4] relative overflow-hidden">
+    <section id="products" className="py-10 md:py-24 px-6 md:px-12 bg-[#FAF8F4] relative overflow-hidden">
 
       {/* Soft Leaf Illustrations (Organic background decoration with light opacity) */}
       <div className="absolute top-16 left-8 w-[240px] h-[240px] opacity-[0.03] text-[#1F5E3B] pointer-events-none z-0 select-none">
@@ -42,7 +42,7 @@ const Products = () => {
       <div className="max-w-[1280px] mx-auto relative z-10">
 
         {/* Section Header */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+        <div className="text-center mb-8 md:mb-16 max-w-3xl mx-auto">
           <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
             Our Products
           </span>
