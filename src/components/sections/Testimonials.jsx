@@ -158,7 +158,7 @@ const Testimonials = () => {
                   animate={{ opacity: 1, x: 0, scale: 1 }}
                   exit={{ opacity: 0, x: -40, scale: 0.98 }}
                   transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                  className="bg-white border border-neutral-200/60 rounded-[2rem] p-8 md:p-10 shadow-xl relative w-full flex flex-col justify-between cursor-pointer"
+                  className="bg-white border border-neutral-200/60 rounded-[2rem] p-8 md:p-10 shadow-xl relative w-full flex flex-col justify-between"
                 >
                   {/* Decorative Big Quote Mark */}
                   <div className="absolute top-8 right-8 opacity-[0.03] text-neutral-900 text-[90px] font-serif pointer-events-none select-none">
