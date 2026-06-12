@@ -465,8 +465,8 @@ const Facility = () => {
                   alt={img.alt}
                   src={img.src}
                 />
-                <div className="absolute inset-0 bg-[#8f000d]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <span className="text-white font-['Montserrat'] font-bold text-sm tracking-wider uppercase">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent md:bg-[#8f000d]/60 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex items-end md:items-center justify-start md:justify-center p-3.5 md:p-0">
+                  <span className="text-white font-['Montserrat'] font-bold text-[11px] md:text-sm tracking-wider uppercase">
                     {img.title}
                   </span>
                 </div>
