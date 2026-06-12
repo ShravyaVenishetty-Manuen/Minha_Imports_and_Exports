@@ -140,7 +140,7 @@ const Facility = () => {
         <div className="relative max-w-[1100px] mx-auto px-6 md:px-12 pb-4 z-10">
 
           {/* Vertical Connecting Line */}
-          <div className="absolute left-8 md:left-1/2 top-4 bottom-4 w-[2px] bg-gradient-to-b from-[#8f000d] via-[#2c6a46] to-[#cca72f] opacity-25 transform -translate-x-1/2 z-0"></div>
+          <div className="absolute left-12 md:left-1/2 top-4 bottom-4 w-[2px] bg-gradient-to-b from-[#8f000d] via-[#2c6a46] to-[#cca72f] opacity-25 transform -translate-x-1/2 z-0"></div>
 
           {/* Timeline Items */}
           <div className="space-y-10 md:space-y-14">
@@ -149,7 +149,7 @@ const Facility = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center relative min-h-[280px]">
 
               {/* Timeline Center Node */}
-              <div className="absolute left-8 md:left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 flex items-center justify-center">
+              <div className="absolute left-12 md:left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-20 flex items-center justify-center">
                 <div className="w-10 h-10 rounded-full bg-white border-2 border-[#8f000d] flex items-center justify-center font-['Montserrat'] font-bold text-xs shadow-md relative z-10">
                   <span className="text-[#8f000d]">01</span>
                   <span className="absolute -inset-1.5 rounded-full border border-[#8f000d] opacity-40 animate-pulse text-[#8f000d]"></span>
@@ -162,7 +162,7 @@ const Facility = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
-                className="w-full order-1 pl-12 md:pl-0 text-left"
+                className="w-full order-1 pl-16 md:pl-0 text-left"
               >
                 <div className="bg-white border border-neutral-100/85 rounded-3xl p-6 md:p-8 shadow-premium-soft hover:-translate-y-1 hover:shadow-md transition-all duration-300 relative z-10">
                   <span className="text-[#8f000d] font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] uppercase">
@@ -196,7 +196,7 @@ const Facility = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: 0.15 }}
-                className="w-full order-2 pl-12 md:pl-0"
+                className="w-full order-2 pl-16 md:pl-0"
               >
                 <div className="rounded-2xl overflow-hidden shadow-lg border border-neutral-100 aspect-video group">
                   <img
@@ -213,7 +213,7 @@ const Facility = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center relative min-h-[280px]">
 
               {/* Timeline Center Node */}
-              <div className="absolute left-8 md:left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 flex items-center justify-center">
+              <div className="absolute left-12 md:left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-20 flex items-center justify-center">
                 <div className="w-10 h-10 rounded-full bg-white border-2 border-[#2c6a46] flex items-center justify-center font-['Montserrat'] font-bold text-xs shadow-md relative z-10">
                   <span className="text-[#2c6a46]">02</span>
                   <span className="absolute -inset-1.5 rounded-full border border-[#2c6a46] opacity-40 animate-pulse text-[#2c6a46]"></span>
@@ -226,7 +226,7 @@ const Facility = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: 0.15 }}
-                className="w-full order-2 md:order-1 pl-12 md:pl-0"
+                className="w-full order-2 md:order-1 pl-16 md:pl-0"
               >
                 <div className="rounded-2xl overflow-hidden shadow-lg border border-neutral-100 aspect-video group">
                   <img
@@ -243,7 +243,7 @@ const Facility = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
-                className="w-full order-1 md:order-2 pl-12 md:pl-0 text-left"
+                className="w-full order-1 md:order-2 pl-16 md:pl-0 text-left"
               >
                 <div className="bg-white border border-neutral-100/85 rounded-3xl p-6 md:p-8 shadow-premium-soft hover:-translate-y-1 hover:shadow-md transition-all duration-300 relative z-10">
                   <span className="text-[#2c6a46] font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] uppercase">
@@ -277,7 +277,7 @@ const Facility = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center relative min-h-[280px]">
 
               {/* Timeline Center Node */}
-              <div className="absolute left-8 md:left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 flex items-center justify-center">
+              <div className="absolute left-12 md:left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-20 flex items-center justify-center">
                 <div className="w-10 h-10 rounded-full bg-white border-2 border-[#8f000d] flex items-center justify-center font-['Montserrat'] font-bold text-xs shadow-md relative z-10">
                   <span className="text-[#8f000d]">03</span>
                   <span className="absolute -inset-1.5 rounded-full border border-[#8f000d] opacity-40 animate-pulse text-[#8f000d]"></span>
@@ -290,7 +290,7 @@ const Facility = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
-                className="w-full order-1 pl-12 md:pl-0 text-left"
+                className="w-full order-1 pl-16 md:pl-0 text-left"
               >
                 <div className="bg-white border border-neutral-100/85 rounded-3xl p-6 md:p-8 shadow-premium-soft hover:-translate-y-1 hover:shadow-md transition-all duration-300 relative z-10">
                   <span className="text-[#8f000d] font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] uppercase">
@@ -324,7 +324,7 @@ const Facility = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: 0.15 }}
-                className="w-full order-2 pl-12 md:pl-0"
+                className="w-full order-2 pl-16 md:pl-0"
               >
                 <div className="rounded-2xl overflow-hidden shadow-lg border border-neutral-100 aspect-video group">
                   <img
@@ -341,7 +341,7 @@ const Facility = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center relative min-h-[280px]">
 
               {/* Timeline Center Node */}
-              <div className="absolute left-8 md:left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 flex items-center justify-center">
+              <div className="absolute left-12 md:left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-20 flex items-center justify-center">
                 <div className="w-10 h-10 rounded-full bg-white border-2 border-[#cca72f] flex items-center justify-center font-['Montserrat'] font-bold text-xs shadow-md relative z-10">
                   <span className="text-[#cca72f]">04</span>
                   <span className="absolute -inset-1.5 rounded-full border border-[#cca72f] opacity-40 animate-pulse text-[#cca72f]"></span>
@@ -354,7 +354,7 @@ const Facility = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: 0.15 }}
-                className="w-full order-2 md:order-1 pl-12 md:pl-0"
+                className="w-full order-2 md:order-1 pl-16 md:pl-0"
               >
                 <div className="rounded-2xl overflow-hidden shadow-lg border border-neutral-100 aspect-video group">
                   <img
@@ -371,7 +371,7 @@ const Facility = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
-                className="w-full order-1 md:order-2 pl-12 md:pl-0 text-left"
+                className="w-full order-1 md:order-2 pl-16 md:pl-0 text-left"
               >
                 <div className="bg-white border border-neutral-100/85 rounded-3xl p-6 md:p-8 shadow-premium-soft hover:-translate-y-1 hover:shadow-md transition-all duration-300 relative z-10">
                   <span className="text-[#cca72f] font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] uppercase">
