@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/common/SEO';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiArrowRight, FiCheck, FiFilter, FiInfo, FiMail, FiDroplet, FiFileText, FiShield, FiCheckCircle } from 'react-icons/fi';
 import { GiChiliPepper } from 'react-icons/gi';
@@ -8,10 +9,6 @@ import chilliHeroVarieties from '../assets/chilli-hero-varieties.png';
 import chilliIntroDry from '../assets/chilli-intro-dry.png';
 import chilliSpotlightDry from '../assets/chilli-spotlight-dry.png';
 import chilliBowlTable from '../assets/chilli-bowl-table.png';
-import chilliBlossoms from '../assets/chilli-blossoms-left.png';
-import singleChilliPod from '../assets/single-chilli-pod-right.png';
-import chilliMountainsBg from '../assets/chilli-mountains-bg.png';
-import chilliTwigsBg from '../assets/chilli-twigs-bg.png';
 
 const Varieties = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -53,8 +50,24 @@ const Varieties = () => {
     backgroundPosition: 'center 25%',
   };
 
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://shravyavenishetty-manuen.github.io/Minha_Imports_and_Exports/' },
+      { '@type': 'ListItem', position: 2, name: 'Chilli Varieties', item: 'https://shravyavenishetty-manuen.github.io/Minha_Imports_and_Exports/varieties' },
+    ],
+  };
+
   return (
     <div className="bg-[#FAF8F4] min-h-screen font-['Inter'] text-[#1a1c1e] relative overflow-hidden">
+      <SEO
+        title="Guntur Dry Red Chilli Varieties | Minha Imports & Exports"
+        description="Explore premium Guntur Dry Red Chilli varieties — Teja S17, S4/334, S10, Byadgi. Bulk Chilli Exporter India with APEDA certification. Custom grades for global spice industries."
+        keywords="Guntur Dry Red Chilli Varieties, Teja S17 Chilli, S4 334 Chilli, Byadgi Chilli, Bulk Chilli Supplier India, Chilli Exporter India"
+        url="/varieties"
+        schemas={[breadcrumb]}
+      />
 
       {/* 1. Hero Banner */}
       <section style={heroStyle} className="relative h-[350px] md:h-[420px] w-full flex items-center justify-center text-center text-white overflow-hidden pt-20">
@@ -505,7 +518,7 @@ const Varieties = () => {
             <div className="absolute bottom-0 left-0 w-[180px] h-[180px] bg-white/5 rounded-full blur-[50px] pointer-events-none" />
 
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-              
+
               {/* Left Column: Sourcing Quote (lg:col-span-5) */}
               <div className="relative space-y-4 text-center lg:text-left lg:border-r lg:border-white/10 lg:pr-8 xl:pr-12 lg:col-span-5 w-full z-10">
                 <span className="absolute -top-10 -left-2 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">

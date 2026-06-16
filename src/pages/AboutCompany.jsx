@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import SEO from '../components/common/SEO';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -287,6 +288,20 @@ const AboutCompany = () => {
 
   return (
     <div className="bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container min-h-screen relative overflow-hidden">
+      <SEO
+        title="About Us | Minha Imports & Exports"
+        description="Learn about Minha Imports & Exports — Guntur's leading dry red chilli and spice export company. FSSAI, APEDA & ISO certified. Direct farm-to-port supply chain since 2018."
+        keywords="Minha Imports Exports, About Minha, Guntur Chilli Exporter, Indian Spice Company, Chilli Exporter India, APEDA certified exporter"
+        url="/about"
+        schemas={[{
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://shravyavenishetty-manuen.github.io/Minha_Imports_and_Exports/' },
+            { '@type': 'ListItem', position: 2, name: 'Our Company', item: 'https://shravyavenishetty-manuen.github.io/Minha_Imports_and_Exports/about' },
+          ],
+        }]}
+      />
 
       {/* 1. Hero Section */}
       <section className="relative h-[350px] md:h-[420px] w-full flex items-center justify-center text-center text-white overflow-hidden bg-neutral-900 pt-20">

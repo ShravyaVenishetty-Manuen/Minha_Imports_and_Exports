@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import SEO from '../components/common/SEO';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import cargoShipImg from '../assets/image.png';
@@ -128,6 +129,29 @@ const Contact = () => {
 
   return (
     <div className="bg-[#f9f9fc] text-[#1a1c1e] font-body">
+      <SEO
+        title="Contact Us | Minha Imports & Exports"
+        description="Get in touch with Minha Imports & Exports for bulk dry red chilli inquiries. WhatsApp, email, and phone support. Guntur, India. Export inquiry response within 12 hours."
+        keywords="Contact Minha Exports, Chilli Export Inquiry, Buy Guntur Chilli, Chilli Wholesale Inquiry, Dry Red Chilli Exporter Contact, Bulk Spice Inquiry India"
+        url="/contact"
+        schemas={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://shravyavenishetty-manuen.github.io/Minha_Imports_and_Exports/' },
+              { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://shravyavenishetty-manuen.github.io/Minha_Imports_and_Exports/contact' },
+            ],
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'ContactPage',
+            url: 'https://shravyavenishetty-manuen.github.io/Minha_Imports_and_Exports/contact',
+            name: 'Contact Minha Imports & Exports',
+            description: 'Send a bulk export inquiry or business partnership request to Minha Imports & Exports.',
+          },
+        ]}
+      />
       <style>{`
         input:-webkit-autofill,
         input:-webkit-autofill:hover, 

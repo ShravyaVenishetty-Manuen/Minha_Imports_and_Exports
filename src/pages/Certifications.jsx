@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import SEO from '../components/common/SEO';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
@@ -118,6 +119,20 @@ const Certifications = () => {
 
   return (
     <div className="bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container min-h-screen relative overflow-hidden">
+      <SEO
+        title="Certifications & Compliance | Minha Imports & Exports"
+        description="ISO 9001:2015 & ISO 22000:2018 certified Guntur chilli exporter. FSSAI, APEDA, FIEO, BRC certifications for safe and compliant global chilli exports."
+        keywords="ISO Certified Chilli Exporter, FSSAI Certified, APEDA Registered, BRC Food Certification, Chilli Compliance India, Certified Spice Exporter"
+        url="/certifications"
+        schemas={[{
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://shravyavenishetty-manuen.github.io/Minha_Imports_and_Exports/' },
+            { '@type': 'ListItem', position: 2, name: 'Certifications', item: 'https://shravyavenishetty-manuen.github.io/Minha_Imports_and_Exports/certifications' },
+          ],
+        }]}
+      />
 
       {/* ── Lightbox Modal ──────────────────────────────────────────────────── */}
       {activeCert && (

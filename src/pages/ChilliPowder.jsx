@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import SEO from '../components/common/SEO';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiCheckCircle, FiAnchor, FiCompass, FiTruck, FiAward, FiCheck, FiLayers, FiTarget, FiActivity, FiShield, FiPackage } from 'react-icons/fi';
@@ -16,6 +17,34 @@ const ChilliPowder = () => {
 
   return (
     <div className="bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container min-h-screen relative overflow-hidden">
+      <SEO
+        title="Premium Chilli Powder Exporter | Minha Imports & Exports"
+        description="Bulk Chilli Powder Exporter from India. Custom SHU & ASTA grades, pesticide-free cold-ground chilli powder. Trusted Indian Chilli Supplier with FSSAI & APEDA certification."
+        keywords="Chilli Powder Exporter India, Bulk Chilli Powder Supplier, Guntur Chilli Powder, Custom ASTA Grade Chilli Powder, Indian Chilli Powder Export"
+        url="/powder"
+        schemas={[{
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://shravyavenishetty-manuen.github.io/Minha_Imports_and_Exports/' },
+            { '@type': 'ListItem', position: 2, name: 'Chilli Powder', item: 'https://shravyavenishetty-manuen.github.io/Minha_Imports_and_Exports/powder' },
+          ],
+        }, {
+          '@context': 'https://schema.org',
+          '@type': 'Product',
+          name: 'Premium Guntur Chilli Powder',
+          description: 'Export-grade Guntur chilli powder, cold-ground for maximum color and pungency retention. Available in custom SHU & ASTA grades.',
+          brand: { '@type': 'Brand', name: 'Minha Imports & Exports' },
+          category: 'Spices & Seasonings',
+          countryOfOrigin: 'IN',
+          offers: {
+            '@type': 'Offer',
+            availability: 'https://schema.org/InStock',
+            priceCurrency: 'USD',
+            seller: { '@type': 'Organization', name: 'Minha Imports & Exports' },
+          },
+        }]}
+      />
 
       {/* 1. Hero Section */}
       <section className="relative h-[350px] md:h-[420px] w-full flex items-center justify-center text-center text-white overflow-hidden bg-neutral-900 pt-20">

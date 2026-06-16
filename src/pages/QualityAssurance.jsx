@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import SEO from '../components/common/SEO';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
@@ -90,6 +91,20 @@ const QualityAssurance = () => {
 
   return (
     <div className="bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container min-h-screen relative overflow-hidden">
+      <SEO
+        title="Quality Assurance | Minha Imports & Exports"
+        description="Rigorous quality checks for every chilli export batch — HPLC heat testing, ASTA color analysis, aflatoxin screening, and FSSAI compliance. 4-stage quality process from farm to port."
+        keywords="Chilli Quality Assurance, ASTA Color Test, Aflatoxin Free Chilli, FSSAI Certified Exporter, Guntur Chilli Quality, Pesticide Free Chilli Export"
+        url="/quality"
+        schemas={[{
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://shravyavenishetty-manuen.github.io/Minha_Imports_and_Exports/' },
+            { '@type': 'ListItem', position: 2, name: 'Quality Assurance', item: 'https://shravyavenishetty-manuen.github.io/Minha_Imports_and_Exports/quality' },
+          ],
+        }]}
+      />
 
       {/* 1. Hero Section */}
       <section className="relative h-[350px] md:h-[420px] w-full flex items-center justify-center text-center text-white overflow-hidden bg-neutral-900 pt-20">

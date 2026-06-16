@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import SEO from '../components/common/SEO';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
@@ -16,7 +17,6 @@ import chilliExportCta from '../assets/chilli-export-cta.png';
 const Facility = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Our Facilities - Minha Imports & Exports";
   }, []);
 
   const fadeUpVariants = {
@@ -40,6 +40,20 @@ const Facility = () => {
 
   return (
     <div className="bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container min-h-screen relative overflow-hidden">
+      <SEO
+        title="Processing Facility | Minha Imports & Exports"
+        description="State-of-the-art Guntur chilli processing facility. 50,000 sq ft climate-controlled storage, optical sorters, automated packaging. Seed-to-shipment transparency for every export batch."
+        keywords="Chilli Processing Facility India, Guntur Chilli Storage, Chilli Sorting Plant, Chilli Export Warehouse, Minha Exports Facility"
+        url="/facility"
+        schemas={[{
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://shravyavenishetty-manuen.github.io/Minha_Imports_and_Exports/' },
+            { '@type': 'ListItem', position: 2, name: 'Facility', item: 'https://shravyavenishetty-manuen.github.io/Minha_Imports_and_Exports/facility' },
+          ],
+        }]}
+      />
 
       {/* 1. Hero Section */}
       <section className="relative h-[350px] md:h-[420px] w-full flex items-center justify-center text-center text-white overflow-hidden bg-neutral-900 pt-20">

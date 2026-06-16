@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import SEO from '../components/common/SEO';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiCheckCircle, FiMapPin, FiDroplet, FiAward, FiTag } from 'react-icons/fi';
@@ -101,6 +102,47 @@ const ChilliDetail = () => {
 
   return (
     <div className="bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container min-h-screen relative overflow-hidden">
+      <SEO
+        title={`${chilli.name} — Export Grade | Minha Imports & Exports`}
+        description={`Buy ${chilli.name} in bulk from India's top chilli exporter. ${chilli.description} Heat: ${chilli.heatLevel}. Color: ${chilli.colorValue} ASTA. FSSAI & APEDA certified.`}
+        keywords={`${chilli.name}, Guntur Dry Red Chilli, ${chilli.category}, Chilli Exporter India, Bulk Chilli Supplier, ${chilli.grade} grade chilli`}
+        url={`/varieties/${chilli.id}`}
+        image={chilli.image}
+        schemas={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://shravyavenishetty-manuen.github.io/Minha_Imports_and_Exports/' },
+              { '@type': 'ListItem', position: 2, name: 'Chilli Varieties', item: 'https://shravyavenishetty-manuen.github.io/Minha_Imports_and_Exports/varieties' },
+              { '@type': 'ListItem', position: 3, name: chilli.name, item: `https://shravyavenishetty-manuen.github.io/Minha_Imports_and_Exports/varieties/${chilli.id}` },
+            ],
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Product',
+            name: chilli.name,
+            description: chilli.description,
+            image: chilli.image,
+            brand: { '@type': 'Brand', name: 'Minha Imports & Exports' },
+            category: 'Spices & Seasonings',
+            countryOfOrigin: 'IN',
+            additionalProperty: [
+              { '@type': 'PropertyValue', name: 'Heat Level', value: chilli.heatLevel },
+              { '@type': 'PropertyValue', name: 'ASTA Color Value', value: chilli.colorValue },
+              { '@type': 'PropertyValue', name: 'Moisture', value: chilli.moisture },
+              { '@type': 'PropertyValue', name: 'Grade', value: chilli.grade },
+              { '@type': 'PropertyValue', name: 'Stem Type', value: chilli.stemType },
+            ],
+            offers: {
+              '@type': 'Offer',
+              availability: 'https://schema.org/InStock',
+              priceCurrency: 'USD',
+              seller: { '@type': 'Organization', name: 'Minha Imports & Exports' },
+            },
+          },
+        ]}
+      />
 
       {/* 1. Hero Section */}
       <section className="relative h-[350px] md:h-[420px] w-full flex items-center justify-center text-center text-white overflow-hidden bg-neutral-900 pt-20">
