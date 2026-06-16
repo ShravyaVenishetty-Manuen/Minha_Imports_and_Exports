@@ -257,8 +257,8 @@ const ChilliPowder = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-left relative z-10">
             {/* Step 1 */}
-            <div className="bg-white/[0.04] backdrop-blur-sm border border-white/15 p-6 rounded-2xl relative overflow-hidden group hover:bg-white/[0.07] hover:border-[#cca72f]/80 transition-all duration-500 flex flex-col justify-between min-h-[200px] hover:-translate-y-1 hover:shadow-[0_20px_40px_-15px_rgba(202,167,47,0.15)]">
-              <div className="flex items-center justify-between w-full mb-4">
+            <div className="bg-white/[0.04] backdrop-blur-sm border border-white/15 p-6 rounded-2xl relative overflow-hidden group hover:bg-white/[0.07] hover:border-[#cca72f]/80 transition-all duration-500 flex flex-col justify-between min-h-[200px] hover:shadow-[0_20px_40px_-15px_rgba(202,167,47,0.25)]">
+              <div className="flex items-center justify-between w-full mb-4 relative z-10">
                 <div className="p-3 bg-[#cca72f] text-[#121315] rounded-xl shadow-md shadow-[#cca72f]/10 group-hover:scale-110 transition-transform duration-300">
                   <FiTarget className="text-[20px]" />
                 </div>
@@ -266,18 +266,18 @@ const ChilliPowder = () => {
                   STEP 01
                 </span>
               </div>
-              <div>
+              <div className="relative z-10">
                 <h4 className="font-heading font-bold text-[17px] text-white mb-2 group-hover:text-[#cca72f] transition-colors">Cleaning</h4>
                 <p className="text-[12.5px] text-neutral-300 leading-relaxed">
                   Stem-removal and magnetic sorting for purity.
                 </p>
               </div>
-              <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#cca72f]/20 to-[#cca72f] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+              <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#cca72f]/20 to-[#cca72f] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left z-10" />
             </div>
 
             {/* Step 2 */}
-            <div className="bg-white/[0.04] backdrop-blur-sm border border-white/15 p-6 rounded-2xl relative overflow-hidden group hover:bg-white/[0.07] hover:border-[#cca72f]/80 transition-all duration-500 flex flex-col justify-between min-h-[200px] hover:-translate-y-1 hover:shadow-[0_20px_40px_-15px_rgba(202,167,47,0.15)]">
-              <div className="flex items-center justify-between w-full mb-4">
+            <div className="bg-white/[0.04] backdrop-blur-sm border border-white/15 p-6 rounded-2xl relative overflow-hidden group hover:bg-white/[0.07] hover:border-[#cca72f]/80 transition-all duration-500 flex flex-col justify-between min-h-[200px] hover:shadow-[0_-20px_40px_-15px_rgba(202,167,47,0.25)]">
+              <div className="flex items-center justify-between w-full mb-4 relative z-10">
                 <div className="p-3 bg-[#cca72f] text-[#121315] rounded-xl shadow-md shadow-[#cca72f]/10 group-hover:scale-110 transition-transform duration-300">
                   <FiActivity className="text-[20px]" />
                 </div>
@@ -285,18 +285,18 @@ const ChilliPowder = () => {
                   STEP 02
                 </span>
               </div>
-              <div>
+              <div className="relative z-10">
                 <h4 className="font-heading font-bold text-[17px] text-white mb-2 group-hover:text-[#cca72f] transition-colors">Grinding</h4>
                 <p className="text-[12.5px] text-neutral-300 leading-relaxed">
                   Precision pulverizing with aroma lock tech.
                 </p>
               </div>
-              <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#cca72f]/20 to-[#cca72f] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+              <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#cca72f]/20 to-[#cca72f] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-right z-10" />
             </div>
 
             {/* Step 3 */}
-            <div className="bg-white/[0.04] backdrop-blur-sm border border-white/15 p-6 rounded-2xl relative overflow-hidden group hover:bg-white/[0.07] hover:border-[#cca72f]/80 transition-all duration-500 flex flex-col justify-between min-h-[200px] hover:-translate-y-1 hover:shadow-[0_20px_40px_-15px_rgba(202,167,47,0.15)]">
-              <div className="flex items-center justify-between w-full mb-4">
+            <div className="bg-white/[0.04] backdrop-blur-sm border border-white/15 p-6 rounded-2xl relative overflow-hidden group hover:bg-white/[0.07] hover:border-[#cca72f]/80 transition-all duration-500 flex flex-col justify-between min-h-[200px] hover:shadow-[-20px_0_40px_-15px_rgba(202,167,47,0.25)]">
+              <div className="flex items-center justify-between w-full mb-4 relative z-10">
                 <div className="p-3 bg-[#cca72f] text-[#121315] rounded-xl shadow-md shadow-[#cca72f]/10 group-hover:scale-110 transition-transform duration-300">
                   <FiShield className="text-[20px]" />
                 </div>
@@ -304,18 +304,18 @@ const ChilliPowder = () => {
                   STEP 03
                 </span>
               </div>
-              <div>
+              <div className="relative z-10">
                 <h4 className="font-heading font-bold text-[17px] text-white mb-2 group-hover:text-[#cca72f] transition-colors">Lab Testing</h4>
                 <p className="text-[12.5px] text-neutral-300 leading-relaxed">
                   Rigorous SHU and ASTA verification per batch.
                 </p>
               </div>
-              <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#cca72f]/20 to-[#cca72f] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+              <div className="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-[#cca72f]/20 to-[#cca72f] scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top z-10" />
             </div>
 
             {/* Step 4 */}
-            <div className="bg-white/[0.04] backdrop-blur-sm border border-white/15 p-6 rounded-2xl relative overflow-hidden group hover:bg-white/[0.07] hover:border-[#cca72f]/80 transition-all duration-500 flex flex-col justify-between min-h-[200px] hover:-translate-y-1 hover:shadow-[0_20px_40px_-15px_rgba(202,167,47,0.15)]">
-              <div className="flex items-center justify-between w-full mb-4">
+            <div className="bg-white/[0.04] backdrop-blur-sm border border-white/15 p-6 rounded-2xl relative overflow-hidden group hover:bg-white/[0.07] hover:border-[#cca72f]/80 transition-all duration-500 flex flex-col justify-between min-h-[200px] hover:shadow-[20px_0_40px_-15px_rgba(202,167,47,0.25)]">
+              <div className="flex items-center justify-between w-full mb-4 relative z-10">
                 <div className="p-3 bg-[#cca72f] text-[#121315] rounded-xl shadow-md shadow-[#cca72f]/10 group-hover:scale-110 transition-transform duration-300">
                   <FiPackage className="text-[20px]" />
                 </div>
@@ -323,13 +323,13 @@ const ChilliPowder = () => {
                   STEP 04
                 </span>
               </div>
-              <div>
+              <div className="relative z-10">
                 <h4 className="font-heading font-bold text-[17px] text-white mb-2 group-hover:text-[#cca72f] transition-colors">Packaging</h4>
                 <p className="text-[12.5px] text-neutral-300 leading-relaxed">
                   Vacuum sealed or moisture-proof bulk packing.
                 </p>
               </div>
-              <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#cca72f]/20 to-[#cca72f] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+              <div className="absolute right-0 top-0 h-full w-[3px] bg-gradient-to-b from-[#cca72f]/20 to-[#cca72f] scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-bottom z-10" />
             </div>
           </div>
         </div>
