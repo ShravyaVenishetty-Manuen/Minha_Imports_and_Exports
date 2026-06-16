@@ -8,14 +8,14 @@ const Footer = () => {
   const [productsOpen, setProductsOpen] = useState(false);
 
   return (
-    <footer className="bg-[#111315] text-[#a0a5ad] font-['Inter'] relative overflow-hidden border-t border-white/[0.02]">
+    <footer className="w-full bg-[#111315] text-[#a0a5ad] font-['Inter'] relative overflow-hidden border-t border-white/[0.02]">
 
       {/* Top Main Footer Area */}
-      <div className="max-w-[1280px] mx-auto px-6 md:px-12 pt-6 md:pt-16 pb-4 md:pb-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-12">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 pt-10 md:pt-20 pb-8 md:pb-12">
+        <div className="grid grid-cols-1 md:grid-cols-12 xl:grid-cols-[3fr_2fr_2fr_3fr_3fr] gap-8 md:gap-y-12 xl:gap-6 w-full">
 
-          {/* Column 1: Brand Info (3 cols on lg) */}
-          <div className="lg:col-span-3 space-y-3 md:space-y-5 text-left">
+          {/* Column 1: Brand Info */}
+          <div className="md:col-span-6 xl:col-span-1 space-y-4 text-left">
             <div className="flex items-center gap-3">
               {/* Tractor Icon SVG */}
               <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#cca72f]/10 text-[#cca72f]">
@@ -25,21 +25,21 @@ const Footer = () => {
                   <path d="M6 16h6v-4H8V8h4V6h4v6h2v4" />
                 </svg>
               </div>
-              <span className="font-['Montserrat'] font-bold text-[16px] md:text-[17px] tracking-wide text-white leading-tight">
-                MINHA IMPORTS & EXPORT
+              <span className="font-['Montserrat'] font-bold text-[15px] tracking-wide text-white leading-tight">
+                MINHA IMPORTS & EXPORTS
               </span>
             </div>
 
-            <p className="text-[12.5px] leading-[1.6] text-[#a0a5ad]/65 max-w-sm">
+            <p className="text-[12.5px] leading-[1.65] text-[#a0a5ad]/65">
               Premium Guntur dry red chillies exporter committed to global standards of purity and reliability.
             </p>
 
             {/* Social Icons */}
             <div className="flex items-center gap-3 pt-1">
               {[
-                { icon: <FiLinkedin className="w-4 h-4" />, href: "https://in.linkedin.com/company/minha-imports-and-exports" },
-                { icon: <FiInstagram className="w-4 h-4" />, href: "https://www.instagram.com/dry_chilli_exporters/" },
-                { icon: <FiFacebook className="w-4 h-4" />, href: "https://www.facebook.com/DryRedChilliesExporter/" }
+                { icon: <FiLinkedin className="w-4.5 h-4.5" />, href: "https://in.linkedin.com/company/minha-imports-and-exports" },
+                { icon: <FiInstagram className="w-4.5 h-4.5" />, href: "https://www.instagram.com/dry_chilli_exporters/" },
+                { icon: <FiFacebook className="w-4.5 h-4.5" />, href: "https://www.facebook.com/DryRedChilliesExporter/" }
               ].map((social, sIdx) => (
                 <a
                   key={sIdx}
@@ -52,11 +52,11 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Column 2: Quick Links (Accordion on mobile, 2 cols on lg) */}
-          <div className="lg:col-span-2 text-left border-b lg:border-b-0 border-white/5 pb-2 lg:pb-0">
+          {/* Column 2: Quick Links */}
+          <div className="md:col-span-3 xl:col-span-1 text-left border-b md:border-b-0 border-white/5 pb-2 md:pb-0">
             <button
               onClick={() => setLinksOpen(!linksOpen)}
-              className="w-full flex justify-between items-center lg:cursor-default lg:pointer-events-none text-left focus:outline-none py-2 lg:py-0"
+              className="w-full flex justify-between items-center md:cursor-default md:pointer-events-none text-left focus:outline-none py-2 md:py-0"
             >
               <h4 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
                 Quick Links
@@ -66,7 +66,7 @@ const Footer = () => {
               </span>
             </button>
             
-            <ul className={`space-y-1.5 mt-2 lg:block ${linksOpen ? 'block' : 'hidden'}`}>
+            <ul className={`space-y-2 mt-3 md:block ${linksOpen ? 'block' : 'hidden'}`}>
               {[
                 { name: 'Home', path: '/' },
                 { name: 'Chilli Varieties', path: '/varieties' },
@@ -76,7 +76,7 @@ const Footer = () => {
                 { name: 'Certifications', path: '/certifications' }
               ].map((link, idx) => (
                 <li key={idx}>
-                  <Link to={link.path} className="text-[13px] text-[#a0a5ad]/75 hover:text-white transition-colors duration-200 block font-normal py-1 lg:py-0">
+                  <Link to={link.path} className="text-[13px] text-[#a0a5ad]/75 hover:text-[#cca72f] hover:translate-x-1.5 transition-all duration-300 block font-normal py-1 md:py-0">
                     {link.name}
                   </Link>
                 </li>
@@ -84,11 +84,11 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 3: Our Products (Accordion on mobile, 2 cols on lg) */}
-          <div className="lg:col-span-2 text-left border-b lg:border-b-0 border-white/5 pb-2 lg:pb-0">
+          {/* Column 3: Our Products */}
+          <div className="md:col-span-3 xl:col-span-1 text-left border-b md:border-b-0 border-white/5 pb-2 md:pb-0">
             <button
               onClick={() => setProductsOpen(!productsOpen)}
-              className="w-full flex justify-between items-center lg:cursor-default lg:pointer-events-none text-left focus:outline-none py-2 lg:py-0"
+              className="w-full flex justify-between items-center md:cursor-default md:pointer-events-none text-left focus:outline-none py-2 md:py-0"
             >
               <h4 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
                 Our Products
@@ -98,14 +98,15 @@ const Footer = () => {
               </span>
             </button>
             
-            <ul className={`space-y-1.5 mt-2 lg:block ${productsOpen ? 'block' : 'hidden'}`}>
+            <ul className={`space-y-2 mt-3 md:block ${productsOpen ? 'block' : 'hidden'}`}>
               {[
                 { name: 'Dry Red Chillies', path: '/varieties' },
-                { name: 'Chilli Powder', path: '/powder' }
+                { name: 'Chilli Powder', path: '/powder' },
+                { name: 'Teja S17 Chilli', path: '/varieties' },
+                { name: 'Byadgi Dry Chilli', path: '/varieties' }
               ].map((product, idx) => (
-                <li key={idx} className="flex items-center gap-2 group py-1 lg:py-0">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#cca72f] transition-transform duration-200 group-hover:scale-150 shrink-0" />
-                  <Link to={product.path} className="text-[13px] text-[#a0a5ad]/75 hover:text-white transition-colors duration-200 block font-normal">
+                <li key={idx}>
+                  <Link to={product.path} className="text-[13px] text-[#a0a5ad]/75 hover:text-[#cca72f] hover:translate-x-1.5 transition-all duration-300 block font-normal py-1 md:py-0">
                     {product.name}
                   </Link>
                 </li>
@@ -113,53 +114,47 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 4: Contact Us (3 cols on lg) */}
-          <div className="lg:col-span-3 space-y-2.5 md:space-y-4 text-left">
+          {/* Column 4: Contact Us */}
+          <div className="md:col-span-6 xl:col-span-1 space-y-3.5 text-left">
             <h4 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
               Contact Us
             </h4>
-            <div className="space-y-2 md:space-y-3 text-[13px]">
+            <div className="space-y-3 text-[13px]">
               <div className="flex items-start gap-3">
                 <FiMapPin className="w-4 h-4 text-[#cca72f] mt-1 shrink-0" />
                 <span className="text-[#a0a5ad]/95 leading-relaxed text-[12.5px]">
                   Arundalpet 7/1, Beside SBI ATM, <br />
-                  Andhra Pradesh, 522002
+                  Guntur, Andhra Pradesh, 522002
                 </span>
               </div>
-              <a href="mailto:minhaimportsexports@gmail.com" className="flex items-center gap-3 hover:text-white transition-colors py-1 lg:py-0">
+              <a href="mailto:minhaimportsexports@gmail.com" className="flex items-center gap-3 hover:text-[#cca72f] transition-colors py-1 md:py-0 w-full overflow-hidden">
                 <FiMail className="w-4 h-4 text-[#cca72f] shrink-0" />
-                <span className="text-[#a0a5ad]/95 text-[12.5px] truncate">minhaimportsexports@gmail.com</span>
+                <span className="text-[#a0a5ad]/95 text-[12.5px]">minhaimportsexports@gmail.com</span>
               </a>
-              <a href="tel:+918185867999" className="flex items-center gap-3 hover:text-white transition-colors py-1 lg:py-0">
+              <a href="tel:+918185867999" className="flex items-center gap-3 hover:text-[#cca72f] transition-colors py-1 md:py-0">
                 <FiPhone className="w-4 h-4 text-[#cca72f] shrink-0" />
                 <span className="text-[#a0a5ad]/95 text-[12.5px]">+91 81858 67999</span>
               </a>
             </div>
           </div>
 
-          {/* Column 5: WeChat QR Connect Banner (2 cols on lg) */}
-          <div className="lg:col-span-2 space-y-2.5 md:space-y-4 text-left">
-            <h4 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase hidden lg:block">
+          {/* Column 5: WeChat QR Connect Banner */}
+          <div className="md:col-span-6 xl:col-span-1 space-y-3.5 text-left">
+            <h4 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
               WeChat Connect
             </h4>
             
-            {/* Elegant Horizontal Banner for WeChat QR */}
-            <div className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10 max-w-sm lg:flex-col lg:items-start lg:bg-transparent lg:border-none lg:p-0">
-              <div className="inline-block p-1 bg-white rounded-lg shadow-md border border-white/5 shrink-0">
+            <div className="flex items-center gap-4 bg-white/5 p-3.5 rounded-xl border border-white/10 w-full max-w-sm">
+              <div className="p-1.5 bg-white rounded-lg shadow-md shrink-0 w-20 h-20 flex items-center justify-center">
                 <img
                   src={vchatQrImg}
                   alt="Minha WeChat QR Contact"
-                  className="w-14 h-14 lg:w-20 lg:h-20 object-contain rounded"
+                  className="w-full h-full object-contain rounded"
                 />
               </div>
-              <div>
-                <h5 className="font-['Montserrat'] font-bold text-[11px] text-white uppercase lg:hidden">
-                  WeChat QR Connect
-                </h5>
-                <p className="text-[11px] text-[#a0a5ad]/60 mt-0.5 leading-normal">
-                  Scan to chat directly with our Guntur B2B export desk.
-                </p>
-              </div>
+              <p className="flex-1 min-w-0 text-[12px] text-[#a0a5ad]/75 leading-relaxed">
+                Scan WeChat QR to chat directly with our Guntur B2B export desk.
+              </p>
             </div>
           </div>
 
@@ -170,13 +165,17 @@ const Footer = () => {
       <div className="w-full h-[3px] bg-gradient-to-r from-[#8f000d] to-[#cca72f]" />
 
       {/* Bottom Bar Area */}
-      <div className="bg-[#0b0c0d] text-[12px] text-[#a0a5ad]/50 py-6 px-6 md:px-12 font-['Montserrat']">
-        <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <div>
+      <div className="w-full bg-[#0b0c0d] text-[12px] text-[#a0a5ad]/50 py-6 px-6 md:px-12 lg:px-16 font-['Montserrat']">
+        <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="text-[#a0a5ad]/60 text-center md:text-left">
             © 2026 Minha Imports & Exports. All Rights Reserved.
           </div>
-          <div className="flex items-center gap-6 uppercase tracking-wider text-[11px] font-semibold text-[#a0a5ad]/40">
-            <span>Secure Site</span>
+          <div className="flex flex-wrap justify-center items-center gap-6 text-[11px] font-semibold text-[#a0a5ad]/40">
+            <a href="#" className="hover:text-white transition-colors uppercase tracking-wider">Privacy Policy</a>
+            <span className="text-white/10 hidden sm:inline">•</span>
+            <a href="#" className="hover:text-white transition-colors uppercase tracking-wider">Terms of Service</a>
+            <span className="text-white/10 hidden sm:inline">•</span>
+            <span className="uppercase tracking-wider">Secure Site</span>
           </div>
         </div>
       </div>

@@ -8,10 +8,22 @@ import chilliHeroVarieties from '../assets/chilli-hero-varieties.png';
 import chilliIntroDry from '../assets/chilli-intro-dry.png';
 import chilliSpotlightDry from '../assets/chilli-spotlight-dry.png';
 import chilliBowlTable from '../assets/chilli-bowl-table.png';
+import chilliBlossoms from '../assets/chilli-blossoms-left.png';
+import singleChilliPod from '../assets/single-chilli-pod-right.png';
+import chilliMountainsBg from '../assets/chilli-mountains-bg.png';
+import chilliTwigsBg from '../assets/chilli-twigs-bg.png';
 
 const Varieties = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [isExpanded, setIsExpanded] = useState(false);
+
+  const redBgStyle = {
+    backgroundImage: `
+      radial-gradient(rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px),
+      linear-gradient(135deg, #8f000d 0%, #a50f15 50%, #5a0006 100%)
+    `,
+    backgroundSize: '24px 24px, 100% 100%',
+  };
 
   // Categories list derived from data
   const categories = ['All', 'Teja S17', 'S4 / 334', 'S10', 'Byadgi'];
@@ -422,7 +434,7 @@ const Varieties = () => {
                 desc: "All trade shipments are strictly tested and issued with analytical COA reports.",
                 details: ["Aflatoxin residue tests", "Sudan dye screenings", "COA reports with shipments"],
                 icon: <FiFileText className="text-white text-xl" />,
-                bg: "bg-[#8f000d]"
+                bg: "bg-[#a73b0f]"
               }
             ].map((item, index) => (
               <motion.div
@@ -511,8 +523,70 @@ const Varieties = () => {
       </section>
 
       {/* 6. Inquiry CTA Section */}
-      <section id="inquire" className="relative bg-[#FAF8F4] py-10 md:py-14 px-6 md:px-12 overflow-hidden border-t border-neutral-100">
-        <div className="max-w-[960px] mx-auto relative z-10">
+      <section id="inquire" className="relative bg-[#FAF8F4] py-12 md:py-16 overflow-hidden border-t border-neutral-100">
+        <div className="max-w-[850px] mx-auto px-6 md:px-12 relative z-10">
+
+          {/* BACKGROUND LAYERS (Rendered behind the card) */}
+          {/* Mountains background sketch (left) */}
+          <motion.div
+            initial={{ opacity: 0, x: -15 }}
+            whileInView={{ opacity: 0.6, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1.2, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="hidden lg:block absolute left-[-150px] xl:left-[-190px] bottom-[-20px] w-[320px] xl:w-[380px] aspect-square pointer-events-none z-0 opacity-60"
+          >
+            <img
+              src={chilliMountainsBg}
+              alt="Mountain Pencil Sketch Background"
+              className="w-full h-full object-contain"
+            />
+          </motion.div>
+
+          {/* Twigs/Spices background sketch (right) */}
+          <motion.div
+            initial={{ opacity: 0, x: 15 }}
+            whileInView={{ opacity: 0.6, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1.2, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="hidden lg:block absolute right-[-170px] xl:right-[-210px] bottom-[-25px] w-[280px] xl:w-[340px] aspect-square pointer-events-none z-0 opacity-60"
+          >
+            <img
+              src={chilliTwigsBg}
+              alt="Twigs Pencil Sketch Background"
+              className="w-full h-full object-contain"
+            />
+          </motion.div>
+
+          {/* FOREGROUND LAYERS (Rendered in front of the card) */}
+          {/* Left illustration - chilli plant */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="hidden lg:block absolute left-[-150px] xl:left-[-180px] bottom-[-15px] w-[280px] xl:w-[340px] aspect-square pointer-events-none z-20 -rotate-[9deg]"
+          >
+            <img
+              src={chilliBlossoms}
+              alt="Chilli Plant Illustration"
+              className="w-full h-full object-contain filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.04)]"
+            />
+          </motion.div>
+
+          {/* Right illustration - chilli powder bowl */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="hidden lg:block absolute right-[-100px] xl:right-[-130px] bottom-[-20px] w-[240px] xl:w-[300px] aspect-square pointer-events-none z-20"
+          >
+            <img
+              src={singleChilliPod}
+              alt="Chilli Powder Bowl Illustration"
+              className="w-full h-full object-contain filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.04)]"
+            />
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -520,23 +594,14 @@ const Varieties = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             whileHover={{ y: -3 }}
-            style={{
-              backgroundImage: `
-                linear-gradient(135deg, rgba(13, 24, 18, 0.45) 0%, rgba(8, 16, 12, 0.75) 100%),
-                url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVj0qp7LLHAyv_4L6dEyYOj2XCvKhERazA8eID7bpVjaycfYjbPQKpTKuBf4fDx-CZz2ups529LoRZbW2MS__yeFS28oUR-pbeM-13_HqgpEF3SGTPZawKBezGGzyTK2b7Apkps9v1IPYPGaym3lQ0ZtfXiZeFPBcwCTuSM9H57byVU3kMFqrdQFETu9ayiU5PKkl4IwHdtA4EWSvA8Z5_4hgWSj67_o8-eyf-KIjaWK62zHmDrGHRvW440-RjZHAmj1h9UPTLX78')
-              `,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
-            }}
-            className="relative rounded-[20px] md:rounded-[28px] overflow-hidden px-5 py-7 sm:px-8 sm:py-9 md:py-10 md:px-12 shadow-[0_15px_40px_rgba(31,94,59,0.15)] border border-[#1f5e3b]/10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 md:gap-8 transition-all duration-300"
+            className="relative z-10 bg-[#181410] rounded-[2rem] overflow-hidden py-8 md:py-10 shadow-2xl border border-white/5 transition-all duration-300"
           >
             {/* Decorative glows inside card */}
             <div className="absolute top-0 right-0 w-[260px] h-[260px] bg-[#cca72f]/10 rounded-full blur-[70px] pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[180px] h-[180px] bg-white/5 rounded-full blur-[50px] pointer-events-none" />
 
-            {/* Left: Text & badges */}
-            <div className="space-y-4 lg:max-w-xl text-left relative z-10">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 border border-white/20 text-[#cca72f] font-['Montserrat'] font-bold text-[8.5px] sm:text-[9px] tracking-widest uppercase">
+            <div className="relative z-10 max-w-xl mx-auto space-y-5 px-4 text-center">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 border border-white/20 text-[#cca72f] font-['Montserrat'] font-bold text-[8.5px] sm:text-[9px] tracking-widest uppercase mx-auto">
                 <span className="relative flex h-1.5 w-1.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#cca72f] opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#cca72f]"></span>
@@ -553,13 +618,13 @@ const Varieties = () => {
               </p>
 
               {/* Checkmark trade highlights */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-0.5">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-0.5 max-w-xl mx-auto">
                 {[
                   "100% Pure & Tested",
                   "ASTA Compliant Quality",
                   "Custom Packing Formats"
                 ].map((text, idx) => (
-                  <div key={idx} className="flex items-center gap-1.5 bg-white/5 border border-white/10 rounded-lg px-2.5 py-1.5">
+                  <div key={idx} className="flex items-center justify-center gap-1.5 bg-white/5 border border-white/10 rounded-lg px-2.5 py-1.5">
                     <FiCheckCircle className="text-[#cca72f] text-xs shrink-0" />
                     <span className="font-['Montserrat'] font-bold text-[8.5px] sm:text-[9px] text-white/90 uppercase tracking-wider">
                       {text}
@@ -567,24 +632,24 @@ const Varieties = () => {
                   </div>
                 ))}
               </div>
-            </div>
 
-            {/* Right: Buttons */}
-            <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row shrink-0 items-stretch sm:items-center lg:items-stretch xl:items-center justify-start gap-3 relative z-10 min-w-[180px]">
-              <a
-                href="mailto:minhaimportsexports@gmail.com"
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/25 text-white font-['Montserrat'] font-bold text-[11.5px] sm:text-[12px] py-[12px] px-[22px] rounded-full shadow-md active:scale-98 transition-all duration-300 uppercase tracking-wider text-center"
-              >
-                <FiMail className="text-sm shrink-0" />
-                Contact Us
-              </a>
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#8f000d] to-[#b22222] hover:shadow-[0_6px_20px_-2px_rgba(143,0,13,0.3)] text-white font-['Montserrat'] font-bold text-[11.5px] sm:text-[12px] py-[12px] px-[22px] rounded-full shadow-lg shadow-[#8f000d]/20 hover:translate-y-[-2px] active:scale-98 transition-all duration-300 uppercase tracking-wider text-center group"
-              >
-                Send Enquiry
-                <FiArrowRight className="text-xs transition-transform group-hover:translate-x-1 duration-300" />
-              </Link>
+              {/* Center Buttons */}
+              <div className="flex flex-col sm:flex-row justify-center gap-3 relative z-10 pt-2">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#8f000d] to-[#b22222] hover:shadow-[0_6px_20px_-2px_rgba(143,0,13,0.3)] text-white font-['Montserrat'] font-bold text-[11.5px] sm:text-[12px] py-[12px] px-[22px] rounded-full shadow-lg shadow-[#8f000d]/20 hover:translate-y-[-2px] active:scale-98 transition-all duration-300 uppercase tracking-wider text-center group whitespace-nowrap"
+                >
+                  Send Enquiry
+                  <FiArrowRight className="text-xs transition-transform group-hover:translate-x-1 duration-300" />
+                </Link>
+                <a
+                  href="mailto:minhaimportsexports@gmail.com"
+                  className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/25 text-white font-['Montserrat'] font-bold text-[11.5px] sm:text-[12px] py-[12px] px-[22px] rounded-full shadow-md active:scale-98 transition-all duration-300 uppercase tracking-wider text-center whitespace-nowrap"
+                >
+                  <FiMail className="text-sm shrink-0" />
+                  Contact Us
+                </a>
+              </div>
             </div>
 
           </motion.div>

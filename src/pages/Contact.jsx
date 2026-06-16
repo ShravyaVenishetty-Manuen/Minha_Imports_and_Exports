@@ -310,7 +310,7 @@ const Contact = () => {
                 className={`flex flex-col lg:flex-row ${isFlipped ? 'h-full' : ''}`}
               >
                 {/* Left Side: Sourcing highlights */}
-                <div className="w-full lg:w-5/12 bg-gradient-to-br from-[#2f0307] via-[#150204] to-[#090001] text-white p-6 sm:p-8 md:p-12 flex flex-col justify-between relative overflow-hidden">
+                <div className="w-full lg:w-5/12 bg-gradient-to-br from-[#8f000d] to-[#4c0005] text-white p-6 sm:p-8 md:p-12 flex flex-col justify-between relative overflow-hidden">
                   <div className="absolute -top-20 -left-20 w-60 h-60 bg-[#cca72f]/10 rounded-full blur-3xl pointer-events-none" />
                   <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-[#8f000d]/20 rounded-full blur-3xl pointer-events-none" />
                   <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.005)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.005)_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none" />
@@ -539,7 +539,7 @@ const Contact = () => {
                 className={`flex flex-col lg:flex-row ${isFlipped ? '' : 'h-full'}`}
               >
                 {/* Left Side: Deep Green Sourcing Guidelines */}
-                <div className="w-full lg:w-5/12 bg-gradient-to-br from-[#1F5E3B] via-[#0D2E1C] to-[#05140C] text-white p-6 sm:p-8 md:p-10 flex flex-col justify-between relative overflow-hidden">
+                <div className="w-full lg:w-5/12 bg-gradient-to-br from-[#1F5E3B] to-[#0d2a1b] text-white p-6 sm:p-8 md:p-10 flex flex-col justify-between relative overflow-hidden">
                   <div className="absolute -top-20 -left-20 w-60 h-60 bg-[#cca72f]/10 rounded-full blur-3xl pointer-events-none" />
                   <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-[#1F5E3B]/20 rounded-full blur-3xl pointer-events-none" />
                   <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.005)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.005)_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none" />

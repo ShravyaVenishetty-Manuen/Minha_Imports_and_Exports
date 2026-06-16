@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
+import { GiChiliPepper } from 'react-icons/gi';
 import chilliPowderImg from '../../assets/chilli-powder-hero.png';
 
 const Hero = () => {
@@ -46,7 +47,7 @@ const Hero = () => {
 
   return (
     <section className="relative w-full min-h-screen md:h-screen overflow-hidden flex items-center justify-center bg-black pt-20 md:pt-0">
-      
+
       {/* Background Image Slideshow with smooth crossfade and Ken Burns scale effect */}
       <div className="absolute inset-0 z-0">
         {bgImages.map((image, index) => {
@@ -109,7 +110,7 @@ const Hero = () => {
               className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#8f000d] to-[#b22222] text-white font-['Montserrat'] font-bold text-[13px] sm:text-[14px] py-4 px-9 rounded-full shadow-lg shadow-[#8f000d]/30 hover:shadow-[#8f000d]/50 hover:translate-y-[-2px] active:scale-98 transition-all duration-300 uppercase tracking-wider group"
             >
               Explore Varieties
-              <FiArrowRight className="text-sm transition-transform group-hover:translate-x-1 duration-300" />
+              <GiChiliPepper className="text-[20px] transition-transform group-hover:translate-x-1 duration-300 scale-x-[-1] rotate-45" />
             </Link>
 
             <Link

@@ -331,7 +331,7 @@ const Certifications = () => {
       </section>
 
       {/* ── 4. Compliance Standards (Premium Shield with Four Quadrants) ────── */}
-      <section className="py-5 md:py-6 bg-[#f5f1e6] relative overflow-hidden text-[#1a1c1e] border-y border-neutral-100/50">
+      <section className="py-5 md:py-6 bg-surface relative overflow-hidden text-[#1a1c1e] border-y border-neutral-100/50">
 
         {/* Glow Accents */}
         <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#2c6a46]/4 rounded-full blur-3xl pointer-events-none" />
@@ -638,11 +638,11 @@ const Certifications = () => {
       </section>
 
       {/* ── 7. CTA ──────────────────────────────────────────────────────────── */}
-      <section className="py-8 px-6 md:px-12 max-w-[850px] mx-auto z-10 relative">
-        <div className="relative rounded-[2rem] overflow-hidden text-center text-white py-10 md:py-14 shadow-2xl border border-white/[0.04] bg-gradient-to-br from-[#2b210e] via-[#1d1609] to-[#0f0b04] group">
+      <section className="py-12 md:py-16 px-6 md:px-12 max-w-[1280px] mx-auto z-10 relative w-full">
+        <div className="relative rounded-[2rem] overflow-hidden py-10 md:py-14 px-6 md:px-12 shadow-[0_35px_80px_rgba(0,0,0,0.18)] border border-white/[0.04] bg-gradient-to-br from-[#2b210e] via-[#1d1609] to-[#0f0b04] group">
 
-          {/* Glows */}
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none" />
+          {/* Glows & Grid */}
+          <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.035)_1.5px,transparent_1.5px)] bg-[size:24px_24px] pointer-events-none" />
           <div className="absolute -top-32 -left-32 w-72 h-72 bg-[#cca72f]/15 rounded-full blur-3xl pointer-events-none group-hover:bg-[#cca72f]/25 transition-all duration-700" />
           <div className="absolute -bottom-32 -right-32 w-64 h-64 bg-[#cca72f]/8 rounded-full blur-3xl pointer-events-none" />
 
@@ -650,38 +650,65 @@ const Certifications = () => {
           <img
             src={chilliExportCta}
             alt="Export cargo overlay"
-            className="absolute right-0 bottom-0 w-1/2 h-full object-cover opacity-10 pointer-events-none mix-blend-overlay"
+            className="absolute right-0 bottom-0 w-1/2 h-full object-cover opacity-[0.04] pointer-events-none mix-blend-overlay"
           />
 
-          <div className="relative z-10 max-w-xl mx-auto space-y-5 px-4">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mx-auto">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#cca72f] animate-pulse" />
-              <span className="font-['Montserrat'] font-bold text-[8.5px] tracking-[0.2em] text-[#cca72f] uppercase">
-                Certified Export Partner
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+
+            {/* Left Column: Brand Quote (lg:col-span-5) */}
+            <div className="relative space-y-4 text-center lg:text-left lg:border-r lg:border-white/10 lg:pr-8 xl:pr-12 lg:col-span-5 w-full z-10">
+              <span className="absolute -top-10 -left-2 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
+                “
+              </span>
+              <blockquote className="font-['Montserrat'] font-medium italic text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed text-white/95 relative z-10">
+                "Compliance is our passport, and uncompromising safety is our path. Our certifications are not just medals on a wall, but a daily promise of purity built for the global stage."
+              </blockquote>
+              <div className="font-['Montserrat'] font-bold text-[9px] sm:text-[10px] tracking-widest uppercase text-[#cca72f] relative z-10">
+                — The Minha Compliance Registry
+              </div>
+              <span className="absolute -bottom-14 right-4 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
+                ”
               </span>
             </div>
 
-            <h2 className="font-['Montserrat'] font-extrabold text-[24px] md:text-[32px] leading-tight text-white tracking-tight">
-              Looking for a Certified<br className="hidden sm:inline" /> Chilli Export Partner?
-            </h2>
+            {/* Right Column: CTA Content (lg:col-span-7) */}
+            <div className="space-y-5 text-center lg:text-left lg:col-span-7 w-full">
 
-            <p className="font-['Inter'] font-normal text-white/80 text-[13px] md:text-[14px] max-w-lg mx-auto leading-relaxed">
-              Partner with Minha for trusted sourcing with globally compliant documentation. We handle the complexity of compliance so you can focus on growth.
-            </p>
+              {/* Badge */}
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mx-auto lg:mx-0">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#cca72f] animate-pulse" />
+                <span className="font-['Montserrat'] font-bold text-[8.5px] tracking-[0.2em] text-[#cca72f] uppercase">
+                  Certified Export Partner
+                </span>
+              </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center pt-2 max-w-xs sm:max-w-md mx-auto">
-              <Link
-                to="/contact"
-                className="w-full sm:w-auto bg-[#cca72f] text-[#140002] px-8 py-3.5 rounded-full font-['Montserrat'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-[#e0bc55] shadow-lg shadow-[#cca72f]/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
-              >
-                Send Inquiry
-              </Link>
+              {/* Title */}
+              <h2 className="font-['Montserrat'] font-extrabold text-[22px] md:text-[30px] leading-tight text-white tracking-tight">
+                Looking for a Certified <br className="hidden sm:inline" /> Chilli Export Partner?
+              </h2>
+
+              {/* Description */}
+              <p className="font-['Inter'] font-normal text-white/80 text-[13.5px] leading-relaxed">
+                Partner with Minha for trusted sourcing with globally compliant documentation. We handle the complexity of compliance so you can focus on growth.
+              </p>
+
+              {/* Action Buttons */}
+              <div className="pt-2 flex justify-center lg:justify-start">
+                <Link
+                  to="/contact"
+                  className="bg-[#cca72f] text-[#140002] px-8 py-3.5 rounded-full font-['Montserrat'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-[#e0bc55] shadow-lg shadow-[#cca72f]/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
+                >
+                  Send Inquiry
+                </Link>
+              </div>
+
+              {/* Trust Guarantee */}
+              <div className="text-[8.5px] font-['Montserrat'] tracking-widest text-white/40 uppercase pt-1">
+                Export Desk Response Guarantee: Within 12 Hours
+              </div>
+
             </div>
 
-            <div className="text-[8px] font-['Montserrat'] tracking-widest text-white/40 uppercase pt-1">
-              Export Desk Response Guarantee: Within 12 Hours
-            </div>
           </div>
         </div>
       </section>

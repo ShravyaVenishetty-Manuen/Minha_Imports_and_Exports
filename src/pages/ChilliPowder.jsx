@@ -5,6 +5,8 @@ import { FiCheckCircle, FiAnchor, FiCompass, FiTruck, FiAward, FiCheck, FiLayers
 import { GiChiliPepper } from 'react-icons/gi';
 import chilliPackagingKraft from '../assets/chilli-packaging-kraft.png';
 import chilliProcessingFacility from '../assets/chilli-processing-facility.png';
+import floatingSpicesLeft from '../assets/floating-spices-left.png';
+import floatingSpicesRight from '../assets/floating-spices-right.png';
 
 const ChilliPowder = () => {
   // Scroll to top on page mount
@@ -183,7 +185,7 @@ const ChilliPowder = () => {
       </section>
 
       {/* 4. Technical Specifications */}
-      <section className="py-10 md:py-14 bg-white">
+      <section className="py-10 md:py-14 bg-surface">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="lg:w-1/3 text-left flex flex-col justify-center">
             <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Datasheet</span>
@@ -334,7 +336,7 @@ const ChilliPowder = () => {
       </section>
 
       {/* 6. Packaging & Export */}
-      <section className="py-10 md:py-14 bg-white">
+      <section className="py-10 md:py-14 bg-surface-container-low">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="text-left space-y-6">
             <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Delivery Standards</span>
@@ -389,7 +391,7 @@ const ChilliPowder = () => {
       </section>
 
       {/* 7. Trust Features */}
-      <section className="py-10 md:py-14 bg-[#FAF8F4] border-t border-b border-neutral-100">
+      <section className="py-10 md:py-14 bg-surface border-t border-b border-neutral-100">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="flex flex-col items-center text-center space-y-2">
@@ -425,39 +427,86 @@ const ChilliPowder = () => {
       </section>
 
       {/* 8. Inquiry CTA */}
-      <section id="inquire" className="py-10 md:py-14 px-6 md:px-12 max-w-4xl mx-auto z-10 relative">
-        <div className="relative rounded-3xl overflow-hidden text-center text-white py-10 md:py-14 shadow-2xl border border-white/[0.05]">
-          <div className="absolute inset-0 bg-black/60 z-10"></div>
+      <section id="inquire" className="py-16 relative bg-[#FAF8F4] w-full z-10 border-t border-neutral-100/40">
+
+        {/* Left Side Floating Illustration (Premium floating spices elements) */}
+        <div className="hidden lg:block absolute left-[calc(50%-650px)] xl:left-[calc(50%-730px)] 2xl:left-[calc(50%-790px)] top-1/2 -translate-y-1/2 w-[450px] h-[450px] xl:w-[540px] xl:h-[540px] 2xl:w-[610px] 2xl:h-[610px] pointer-events-none select-none z-0 mix-blend-multiply">
           <img
-            alt="Inquiry CTA Red Chilli Powder"
-            className="absolute inset-0 w-full h-full object-cover"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxVWr-X22A2uy8R8l86VWqrk6LutV80tBDlf-SxQqfwYsAUwxgaY3HThUezk8N2wUE6sYNEIQ491AaEyIMLEv3dSB3XiApWM9AjS3Idoj2jcDHvyGTHemKKjDa_lVPUdTY4UVh_QRm371bs1JX97m0ktKN6Rh8K_Za2O-WR1JDPfF3oDMkGUwu0QNT_wbvA3M8_SEGy67_25fKohq9O3v_tacpnlOFlh9frL1FBX6ErSOuNRuqYjyVH-9RZkcn-59_qVqTk4DWV4w"
+            src={floatingSpicesLeft}
+            alt="Decorative Floating Spices Left"
+            className="w-full h-full object-contain opacity-50 saturate-[0.5]"
+            style={{
+              maskImage: 'radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)',
+              WebkitMaskImage: 'radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)'
+            }}
           />
-          <div className="relative z-20 w-full max-w-2xl mx-auto px-6 md:px-12 text-center space-y-6">
-            <h2 className="font-['Montserrat'] font-bold text-[22px] sm:text-[26px] md:text-[30px] leading-[1.25] tracking-tight text-white">
-              Looking for Premium Chilli Powder Supply?
-            </h2>
-            <p className="font-['Inter'] font-normal text-white/80 text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed">
-              Partner with a trusted export leader. Get a customized quote for your specific grade and volume requirements today.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-5 max-w-md mx-auto pt-4">
-              <a
-                href="mailto:minhaimportsexports@gmail.com?subject=Enquiry for Premium Chilli Powder&body=Hello Minha Desk,%0D%0A%0D%0AI would like to request details and wholesale pricing for Chilli Powder."
-                className="flex-1 bg-[#cca72f] text-[#121315] font-['Montserrat'] font-extrabold text-[12px] tracking-wider py-4 px-6 rounded-full hover:bg-white hover:text-black shadow-lg shadow-[#cca72f]/20 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 uppercase text-center whitespace-nowrap"
-              >
-                Request a Quote
-              </a>
-              <a
-                href="mailto:minhaimportsexports@gmail.com?subject=Request Chilli Powder Brochure"
-                className="flex-1 border-2 border-white/80 text-white font-['Montserrat'] font-extrabold text-[12px] tracking-wider py-[14px] px-6 rounded-full hover:bg-white hover:text-black hover:border-white hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 uppercase text-center whitespace-nowrap"
-              >
-                Download Brochure
-              </a>
+        </div>
+
+        {/* Right Side Floating Illustration (Premium floating spices elements) */}
+        <div className="hidden lg:block absolute right-[calc(50%-710px)] xl:right-[calc(50%-790px)] 2xl:right-[calc(50%-850px)] top-1/2 -translate-y-1/2 w-[500px] h-[500px] xl:w-[600px] xl:h-[600px] 2xl:w-[680px] 2xl:h-[680px] pointer-events-none select-none z-0 mix-blend-multiply">
+          <img
+            src={floatingSpicesRight}
+            alt="Decorative Floating Spices Right"
+            className="w-full h-full object-contain opacity-50 saturate-[0.5]"
+            style={{
+              maskImage: 'radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)',
+              WebkitMaskImage: 'radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)'
+            }}
+          />
+        </div>
+
+        {/* Subtle center glow behind the card */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-to-r from-[#cca72f]/10 to-[#8f000d]/10 rounded-full blur-[80px] pointer-events-none select-none z-0"></div>
+
+        <div className="max-w-[850px] mx-auto px-6 md:px-12 relative z-10">
+          <div className="relative rounded-[2.5rem] overflow-hidden text-center text-white py-12 md:py-16 px-6 md:px-12 shadow-[0_30px_80px_rgba(0,0,0,0.18)] border border-white/10 bg-neutral-950/20 backdrop-blur-md">
+
+            {/* Blurred Red Chilli Powder background inside card */}
+            <div className="absolute inset-0 bg-neutral-950/50 z-10"></div>
+            <img
+              alt="Blurred Red Chilli Powder Background"
+              className="absolute inset-0 w-full h-full object-cover filter blur-[6px] scale-105 opacity-70"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxVWr-X22A2uy8R8l86VWqrk6LutV80tBDlf-SxQqfwYsAUwxgaY3HThUezk8N2wUE6sYNEIQ491AaEyIMLEv3dSB3XiApWM9AjS3Idoj2jcDHvyGTHemKKjDa_lVPUdTY4UVh_QRm371bs1JX97m0ktKN6Rh8K_Za2O-WR1JDPfF3oDMkGUwu0QNT_wbvA3M8_SEGy67_25fKohq9O3v_tacpnlOFlh9frL1FBX6ErSOuNRuqYjyVH-9RZkcn-59_qVqTk4DWV4w"
+            />
+
+            <div className="relative z-20 max-w-xl mx-auto space-y-6 text-center">
+              {/* Tagline Badge */}
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mx-auto">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#cca72f] animate-pulse" />
+                <span className="font-['Montserrat'] font-bold text-[8.5px] tracking-[0.2em] text-[#cca72f] uppercase">
+                  Bulk Powder Sourcing
+                </span>
+              </div>
+
+              <h2 className="font-['Montserrat'] font-bold text-[22px] sm:text-[26px] md:text-[32px] leading-[1.2] tracking-tight text-white">
+                Looking for Premium <br className="hidden sm:inline" /> Chilli Powder Supply?
+              </h2>
+              <p className="font-['Inter'] font-normal text-white/80 text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed max-w-lg mx-auto">
+                Partner with a trusted export leader. Get a customized quote for your specific grade and volume requirements today.
+              </p>
+
+              <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-md mx-auto pt-3">
+                <a
+                  href="mailto:minhaimportsexports@gmail.com?subject=Enquiry for Premium Chilli Powder&body=Hello Minha Desk,%0D%0A%0D%0AI would like to request details and wholesale pricing for Chilli Powder."
+                  className="flex-1 bg-[#cca72f] text-[#121315] font-['Montserrat'] font-extrabold text-[12px] tracking-wider py-3.5 px-6 rounded-full hover:bg-white hover:text-black shadow-lg shadow-[#cca72f]/20 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 uppercase text-center whitespace-nowrap"
+                >
+                  Request a Quote
+                </a>
+                <a
+                  href="mailto:minhaimportsexports@gmail.com?subject=Request Chilli Powder Brochure"
+                  className="flex-1 border-2 border-white/85 text-white font-['Montserrat'] font-extrabold text-[12px] tracking-wider py-[14px] px-6 rounded-full hover:bg-white hover:text-black hover:border-white hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 uppercase text-center whitespace-nowrap"
+                >
+                  Download Brochure
+                </a>
+              </div>
+
+              <div className="text-[8px] font-['Montserrat'] tracking-widest text-white/40 uppercase pt-2">
+                Export Desk Response Guarantee: Within 12 Hours
+              </div>
             </div>
           </div>
         </div>
       </section>
-
     </div>
   );
 };

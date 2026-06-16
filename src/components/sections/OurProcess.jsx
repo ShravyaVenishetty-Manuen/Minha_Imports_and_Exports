@@ -13,7 +13,6 @@ const OurProcess = () => {
       text: "Direct collaboration with trusted farmers in Guntur for premium quality cultivation.",
       image: step1Img,
       color: "bg-[#B22222]",
-      arrowColor: "#1F5E3B" // Green arrow
     },
     {
       id: "02",
@@ -21,22 +20,20 @@ const OurProcess = () => {
       text: "Handpicked and graded chillies ensuring vibrant color, high SHU and consistent quality.",
       image: step2Img,
       color: "bg-[#1F5E3B]",
-      arrowColor: "#B22222" // Red arrow
     },
     {
       id: "03",
       title: "Processing & Packaging",
       text: "Hygienic processing, advanced sorting and customized packaging to lock in freshness and flavor.",
       image: step3Img,
-      color: "bg-[#B22222]",
-      arrowColor: "#1F5E3B" // Green arrow
+      color: "bg-[#cca72f]",
     },
     {
       id: "04",
       title: "Global Export",
       text: "Timely delivery with complete documentation to global markets.",
       image: step4Img,
-      color: "bg-[#1F5E3B]"
+      color: "bg-[#d97706]"
     }
   ];
 
@@ -111,15 +108,15 @@ const OurProcess = () => {
             {/* Arrow 2: between Col 2 and Col 3 */}
             <div className="absolute left-[50%] -translate-x-1/2 w-[80px] flex items-center justify-center">
               <svg className="w-full h-4" fill="none" viewBox="0 0 100 20">
-                <path d="M 5,10 L 85,10" stroke="#B22222" strokeWidth="1.5" strokeDasharray="4,4" />
-                <path d="M 80,6 L 88,10 L 80,14" fill="#B22222" stroke="#B22222" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M 5,10 L 85,10" stroke="#cca72f" strokeWidth="1.5" strokeDasharray="4,4" />
+                <path d="M 80,6 L 88,10 L 80,14" fill="#cca72f" stroke="#cca72f" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
             {/* Arrow 3: between Col 3 and Col 4 */}
             <div className="absolute left-[75%] -translate-x-1/2 w-[80px] flex items-center justify-center">
               <svg className="w-full h-4" fill="none" viewBox="0 0 100 20">
-                <path d="M 5,10 L 85,10" stroke="#1F5E3B" strokeWidth="1.5" strokeDasharray="4,4" />
-                <path d="M 80,6 L 88,10 L 80,14" fill="#1F5E3B" stroke="#1F5E3B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M 5,10 L 85,10" stroke="#d97706" strokeWidth="1.5" strokeDasharray="4,4" />
+                <path d="M 80,6 L 88,10 L 80,14" fill="#d97706" stroke="#d97706" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
           </div>

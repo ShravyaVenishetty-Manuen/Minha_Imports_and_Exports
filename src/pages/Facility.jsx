@@ -278,9 +278,9 @@ const Facility = () => {
 
               {/* Timeline Center Node */}
               <div className="absolute left-12 md:left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-20 flex items-center justify-center">
-                <div className="w-10 h-10 rounded-full bg-white border-2 border-[#8f000d] flex items-center justify-center font-['Montserrat'] font-bold text-xs shadow-md relative z-10">
-                  <span className="text-[#8f000d]">03</span>
-                  <span className="absolute -inset-1.5 rounded-full border border-[#8f000d] opacity-40 animate-pulse text-[#8f000d]"></span>
+                <div className="w-10 h-10 rounded-full bg-white border-2 border-[#cca72f] flex items-center justify-center font-['Montserrat'] font-bold text-xs shadow-md relative z-10">
+                  <span className="text-[#cca72f]">03</span>
+                  <span className="absolute -inset-1.5 rounded-full border border-[#cca72f] opacity-40 animate-pulse text-[#cca72f]"></span>
                 </div>
               </div>
 
@@ -293,13 +293,13 @@ const Facility = () => {
                 className="w-full order-1 pl-16 md:pl-0 text-left"
               >
                 <div className="bg-white border border-neutral-100/85 rounded-3xl p-6 md:p-8 shadow-premium-soft hover:-translate-y-1 hover:shadow-md transition-all duration-300 relative z-10">
-                  <span className="text-[#8f000d] font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] uppercase">
+                  <span className="text-[#cca72f] font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] uppercase">
                     Phase 03
                   </span>
                   <h3 className="font-['Montserrat'] font-bold text-[22px] md:text-[26px] text-neutral-900 leading-tight mt-1">
                     Export-Grade Packaging
                   </h3>
-                  <div className="w-12 h-[2.5px] bg-[#8f000d] rounded-full mt-3 mb-4"></div>
+                  <div className="w-12 h-[2.5px] bg-[#cca72f] rounded-full mt-3 mb-4"></div>
                   <p className="font-['Inter'] text-[#5a403e] text-[14px] md:text-[15px] leading-relaxed mb-6">
                     We provide customized packaging solutions tailored to international shipping requirements. From 5kg vacuum-sealed pouches to 25kg PP bags, our automated machinery ensures airtight seals and accurate weight measurement. Every package features clear batch-tracking QR codes for total traceability.
                   </p>
@@ -307,11 +307,11 @@ const Facility = () => {
                   {/* Phase Metrics */}
                   <div className="grid grid-cols-2 gap-4 pt-4 border-t border-neutral-100">
                     <div>
-                      <h5 className="font-['Montserrat'] font-bold text-[11px] text-[#8f000d] uppercase tracking-wider">Bag Sizes</h5>
+                      <h5 className="font-['Montserrat'] font-bold text-[11px] text-[#cca72f] uppercase tracking-wider">Bag Sizes</h5>
                       <p className="font-['Inter'] text-neutral-800 text-[13px] font-semibold mt-0.5">5kg to 25kg Pallets</p>
                     </div>
                     <div>
-                      <h5 className="font-['Montserrat'] font-bold text-[11px] text-[#8f000d] uppercase tracking-wider">Traceability</h5>
+                      <h5 className="font-['Montserrat'] font-bold text-[11px] text-[#cca72f] uppercase tracking-wider">Traceability</h5>
                       <p className="font-['Inter'] text-neutral-800 text-[13px] font-semibold mt-0.5">QR Code Scans</p>
                     </div>
                   </div>
@@ -342,9 +342,9 @@ const Facility = () => {
 
               {/* Timeline Center Node */}
               <div className="absolute left-12 md:left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-20 flex items-center justify-center">
-                <div className="w-10 h-10 rounded-full bg-white border-2 border-[#cca72f] flex items-center justify-center font-['Montserrat'] font-bold text-xs shadow-md relative z-10">
-                  <span className="text-[#cca72f]">04</span>
-                  <span className="absolute -inset-1.5 rounded-full border border-[#cca72f] opacity-40 animate-pulse text-[#cca72f]"></span>
+                <div className="w-10 h-10 rounded-full bg-white border-2 border-[#b22222] flex items-center justify-center font-['Montserrat'] font-bold text-xs shadow-md relative z-10">
+                  <span className="text-[#b22222]">04</span>
+                  <span className="absolute -inset-1.5 rounded-full border border-[#b22222] opacity-40 animate-pulse text-[#b22222]"></span>
                 </div>
               </div>
 
@@ -374,13 +374,13 @@ const Facility = () => {
                 className="w-full order-1 md:order-2 pl-16 md:pl-0 text-left"
               >
                 <div className="bg-white border border-neutral-100/85 rounded-3xl p-6 md:p-8 shadow-premium-soft hover:-translate-y-1 hover:shadow-md transition-all duration-300 relative z-10">
-                  <span className="text-[#cca72f] font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] uppercase">
+                  <span className="text-[#b22222] font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] uppercase">
                     Phase 04
                   </span>
                   <h3 className="font-['Montserrat'] font-bold text-[22px] md:text-[26px] text-neutral-900 leading-tight mt-1">
                     Logistics &amp; Global Dispatch
                   </h3>
-                  <div className="w-12 h-[2.5px] bg-[#cca72f] rounded-full mt-3 mb-4"></div>
+                  <div className="w-12 h-[2.5px] bg-[#b22222] rounded-full mt-3 mb-4"></div>
                   <p className="font-['Inter'] text-[#5a403e] text-[14px] md:text-[15px] leading-relaxed mb-6">
                     Located near major transport hubs, our logistics arm ensures rapid transit from facility to port. We handle all container stuffing on-site under high surveillance, ensuring that the integrity of the packaging is maintained until the doors are sealed for global shipping.
                   </p>
@@ -388,11 +388,11 @@ const Facility = () => {
                   {/* Phase Metrics */}
                   <div className="grid grid-cols-2 gap-4 pt-4 border-t border-neutral-100">
                     <div>
-                      <h5 className="font-['Montserrat'] font-bold text-[11px] text-[#cca72f] uppercase tracking-wider">Dispatch Hours</h5>
+                      <h5 className="font-['Montserrat'] font-bold text-[11px] text-[#b22222] uppercase tracking-wider">Dispatch Hours</h5>
                       <p className="font-['Inter'] text-neutral-800 text-[13px] font-semibold mt-0.5">24/7 Loading Bays</p>
                     </div>
                     <div>
-                      <h5 className="font-['Montserrat'] font-bold text-[11px] text-[#cca72f] uppercase tracking-wider">Tracking</h5>
+                      <h5 className="font-['Montserrat'] font-bold text-[11px] text-[#b22222] uppercase tracking-wider">Tracking</h5>
                       <p className="font-['Inter'] text-neutral-800 text-[13px] font-semibold mt-0.5">Real-time GPS Logs</p>
                     </div>
                   </div>
@@ -479,7 +479,7 @@ const Facility = () => {
       {/* 9. Why Our Infrastructure Matters */}
       <section className="py-10 md:py-14 bg-[#f9f9fc]">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
-          
+
           {/* Centered Header */}
           <div className="text-center mb-16 space-y-3">
             <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase block">
@@ -529,27 +529,27 @@ const Facility = () => {
                 title: 'In-House Lab Testing',
                 desc: 'Immediate moisture and color testing in our on-site laboratory for every batch.',
                 iconObj: <FiAward className="text-xl" />,
-                color: 'text-[#8f000d]',
-                bg: 'bg-[#8f000d]/10',
-                border: 'border-[#8f000d]/20',
+                color: 'text-[#d97706]',
+                bg: 'bg-[#d97706]/10',
+                border: 'border-[#d97706]/20',
               },
               {
                 num: '05',
                 title: 'Sustainable Practices',
                 desc: 'Energy-efficient machinery and waste management systems for a greener footprint.',
                 iconObj: <FiGlobe className="text-xl" />,
-                color: 'text-[#2c6a46]',
-                bg: 'bg-[#2c6a46]/10',
-                border: 'border-[#2c6a46]/20',
+                color: 'text-[#0a361c]',
+                bg: 'bg-[#0a361c]/10',
+                border: 'border-[#0a361c]/20',
               },
               {
                 num: '06',
                 title: 'Secure Facility',
                 desc: '24/7 CCTV surveillance and restricted access zones for product security.',
                 iconObj: <FiShield className="text-xl" />,
-                color: 'text-[#cca72f]',
-                bg: 'bg-[#cca72f]/10',
-                border: 'border-[#cca72f]/20',
+                color: 'text-[#8f6a10]',
+                bg: 'bg-[#8f6a10]/10',
+                border: 'border-[#8f6a10]/20',
               }
             ].map((value, idx) => (
               <motion.div
@@ -571,7 +571,7 @@ const Facility = () => {
                   <div className={`w-11 h-11 rounded-xl ${value.bg} ${value.color} flex items-center justify-center shrink-0 border ${value.border} transition-transform duration-300 group-hover:scale-110`}>
                     {value.iconObj}
                   </div>
-                  
+
                   <div className="space-y-2">
                     <h4 className="font-['Montserrat'] font-bold text-neutral-900 text-[16px] leading-tight">
                       {value.title}
@@ -581,7 +581,7 @@ const Facility = () => {
                     </p>
                   </div>
                 </div>
-                
+
               </motion.div>
             ))}
           </div>
@@ -590,11 +590,11 @@ const Facility = () => {
       </section>
 
       {/* 10. Business CTA */}
-      <section className="py-8 px-6 md:px-12 max-w-[850px] mx-auto z-10 relative">
-        <div className="relative rounded-[2rem] overflow-hidden text-center text-white py-10 md:py-14 shadow-2xl border border-white/[0.04] bg-gradient-to-br from-[#3d0008] via-[#220004] to-[#140002] group">
+      <section className="py-12 md:py-16 px-6 md:px-12 max-w-[1280px] mx-auto z-10 relative w-full">
+        <div className="relative rounded-[2rem] overflow-hidden py-10 md:py-14 px-6 md:px-12 shadow-[0_35px_80px_rgba(0,0,0,0.18)] border border-white/[0.04] bg-gradient-to-br from-[#3d0008] via-[#220004] to-[#140002] group">
 
           {/* Subtle grid and glowing accents */}
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.035)_1.5px,transparent_1.5px)] bg-[size:24px_24px] pointer-events-none" />
           <div className="absolute -top-32 -left-32 w-72 h-72 bg-[#8f000d]/25 rounded-full blur-3xl pointer-events-none group-hover:bg-[#8f000d]/35 transition-all duration-700" />
           <div className="absolute -bottom-32 -right-32 w-64 h-64 bg-[#cca72f]/8 rounded-full blur-3xl pointer-events-none" />
 
@@ -602,42 +602,63 @@ const Facility = () => {
           <img
             src={chilliExportCta}
             alt="Cargo logistics overlay"
-            className="absolute right-0 bottom-0 w-1/2 h-full object-cover opacity-10 pointer-events-none mix-blend-overlay"
+            className="absolute right-0 bottom-0 w-1/2 h-full object-cover opacity-[0.04] pointer-events-none mix-blend-overlay"
           />
 
-          <div className="relative z-10 max-w-xl mx-auto space-y-5 px-4">
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
-            {/* Tagline Badge */}
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mx-auto">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#cca72f] animate-pulse" />
-              <span className="font-['Montserrat'] font-bold text-[8.5px] tracking-[0.2em] text-[#cca72f] uppercase">
-                Direct Export Cargo Sourcing
+            {/* Left Column: Brand Quote (lg:col-span-5) */}
+            <div className="relative space-y-4 text-center lg:text-left lg:border-r lg:border-white/10 lg:pr-8 xl:pr-12 lg:col-span-5 w-full z-10">
+              <span className="absolute -top-10 -left-2 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
+                “
+              </span>
+              <blockquote className="font-['Montserrat'] font-medium italic text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed text-white/95 relative z-10">
+                "Behind every successful export is a strong infrastructure built for precision and consistency. Our facilities are carefully designed to maintain product quality, ensure hygienic handling, and support seamless global deliveries."
+              </blockquote>
+              <div className="font-['Montserrat'] font-bold text-[9px] sm:text-[10px] tracking-widest uppercase text-[#cca72f] relative z-10">
+                — The Minha Infrastructure
+              </div>
+              <span className="absolute -bottom-14 right-4 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
+                ”
               </span>
             </div>
 
-            {/* Title */}
-            <h2 className="font-['Montserrat'] font-extrabold text-[24px] md:text-[32px] leading-tight text-white tracking-tight">
-              Partner With a Reliable Export Infrastructure
-            </h2>
+            {/* Right Column: CTA Content (lg:col-span-7) */}
+            <div className="space-y-5 text-center lg:text-left lg:col-span-7 w-full">
 
-            {/* Description */}
-            <p className="font-['Inter'] font-normal text-white/80 text-[13px] md:text-[14px] max-w-lg mx-auto leading-relaxed">
-              Experience the difference of a facility built for the demands of the global market. Request a virtual tour or a quote today.
-            </p>
+              {/* Tagline Badge */}
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mx-auto lg:mx-0">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#cca72f] animate-pulse" />
+                <span className="font-['Montserrat'] font-bold text-[8.5px] tracking-[0.2em] text-[#cca72f] uppercase">
+                  Direct Export Cargo Sourcing
+                </span>
+              </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center pt-2 max-w-xs sm:max-w-md mx-auto">
-              <Link
-                to="/contact"
-                className="w-full sm:w-auto bg-[#cca72f] text-[#140002] px-8 py-3.5 rounded-full font-['Montserrat'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-[#e0bc55] shadow-lg shadow-[#cca72f]/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
-              >
-                Request a Quote
-              </Link>
-            </div>
+              {/* Title */}
+              <h2 className="font-['Montserrat'] font-extrabold text-[22px] md:text-[30px] leading-tight text-white tracking-tight">
+                Partner With a Reliable Export Infrastructure
+              </h2>
 
-            {/* Trust Guarantee */}
-            <div className="text-[8px] font-['Montserrat'] tracking-widest text-white/40 uppercase pt-1">
-              Export Desk Response Guarantee: Within 12 Hours
+              {/* Description */}
+              <p className="font-['Inter'] font-normal text-white/80 text-[13.5px] leading-relaxed">
+                Experience the difference of a facility built for the demands of the global market. Request a virtual tour or a quote today.
+              </p>
+
+              {/* Action Buttons */}
+              <div className="pt-2 flex justify-center lg:justify-start">
+                <Link
+                  to="/contact"
+                  className="bg-[#cca72f] text-[#140002] px-8 py-3.5 rounded-full font-['Montserrat'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-[#e0bc55] shadow-lg shadow-[#cca72f]/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
+                >
+                  Request a Quote
+                </Link>
+              </div>
+
+              {/* Trust Guarantee */}
+              <div className="text-[8.5px] font-['Montserrat'] tracking-widest text-white/40 uppercase pt-1">
+                Export Desk Response Guarantee: Within 12 Hours
+              </div>
+
             </div>
 
           </div>

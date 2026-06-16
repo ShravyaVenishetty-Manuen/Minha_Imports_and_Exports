@@ -81,6 +81,8 @@
     font-family: var(--font-body);
     color: var(--color-text-dark);
     background-color: #FFFFFF;
+    overflow-x: hidden;
+    width: 100%;
   }
 
   body {
@@ -89,6 +91,14 @@
     color: var(--color-text-dark);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   h1,

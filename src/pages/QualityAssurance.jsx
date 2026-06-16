@@ -71,18 +71,18 @@ const QualityAssurance = () => {
       title: 'Processing',
       image: qaStepProcessing,
       desc: 'Cleaning, stem removal, and moisture control are performed in our climate-controlled facility.',
-      colorClass: 'border-[#2c6a46]/40',
-      dotBgClass: 'bg-[#2c6a46]',
-      badgeBgClass: 'bg-[#2c6a46]'
+      colorClass: 'border-[#cca72f]/40',
+      dotBgClass: 'bg-[#cca72f]',
+      badgeBgClass: 'bg-[#cca72f]'
     },
     {
       num: '04',
       title: 'Shipping',
       image: qaStepShipping,
       desc: 'Final export clearance and container loading under supervised inspection for timely global delivery.',
-      colorClass: 'border-[#8f000d]/40',
-      dotBgClass: 'bg-[#8f000d]',
-      badgeBgClass: 'bg-[#8f000d]'
+      colorClass: 'border-[#d97706]/40',
+      dotBgClass: 'bg-[#d97706]',
+      badgeBgClass: 'bg-[#d97706]'
     }
   ];
 
@@ -116,7 +116,7 @@ const QualityAssurance = () => {
 
       {/* 2. Quality Commitment Section */}
       <section className="py-10 md:py-14 bg-surface">
-        <div className="max-w-[1280px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="max-w-[1280px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
 
           {/* Left Column (Image with secondary accent background glow) */}
           <motion.div
@@ -126,7 +126,7 @@ const QualityAssurance = () => {
             transition={{ duration: 0.6 }}
             className="relative group"
           >
-            <div className="absolute -inset-4 bg-[#2c6a46]/10 rounded-xl -rotate-2 group-hover:rotate-0 transition-transform duration-500 -z-10"></div>
+            <div className="absolute -inset-4 bg-[#2c6a46]/10 rounded-xl -rotate-2 group-hover:rotate-0 transition-transform duration-500"></div>
             <img
               alt="Expert Quality Grading Red Chillies"
               className="relative rounded-xl shadow-xl w-full h-[400px] md:h-[500px] object-cover transition-transform duration-500 hover:scale-[1.01]"
@@ -143,37 +143,32 @@ const QualityAssurance = () => {
             className="text-left space-y-6"
           >
             <div>
-              <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
-                Our Commitment
-              </span>
-              <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
-                Premium Standards for Global Markets
-              </h2>
+              <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">Premium Standards for Global Markets</h2>
             </div>
 
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
+            <p className="text-on-surface-variant font-body-md text-body-md leading-relaxed text-justify">
               At Minha Imports & Exports, quality is not just a department—it is our core identity. We specialize in the high-stakes export of Guntur Dry Red Chillies, where precision in grading and hygiene determines global competitiveness.
             </p>
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
+            <p className="text-on-surface-variant font-body-md text-body-md leading-relaxed text-justify">
               Every consignment undergoes rigorous multi-tier testing. From field-level crop monitoring to final airtight packaging, our protocols ensure that our clients receive produce that meets the strictest international food safety and aesthetic standards.
             </p>
 
             <ul className="space-y-4 pt-2">
               <li className="flex items-start gap-3">
                 <FiCheckCircle className="text-[#2c6a46] text-xl shrink-0 mt-0.5" />
-                <span className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-normal">
+                <span className="text-on-surface-variant font-body-md text-body-md leading-normal text-justify">
                   Zero-tolerance policy on cross-contamination and impurities.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <FiCheckCircle className="text-[#2c6a46] text-xl shrink-0 mt-0.5" />
-                <span className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-normal">
+                <span className="text-on-surface-variant font-body-md text-body-md leading-normal text-justify">
                   Advanced moisture-level monitoring for extended shelf life.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <FiCheckCircle className="text-[#2c6a46] text-xl shrink-0 mt-0.5" />
-                <span className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-normal">
+                <span className="text-on-surface-variant font-body-md text-body-md leading-normal text-justify">
                   Ethical sourcing directly from certified Guntur farming clusters.
                 </span>
               </li>
@@ -411,7 +406,7 @@ const QualityAssurance = () => {
                   Food-grade packaging for long freshness.
                 </p>
               </div>
-              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-['Montserrat'] font-bold w-max mt-4 text-[#8f000d] bg-[#8f000d]/10">
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-['Montserrat'] font-bold w-max mt-4 text-[#2c6a46] bg-[#2c6a46]/10">
                 <span>✓</span> Validated
               </div>
             </motion.div>
@@ -507,7 +502,7 @@ const QualityAssurance = () => {
 
               {/* Stat 1 */}
               <div className="space-y-2 py-4 md:py-0 md:px-4 text-center">
-                <div className="font-['Montserrat'] font-black text-[40px] md:text-[48px] leading-none text-[#8f000d]">
+                <div className="font-['Montserrat'] font-black text-[40px] md:text-[48px] leading-none text-[#2c6a46] flex items-center justify-center gap-2">
                   100%
                 </div>
                 <div className="font-['Montserrat'] font-bold text-[10.5px] tracking-[0.15em] text-neutral-800 uppercase">
@@ -520,7 +515,7 @@ const QualityAssurance = () => {
 
               {/* Stat 2 */}
               <div className="space-y-2 py-4 md:py-0 md:px-4 text-center">
-                <div className="font-['Montserrat'] font-black text-[40px] md:text-[48px] leading-none text-[#8f000d]">
+                <div className="font-['Montserrat'] font-black text-[40px] md:text-[48px] leading-none text-[#2c6a46] flex items-center justify-center gap-2">
                   50+
                 </div>
                 <div className="font-['Montserrat'] font-bold text-[10.5px] tracking-[0.15em] text-neutral-800 uppercase">
@@ -552,11 +547,11 @@ const QualityAssurance = () => {
       </section>
 
       {/* 6. Inquiry CTA Section */}
-      <section className="py-6 px-6 md:px-12 max-w-[850px] mx-auto z-10 relative">
-        <div className="relative rounded-[2rem] overflow-hidden text-center text-white py-10 md:py-14 shadow-2xl border border-white/10 bg-gradient-to-br from-[#2c6a46] via-[#123e25] to-[#111315] group">
+      <section className="py-12 md:py-16 px-6 md:px-12 max-w-[1280px] mx-auto z-10 relative w-full">
+        <div className="relative rounded-[2rem] overflow-hidden py-10 md:py-14 px-6 md:px-12 shadow-[0_35px_80px_rgba(0,0,0,0.18)] border border-white/[0.04] bg-gradient-to-br from-[#2c6a46] via-[#123e25] to-[#111315] group">
 
           {/* Subtle grid and glowing accents */}
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.035)_1.5px,transparent_1.5px)] bg-[size:24px_24px] pointer-events-none" />
           <div className="absolute -top-32 -left-32 w-64 h-64 bg-[#2c6a46]/20 rounded-full blur-3xl pointer-events-none group-hover:bg-[#2c6a46]/30 transition-all duration-700" />
           <div className="absolute -bottom-32 -right-32 w-64 h-64 bg-white/5 rounded-full blur-3xl pointer-events-none" />
 
@@ -564,42 +559,63 @@ const QualityAssurance = () => {
           <img
             src={chilliExportCta}
             alt="Cargo logistics overlay"
-            className="absolute right-0 bottom-0 w-1/2 h-full object-cover opacity-10 pointer-events-none mix-blend-overlay"
+            className="absolute right-0 bottom-0 w-1/2 h-full object-cover opacity-[0.04] pointer-events-none mix-blend-overlay"
           />
 
-          <div className="relative z-10 max-w-xl mx-auto space-y-5 px-4">
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
-            {/* Tagline Badge */}
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mx-auto">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#cca72f] animate-pulse" />
-              <span className="font-['Montserrat'] font-bold text-[8.5px] tracking-[0.2em] text-[#cca72f] uppercase">
-                Premium Sourcing & Logistics
+            {/* Left Column: Brand Quote (lg:col-span-5) */}
+            <div className="relative space-y-4 text-center lg:text-left lg:border-r lg:border-white/10 lg:pr-8 xl:pr-12 lg:col-span-5 w-full z-10">
+              <span className="absolute -top-10 -left-2 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
+                “
+              </span>
+              <blockquote className="font-['Montserrat'] font-medium italic text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed text-white/95 relative z-10">
+                "Excellence is the only standard that travels without a passport. We don't just inspect our chillies; we trace, verify, and guarantee their legacy from Guntur's soil to your doorstep."
+              </blockquote>
+              <div className="font-['Montserrat'] font-bold text-[9px] sm:text-[10px] tracking-widest uppercase text-[#cca72f] relative z-10">
+                — The Minha Quality Council
+              </div>
+              <span className="absolute -bottom-14 right-4 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
+                ”
               </span>
             </div>
 
-            {/* Title */}
-            <h2 className="font-['Montserrat'] font-extrabold text-[24px] md:text-[32px] leading-tight text-white tracking-tight">
-              Looking for Premium <br className="hidden sm:inline" /> Quality Chilli Exports?
-            </h2>
+            {/* Right Column: CTA Content (lg:col-span-7) */}
+            <div className="space-y-5 text-center lg:text-left lg:col-span-7 w-full">
+              
+              {/* Tagline Badge */}
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mx-auto lg:mx-0">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#cca72f] animate-pulse" />
+                <span className="font-['Montserrat'] font-bold text-[8.5px] tracking-[0.2em] text-[#cca72f] uppercase">
+                  Premium Sourcing & Logistics
+                </span>
+              </div>
 
-            {/* Description */}
-            <p className="font-['Inter'] font-normal text-white/80 text-[13px] md:text-[14px] max-w-lg mx-auto leading-relaxed">
-              Partner with Minha Imports & Exports for reliable, grade-A dry red chillies. Get a customized quote based on your specific requirements today.
-            </p>
+              {/* Title */}
+              <h2 className="font-['Montserrat'] font-extrabold text-[22px] md:text-[30px] leading-tight text-white tracking-tight">
+                Looking for Premium <br className="hidden sm:inline" /> Quality Chilli Exports?
+              </h2>
 
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center pt-2 max-w-xs sm:max-w-md mx-auto">
-              <Link
-                to="/contact"
-                className="w-full sm:w-auto bg-white text-[#2c6a46] px-8 py-3.5 rounded-full font-['Montserrat'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-neutral-100 hover:text-black shadow-lg shadow-black/10 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
-              >
-                Send Inquiry
-              </Link>
-            </div>
+              {/* Description */}
+              <p className="font-['Inter'] font-normal text-white/80 text-[13.5px] leading-relaxed">
+                Partner with Minha Imports & Exports for reliable, grade-A dry red chillies. Get a customized quote based on your specific requirements today.
+              </p>
 
-            {/* Trust Guarantee */}
-            <div className="text-[8px] font-['Montserrat'] tracking-widest text-white/40 uppercase pt-1">
-              Export Desk Response Guarantee: Within 12 Hours
+              {/* Action Buttons */}
+              <div className="pt-2 flex justify-center lg:justify-start">
+                <Link
+                  to="/contact"
+                  className="bg-white text-[#2c6a46] px-8 py-3.5 rounded-full font-['Montserrat'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-neutral-100 hover:text-black shadow-lg shadow-black/10 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
+                >
+                  Send Inquiry
+                </Link>
+              </div>
+
+              {/* Trust Guarantee */}
+              <div className="text-[8.5px] font-['Montserrat'] tracking-widest text-white/40 uppercase pt-1">
+                Export Desk Response Guarantee: Within 12 Hours
+              </div>
+
             </div>
 
           </div>

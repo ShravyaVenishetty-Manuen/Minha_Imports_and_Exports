@@ -27,19 +27,19 @@ const WhyChooseUs = () => {
       title: "Timely Delivery",
       text: "Reliable logistics network for on-time delivery to any port worldwide.",
       icon: <FiTruck className="text-white text-2xl md:text-3xl" />,
-      bg: "bg-[#8f000d]"
+      bg: "bg-[#d97706]"
     },
     {
       title: "Reliable Supply",
       text: "Direct sourcing ensures consistent supply even during peak seasons.",
       icon: <FiPackage className="text-white text-2xl md:text-3xl" />,
-      bg: "bg-[#2c6a46]"
+      bg: "bg-[#0a361c]"
     },
     {
       title: "Customer Trust",
       text: "Transparent deals with lab reports and inspection certificates.",
       icon: <FiThumbsUp className="text-white text-2xl md:text-3xl" />,
-      bg: "bg-[#cca72f]"
+      bg: "bg-[#8f6a10]"
     }
   ];
 
@@ -127,8 +127,7 @@ const WhyChooseUs = () => {
                 {idx < 5 && (
                   <div className="hidden lg:flex absolute top-[36px] left-[50%] w-[100%] items-center justify-center pointer-events-none z-0">
                     <div className="w-full h-[1px] bg-neutral-300" />
-                    <div className={`w-2 h-2 rotate-45 shrink-0 mx-[-4px] ${idx % 3 === 0 ? 'bg-[#8f000d]' : idx % 3 === 1 ? 'bg-[#2c6a46]' : 'bg-[#cca72f]'
-                      }`} />
+                    <div className={`w-2 h-2 rotate-45 shrink-0 mx-[-4px] ${card.bg}`} />
                     <div className="w-full h-[1px] bg-neutral-300" />
                   </div>
                 )}

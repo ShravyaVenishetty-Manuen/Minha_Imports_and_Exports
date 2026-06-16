@@ -54,8 +54,8 @@ const Navbar = () => {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${isScrolled
-            ? 'bg-white/90 backdrop-blur-md shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-b border-brand-red/10 py-3'
-            : 'bg-white/80 backdrop-blur-sm border-b border-transparent py-5'
+          ? 'bg-white/90 backdrop-blur-md shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-b border-brand-red/10 py-3'
+          : 'bg-white/80 backdrop-blur-sm border-b border-transparent py-5'
           }`}
       >
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 flex items-center justify-between">
@@ -79,8 +79,8 @@ const Navbar = () => {
                   key={link.name}
                   to={link.path}
                   className={`font-body text-[13px] font-medium tracking-[0.08em] transition-all duration-300 relative py-1 hover:text-brand-red ${isActive
-                      ? 'text-brand-red font-semibold'
-                      : 'text-text-gray'
+                    ? 'text-brand-red font-semibold'
+                    : 'text-text-gray'
                     }`}
                 >
                   {link.name}
@@ -165,8 +165,8 @@ const Navbar = () => {
                         to={link.path}
                         onClick={() => setIsOpen(false)}
                         className={`font-body text-base font-semibold tracking-[0.08em] transition-all py-2 block rounded-lg ${isActive
-                            ? 'text-brand-red bg-brand-red/5 font-bold'
-                            : 'text-text-gray hover:text-brand-red hover:bg-neutral-50'
+                          ? 'text-brand-red bg-brand-red/5 font-bold'
+                          : 'text-text-gray hover:text-brand-red hover:bg-neutral-50'
                           }`}
                       >
                         {link.name}

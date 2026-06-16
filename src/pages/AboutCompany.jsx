@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -20,9 +20,59 @@ import dryChilliSortingFacility from '../assets/dry_chilli_sorting_facility.png'
 import immersiveSpiceBg from '../assets/immersive_spice_bg.png';
 import worldMapSvg from '../assets/world-map.svg';
 
+const OdometerYear = ({ year, color }) => {
+  const digits = year.split('');
+  return (
+    <div className="flex font-['Montserrat'] font-black text-[72px] sm:text-[88px] lg:text-[108px] leading-none select-none tracking-tighter">
+      {digits.map((digit, idx) => {
+        const val = parseInt(digit) || 0;
+        return (
+          <div
+            key={idx}
+            className="overflow-hidden relative"
+            style={{
+              width: '0.7em',
+              height: '1.28em',
+              marginRight: idx < digits.length - 1 ? '-0.1em' : '0'
+            }}
+          >
+            <motion.div
+              initial={{ y: 0 }}
+              animate={{ y: `-${val * 1.28}em` }}
+              transition={{
+                type: 'spring',
+                stiffness: 100,
+                damping: 14,
+                delay: idx * 0.05
+              }}
+              className="absolute left-0 top-0 w-full"
+            >
+              {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
+                <span
+                  key={n}
+                  className="block text-center bg-gradient-to-br bg-clip-text text-transparent"
+                  style={{
+                    height: '1.28em',
+                    lineHeight: '1.28em',
+                    backgroundImage: `linear-gradient(135deg, ${color}, #cca72f)`,
+                  }}
+                >
+                  {n}
+                </span>
+              ))}
+            </motion.div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
 const AboutCompany = () => {
   const [activeSection, setActiveSection] = useState(0);
   const [activeTimelineYear, setActiveTimelineYear] = useState(0);
+  const [slideDirection, setSlideDirection] = useState(1);
+
 
   // Scroll to top on page mount
   useEffect(() => {
@@ -221,11 +271,18 @@ const AboutCompany = () => {
   ];
 
   const handlePrevYear = () => {
+    setSlideDirection(-1);
     setActiveTimelineYear((prev) => (prev === 0 ? timelineData.length - 1 : prev - 1));
   };
 
   const handleNextYear = () => {
+    setSlideDirection(1);
     setActiveTimelineYear((prev) => (prev === timelineData.length - 1 ? 0 : prev + 1));
+  };
+
+  const changeTimelineYear = (newIdx) => {
+    setSlideDirection(newIdx > activeTimelineYear ? 1 : -1);
+    setActiveTimelineYear(newIdx);
   };
 
   return (
@@ -425,7 +482,7 @@ const AboutCompany = () => {
               return (
                 <div
                   key={val.id}
-                  className={`group relative bg-white rounded-[2rem] border border-neutral-100 p-8 md:p-10 shadow-sm hover:shadow-premium-soft hover:-translate-y-3 transition-all duration-500 ease-out text-left flex flex-col justify-between overflow-hidden ${isStaggered ? 'md:translate-y-8' : ''
+                  className={`group relative bg-white rounded-[2rem] border border-neutral-100 p-8 md:p-10 shadow-sm hover:shadow-premium-hover hover:border-neutral-300/80 transition-all duration-500 ease-out text-left flex flex-col justify-between overflow-hidden ${isStaggered ? 'md:translate-y-8' : ''
                     }`}
                   style={{
                     borderTop: `4px solid ${val.accentColor}`,
@@ -471,6 +528,14 @@ const AboutCompany = () => {
                   >
                     {val.num}
                   </div>
+
+                  {/* Bottom Accent Slide Line */}
+                  <div
+                    className="absolute bottom-0 left-0 w-full h-[4px] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
+                    style={{
+                      background: `linear-gradient(to right, ${val.accentColor}33, ${val.accentColor})`
+                    }}
+                  />
                 </div>
               );
             })}
@@ -483,17 +548,94 @@ const AboutCompany = () => {
       <section className="py-10 md:py-14 bg-surface-container-high relative overflow-hidden border-y border-neutral-100">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 relative">
 
-          <div className="text-center mb-10">
+          <style>{`
+            @keyframes progressStreak {
+              0% { left: -40%; }
+              100% { left: 100%; }
+            }
+            @keyframes haloPulse {
+              0% { transform: scale(1); opacity: 0.6; }
+              100% { transform: scale(1.8); opacity: 0; }
+            }
+          `}</style>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-10"
+          >
             <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Our Evolution</span>
             <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">Our Journey & Milestones</h2>
             <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-2xl mx-auto">
               Tracing the progress of Minha Imports & Exports from our founding roots to our current global presence.
             </p>
+          </motion.div>
+
+          {/* Progress Wavy Track for Desktop / Tablet (screens >= md) */}
+          <div className="hidden md:block relative w-full max-w-3xl mx-auto h-[140px] mb-8 mt-12 select-none">
+            <svg viewBox="0 0 800 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+              <defs>
+                <linearGradient id="wavy-timeline-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="12.5%" stopColor="#8f000d" />
+                  <stop offset="37.5%" stopColor="#2c6a46" />
+                  <stop offset="62.5%" stopColor="#cca72f" />
+                  <stop offset="87.5%" stopColor="#8f000d" />
+                </linearGradient>
+              </defs>
+              {/* Background Path line */}
+              <path
+                d="M 50,90 L 100,90 C 180,90 220,90 300,90 C 380,90 420,30 500,30 C 580,30 620,90 700,90 L 750,90"
+                stroke="#e5e7eb"
+                strokeWidth="4"
+                strokeLinecap="round"
+              />
+              {/* Dynamic Gradient Path */}
+              <path
+                d="M 50,90 L 100,90 C 180,90 220,90 300,90 C 380,90 420,30 500,30 C 580,30 620,90 700,90 L 750,90"
+                stroke="url(#wavy-timeline-gradient)"
+                strokeWidth="4"
+                strokeLinecap="round"
+              />
+              {/* Interactive Nodes */}
+              {timelineData.map((item, idx) => {
+                const isActive = idx === activeTimelineYear;
+                const cx = idx === 0 ? 100 : idx === 1 ? 300 : idx === 2 ? 500 : 700;
+                const cy = idx === 2 ? 30 : 90;
+                return (
+                  <g key={item.year} className="cursor-pointer group" onClick={() => changeTimelineYear(idx)}>
+                    <circle cx={cx} cy={cy} r="16" fill={item.accent} opacity={isActive ? 0.25 : 0} className="transition-all duration-300" />
+                    <circle cx={cx} cy={cy} r="10" fill={item.accent} className="transition-transform duration-300 group-hover:scale-110 origin-center" style={{ transformOrigin: `${cx}px ${cy}px` }} />
+                    <circle cx={cx} cy={cy} r="5" fill="#fff" />
+                  </g>
+                );
+              })}
+            </svg>
+            {/* Year Labels Overlay absolute */}
+            {timelineData.map((item, idx) => {
+              const isActive = idx === activeTimelineYear;
+              const leftPercent = idx === 0 ? '12.5%' : idx === 1 ? '37.5%' : idx === 2 ? '62.5%' : '87.5%';
+              const topVal = idx === 2 ? '50%' : '45%';
+              return (
+                <button
+                  key={item.year}
+                  onClick={() => changeTimelineYear(idx)}
+                  className="absolute font-['Montserrat'] font-extrabold text-[13px] md:text-sm tracking-wider transition-all duration-300 select-none -translate-x-1/2 -translate-y-1/2 cursor-pointer focus:outline-none"
+                  style={{
+                    left: leftPercent,
+                    top: topVal,
+                    color: isActive ? item.accent : '#9ca3af'
+                  }}
+                >
+                  {item.year}
+                </button>
+              );
+            })}
           </div>
 
-          {/* Progress Bar Line */}
-          <div className="w-full max-w-3xl mx-auto h-[3px] bg-neutral-200 relative mb-10 mt-16 flex justify-between items-center px-2">
-            {/* Active Filled Line */}
+          {/* Progress Bar Line for Mobile (screens < md) */}
+          <div className="md:hidden w-full max-w-[280px] mx-auto h-[3px] bg-neutral-200 relative mb-10 mt-16 flex justify-between items-center px-1">
             <div
               className="absolute h-[3px] left-0 top-0 transition-all duration-500 ease-out"
               style={{
@@ -506,41 +648,22 @@ const AboutCompany = () => {
               return (
                 <button
                   key={item.year}
-                  onClick={() => setActiveTimelineYear(idx)}
+                  onClick={() => changeTimelineYear(idx)}
                   className="relative z-10 flex flex-col items-center group focus:outline-none cursor-pointer"
                 >
-                  {/* Year Label */}
                   <span
-                    className={`absolute -top-8 font-['Montserrat'] font-extrabold text-[13px] md:text-sm tracking-wider transition-all duration-300 ${isActive ? 'scale-115' : 'text-neutral-400 opacity-60 group-hover:opacity-100'
-                      }`}
-                    style={{
-                      color: isActive ? item.accent : undefined
-                    }}
+                    className="absolute -top-7 font-['Montserrat'] font-extrabold text-[12px] tracking-wider transition-all duration-300"
+                    style={{ color: isActive ? item.accent : '#9ca3af' }}
                   >
                     {item.year}
                   </span>
-
-                  {/* Circular Node */}
                   <div
-                    className={`w-6 h-6 rounded-full border-4 bg-white transition-all duration-300 flex items-center justify-center relative ${isActive ? 'scale-125 shadow-md' : 'hover:scale-110'
-                      }`}
-                    style={{
-                      borderColor: isActive
-                        ? item.accent
-                        : idx < activeTimelineYear
-                          ? item.accent
-                          : '#e5e7eb',
-                    }}
+                    className="w-5 h-5 rounded-full border-4 bg-white transition-all duration-300 flex items-center justify-center"
+                    style={{ borderColor: isActive || idx < activeTimelineYear ? item.accent : '#e5e7eb' }}
                   >
                     <div
-                      className="w-2 h-2 rounded-full transition-all duration-300"
-                      style={{
-                        backgroundColor: isActive
-                          ? item.accent
-                          : idx < activeTimelineYear
-                            ? item.accent
-                            : 'transparent',
-                      }}
+                      className="w-1.5 h-1.5 rounded-full transition-all duration-300"
+                      style={{ backgroundColor: isActive || idx < activeTimelineYear ? item.accent : 'transparent' }}
                     />
                   </div>
                 </button>
@@ -565,23 +688,22 @@ const AboutCompany = () => {
               <FiChevronRight className="text-xl" />
             </button>
 
-            {/* Showcase Slider Container */}
-            <div className="bg-white rounded-[2.5rem] shadow-premium-soft border border-neutral-100/80 p-8 md:p-12 min-h-[350px] relative overflow-hidden flex items-stretch">
+            <div
+              className="bg-white rounded-[2.5rem] shadow-premium-soft border border-neutral-100/80 p-8 md:p-12 min-h-[350px] relative overflow-hidden flex items-stretch z-10"
+            >
 
-              {/* Subtle background glow */}
-              <div
-                className="absolute inset-0 z-0 transition-opacity duration-700 pointer-events-none opacity-[0.03]"
-                style={{
-                  background: `radial-gradient(circle at top left, ${timelineData[activeTimelineYear].accent}, transparent 70%)`
-                }}
-              />
-
-              <AnimatePresence mode="wait">
+              <AnimatePresence mode="wait" custom={slideDirection}>
                 <motion.div
                   key={activeTimelineYear}
-                  initial={{ opacity: 0, x: 30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -30 }}
+                  custom={slideDirection}
+                  variants={{
+                    enter: (dir) => ({ opacity: 0, x: dir > 0 ? 50 : -50 }),
+                    center: { opacity: 1, x: 0 },
+                    exit: (dir) => ({ opacity: 0, x: dir > 0 ? -50 : 50 })
+                  }}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
                   transition={{ duration: 0.4, ease: 'easeInOut' }}
                   className="w-full flex flex-col md:flex-row items-center md:items-stretch gap-8 relative z-10"
                 >
@@ -594,15 +716,11 @@ const AboutCompany = () => {
                       {timelineData[activeTimelineYear].tag}
                     </span>
 
-                    {/* Giant Gradient Year Text */}
-                    <div
-                      className="font-['Montserrat'] font-black text-[72px] sm:text-[88px] lg:text-[108px] leading-tight py-2 px-6 -ml-6 tracking-tighter select-none bg-gradient-to-br bg-clip-text text-transparent"
-                      style={{
-                        backgroundImage: `linear-gradient(135deg, ${timelineData[activeTimelineYear].accent}, #cca72f)`,
-                      }}
-                    >
-                      {timelineData[activeTimelineYear].year}
-                    </div>
+                    {/* Giant Gradient Year Text with Odometer Animation */}
+                    <OdometerYear
+                      year={timelineData[activeTimelineYear].year}
+                      color={timelineData[activeTimelineYear].accent}
+                    />
                   </div>
 
                   {/* Right Column (Milestone Details) */}
@@ -610,7 +728,7 @@ const AboutCompany = () => {
                     <span className="font-['Montserrat'] font-semibold text-[11px] tracking-[0.15em] text-[#cca72f] uppercase block">
                       {timelineData[activeTimelineYear].subtitle}
                     </span>
-                    <h3 className="font-['Montserrat'] font-extrabold text-[24px] md:text-[32px] text-neutral-900 leading-tight">
+                    <h3 className="font-['Montserrat'] font-extrabold text-[24px] md:text-[32px] text-[#1a1c1e] leading-tight">
                       {timelineData[activeTimelineYear].title}
                     </h3>
                     <p className="font-['Inter'] font-normal text-neutral-600 text-[15px] leading-relaxed">
@@ -886,21 +1004,83 @@ const AboutCompany = () => {
 
           {/* Pipeline Container */}
           <div className="relative w-full">
+            <style>{`
+                @keyframes lineFlow {
+                  0% { left: -15%; }
+                  100% { left: 100%; }
+                }
+                @keyframes stage1Zoom {
+                  0%, 1.7% { transform: scale(1); }
+                  6.5% { transform: scale(1.25); }
+                  13%, 100% { transform: scale(1); }
+                }
+                @keyframes stage1Ring {
+                  0% { transform: scale(1); opacity: 0; }
+                  6.5% { transform: scale(1.1); opacity: 0.8; }
+                  13% { transform: scale(2.2); opacity: 0; }
+                  100% { transform: scale(2.2); opacity: 0; }
+                }
+                @keyframes stage2Zoom {
+                  0%, 42% { transform: scale(1); }
+                  50% { transform: scale(1.25); }
+                  58%, 100% { transform: scale(1); }
+                }
+                @keyframes stage2Ring {
+                  0%, 42% { transform: scale(1); opacity: 0; }
+                  50% { transform: scale(1.1); opacity: 0.8; }
+                  58% { transform: scale(2.2); opacity: 0; }
+                  100% { transform: scale(2.2); opacity: 0; }
+                }
+                @keyframes stage3Zoom {
+                  0%, 85.5% { transform: scale(1); }
+                  93.5% { transform: scale(1.25); }
+                  100% { transform: scale(1); }
+                }
+                @keyframes stage3Ring {
+                  0%, 85.5% { transform: scale(1); opacity: 0; }
+                  93.5% { transform: scale(1.1); opacity: 0.8; }
+                  100% { transform: scale(2.2); opacity: 0; }
+                }
+              `}</style>
 
             {/* Horizontal Track Line (Visible on Desktop) */}
-            <div className="absolute top-8 left-[16%] right-[16%] h-[2px] bg-neutral-200 -z-0 hidden lg:block" />
+            <div className="absolute top-8 left-[16%] right-[16%] h-[2px] bg-neutral-200 -z-0 hidden lg:block overflow-hidden">
+              <div
+                className="absolute top-0 bottom-0 pointer-events-none"
+                style={{
+                  width: "15%",
+                  left: "-15%",
+                  background: 'linear-gradient(90deg, transparent, #2c6a46, #8f000d, #cca72f, transparent)',
+                  animation: 'lineFlow 3.5s linear infinite'
+                }}
+              />
+            </div>
 
             {/* Three Columns Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 relative z-10">
 
               {/* Stage 1: Sourcing */}
               <div className="text-center space-y-6 group">
-                {/* Node Circle */}
-                <div className="w-16 h-16 rounded-full bg-white border-2 border-[#2c6a46] shadow-sm flex items-center justify-center mx-auto relative transition-all duration-300 group-hover:scale-110 group-hover:shadow-md">
-                  <span className="absolute -top-3 bg-[#2c6a46] text-white text-[9px] font-['Montserrat'] font-bold py-0.5 px-2 rounded-full">
-                    STAGE 01
-                  </span>
-                  <FiLayers className="text-[20px] text-[#2c6a46]" />
+                <div className="w-16 h-16 mx-auto relative transition-transform duration-300 hover:scale-115 cursor-pointer">
+                  {/* Outer pulse echo ring - animated independently as sibling */}
+                  <div
+                    className="absolute inset-0 rounded-full border-2 border-[#2c6a46] pointer-events-none"
+                    style={{
+                      animation: 'stage1Ring 3.5s ease-out infinite'
+                    }}
+                  />
+                  {/* Core scaling circle node */}
+                  <div
+                    className="w-full h-full rounded-full bg-white border-2 border-[#2c6a46] shadow-sm flex items-center justify-center relative z-10"
+                    style={{
+                      animation: 'stage1Zoom 3.5s ease-in-out infinite'
+                    }}
+                  >
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#2c6a46] text-white text-[9px] font-['Montserrat'] font-bold py-0.5 px-2 rounded-full whitespace-nowrap">
+                      STAGE 01
+                    </span>
+                    <FiLayers className="text-[20px] text-[#2c6a46]" />
+                  </div>
                 </div>
 
                 {/* Content */}
@@ -919,12 +1099,26 @@ const AboutCompany = () => {
 
               {/* Stage 2: Quality */}
               <div className="text-center space-y-6 group">
-                {/* Node Circle */}
-                <div className="w-16 h-16 rounded-full bg-white border-2 border-[#8f000d] shadow-sm flex items-center justify-center mx-auto relative transition-all duration-300 group-hover:scale-110 group-hover:shadow-md">
-                  <span className="absolute -top-3 bg-[#8f000d] text-white text-[9px] font-['Montserrat'] font-bold py-0.5 px-2 rounded-full">
-                    STAGE 02
-                  </span>
-                  <FiCheckCircle className="text-[20px] text-[#8f000d]" />
+                <div className="w-16 h-16 mx-auto relative transition-transform duration-300 hover:scale-115 cursor-pointer">
+                  {/* Outer pulse echo ring - animated independently as sibling */}
+                  <div
+                    className="absolute inset-0 rounded-full border-2 border-[#8f000d] pointer-events-none"
+                    style={{
+                      animation: 'stage2Ring 3.5s ease-out infinite'
+                    }}
+                  />
+                  {/* Core scaling circle node */}
+                  <div
+                    className="w-full h-full rounded-full bg-white border-2 border-[#8f000d] shadow-sm flex items-center justify-center relative z-10"
+                    style={{
+                      animation: 'stage2Zoom 3.5s ease-in-out infinite'
+                    }}
+                  >
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#8f000d] text-white text-[9px] font-['Montserrat'] font-bold py-0.5 px-2 rounded-full whitespace-nowrap">
+                      STAGE 02
+                    </span>
+                    <FiCheckCircle className="text-[20px] text-[#8f000d]" />
+                  </div>
                 </div>
 
                 {/* Content */}
@@ -943,12 +1137,26 @@ const AboutCompany = () => {
 
               {/* Stage 3: Logistics */}
               <div className="text-center space-y-6 group">
-                {/* Node Circle */}
-                <div className="w-16 h-16 rounded-full bg-white border-2 border-[#cca72f] shadow-sm flex items-center justify-center mx-auto relative transition-all duration-300 group-hover:scale-110 group-hover:shadow-md">
-                  <span className="absolute -top-3 bg-[#cca72f] text-white text-[9px] font-['Montserrat'] font-bold py-0.5 px-2 rounded-full">
-                    STAGE 03
-                  </span>
-                  <FiTruck className="text-[20px] text-[#cca72f]" />
+                <div className="w-16 h-16 mx-auto relative transition-transform duration-300 hover:scale-115 cursor-pointer">
+                  {/* Outer pulse echo ring - animated independently as sibling */}
+                  <div
+                    className="absolute inset-0 rounded-full border-2 border-[#cca72f] pointer-events-none"
+                    style={{
+                      animation: 'stage3Ring 3.5s ease-out infinite'
+                    }}
+                  />
+                  {/* Core scaling circle node */}
+                  <div
+                    className="w-full h-full rounded-full bg-white border-2 border-[#cca72f] shadow-sm flex items-center justify-center relative z-10"
+                    style={{
+                      animation: 'stage3Zoom 3.5s ease-in-out infinite'
+                    }}
+                  >
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#cca72f] text-white text-[9px] font-['Montserrat'] font-bold py-0.5 px-2 rounded-full whitespace-nowrap">
+                      STAGE 03
+                    </span>
+                    <FiTruck className="text-[20px] text-[#cca72f]" />
+                  </div>
                 </div>
 
                 {/* Content */}
@@ -972,48 +1180,68 @@ const AboutCompany = () => {
         </div>
       </section>
 
-      {/* 9. Business CTA */}
-      <section className="py-8 md:py-12 max-w-[800px] mx-auto px-6">
-        <div className="bg-gradient-to-br from-[#8f000d] via-[#5e0008] to-[#200002] text-white rounded-[1.5rem] p-6 md:p-10 text-center relative overflow-hidden shadow-premium-soft border border-white/10 group">
+      <section className="py-12 md:py-16 px-6 md:px-12 max-w-[1280px] mx-auto z-10 relative w-full">
+        <div className="relative rounded-[2rem] overflow-hidden py-10 md:py-14 px-6 md:px-12 shadow-[0_35px_80px_rgba(0,0,0,0.18)] border border-white/[0.04] bg-gradient-to-br from-[#8f000d] via-[#5e0008] to-[#200002] group">
 
           {/* Subtle grid and glowing accents */}
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.035)_1.5px,transparent_1.5px)] bg-[size:24px_24px] pointer-events-none" />
           <div className="absolute -top-32 -left-32 w-64 h-64 bg-[#cca72f]/10 rounded-full blur-3xl pointer-events-none group-hover:bg-[#cca72f]/15 transition-all duration-700" />
           <div className="absolute -bottom-32 -right-32 w-64 h-64 bg-white/5 rounded-full blur-3xl pointer-events-none" />
 
-          <div className="relative z-10 max-w-xl mx-auto space-y-4">
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
-            {/* Tagline Badge */}
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mx-auto">
-              <span className="w-1 h-1 rounded-full bg-[#cca72f] animate-pulse" />
-              <span className="font-['Montserrat'] font-bold text-[8px] tracking-[0.2em] text-[#cca72f] uppercase">
-                Direct Export Cargo Sourcing
+            {/* Left Column: Brand Quote (lg:col-span-5) */}
+            <div className="relative space-y-4 text-center lg:text-left lg:border-r lg:border-white/10 lg:pr-8 xl:pr-12 lg:col-span-5 w-full z-10">
+              <span className="absolute -top-10 -left-2 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
+                “
+              </span>
+              <blockquote className="font-['Montserrat'] font-medium italic text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed text-white/95 relative z-10">
+                "Our story began in the fertile lands of Guntur with a simple belief—that the finest harvest deserves a place on the global stage. Today, every shipment we send carries the dedication of our farmers, the trust of our partners, and our promise of uncompromising quality."
+              </blockquote>
+              <div className="font-['Montserrat'] font-bold text-[9px] sm:text-[10px] tracking-widest uppercase text-[#cca72f] relative z-10">
+                — The Minha Board of Directors
+              </div>
+              <span className="absolute -bottom-14 right-4 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
+                ”
               </span>
             </div>
 
-            {/* Title */}
-            <h2 className="font-['Montserrat'] font-extrabold text-[22px] md:text-[30px] leading-tight text-white tracking-tight">
-              Ready to Secure Your <span className="bg-gradient-to-r from-white via-white to-[#cca72f] bg-clip-text text-transparent">Chilli Supply?</span>
-            </h2>
+            {/* Right Column: CTA Content (lg:col-span-7) */}
+            <div className="space-y-5 text-center lg:text-left lg:col-span-7 w-full">
 
-            {/* Description */}
-            <p className="font-['Inter'] font-normal text-white/80 text-[12px] md:text-[13px] max-w-lg mx-auto leading-relaxed">
-              Connect directly with our Guntur export desk. We offer custom packaging, strict pesticide compliance, and stable year-round shipping slots.
-            </p>
+              {/* Tagline Badge */}
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mx-auto lg:mx-0">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#cca72f] animate-pulse" />
+                <span className="font-['Montserrat'] font-bold text-[8.5px] tracking-[0.2em] text-[#cca72f] uppercase">
+                  Direct Export Cargo Sourcing
+                </span>
+              </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center pt-2 max-w-xs sm:max-w-md mx-auto">
-              <Link
-                to="/contact"
-                className="w-full sm:w-auto bg-[#cca72f] text-neutral-900 px-6 py-2.5 rounded-lg font-['Montserrat'] font-bold text-[10px] uppercase tracking-wider hover:bg-[#d8b43c] transition-all duration-300 active:scale-95 shadow-md shadow-[#cca72f]/10 text-center"
-              >
-                Request Quote
-              </Link>
-            </div>
+              {/* Title */}
+              <h2 className="font-['Montserrat'] font-extrabold text-[22px] md:text-[30px] leading-tight text-white tracking-tight">
+                Ready to Secure Your <span className="bg-gradient-to-r from-white via-white to-[#cca72f] bg-clip-text text-transparent">Chilli Supply?</span>
+              </h2>
 
-            {/* Trust Guarantee */}
-            <div className="text-[8px] font-['Montserrat'] tracking-widest text-white/40 uppercase pt-1">
-              Export Desk Response Guarantee: Within 12 Hours
+              {/* Description */}
+              <p className="font-['Inter'] font-normal text-white/80 text-[13.5px] leading-relaxed">
+                Connect directly with our Guntur export desk. We offer custom packaging, strict pesticide compliance, and stable year-round shipping slots.
+              </p>
+
+              {/* Action Buttons */}
+              <div className="pt-2 flex justify-center lg:justify-start">
+                <Link
+                  to="/contact"
+                  className="bg-[#cca72f] text-[#140002] px-8 py-3.5 rounded-full font-['Montserrat'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-[#e0bc55] shadow-lg shadow-[#cca72f]/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
+                >
+                  Request Quote
+                </Link>
+              </div>
+
+              {/* Trust Guarantee */}
+              <div className="text-[8.5px] font-['Montserrat'] tracking-widest text-white/40 uppercase pt-1">
+                Export Desk Response Guarantee: Within 12 Hours
+              </div>
+
             </div>
 
           </div>
