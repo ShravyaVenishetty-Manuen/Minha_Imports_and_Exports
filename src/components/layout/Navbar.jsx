@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { GiChiliPepper } from 'react-icons/gi';
-import { FiMenu, FiX } from 'react-icons/fi';
+import { FiMenu, FiX, FiArrowRight } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 import logoImg from '../../assets/logo-minha-main.png';
+import logoDarkImg from '../../assets/logo-minha-dark.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,79 +41,100 @@ const Navbar = () => {
   }, [isOpen]);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Chilli Varieties', path: '/varieties' },
-    { name: 'Chilli Powder', path: '/powder' },
-    { name: 'Our Company', path: '/about' },
-    { name: 'Quality Assurance', path: '/quality' },
-    { name: 'Facility', path: '/facility' },
-    { name: 'Certification', path: '/certifications' },
+    { name: 'HOME', path: '/' },
+    { name: 'CHILLI VARIETIES', path: '/varieties' },
+    { name: 'CHILLI POWDER', path: '/powder' },
+    { name: 'OUR COMPANY', path: '/about' },
+    { name: 'QUALITY ASSURANCE', path: '/quality' },
+    { name: 'FACILITY', path: '/facility' },
+    { name: 'CERTIFICATION', path: '/certifications' },
   ];
 
   return (
     <>
+      {/* Main Navbar: Floating Dark/Light Dynamic Capsule */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${isScrolled
-          ? 'bg-white/90 backdrop-blur-md shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-b border-brand-red/10 py-3'
-          : 'bg-white/80 backdrop-blur-sm border-b border-transparent py-5'
-          }`}
+        className={`fixed left-1/2 -translate-x-1/2 z-50 h-[68px] px-7 flex items-center justify-between transition-all duration-500 ease-in-out ${
+          isScrolled
+            ? 'top-3 w-[92%] max-w-[1240px] bg-white/95 border border-neutral-200/50 rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.08)]'
+            : 'top-6 w-[95%] max-w-[1280px] bg-white/5 backdrop-blur-[20px] border border-white/10 rounded-[24px] shadow-sm'
+        }`}
       >
-        <div className="max-w-[1280px] mx-auto px-6 md:px-12 flex items-center justify-between">
-
+        <div className="flex items-center justify-between gap-4 w-full h-full">
+          
           {/* Logo Section */}
-          <Link to="/" className="flex items-center focus:outline-none">
+          <Link to="/" className="flex items-center focus:outline-none shrink-0 pl-1">
             <img
-              src={logoImg}
+              src={isScrolled ? logoImg : logoDarkImg}
               alt="Minha Imports & Exports"
-              className={`transition-all duration-500 object-contain ${isScrolled ? 'h-7 md:h-8' : 'h-9 md:h-10'
-                }`}
+              className="h-[42px] object-contain transition-all duration-500"
             />
           </Link>
 
-          {/* Desktop Navigation Menu */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navLinks.map((link) => {
+          {/* Desktop Navigation Links (with vertical separators) */}
+          <div className="hidden lg:flex items-center justify-center space-x-2 xl:space-x-3.5">
+            {navLinks.map((link, idx) => {
               const isActive = location.pathname === link.path;
               return (
-                <Link
-                  key={link.name}
-                  to={link.path}
-                  className={`font-body text-[13px] font-medium tracking-[0.08em] transition-all duration-300 relative py-1 hover:text-brand-red ${isActive
-                    ? 'text-brand-red font-semibold'
-                    : 'text-text-gray'
+                <React.Fragment key={link.name}>
+                  <Link
+                    to={link.path}
+                    className={`font-heading text-[10px] xl:text-[11px] font-bold tracking-[0.06em] transition-all duration-300 relative py-1 px-0.5 ${
+                      isScrolled
+                        ? isActive
+                          ? 'text-[#111827]'
+                          : 'text-[#374151] hover:text-brand-red font-semibold'
+                        : isActive
+                          ? 'text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]'
+                          : 'text-white/80 hover:text-[#cca72f]'
                     }`}
-                >
-                  {link.name}
+                  >
+                    {link.name}
+                    
+                    {/* Active Gold/Red Underline */}
+                    {isActive && (
+                      <motion.span
+                        layoutId="capsuleActiveUnderline"
+                        className={`absolute bottom-[-4px] left-0 w-full h-[3px] rounded-full ${
+                          isScrolled
+                            ? 'bg-brand-red shadow-[0_0_6px_rgba(178,34,34,0.15)]'
+                            : 'bg-[#cca72f] shadow-[0_0_8px_#cca72f]'
+                        }`}
+                      />
+                    )}
+                  </Link>
 
-                  {/* Underline Hover and Active Animation */}
-                  {isActive ? (
-                    <motion.span
-                      layoutId="activeUnderline"
-                      className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-red rounded-full"
-                    />
-                  ) : (
-                    <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-brand-red/60 rounded-full transition-all duration-300 hover:w-full" />
+                  {/* Vertical Separator */}
+                  {idx < navLinks.length - 1 && (
+                    <span className={`h-3.5 w-[1px] self-center pointer-events-none ${
+                      isScrolled ? 'bg-neutral-950/10' : 'bg-white/10'
+                    }`} />
                   )}
-                </Link>
+                </React.Fragment>
               );
             })}
           </div>
 
-          {/* CTA Button and Hamburger toggle (Desktop / Mobile combined) */}
-          <div className="flex items-center space-x-4">
+          {/* CTA Button and Hamburger Toggle (Desktop / Mobile combined) */}
+          <div className="flex items-center space-x-3 pr-1">
             <Link
               to="/contact"
-              className="bg-brand-red text-white text-xs font-heading font-bold py-2.5 px-6 rounded-lg hover:opacity-80 active:scale-95 transition-all duration-200"
+              className="hidden sm:inline-flex items-center gap-1.5 font-heading font-extrabold text-[10px] xl:text-[11px] py-2 px-5 rounded-lg transition-all duration-300 shadow-md uppercase tracking-wider group bg-gradient-to-r from-[#B22222] to-[#D62828] text-white border border-[#B22222]/10 hover:opacity-95 hover:-translate-y-0.5"
             >
               Enquire Now
+              <FiArrowRight className="text-xs transition-transform group-hover:translate-x-1 duration-300" />
             </Link>
 
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 text-brand-red hover:text-brand-red/80 transition-colors focus:outline-none"
+              className={`lg:hidden p-2 transition-colors focus:outline-none ${
+                isScrolled
+                  ? 'text-[#111827] hover:text-brand-red'
+                  : 'text-white hover:text-[#cca72f]'
+              }`}
               aria-label="Toggle Navigation Menu"
             >
-              {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              {isOpen ? <FiX size={22} /> : <FiMenu size={22} />}
             </button>
           </div>
 
@@ -128,20 +149,20 @@ const Navbar = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-white z-50 flex flex-col lg:hidden"
+            className="fixed inset-0 bg-neutral-950/98 backdrop-blur-xl z-50 flex flex-col lg:hidden text-white border-l border-white/10"
           >
             {/* Overlay Header Bar */}
-            <div className="w-full px-6 py-4 flex items-center justify-between border-b border-neutral-100 bg-white/95 backdrop-blur-md">
+            <div className="w-full px-6 py-4 flex items-center justify-between border-b border-white/5 bg-neutral-950/40 backdrop-blur-md">
               <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center">
                 <img
-                  src={logoImg}
+                  src={logoDarkImg}
                   alt="Minha Imports & Exports"
                   className="h-8 object-contain"
                 />
               </Link>
               <button
                 onClick={() => setIsOpen(false)}
-                className="p-2 text-brand-red hover:text-brand-red/80 transition-colors focus:outline-none"
+                className="p-2 text-white hover:text-brand-gold transition-colors focus:outline-none"
                 aria-label="Close Navigation Menu"
               >
                 <FiX size={24} />
@@ -164,10 +185,11 @@ const Navbar = () => {
                       <Link
                         to={link.path}
                         onClick={() => setIsOpen(false)}
-                        className={`font-body text-base font-semibold tracking-[0.08em] transition-all py-2 block rounded-lg ${isActive
-                          ? 'text-brand-red bg-brand-red/5 font-bold'
-                          : 'text-text-gray hover:text-brand-red hover:bg-neutral-50'
-                          }`}
+                        className={`font-heading text-sm font-semibold tracking-[0.12em] uppercase transition-all py-2.5 block rounded-lg ${
+                          isActive
+                            ? 'text-brand-gold bg-white/5 font-bold'
+                            : 'text-white/80 hover:text-brand-gold hover:bg-white/5'
+                        }`}
                       >
                         {link.name}
                       </Link>
@@ -184,7 +206,7 @@ const Navbar = () => {
                   <Link
                     to="/contact"
                     onClick={() => setIsOpen(false)}
-                    className="block bg-brand-red text-white text-sm font-heading font-semibold py-3 px-8 rounded-lg shadow-lg text-center hover:opacity-95 transition-opacity"
+                    className="block bg-gradient-to-r from-brand-red to-[#901a1a] text-white text-[12px] font-heading font-bold py-3.5 px-8 rounded-lg shadow-lg text-center hover:opacity-95 hover:shadow-brand-red/20 tracking-wider uppercase active:scale-98 transition-all"
                   >
                     Enquire Now
                   </Link>

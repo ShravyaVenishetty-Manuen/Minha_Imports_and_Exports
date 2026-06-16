@@ -233,41 +233,7 @@ const Varieties = () => {
                       </p>
                     </div>
 
-                    {/* Stats List */}
-                    <div className="space-y-2 border-t border-neutral-100 pt-4 text-[12px] font-['Montserrat'] font-semibold">
-                      <div className="flex justify-between items-center">
-                        <span className="text-[#a0a5ad] flex items-center gap-1.5">
-                          <svg className="w-4 h-4 text-[#8f000d]" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2c-.6 0-1 .4-1 1c0 .9-.6 1.7-1.5 1.9C8.3 5.2 7.2 5.9 6.4 6.8c-1.9 2.2-2.4 5.3-1.3 8C5.6 16.1 6.5 17.2 7.6 18c1.2.8 2.6 1.2 4 1.1c2.2-.1 4.2-1.3 5.4-3.1c1.8-2.8 1.8-6.4 0-9.2c-.6-.9-1.5-1.6-2.5-1.9c-.9-.2-1.5-1-1.5-1.9c0-.6-.4-1-1-1z" />
-                          </svg>
-                          Heat Level
-                        </span>
-                        <span className="text-[#8f000d]">{chilli.heatLevel}</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-[#a0a5ad] flex items-center gap-1.5">
-                          <svg className="w-4 h-4 text-[#cca72f]" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z" />
-                            <circle cx="12" cy="12" r="3" />
-                          </svg>
-                          Color Value
-                        </span>
-                        <span className="text-[#1F5E3B]">{chilli.colorValue}</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-[#a0a5ad] flex items-center gap-1.5">
-                          <svg className="w-4 h-4 text-[#5a403e]" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
-                            <circle cx="6" cy="6" r="3" />
-                            <circle cx="6" cy="18" r="3" />
-                            <line x1="20" y1="4" x2="8.12" y2="15.88" />
-                            <line x1="14.47" y1="14.48" x2="20" y2="20" />
-                            <line x1="8.12" y1="8.12" x2="12" y2="12" />
-                          </svg>
-                          {chilli.stemType === 'Stemless' ? 'Stemless' : chilli.stemType === 'Stemcut' ? 'Stemcut' : 'Stem Style'}
-                        </span>
-                        <span className="text-[#1a1c1e]">{chilli.stemType}</span>
-                      </div>
-                    </div>
+
 
                     {/* Enquiry Buttons */}
                     <div className="grid grid-cols-2 gap-2 pt-2">
