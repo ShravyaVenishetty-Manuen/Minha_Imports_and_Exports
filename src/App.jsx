@@ -25,7 +25,7 @@ function App() {
     <Router basename={import.meta.env.BASE_URL}>
       <div className="min-h-screen bg-bg-light font-body text-text-dark flex flex-col justify-between w-full overflow-x-hidden">
         <Navbar />
-        <div className="flex-grow">
+        <main className="flex-grow">
           <Routes>
             <Route
               path="/"
@@ -57,7 +57,7 @@ function App() {
             <Route path="/certifications" element={<Certifications />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-        </div>
+        </main>
         <Footer />
       </div>
     </Router>
