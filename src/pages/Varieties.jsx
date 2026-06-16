@@ -524,69 +524,7 @@ const Varieties = () => {
 
       {/* 6. Inquiry CTA Section */}
       <section id="inquire" className="relative bg-[#FAF8F4] py-12 md:py-16 overflow-hidden border-t border-neutral-100">
-        <div className="max-w-[850px] mx-auto px-6 md:px-12 relative z-10">
-
-          {/* BACKGROUND LAYERS (Rendered behind the card) */}
-          {/* Mountains background sketch (left) */}
-          <motion.div
-            initial={{ opacity: 0, x: -15 }}
-            whileInView={{ opacity: 0.6, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1.2, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="hidden lg:block absolute left-[-150px] xl:left-[-190px] bottom-[-20px] w-[320px] xl:w-[380px] aspect-square pointer-events-none z-0 opacity-60"
-          >
-            <img
-              src={chilliMountainsBg}
-              alt="Mountain Pencil Sketch Background"
-              className="w-full h-full object-contain"
-            />
-          </motion.div>
-
-          {/* Twigs/Spices background sketch (right) */}
-          <motion.div
-            initial={{ opacity: 0, x: 15 }}
-            whileInView={{ opacity: 0.6, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1.2, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="hidden lg:block absolute right-[-170px] xl:right-[-210px] bottom-[-25px] w-[280px] xl:w-[340px] aspect-square pointer-events-none z-0 opacity-60"
-          >
-            <img
-              src={chilliTwigsBg}
-              alt="Twigs Pencil Sketch Background"
-              className="w-full h-full object-contain"
-            />
-          </motion.div>
-
-          {/* FOREGROUND LAYERS (Rendered in front of the card) */}
-          {/* Left illustration - chilli plant */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="hidden lg:block absolute left-[-150px] xl:left-[-180px] bottom-[-15px] w-[280px] xl:w-[340px] aspect-square pointer-events-none z-20 -rotate-[9deg]"
-          >
-            <img
-              src={chilliBlossoms}
-              alt="Chilli Plant Illustration"
-              className="w-full h-full object-contain filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.04)]"
-            />
-          </motion.div>
-
-          {/* Right illustration - chilli powder bowl */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="hidden lg:block absolute right-[-100px] xl:right-[-130px] bottom-[-20px] w-[240px] xl:w-[300px] aspect-square pointer-events-none z-20"
-          >
-            <img
-              src={singleChilliPod}
-              alt="Chilli Powder Bowl Illustration"
-              className="w-full h-full object-contain filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.04)]"
-            />
-          </motion.div>
+        <div className="max-w-[1280px] mx-auto px-6 md:px-12 relative z-10">
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -594,64 +532,85 @@ const Varieties = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             whileHover={{ y: -3 }}
-            className="relative z-10 bg-[#181410] rounded-[2rem] overflow-hidden py-8 md:py-10 shadow-2xl border border-white/5 transition-all duration-300"
+            className="relative z-10 bg-[#181410] rounded-[2rem] overflow-hidden py-10 md:py-14 px-6 md:px-12 shadow-2xl border border-white/5 transition-all duration-300"
           >
             {/* Decorative glows inside card */}
             <div className="absolute top-0 right-0 w-[260px] h-[260px] bg-[#cca72f]/10 rounded-full blur-[70px] pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[180px] h-[180px] bg-white/5 rounded-full blur-[50px] pointer-events-none" />
 
-            <div className="relative z-10 max-w-xl mx-auto space-y-5 px-4 text-center">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 border border-white/20 text-[#cca72f] font-['Montserrat'] font-bold text-[8.5px] sm:text-[9px] tracking-widest uppercase mx-auto">
-                <span className="relative flex h-1.5 w-1.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#cca72f] opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#cca72f]"></span>
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              
+              {/* Left Column: Sourcing Quote (lg:col-span-5) */}
+              <div className="relative space-y-4 text-center lg:text-left lg:border-r lg:border-white/10 lg:pr-8 xl:pr-12 lg:col-span-5 w-full z-10">
+                <span className="absolute -top-10 -left-2 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
+                  “
                 </span>
-                Bulk Procurement
+                <blockquote className="font-['Montserrat'] font-medium italic text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed text-white/95 relative z-10">
+                  "We select Guntur's finest chilli pods directly from farms we trust, grading every batch by hand to guarantee perfect SHU levels, color retention, and moisture compliance."
+                </blockquote>
+                <div className="font-['Montserrat'] font-bold text-[9px] sm:text-[10px] tracking-widest uppercase text-[#cca72f] relative z-10">
+                  — The Minha Sourcing Team
+                </div>
+                <span className="absolute -bottom-14 right-4 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
+                  ”
+                </span>
               </div>
 
-              <h2 className="font-['Montserrat'] font-bold text-[22px] sm:text-[26px] md:text-[30px] leading-[1.25] text-white tracking-tight">
-                Need Bulk Chilli Supply for <br className="hidden sm:inline" /> Export or Processing?
-              </h2>
+              {/* Right Column: CTA Content (lg:col-span-7) */}
+              <div className="space-y-5 text-center lg:text-left lg:col-span-7 w-full">
+                {/* Tagline Badge */}
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 border border-white/20 text-[#cca72f] font-['Montserrat'] font-bold text-[8.5px] sm:text-[9px] tracking-widest uppercase mx-auto lg:mx-0">
+                  <span className="relative flex h-1.5 w-1.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#cca72f] opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#cca72f]"></span>
+                  </span>
+                  Bulk Procurement
+                </div>
 
-              <p className="font-['Inter'] font-normal text-[13px] sm:text-[13.5px] leading-relaxed text-white/80">
-                Partner with India’s premier chilli export desk. Request specialized quotes, certificate reports, and booking timelines for your trade volume.
-              </p>
+                <h2 className="font-['Montserrat'] font-bold text-[22px] sm:text-[26px] md:text-[30px] leading-[1.25] text-white tracking-tight">
+                  Need Bulk Chilli Supply for <br className="hidden sm:inline" /> Export or Processing?
+                </h2>
 
-              {/* Checkmark trade highlights */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-0.5 max-w-xl mx-auto">
-                {[
-                  "100% Pure & Tested",
-                  "ASTA Compliant Quality",
-                  "Custom Packing Formats"
-                ].map((text, idx) => (
-                  <div key={idx} className="flex items-center justify-center gap-1.5 bg-white/5 border border-white/10 rounded-lg px-2.5 py-1.5">
-                    <FiCheckCircle className="text-[#cca72f] text-xs shrink-0" />
-                    <span className="font-['Montserrat'] font-bold text-[8.5px] sm:text-[9px] text-white/90 uppercase tracking-wider">
-                      {text}
-                    </span>
-                  </div>
-                ))}
+                <p className="font-['Inter'] font-normal text-[13.5px] leading-relaxed text-white/80">
+                  Partner with India’s premier chilli export desk. Request specialized quotes, certificate reports, and booking timelines for your trade volume.
+                </p>
+
+                {/* Checkmark trade highlights / Glass Chips */}
+                <div className="flex flex-wrap gap-2.5 justify-center lg:justify-start pt-1">
+                  {[
+                    "100% Pure & Tested",
+                    "ASTA Compliant Quality",
+                    "Custom Packing Formats"
+                  ].map((text, idx) => (
+                    <div key={idx} className="flex items-center gap-1.5 bg-white/5 border border-white/5 backdrop-blur-[2px] rounded-full px-3.5 py-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#cca72f] shrink-0" />
+                      <span className="font-['Montserrat'] font-bold text-[8.5px] sm:text-[9px] text-white/90 uppercase tracking-wider">
+                        {text}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Buttons Group */}
+                <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 relative z-10 pt-2">
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#8f000d] to-[#b22222] hover:shadow-[0_6px_20px_-2px_rgba(143,0,13,0.3)] text-white font-['Montserrat'] font-bold text-[11px] sm:text-[11.5px] py-[12px] px-[22px] rounded-full shadow-lg shadow-[#8f000d]/20 hover:translate-y-[-2px] active:scale-98 transition-all duration-300 uppercase tracking-wider text-center group whitespace-nowrap cursor-pointer"
+                  >
+                    Send Enquiry
+                    <FiArrowRight className="text-xs transition-transform group-hover:translate-x-1 duration-300" />
+                  </Link>
+                  <a
+                    href="mailto:minhaimportsexports@gmail.com"
+                    className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/25 text-white font-['Montserrat'] font-bold text-[11px] sm:text-[11.5px] py-[12px] px-[22px] rounded-full shadow-md active:scale-98 transition-all duration-300 uppercase tracking-wider text-center whitespace-nowrap cursor-pointer"
+                  >
+                    <FiMail className="text-sm shrink-0" />
+                    Contact Us
+                  </a>
+                </div>
               </div>
 
-              {/* Center Buttons */}
-              <div className="flex flex-col sm:flex-row justify-center gap-3 relative z-10 pt-2">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#8f000d] to-[#b22222] hover:shadow-[0_6px_20px_-2px_rgba(143,0,13,0.3)] text-white font-['Montserrat'] font-bold text-[11.5px] sm:text-[12px] py-[12px] px-[22px] rounded-full shadow-lg shadow-[#8f000d]/20 hover:translate-y-[-2px] active:scale-98 transition-all duration-300 uppercase tracking-wider text-center group whitespace-nowrap"
-                >
-                  Send Enquiry
-                  <FiArrowRight className="text-xs transition-transform group-hover:translate-x-1 duration-300" />
-                </Link>
-                <a
-                  href="mailto:minhaimportsexports@gmail.com"
-                  className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/25 text-white font-['Montserrat'] font-bold text-[11.5px] sm:text-[12px] py-[12px] px-[22px] rounded-full shadow-md active:scale-98 transition-all duration-300 uppercase tracking-wider text-center whitespace-nowrap"
-                >
-                  <FiMail className="text-sm shrink-0" />
-                  Contact Us
-                </a>
-              </div>
             </div>
-
           </motion.div>
         </div>
       </section>

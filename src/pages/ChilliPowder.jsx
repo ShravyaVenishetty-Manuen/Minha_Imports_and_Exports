@@ -429,37 +429,11 @@ const ChilliPowder = () => {
       {/* 8. Inquiry CTA */}
       <section id="inquire" className="py-16 relative bg-[#FAF8F4] w-full z-10 border-t border-neutral-100/40">
 
-        {/* Left Side Floating Illustration (Premium floating spices elements) */}
-        <div className="hidden lg:block absolute left-[calc(50%-650px)] xl:left-[calc(50%-730px)] 2xl:left-[calc(50%-790px)] top-1/2 -translate-y-1/2 w-[450px] h-[450px] xl:w-[540px] xl:h-[540px] 2xl:w-[610px] 2xl:h-[610px] pointer-events-none select-none z-0 mix-blend-multiply">
-          <img
-            src={floatingSpicesLeft}
-            alt="Decorative Floating Spices Left"
-            className="w-full h-full object-contain opacity-50 saturate-[0.5]"
-            style={{
-              maskImage: 'radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)',
-              WebkitMaskImage: 'radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)'
-            }}
-          />
-        </div>
-
-        {/* Right Side Floating Illustration (Premium floating spices elements) */}
-        <div className="hidden lg:block absolute right-[calc(50%-710px)] xl:right-[calc(50%-790px)] 2xl:right-[calc(50%-850px)] top-1/2 -translate-y-1/2 w-[500px] h-[500px] xl:w-[600px] xl:h-[600px] 2xl:w-[680px] 2xl:h-[680px] pointer-events-none select-none z-0 mix-blend-multiply">
-          <img
-            src={floatingSpicesRight}
-            alt="Decorative Floating Spices Right"
-            className="w-full h-full object-contain opacity-50 saturate-[0.5]"
-            style={{
-              maskImage: 'radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)',
-              WebkitMaskImage: 'radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)'
-            }}
-          />
-        </div>
-
         {/* Subtle center glow behind the card */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-to-r from-[#cca72f]/10 to-[#8f000d]/10 rounded-full blur-[80px] pointer-events-none select-none z-0"></div>
 
-        <div className="max-w-[850px] mx-auto px-6 md:px-12 relative z-10">
-          <div className="relative rounded-[2.5rem] overflow-hidden text-center text-white py-12 md:py-16 px-6 md:px-12 shadow-[0_30px_80px_rgba(0,0,0,0.18)] border border-white/10 bg-neutral-950/20 backdrop-blur-md">
+        <div className="max-w-[1280px] mx-auto px-6 md:px-12 relative z-10">
+          <div className="relative rounded-[2.5rem] overflow-hidden text-white py-10 md:py-14 px-6 md:px-12 shadow-[0_35px_80px_rgba(0,0,0,0.18)] border border-white/10 bg-neutral-950/20 backdrop-blur-md">
 
             {/* Blurred Red Chilli Powder background inside card */}
             <div className="absolute inset-0 bg-neutral-950/50 z-10"></div>
@@ -469,40 +443,79 @@ const ChilliPowder = () => {
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxVWr-X22A2uy8R8l86VWqrk6LutV80tBDlf-SxQqfwYsAUwxgaY3HThUezk8N2wUE6sYNEIQ491AaEyIMLEv3dSB3XiApWM9AjS3Idoj2jcDHvyGTHemKKjDa_lVPUdTY4UVh_QRm371bs1JX97m0ktKN6Rh8K_Za2O-WR1JDPfF3oDMkGUwu0QNT_wbvA3M8_SEGy67_25fKohq9O3v_tacpnlOFlh9frL1FBX6ErSOuNRuqYjyVH-9RZkcn-59_qVqTk4DWV4w"
             />
 
-            <div className="relative z-20 max-w-xl mx-auto space-y-6 text-center">
-              {/* Tagline Badge */}
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mx-auto">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#cca72f] animate-pulse" />
-                <span className="font-['Montserrat'] font-bold text-[8.5px] tracking-[0.2em] text-[#cca72f] uppercase">
-                  Bulk Powder Sourcing
+            <div className="relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              
+              {/* Left Column: Brand Quote (lg:col-span-5) */}
+              <div className="relative space-y-4 text-center lg:text-left lg:border-r lg:border-white/10 lg:pr-8 xl:pr-12 lg:col-span-5 w-full z-10">
+                <span className="absolute -top-10 -left-2 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
+                  “
+                </span>
+                <blockquote className="font-['Montserrat'] font-medium italic text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed text-white/95 relative z-10">
+                  "Our chilli powder is processed utilizing advanced low-temperature grinding to lock in the volatile oils, natural pungency, and vivid color values that global food industries demand."
+                </blockquote>
+                <div className="font-['Montserrat'] font-bold text-[9px] sm:text-[10px] tracking-widest uppercase text-[#cca72f] relative z-10">
+                  — The Minha Pulverizing Desk
+                </div>
+                <span className="absolute -bottom-14 right-4 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
+                  ”
                 </span>
               </div>
 
-              <h2 className="font-['Montserrat'] font-bold text-[22px] sm:text-[26px] md:text-[32px] leading-[1.2] tracking-tight text-white">
-                Looking for Premium <br className="hidden sm:inline" /> Chilli Powder Supply?
-              </h2>
-              <p className="font-['Inter'] font-normal text-white/80 text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed max-w-lg mx-auto">
-                Partner with a trusted export leader. Get a customized quote for your specific grade and volume requirements today.
-              </p>
+              {/* Right Column: CTA Content (lg:col-span-7) */}
+              <div className="space-y-5 text-center lg:text-left lg:col-span-7 w-full">
+                {/* Tagline Badge */}
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 border border-white/20 text-[#cca72f] font-['Montserrat'] font-bold text-[8.5px] sm:text-[9px] tracking-widest uppercase mx-auto lg:mx-0">
+                  <span className="relative flex h-1.5 w-1.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#cca72f] opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#cca72f]"></span>
+                  </span>
+                  Bulk Powder Sourcing
+                </div>
 
-              <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-md mx-auto pt-3">
-                <a
-                  href="mailto:minhaimportsexports@gmail.com?subject=Enquiry for Premium Chilli Powder&body=Hello Minha Desk,%0D%0A%0D%0AI would like to request details and wholesale pricing for Chilli Powder."
-                  className="flex-1 bg-[#cca72f] text-[#121315] font-['Montserrat'] font-extrabold text-[12px] tracking-wider py-3.5 px-6 rounded-full hover:bg-white hover:text-black shadow-lg shadow-[#cca72f]/20 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 uppercase text-center whitespace-nowrap"
-                >
-                  Request a Quote
-                </a>
-                <a
-                  href="mailto:minhaimportsexports@gmail.com?subject=Request Chilli Powder Brochure"
-                  className="flex-1 border-2 border-white/85 text-white font-['Montserrat'] font-extrabold text-[12px] tracking-wider py-[14px] px-6 rounded-full hover:bg-white hover:text-black hover:border-white hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 uppercase text-center whitespace-nowrap"
-                >
-                  Download Brochure
-                </a>
+                <h2 className="font-['Montserrat'] font-bold text-[22px] sm:text-[26px] md:text-[32px] leading-[1.2] text-white tracking-tight">
+                  Looking for Premium <br className="hidden sm:inline" /> Chilli Powder Supply?
+                </h2>
+                <p className="font-['Inter'] font-normal text-white/80 text-[13.5px] leading-relaxed">
+                  Partner with a trusted export leader. Get a customized quote for your specific grade and volume requirements today.
+                </p>
+
+                {/* Feature Glass Chips */}
+                <div className="flex flex-wrap gap-2.5 justify-center lg:justify-start pt-1">
+                  {[
+                    "Low-Temp Cold Grinding",
+                    "Pesticide & Aflatoxin Free",
+                    "Custom SHU & ASTA Grading"
+                  ].map((text, idx) => (
+                    <div key={idx} className="flex items-center gap-1.5 bg-white/5 border border-white/5 backdrop-blur-[2px] rounded-full px-3.5 py-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#cca72f] shrink-0" />
+                      <span className="font-['Montserrat'] font-bold text-[8.5px] sm:text-[9px] text-white/90 uppercase tracking-wider">
+                        {text}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Buttons Group */}
+                <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 relative z-10 pt-2">
+                  <a
+                    href="mailto:minhaimportsexports@gmail.com?subject=Enquiry for Premium Chilli Powder&body=Hello Minha Desk,%0D%0A%0D%0AI would like to request details and wholesale pricing for Chilli Powder."
+                    className="inline-flex items-center justify-center gap-2 bg-[#cca72f] text-[#121315] font-['Montserrat'] font-bold text-[11px] sm:text-[11.5px] py-[12px] px-[22px] rounded-full shadow-lg shadow-[#cca72f]/20 hover:bg-white hover:text-black hover:border-white hover:-translate-y-[-2px] active:scale-98 transition-all duration-300 uppercase tracking-wider text-center whitespace-nowrap cursor-pointer"
+                  >
+                    Request a Quote
+                  </a>
+                  <a
+                    href="mailto:minhaimportsexports@gmail.com?subject=Request Chilli Powder Brochure"
+                    className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/25 text-white font-['Montserrat'] font-bold text-[11px] sm:text-[11.5px] py-[12px] px-[22px] rounded-full shadow-md active:scale-98 transition-all duration-300 uppercase tracking-wider text-center whitespace-nowrap cursor-pointer"
+                  >
+                    Download Brochure
+                  </a>
+                </div>
+
+                <div className="text-[8px] font-['Montserrat'] tracking-widest text-white/40 uppercase pt-2">
+                  Export Desk Response Guarantee: Within 12 Hours
+                </div>
               </div>
 
-              <div className="text-[8px] font-['Montserrat'] tracking-widest text-white/40 uppercase pt-2">
-                Export Desk Response Guarantee: Within 12 Hours
-              </div>
             </div>
           </div>
         </div>
