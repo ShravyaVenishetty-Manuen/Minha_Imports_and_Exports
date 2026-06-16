@@ -37,13 +37,14 @@ const Footer = () => {
             {/* Social Icons */}
             <div className="flex items-center gap-3 pt-1">
               {[
-                { icon: <FiLinkedin className="w-4.5 h-4.5" />, href: "https://in.linkedin.com/company/minha-imports-and-exports" },
-                { icon: <FiInstagram className="w-4.5 h-4.5" />, href: "https://www.instagram.com/dry_chilli_exporters/" },
-                { icon: <FiFacebook className="w-4.5 h-4.5" />, href: "https://www.facebook.com/DryRedChilliesExporter/" }
+                { name: "LinkedIn", icon: <FiLinkedin className="w-4.5 h-4.5" />, href: "https://in.linkedin.com/company/minha-imports-and-exports" },
+                { name: "Instagram", icon: <FiInstagram className="w-4.5 h-4.5" />, href: "https://www.instagram.com/dry_chilli_exporters/" },
+                { name: "Facebook", icon: <FiFacebook className="w-4.5 h-4.5" />, href: "https://www.facebook.com/DryRedChilliesExporter/" }
               ].map((social, sIdx) => (
                 <a
                   key={sIdx}
                   href={social.href}
+                  aria-label={`${social.name} profile`}
                   className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:border-[#cca72f] hover:text-white transition-all duration-300 bg-white/[0.01]"
                 >
                   {social.icon}
@@ -58,9 +59,9 @@ const Footer = () => {
               onClick={() => setLinksOpen(!linksOpen)}
               className="w-full flex justify-between items-center md:cursor-default md:pointer-events-none text-left focus:outline-none py-2 md:py-0"
             >
-              <h4 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
+              <h3 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
                 Quick Links
-              </h4>
+              </h3>
               <span className="lg:hidden text-white text-base">
                 {linksOpen ? <FiChevronUp className="w-4 h-4" /> : <FiChevronDown className="w-4 h-4" />}
               </span>
@@ -90,9 +91,9 @@ const Footer = () => {
               onClick={() => setProductsOpen(!productsOpen)}
               className="w-full flex justify-between items-center md:cursor-default md:pointer-events-none text-left focus:outline-none py-2 md:py-0"
             >
-              <h4 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
+              <h3 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
                 Our Products
-              </h4>
+              </h3>
               <span className="lg:hidden text-white text-base">
                 {productsOpen ? <FiChevronUp className="w-4 h-4" /> : <FiChevronDown className="w-4 h-4" />}
               </span>
@@ -116,9 +117,9 @@ const Footer = () => {
 
           {/* Column 4: Contact Us */}
           <div className="md:col-span-6 xl:col-span-1 space-y-3.5 text-left">
-            <h4 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
+            <h3 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
               Contact Us
-            </h4>
+            </h3>
             <div className="space-y-3 text-[13px]">
               <div className="flex items-start gap-3">
                 <FiMapPin className="w-4 h-4 text-[#cca72f] mt-1 shrink-0" />
@@ -140,9 +141,9 @@ const Footer = () => {
 
           {/* Column 5: WeChat QR Connect Banner */}
           <div className="md:col-span-6 xl:col-span-1 space-y-3.5 text-left">
-            <h4 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
+            <h3 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
               WeChat Connect
-            </h4>
+            </h3>
             
             <div className="flex items-center gap-4 bg-white/5 p-3.5 rounded-xl border border-white/10 w-full max-w-sm">
               <div className="p-1.5 bg-white rounded-lg shadow-md shrink-0 w-20 h-20 flex items-center justify-center">
