@@ -187,7 +187,7 @@ const Navbar = () => {
                       <Link
                         to={link.path}
                         onClick={() => setIsOpen(false)}
-                        className={`font-heading text-sm font-semibold tracking-[0.12em] uppercase transition-all py-2.5 block rounded-lg ${
+                        className={`font-heading text-sm font-semibold tracking-[0.12em] uppercase transition-all py-3.5 block rounded-lg ${
                           isActive
                             ? 'text-brand-gold bg-white/5 font-bold'
                             : 'text-white/80 hover:text-brand-gold hover:bg-white/5'
