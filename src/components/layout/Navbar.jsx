@@ -74,7 +74,9 @@ const Navbar = () => {
           {/* Desktop Navigation Links (with vertical separators) */}
           <div className="hidden lg:flex items-center justify-center space-x-2 xl:space-x-3.5">
             {navLinks.map((link, idx) => {
-              const isActive = location.pathname === link.path;
+              const isActive = link.path === '/'
+                ? location.pathname === '/'
+                : location.pathname.startsWith(link.path);
               return (
                 <React.Fragment key={link.name}>
                   <Link
@@ -96,9 +98,7 @@ const Navbar = () => {
                       <motion.span
                         layoutId="capsuleActiveUnderline"
                         className={`absolute bottom-[-4px] left-0 w-full h-[3px] rounded-full ${
-                          isScrolled
-                            ? 'bg-brand-red shadow-[0_0_6px_rgba(178,34,34,0.15)]'
-                            : 'bg-[#cca72f] shadow-[0_0_8px_#cca72f]'
+                          isScrolled ? 'bg-brand-red' : 'bg-[#cca72f]'
                         }`}
                       />
                     )}
@@ -173,7 +173,9 @@ const Navbar = () => {
             <div className="flex-grow overflow-y-auto px-6 py-6 flex flex-col">
               <div className="my-auto flex flex-col items-center space-y-4 text-center w-full max-w-sm mx-auto">
                 {navLinks.map((link, idx) => {
-                  const isActive = location.pathname === link.path;
+                  const isActive = link.path === '/'
+                    ? location.pathname === '/'
+                    : location.pathname.startsWith(link.path);
                   return (
                     <motion.div
                       key={link.name}
