@@ -170,12 +170,12 @@ const Footer = () => {
           <div className="text-[#a0a5ad]/60 text-center md:text-left">
             © 2026 Minha Imports & Exports. All Rights Reserved.
           </div>
-          <div className="flex flex-wrap justify-center items-center gap-6 text-[11px] font-semibold text-[#a0a5ad]/40">
-            <a href="#" className="hover:text-white transition-colors uppercase tracking-wider">Privacy Policy</a>
+          <div className="flex flex-wrap justify-center items-center gap-6 text-[11.5px] font-semibold text-[#a0a5ad]/45 tracking-widest uppercase">
+            <span>ISO 9001:2015 Certified</span>
             <span className="text-white/10 hidden sm:inline">•</span>
-            <a href="#" className="hover:text-white transition-colors uppercase tracking-wider">Terms of Service</a>
+            <span>ISO 22000:2018 Compliant</span>
             <span className="text-white/10 hidden sm:inline">•</span>
-            <span className="uppercase tracking-wider">Secure Site</span>
+            <span>Spices Board of India Registered</span>
           </div>
         </div>
       </div>
