@@ -134,6 +134,7 @@ const Varieties = () => {
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-[#1F5E3B]/10 rounded-xl -z-10 transition-transform duration-300 group-hover:scale-105" />
             <img
               alt="Systematic Grading of Guntur Chillies"
+              loading="lazy"
               className="rounded-2xl shadow-2xl w-full object-cover aspect-[4/3] relative z-10 border border-white/40"
               src={chilliIntroDry}
             />
@@ -225,6 +226,7 @@ const Varieties = () => {
                     <img
                       src={chilli.image}
                       alt={chilli.name}
+                      loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -337,6 +339,7 @@ const Varieties = () => {
             <img
               className="absolute inset-0 w-full h-full object-cover"
               src={chilliSpotlightDry}
+              loading="lazy"
               alt="Teja S17 Graded Hot Chillies"
             />
             <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-black/40 via-transparent to-transparent z-10" />
@@ -488,6 +491,7 @@ const Varieties = () => {
               <img
                 src={chilliBowlTable}
                 alt="Guntur Dry Red Chillies Packaging"
+                loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent z-10" />

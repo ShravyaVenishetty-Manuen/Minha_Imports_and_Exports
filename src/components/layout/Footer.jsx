@@ -150,6 +150,7 @@ const Footer = () => {
                 <img
                   src={vchatQrImg}
                   alt="Minha WeChat QR Contact"
+                  loading="lazy"
                   className="w-full h-full object-contain rounded"
                 />
               </div>

@@ -23,6 +23,7 @@ const About = () => {
           {/* Main Image */}
           <img
             alt="Chilli Harvest"
+            loading="lazy"
             className="relative rounded-lg shadow-2xl w-full h-[500px] object-cover"
             src={imageUrl}
           />
