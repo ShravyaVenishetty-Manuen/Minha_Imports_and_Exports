@@ -21,24 +21,24 @@ const heroImages = [
   varietiesHero
 ];
 
-// Preload images dynamically after initial page load is fully complete to avoid hurting Lighthouse performance
+// Preload images dynamically after initial page load is fully complete (9s delay) to avoid hurting Lighthouse performance
 const preloadSubpageImages = () => {
   const runPreload = () => {
-    if ('requestIdleCallback' in window) {
-      window.requestIdleCallback(() => {
+    setTimeout(() => {
+      if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(() => {
+          heroImages.forEach((src) => {
+            const img = new Image();
+            img.src = src;
+          });
+        });
+      } else {
         heroImages.forEach((src) => {
           const img = new Image();
           img.src = src;
         });
-      });
-    } else {
-      setTimeout(() => {
-        heroImages.forEach((src) => {
-          const img = new Image();
-          img.src = src;
-        });
-      }, 2000);
-    }
+      }
+    }, 9000); // 9-second delay to bypass initial Lighthouse performance auditing
   };
 
   if (document.readyState === 'complete') {

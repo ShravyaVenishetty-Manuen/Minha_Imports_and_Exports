@@ -5,10 +5,35 @@ import { motion, AnimatePresence } from 'framer-motion';
 import logoImg from '../../assets/logo-minha-main.png';
 import logoDarkImg from '../../assets/logo-minha-dark.png';
 
+// Import hero images for hover-based prefetching
+import certificationsHero from '../../assets/certifications-hero.png';
+import contactHero from '../../assets/contact-hero.png';
+import facilityHero from '../../assets/facility-hero.png';
+import powderHero from '../../assets/powder-hero.png';
+import aboutHero from '../../assets/about_hero_bg.png';
+import varietiesHero from '../../assets/chilli-hero-varieties.png';
+
+const heroImageMap = {
+  '/certifications': certificationsHero,
+  '/contact': contactHero,
+  '/facility': facilityHero,
+  '/powder': powderHero,
+  '/about': aboutHero,
+  '/varieties': varietiesHero
+};
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+
+  const handleLinkHover = (path) => {
+    const imgSrc = heroImageMap[path];
+    if (imgSrc) {
+      const img = new Image();
+      img.src = imgSrc;
+    }
+  };
 
   // Scroll detection to trigger shrinking and shadow elevation
   useEffect(() => {
@@ -81,6 +106,7 @@ const Navbar = () => {
                 <React.Fragment key={link.name}>
                   <Link
                     to={link.path}
+                    onMouseEnter={() => handleLinkHover(link.path)}
                     className={`font-heading text-[10px] xl:text-[11px] font-bold tracking-[0.06em] transition-all duration-300 relative py-1 px-0.5 ${
                       isScrolled
                         ? isActive
@@ -119,6 +145,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-3 pr-1">
             <Link
               to="/contact"
+              onMouseEnter={() => handleLinkHover('/contact')}
               className="hidden sm:inline-flex items-center gap-1.5 font-heading font-extrabold text-[10px] xl:text-[11px] py-2 px-5 rounded-lg transition-all duration-300 shadow-md uppercase tracking-wider group bg-gradient-to-r from-[#B22222] to-[#D62828] text-white border border-[#B22222]/10 hover:opacity-95 hover:-translate-y-0.5"
             >
               Enquire Now
@@ -186,6 +213,7 @@ const Navbar = () => {
                     >
                       <Link
                         to={link.path}
+                        onMouseEnter={() => handleLinkHover(link.path)}
                         onClick={() => setIsOpen(false)}
                         className={`font-heading text-sm font-semibold tracking-[0.12em] uppercase transition-all py-3.5 block rounded-lg ${
                           isActive
@@ -207,6 +235,7 @@ const Navbar = () => {
                 >
                   <Link
                     to="/contact"
+                    onMouseEnter={() => handleLinkHover('/contact')}
                     onClick={() => setIsOpen(false)}
                     className="block bg-gradient-to-r from-brand-red to-[#901a1a] text-white text-[12px] font-heading font-bold py-3.5 px-8 rounded-lg shadow-lg text-center hover:opacity-95 hover:shadow-brand-red/20 tracking-wider uppercase active:scale-98 transition-all"
                   >
