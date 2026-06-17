@@ -21,11 +21,34 @@ const heroImages = [
   varietiesHero
 ];
 
-// Preload images as soon as the application initializes
-heroImages.forEach((src) => {
-  const img = new Image();
-  img.src = src;
-});
+// Preload images dynamically after initial page load is fully complete to avoid hurting Lighthouse performance
+const preloadSubpageImages = () => {
+  const runPreload = () => {
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(() => {
+        heroImages.forEach((src) => {
+          const img = new Image();
+          img.src = src;
+        });
+      });
+    } else {
+      setTimeout(() => {
+        heroImages.forEach((src) => {
+          const img = new Image();
+          img.src = src;
+        });
+      }, 2000);
+    }
+  };
+
+  if (document.readyState === 'complete') {
+    runPreload();
+  } else {
+    window.addEventListener('load', runPreload);
+  }
+};
+
+preloadSubpageImages();
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

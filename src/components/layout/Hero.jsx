@@ -54,8 +54,10 @@ const Hero = () => {
         {bgImages.map((image, index) => {
           const isActive = index === currentIdx;
           return (
-            <motion.div
+            <motion.img
               key={index}
+              src={image}
+              alt={index === 0 ? "Premium Guntur Dry Red Chillies" : "Pure Chilli Powder Sourcing"}
               initial={{ opacity: index === 0 ? 1 : 0, scale: 1 }}
               animate={{
                 opacity: isActive ? 1 : 0,
@@ -65,8 +67,9 @@ const Hero = () => {
                 opacity: { duration: 2.0, ease: "easeInOut" },
                 scale: { duration: 5.0, ease: "easeOut" }
               }}
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${image})` }}
+              className="absolute inset-0 w-full h-full object-cover"
+              fetchpriority={index === 0 ? "high" : "low"}
+              loading={index === 0 ? "eager" : "lazy"}
             />
           );
         })}
