@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import SEO from '../components/common/SEO';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -49,10 +49,16 @@ const Contact = () => {
     reqType: 'Bulk Order',
     message: ''
   });
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const imgRef = useRef(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    if (imgRef.current && imgRef.current.complete) {
+      setImageLoaded(true);
+    }
   }, []);
+
 
   const toggleFaq = (index) => {
     setOpenFaq(prev => prev === index ? null : index);
@@ -171,9 +177,13 @@ const Contact = () => {
       <section className="relative h-[350px] md:h-[420px] w-full flex items-center justify-center text-center text-white overflow-hidden bg-neutral-900 pt-20">
         <div className="absolute inset-0 bg-black/60 z-10" />
         <img
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          ref={imgRef}
+          className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700 ease-out ${
+            imageLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
           alt="International Cargo Port Sourcing"
           src={contactHeroBg}
+          onLoad={() => setImageLoaded(true)}
           fetchpriority="high"
           loading="eager"
         />

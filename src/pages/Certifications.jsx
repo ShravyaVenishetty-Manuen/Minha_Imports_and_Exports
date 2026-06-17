@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import SEO from '../components/common/SEO';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -103,10 +103,16 @@ const whyPoints = [
 const Certifications = () => {
   const [activeCert, setActiveCert] = useState(null);
   const [activePillar, setActivePillar] = useState(null);
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const imgRef = useRef(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    if (imgRef.current && imgRef.current.complete) {
+      setImageLoaded(true);
+    }
   }, []);
+
 
   // Prevent body scroll when modal is open
   useEffect(() => {
@@ -191,9 +197,13 @@ const Certifications = () => {
       <section className="relative h-[350px] md:h-[420px] w-full flex items-center justify-center text-center text-white overflow-hidden bg-neutral-900 pt-20">
         <div className="absolute inset-0 bg-black/60 z-10" />
         <img
+          ref={imgRef}
           alt="Certified Chilli Export Facility"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700 ease-out ${
+            imageLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
           src={certificationsHeroBg}
+          onLoad={() => setImageLoaded(true)}
           fetchpriority="high"
           loading="eager"
         />

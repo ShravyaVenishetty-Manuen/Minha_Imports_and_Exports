@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import SEO from '../components/common/SEO';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -11,10 +11,17 @@ import floatingSpicesRight from '../assets/floating-spices-right.png';
 import powderHeroBg from '../assets/powder-hero.png';
 
 const ChilliPowder = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const imgRef = useRef(null);
+
   // Scroll to top on page mount
   useEffect(() => {
     window.scrollTo(0, 0);
+    if (imgRef.current && imgRef.current.complete) {
+      setImageLoaded(true);
+    }
   }, []);
+
 
   return (
     <div className="bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container min-h-screen relative overflow-hidden">
@@ -51,9 +58,13 @@ const ChilliPowder = () => {
       <section className="relative h-[350px] md:h-[420px] w-full flex items-center justify-center text-center text-white overflow-hidden bg-neutral-900 pt-20">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         <img
+          ref={imgRef}
           alt="Guntur Chilli Processing and Pulverizing"
-          className="absolute inset-0 w-full h-full object-cover object-[center_35%]"
+          className={`absolute inset-0 w-full h-full object-cover object-[center_35%] transition-opacity duration-700 ease-out ${
+            imageLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
           src={powderHeroBg}
+          onLoad={() => setImageLoaded(true)}
           fetchpriority="high"
           loading="eager"
         />

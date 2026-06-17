@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import SEO from '../components/common/SEO';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -16,9 +16,16 @@ import chilliExportCta from '../assets/chilli-export-cta.png';
 import facilityHeroBg from '../assets/facility-hero.png';
 
 const Facility = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const imgRef = useRef(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
+    if (imgRef.current && imgRef.current.complete) {
+      setImageLoaded(true);
+    }
   }, []);
+
 
   const fadeUpVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -60,9 +67,13 @@ const Facility = () => {
       <section className="relative h-[350px] md:h-[420px] w-full flex items-center justify-center text-center text-white overflow-hidden bg-neutral-900 pt-20">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         <img
+          ref={imgRef}
           alt="Sprawling high-tech industrial processing facility"
-          className="absolute inset-0 w-full h-full object-cover"
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-out ${
+            imageLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
           src={facilityHeroBg}
+          onLoad={() => setImageLoaded(true)}
           fetchpriority="high"
           loading="eager"
         />

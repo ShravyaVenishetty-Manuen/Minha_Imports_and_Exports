@@ -73,12 +73,17 @@ const AboutCompany = () => {
   const [activeSection, setActiveSection] = useState(0);
   const [activeTimelineYear, setActiveTimelineYear] = useState(0);
   const [slideDirection, setSlideDirection] = useState(1);
-
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const imgRef = useRef(null);
 
   // Scroll to top on page mount
   useEffect(() => {
     window.scrollTo(0, 0);
+    if (imgRef.current && imgRef.current.complete) {
+      setImageLoaded(true);
+    }
   }, []);
+
 
   const regionalTradeDetails = [
     {
@@ -307,9 +312,15 @@ const AboutCompany = () => {
       <section className="relative h-[350px] md:h-[420px] w-full flex items-center justify-center text-center text-white overflow-hidden bg-neutral-900 pt-20">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         <img
-          alt="Ripening dry red chillies field in Guntur"
-          className="absolute inset-0 w-full h-full object-cover object-[center_35%]"
+          ref={imgRef}
+          alt="Premium Chilli Sourcing Fields"
+          className={`absolute inset-0 w-full h-full object-cover object-[center_35%] transition-opacity duration-700 ease-out ${
+            imageLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
           src={aboutHeroBg}
+          onLoad={() => setImageLoaded(true)}
+          fetchpriority="high"
+          loading="eager"
         />
         <div className="relative z-20 w-full max-w-4xl mx-auto text-center space-y-6">
           <nav className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['Montserrat'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">
