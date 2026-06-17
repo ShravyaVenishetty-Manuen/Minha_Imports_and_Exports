@@ -25,3 +25,6 @@ dist-ssr
 
 src/assets_backup
 compress-sharp.js
+compress-favicons.js
+public/favicon_backup.png
+public/favicon1_backup.png
