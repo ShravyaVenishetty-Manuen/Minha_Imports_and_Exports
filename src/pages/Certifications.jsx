@@ -19,6 +19,7 @@ import brcLogo from '../assets/brc-food-certification-logo-Photoroom.png';
 import fieoLogo from '../assets/fieo-Photoroom.png';
 import chilliExportCta from '../assets/chilli-export-cta.png';
 import chilliBowlTable from '../assets/chilli-bowl-table.png';
+import certificationsHeroBg from '../assets/certifications-hero.png';
 import iso9001Cert from '../assets/certificates/iso-9001-2015.jpg';
 import iso22000Cert from '../assets/certificates/iso-22000-2018.jpg';
 
@@ -192,7 +193,9 @@ const Certifications = () => {
         <img
           alt="Certified Chilli Export Facility"
           className="absolute inset-0 w-full h-full object-cover object-center"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUFP4lXWY2N9ZZnMljSsoM6tmA9LoA-hRA2LWZxX1PBwuu5u1EReljIm1QHf2w-fcIqwhPJeJ5PDiKQSISSwNKl4tGg7e2AiyECz13F5lCexzj9iBiJe2QgqjLznWEHUrTvyxQ7W6fVUZ6rAZ1FZS8FudIvpnvl6i0Klr23bCvl_53WA9Klbi9FImUYI9W2AGXwRl7kKkee7vuHX_9P3Yu2jRgi60ooXCzsSa9Fgh5eAH0Bt3oli16WzCaiZcVj3w7PJ66oEOdUkA"
+          src={certificationsHeroBg}
+          fetchpriority="high"
+          loading="eager"
         />
         <div className="relative z-20 w-full max-w-4xl mx-auto text-center space-y-5 px-6">
           <nav className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['Montserrat'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">

@@ -13,6 +13,7 @@ import {
 } from 'react-icons/fi';
 
 import chilliExportCta from '../assets/chilli-export-cta.png';
+import facilityHeroBg from '../assets/facility-hero.png';
 
 const Facility = () => {
   useEffect(() => {
@@ -61,7 +62,9 @@ const Facility = () => {
         <img
           alt="Sprawling high-tech industrial processing facility"
           className="absolute inset-0 w-full h-full object-cover"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK-a2elKINyI0yKcXJLvQ4B6_T73fx2cv-eE9sfSYNg35mcrwduRpNPl3DXvlMQZThEPHnzCFPoOvfzPECpP8hvtzDMONyDNjgE_PTdsR9rQHoUF0MljN3I9vXpYivbz8OHLgBgvZffLIfFUQvlH46qMvVkjMVE-otq_gKpFZkinkzdMJieGHZZs2eSBGwXHqxAeyIHNtNs8yOQvMSqI3AgO7w4Vmtfc2KZJbBPVAsiLDofTFJ7f4Ym4jRHu1VvguCiUvY-Cgx-js"
+          src={facilityHeroBg}
+          fetchpriority="high"
+          loading="eager"
         />
         <div className="relative z-20 w-full max-w-4xl mx-auto text-center space-y-6 px-6">
           <nav className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['Montserrat'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">

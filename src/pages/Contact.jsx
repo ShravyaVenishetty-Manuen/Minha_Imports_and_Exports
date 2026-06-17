@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import cargoShipImg from '../assets/image.png';
 import chilliBowlTable from '../assets/chilli-bowl-table.png';
+import contactHeroBg from '../assets/contact-hero.png';
 import {
   FiPhone,
   FiMail,
@@ -23,7 +24,7 @@ import {
   MdPublic
 } from 'react-icons/md';
 
-const contactHeroBg = "https://lh3.googleusercontent.com/aida-public/AB6AXuBYTOWWYX2-AEwKGMeXEuiMKGJwYFQMq_0kSqSOUSHpcnvvBCs5I_5jNCxuIeHzMTGHDDWa6owpq-GVB_Rj5ZiR4NoZOKT-5zVR4PMoWarzzg19fTy-V12ePX3ga5QCJU0nllLzz7lM-tTEz8nEfVgQf5Z17rEbLHwWtdTTccE_yckslC6IPnbrJYYBapFFMiAyA8Y_c3whQhh8hp02falfMdifDkhirhArCKXjxnyVHbtojz_4pHZJGfXPJC-aQATDnMGCC1TxLwE";
+
 
 const fadeUp = {
   hidden: { opacity: 0, y: 25 },
@@ -173,6 +174,8 @@ const Contact = () => {
           className="absolute inset-0 w-full h-full object-cover object-center"
           alt="International Cargo Port Sourcing"
           src={contactHeroBg}
+          fetchpriority="high"
+          loading="eager"
         />
         <div className="relative z-20 w-full max-w-4xl mx-auto text-center space-y-5 px-6">
           <nav aria-label="Breadcrumb" className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['Montserrat'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">
