@@ -4,10 +4,11 @@ import { motion } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
 import { GiChiliPepper } from 'react-icons/gi';
 import chilliPowderImg from '../../assets/chilli-powder-hero.png';
+import heroSlide1Img from '../../assets/hero-slide1.png';
 
 const Hero = () => {
   const bgImages = [
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuDtpki20kGgdA7_cxFiOWTR5OBFsfm5ZCRn0_xuTFz2u0suIde-PQOmIcfojYC-TbiqH42ax86M_Zp2Mw4V7_jShncNM8V53FiFybwCdXt_NFRsbG0YM8qfClvGASqWIqivC0UUz9t51pOqZ9xNMmCq5oCEcWLNZ0D-O1xbNNJGdhWcCLfFztVWaEeZson9N5zYt1dGFSnUaiUMzi_rjzI9BRAYq3BuBhmb7Ej3EM81AJLpxJfb6uBr8XcbIEmp5yv4wJJQI9_qiCA",
+    heroSlide1Img,
     chilliPowderImg
   ];
 
