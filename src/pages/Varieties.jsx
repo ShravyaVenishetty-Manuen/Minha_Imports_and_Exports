@@ -23,7 +23,18 @@ const Varieties = () => {
   };
 
   // Categories list derived from data
-  const categories = ['All', 'Teja S17', 'S4 / 334', 'S10', 'Byadgi'];
+  const categories = ['All', 'Teja S17', 'S4 / 334', 'S10', 'Byadgi', 'Other Varieties'];
+
+  const getCategoryColorClass = (category) => {
+    switch (category) {
+      case 'Teja S17': return 'text-[#8f000d]';
+      case 'S4 / 334': return 'text-[#1F5E3B]';
+      case 'S10': return 'text-[#cca72f]';
+      case 'Byadgi': return 'text-[#a73b0f]';
+      case 'Other Varieties': return 'text-[#d97706]';
+      default: return 'text-[#cca72f]';
+    }
+  };
 
   // Scroll to top on mount
   useEffect(() => {
@@ -186,6 +197,14 @@ const Varieties = () => {
                       <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                     </svg>
                   );
+                } else if (cat === 'Other Varieties') {
+                  icon = (
+                    <svg className={`w-4.5 h-4.5 mr-2 ${activeFilter === cat ? 'text-white' : 'text-[#d97706]'}`} fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="12" y1="8" x2="12" y2="16" />
+                      <line x1="8" y1="12" x2="16" y2="12" />
+                    </svg>
+                  );
                 }
 
                 return (
@@ -235,7 +254,7 @@ const Varieties = () => {
                   {/* Details content */}
                   <div className="p-6 flex-grow flex flex-col justify-between space-y-4">
                     <div className="space-y-2">
-                      <span className="text-[11px] font-['Montserrat'] font-bold tracking-widest text-[#cca72f] uppercase block">
+                      <span className={`text-[11px] font-['Montserrat'] font-bold tracking-widest uppercase block ${getCategoryColorClass(chilli.category)}`}>
                         {chilli.category}
                       </span>
                       <h3 className="font-['Montserrat'] font-bold text-[16px] md:text-[18px] text-[#1a1c1e] group-hover:text-[#8f000d] transition-colors leading-snug">
