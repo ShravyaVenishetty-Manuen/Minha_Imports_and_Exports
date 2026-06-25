@@ -172,7 +172,7 @@ const WhyChooseUs = () => {
                 </h3>
 
                 {/* Description */}
-                <p className="font-['Nunito'] font-normal text-[#5a403e] text-[14px] leading-[1.6]">
+                <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[14px] leading-[1.6]">
                   {card.text}
                 </p>
               </motion.div>

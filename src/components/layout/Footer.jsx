@@ -77,7 +77,7 @@ const Footer = () => {
                 { name: 'Certifications', path: '/certifications' }
               ].map((link, idx) => (
                 <li key={idx}>
-                  <Link to={link.path} className="text-[13px] text-[#a0a5ad]/90 hover:text-[#cca72f] hover:translate-x-1.5 transition-all duration-300 block font-normal py-2 md:py-0.5">
+                  <Link to={link.path} className="text-[13px] text-[#a0a5ad]/90 hover:text-[#cca72f] hover:translate-x-1.5 transition-all duration-300 block font-semibold py-2 md:py-0.5">
                     {link.name}
                   </Link>
                 </li>
@@ -107,7 +107,7 @@ const Footer = () => {
                 { name: 'Byadgi Dry Chilli', path: '/varieties' }
               ].map((product, idx) => (
                 <li key={idx}>
-                  <Link to={product.path} className="text-[13px] text-[#a0a5ad]/90 hover:text-[#cca72f] hover:translate-x-1.5 transition-all duration-300 block font-normal py-2 md:py-0.5">
+                  <Link to={product.path} className="text-[13px] text-[#a0a5ad]/90 hover:text-[#cca72f] hover:translate-x-1.5 transition-all duration-300 block font-semibold py-2 md:py-0.5">
                     {product.name}
                   </Link>
                 </li>

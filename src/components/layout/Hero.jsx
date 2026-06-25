@@ -98,7 +98,7 @@ const Hero = () => {
           {/* Subheading */}
           <motion.p
             variants={itemVariants}
-            className="font-['nunito'] font-normal text-[15px] sm:text-[17px] md:text-[19px] leading-relaxed max-w-2xl text-white/95 text-center"
+            className="font-['nunito'] font-semibold text-[15px] sm:text-[17px] md:text-[19px] leading-relaxed max-w-2xl text-white/95 text-center"
           >
             Delivering Quality, Purity and Trust Across Global Markets. We are your premium gateway to the finest spices from India's chilli capital.
           </motion.p>

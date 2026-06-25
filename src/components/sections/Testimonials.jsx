@@ -91,7 +91,7 @@ const Testimonials = () => {
               </h2>
             </div>
 
-            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
               We partner with India's largest domestic packers, food processors, and spice exporters to deliver consistent, certified dry red chilli varieties to global end-users.
             </p>
 
@@ -184,7 +184,7 @@ const Testimonials = () => {
                     </h3>
 
                     {/* Review text */}
-                    <p className="font-['Nunito'] font-normal text-[#5a403e] text-[14px] sm:text-[15.5px] leading-relaxed text-justify">
+                    <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[14px] sm:text-[15.5px] leading-relaxed text-justify">
                       {reviews[activeIndex].text}
                     </p>
                   </div>

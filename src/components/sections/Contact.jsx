@@ -66,7 +66,7 @@ const Contact = () => {
                 Looking for a Reliable <br className="hidden sm:inline" /> Chilli Buying Partner?
               </h2>
 
-              <p className="font-['nunito'] font-normal text-[13.5px] leading-relaxed text-white/80">
+              <p className="font-['nunito'] font-semibold text-[13.5px] leading-relaxed text-white/80">
                 Looking to buy premium dry red chillies or high-quality chilli powder? Get in touch with us today for customized wholesale quotes, bulk orders, and direct sourcing inquiries.
               </p>
 

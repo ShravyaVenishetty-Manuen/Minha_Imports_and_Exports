@@ -86,7 +86,7 @@ const Facility = () => {
           <h1 className="font-['urbanist'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             Our Facilities
           </h1>
-          <p className="font-['Nunito'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
+          <p className="font-['Nunito'] font-semibold text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
             Modern Infrastructure for Safe, Hygienic, and Reliable Chilli Exports
           </p>
         </div>
@@ -113,10 +113,10 @@ const Facility = () => {
               </h2>
             </div>
 
-            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
               At Minha Imports & Exports, our facilities represent the pinnacle of "Seed-to-Shipment" logistics. We have invested in state-of-the-art infrastructure that integrates cold chain management, automated sorting, and multi-tier quality control labs to ensure every shipment meets the stringent standards of the international market.
             </p>
-            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
               Our operational capabilities are built around a central philosophy: transparency. From the moment the chillies arrive from the farms to the final dispatch, every step is documented and performed under strict hygienic conditions.
             </p>
 
@@ -518,7 +518,7 @@ const Facility = () => {
             <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Built for Quality &amp; Reliability
             </h2>
-            <p className="font-['Nunito'] font-normal text-[#5a403e] max-w-2xl mx-auto text-[15px] md:text-[16px] leading-[1.6]">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] max-w-2xl mx-auto text-[15px] md:text-[16px] leading-[1.6]">
               Our infrastructure isn't just about high-tech machines; it's about the promise of safety, consistency, and promptness we deliver to your doorstep.
             </p>
             <div className="w-16 h-[2.5px] bg-[#8f000d] mx-auto mt-4 rounded-full" />
@@ -606,7 +606,7 @@ const Facility = () => {
                     <h4 className="font-['urbanist'] font-bold text-neutral-900 text-[16px] leading-tight">
                       {value.title}
                     </h4>
-                    <p className="font-['Nunito'] font-normal text-[#5a403e]/85 text-[13.5px] leading-relaxed max-w-xs">
+                    <p className="font-['Nunito'] font-semibold text-[#5a403e]/85 text-[13.5px] leading-relaxed max-w-xs">
                       {value.desc}
                     </p>
                   </div>
@@ -670,7 +670,7 @@ const Facility = () => {
               </h2>
 
               {/* Description */}
-              <p className="font-['Nunito'] font-normal text-white/80 text-[13.5px] leading-relaxed">
+              <p className="font-['Nunito'] font-semibold text-white/80 text-[13.5px] leading-relaxed">
                 Experience the difference of a facility built for the demands of the global market. Request a virtual tour or a quote today.
               </p>
 

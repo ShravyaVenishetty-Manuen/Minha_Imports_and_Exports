@@ -123,7 +123,7 @@ const QualityAssurance = () => {
           <h1 className="font-['urbanist'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             Quality Assurance
           </h1>
-          <p className="font-['Nunito'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
+          <p className="font-['Nunito'] font-semibold text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
             Maintaining Excellence Through Every Stage of Export
           </p>
         </div>
@@ -263,7 +263,7 @@ const QualityAssurance = () => {
                   <h3 className="font-['urbanist'] font-bold text-[16px] text-neutral-900 mt-4 mb-2 uppercase tracking-wide">
                     {stage.title}
                   </h3>
-                  <p className="font-['Nunito'] font-normal text-[#5a403e] text-[13px] md:text-[14px] leading-relaxed max-w-xs px-2">
+                  <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[13px] md:text-[14px] leading-relaxed max-w-xs px-2">
                     {stage.desc}
                   </p>
                 </motion.div>
@@ -291,7 +291,7 @@ const QualityAssurance = () => {
             <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Certified Quality Measures
             </h2>
-            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-2xl">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-2xl">
               Rigorous laboratory analysis and inspections are implemented to monitor ASTA moisture, purity, safety index, and phytosanitary metrics.
             </p>
           </motion.div>
@@ -319,7 +319,7 @@ const QualityAssurance = () => {
                   </h3>
                 </div>
 
-                <p className="font-['Nunito'] font-normal text-white/80 text-[13.5px] leading-relaxed">
+                <p className="font-['Nunito'] font-semibold text-white/80 text-[13.5px] leading-relaxed">
                   Every step is controlled, tested and certified. We implement strict multi-stage sorting, moisture management (10-12%), and laboratory inspection to meet international food safety benchmarks and preserve natural color and heat.
                 </p>
               </div>
@@ -348,7 +348,7 @@ const QualityAssurance = () => {
                     Moisture Control
                   </h4>
                 </div>
-                <p className="font-['Nunito'] font-normal text-[#5a403e] text-[13px] leading-relaxed mt-4">
+                <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[13px] leading-relaxed mt-4">
                   10-12% maintained to prevent mold.
                 </p>
               </div>
@@ -371,7 +371,7 @@ const QualityAssurance = () => {
                     Cleanliness
                   </h4>
                 </div>
-                <p className="font-['Nunito'] font-normal text-[#5a403e] text-[13px] leading-relaxed mt-4">
+                <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[13px] leading-relaxed mt-4">
                   Product free from foreign matter.
                 </p>
               </div>
@@ -394,7 +394,7 @@ const QualityAssurance = () => {
                     Product Grading
                   </h4>
                 </div>
-                <p className="font-['Nunito'] font-normal text-[#5a403e] text-[13px] leading-relaxed mt-4">
+                <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[13px] leading-relaxed mt-4">
                   SHU & ASTA standards for markets.
                 </p>
               </div>
@@ -417,7 +417,7 @@ const QualityAssurance = () => {
                     Packaging Safety
                   </h4>
                 </div>
-                <p className="font-['Nunito'] font-normal text-[#5a403e] text-[13px] leading-relaxed mt-4">
+                <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[13px] leading-relaxed mt-4">
                   Food-grade packaging for long freshness.
                 </p>
               </div>
@@ -440,7 +440,7 @@ const QualityAssurance = () => {
                     Export Compliance
                   </h4>
                 </div>
-                <p className="font-['Nunito'] font-normal text-[#5a403e] text-[13px] leading-relaxed mt-4">
+                <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[13px] leading-relaxed mt-4">
                   Phytosanitary & MRL compliant.
                 </p>
               </div>
@@ -469,7 +469,7 @@ const QualityAssurance = () => {
                     Global Trust
                   </h4>
                 </div>
-                <p className="font-['Nunito'] font-normal text-white/80 text-[13px] leading-relaxed mt-4">
+                <p className="font-['Nunito'] font-semibold text-white/80 text-[13px] leading-relaxed mt-4">
                   Delivering premium quality to international spice hubs.
                 </p>
               </div>
@@ -505,7 +505,7 @@ const QualityAssurance = () => {
             </div>
 
             {/* Description */}
-            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] max-w-3xl mx-auto">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] max-w-3xl mx-auto">
               Our legacy is built on the consistency of our supply. By integrating technology with traditional farming wisdom, we provide a transparent bridge between Indian agriculture and global commerce. When you choose Minha, you choose a partner committed to your brand's integrity.
             </p>
 
@@ -612,7 +612,7 @@ const QualityAssurance = () => {
               </h2>
 
               {/* Description */}
-              <p className="font-['Nunito'] font-normal text-white/80 text-[13.5px] leading-relaxed">
+              <p className="font-['Nunito'] font-semibold text-white/80 text-[13.5px] leading-relaxed">
                 Partner with Minha Imports & Exports for reliable, grade-A dry red chillies. Get a customized quote based on your specific requirements today.
               </p>
 

@@ -92,6 +92,7 @@
     font-family: var(--font-body);
     background-color: #FFFFFF;
     color: var(--color-text-dark);
+    font-weight: 600;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -190,6 +191,7 @@
   li {
     font-size: 16px;
     line-height: 1.6;
+    font-weight: 600;
   }
 
   @media (min-width: 1024px) {
@@ -198,6 +200,7 @@
     body,
     li {
       font-size: 18px;
+      font-weight: 600;
     }
   }
 }
@@ -342,32 +345,32 @@
   }
 
   .hero-title {
-    font-family: 'Urbanist', sans-serif;
+    font-family: var(--font-heading);
   }
 
   .hero-description {
-    font-family: 'Nunito', sans-serif;
+    font-family: var(--font-body);
   }
 
   .section-title {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-heading);
   }
 
   .nav-links {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-body);
   }
 
   .custom-heading {
-    font-family: var(--font-urbanist);
+    font-family: var(--font-heading);
   }
 
   .custom-body {
-    font-family: var(--font-nunito);
+    font-family: var(--font-body);
   }
 }
 
 @utility font-headline-md {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-heading);
 }
 
 @utility text-headline-md {
@@ -377,7 +380,7 @@
 }
 
 @utility font-headline-lg {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-heading);
 }
 
 @utility text-headline-lg {
@@ -387,7 +390,7 @@
 }
 
 @utility font-label-caps {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
 }
 
 @utility text-label-caps {
@@ -398,7 +401,7 @@
 }
 
 @utility font-body-lg {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
 }
 
 @utility text-body-lg {
@@ -408,7 +411,7 @@
 }
 
 @utility font-body-md {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
 }
 
 @utility text-body-md {
@@ -418,7 +421,7 @@
 }
 
 @utility font-body-sm {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
 }
 
 @utility text-body-sm {
@@ -428,7 +431,7 @@
 }
 
 @utility font-display-lg-mobile {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-heading);
 }
 
 @utility text-display-lg-mobile {
@@ -438,7 +441,7 @@
 }
 
 @utility font-display-lg {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-heading);
 }
 
 @utility text-display-lg {

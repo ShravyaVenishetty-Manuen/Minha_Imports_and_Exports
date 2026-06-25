@@ -91,7 +91,7 @@ const Varieties = () => {
           <h1 className="font-['urbanist'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             Premium Chilli Varieties
           </h1>
-          <p className="font-['Nunito'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
+          <p className="font-['Nunito'] font-semibold text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
             Export-Grade Guntur Dry Red Chillies with Superior Quality and Global Standards
           </p>
         </div>
@@ -115,10 +115,10 @@ const Varieties = () => {
             <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Precision-Graded for <br className="hidden sm:inline" /> Global Markets
             </h2>
-            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
               At Minha Imports & Exports, we understand the nuances of global commodity trading. Our red chillies are sourced directly from the fertile Guntur region, processed in state-of-the-art facilities to meet stringent international food safety standards.
             </p>
-            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
               From moisture control to stem removal and customized grading, every batch undergoes rigorous quality checks. We cater to diverse requirements including whole pods, crushed flakes, and fine powder, ensuring the SHU levels and color values match your exact technical specifications.
             </p>
 
@@ -163,7 +163,7 @@ const Varieties = () => {
             <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-primary tracking-tight">
               Our Core Varieties
             </h2>
-            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
               We offer tailored grades across major varieties to suit extraction, food service, and spice blend specifications.
             </p>
 
@@ -262,7 +262,7 @@ const Varieties = () => {
                           {chilli.name}
                         </Link>
                       </h3>
-                      <p className="font-['Nunito'] font-normal text-[#5a403e] text-[13px] leading-[1.5] h-15 overflow-hidden text-ellipsis line-clamp-3">
+                      <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[13px] leading-[1.5] h-15 overflow-hidden text-ellipsis line-clamp-3">
                         {chilli.description}
                       </p>
                     </div>
@@ -388,7 +388,7 @@ const Varieties = () => {
             <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Uncompromising Sourcing Ethics
             </h2>
-            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] leading-relaxed">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[15px] leading-relaxed">
               Our seed-to-shipment workflow ensures that the quality harvested on the farm is exactly what arrives at your destination port.
             </p>
           </motion.div>
@@ -499,7 +499,7 @@ const Varieties = () => {
                 ].map((pkg, idx) => (
                   <div key={idx} className="space-y-1">
                     <h5 className="font-['urbanist'] font-bold text-[13px] text-[#8f000d]">{pkg.name}</h5>
-                    <p className="font-['Nunito'] text-[#5a403e]/70 text-[11px] leading-tight">{pkg.desc}</p>
+                    <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[11px] leading-tight">{pkg.desc}</p>
                   </div>
                 ))}
               </div>
@@ -573,7 +573,7 @@ const Varieties = () => {
                   Need Bulk Chilli Supply for <br className="hidden sm:inline" /> Export or Processing?
                 </h2>
 
-                <p className="font-['Nunito'] font-normal text-[13.5px] leading-relaxed text-white/80">
+                <p className="font-['Nunito'] font-semibold text-[13.5px] leading-relaxed text-white/80">
                   Partner with India’s premier chilli export desk. Request specialized quotes, certificate reports, and booking timelines for your trade volume.
                 </p>
 

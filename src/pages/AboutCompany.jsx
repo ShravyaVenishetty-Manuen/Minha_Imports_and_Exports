@@ -332,7 +332,7 @@ const AboutCompany = () => {
           <h1 className="font-['urbanist'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             About Minha <br className="hidden md:block" />Imports & Exports
           </h1>
-          <p className="font-['Nunito'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
+          <p className="font-['Nunito'] font-semibold text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
             Delivering Quality, Trust, and Excellence in Global Chilli Exports. We bridge the gap between local agricultural excellence and international demand.
           </p>
         </div>
@@ -401,7 +401,7 @@ const AboutCompany = () => {
           <div className="text-center mb-10">
             <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Our Foundation</span>
             <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">Mission, Policy & Commitment</h2>
-            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-2xl mx-auto">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-2xl mx-auto">
               Discover our core frameworks, standards, and values that guide every export transaction and operational process.
             </p>
           </div>
@@ -481,7 +481,7 @@ const AboutCompany = () => {
                       {pillars[activeSection].label}
                     </h3>
 
-                    <p className="font-body-lg text-white/85 text-[15px] md:text-[17px] leading-[1.7] text-justify font-normal">
+                    <p className="font-body-lg text-white/85 text-[15px] md:text-[17px] leading-[1.7] text-justify font-semibold">
                       {pillars[activeSection].content}
                     </p>
                   </motion.div>
@@ -502,7 +502,7 @@ const AboutCompany = () => {
           <div className="text-center mb-10">
             <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">The Minha Way</span>
             <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">Core Values That Drive Us</h2>
-            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-2xl mx-auto">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-2xl mx-auto">
               Our operational principles, defining how we interact with customers, partners, and the global environment.
             </p>
           </div>
@@ -546,7 +546,7 @@ const AboutCompany = () => {
                     <h4 className="font-['urbanist'] font-extrabold text-[20px] text-neutral-900 tracking-tight">
                       {val.title}
                     </h4>
-                    <p className="font-['Nunito'] font-normal text-neutral-600 text-[14px] leading-relaxed">
+                    <p className="font-['Nunito'] font-semibold text-neutral-600 text-[14px] leading-relaxed">
                       {val.desc}
                     </p>
                   </div>
@@ -600,7 +600,7 @@ const AboutCompany = () => {
           >
             <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Our Evolution</span>
             <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">Our Journey & Milestones</h2>
-            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-2xl mx-auto">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-2xl mx-auto">
               Tracing the progress of Minha Imports & Exports from our founding roots to our current global presence.
             </p>
           </motion.div>
@@ -763,7 +763,7 @@ const AboutCompany = () => {
                     <h3 className="font-['urbanist'] font-extrabold text-[24px] md:text-[32px] text-[#1a1c1e] leading-tight">
                       {timelineData[activeTimelineYear].title}
                     </h3>
-                    <p className="font-['Nunito'] font-normal text-neutral-600 text-[15px] leading-relaxed">
+                    <p className="font-['Nunito'] font-semibold text-neutral-600 text-[15px] leading-relaxed">
                       {timelineData[activeTimelineYear].desc}
                     </p>
                   </div>
@@ -797,7 +797,7 @@ const AboutCompany = () => {
           <div className="text-center mb-10">
             <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Leadership & Management</span>
             <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">Leadership & Visionary Management</h2>
-            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-2xl mx-auto">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-2xl mx-auto">
               Guided by decades of experience in international trade, corporate relations, and agricultural excellence.
             </p>
           </div>
@@ -824,7 +824,7 @@ const AboutCompany = () => {
                   "Our mission is to establish Minha as the synonym of trust, quality, and purity in the global chilli market, connecting Guntur farmers with buyers."
                 </div>
 
-                <p className="text-on-surface-variant font-['Nunito'] font-normal text-[13px] leading-relaxed">
+                <p className="text-on-surface-variant font-['Nunito'] font-semibold text-[13px] leading-relaxed">
                   With over 20 years of experience in global agricultural exports, Mr. Shaik Jani Basha founded Minha with a vision to bridge the gap between Indian spice heritage and global quality standards. He guides the company's long-term strategy.
                 </p>
               </div>
@@ -850,7 +850,7 @@ const AboutCompany = () => {
                   "Our goal is simple: to make Indian dry chillies the gold standard of quality and traceability in every international market we serve."
                 </div>
 
-                <p className="text-on-surface-variant font-['Nunito'] font-normal text-[13px] leading-relaxed">
+                <p className="text-on-surface-variant font-['Nunito'] font-semibold text-[13px] leading-relaxed">
                   With over 15 years of experience in supply chain technology and global trade, Mr. Moosa Maulavi Rafeekh co-founded Minha to modernize agricultural exports. He oversees technology integration, logistics, and operational compliance.
                 </p>
               </div>
@@ -878,7 +878,7 @@ const AboutCompany = () => {
                 <div>
                   <span className="font-['urbanist'] font-bold text-[9px] tracking-[0.15em] text-[#8f000d] uppercase block mb-1">Chief Operating Officer</span>
                   <h4 className="font-['urbanist'] font-bold text-[16px] text-[#1a1c1e]">Mr. David Chen</h4>
-                  <p className="text-neutral-500 font-['Nunito'] font-normal text-[12px] leading-relaxed mt-2">
+                  <p className="text-neutral-500 font-['Nunito'] font-semibold text-[12px] leading-relaxed mt-2">
                     David oversees our global supply chain and logistics, ensuring that every shipment meets the stringent quality requirements of our international partners.
                   </p>
                 </div>
@@ -898,7 +898,7 @@ const AboutCompany = () => {
                 <div>
                   <span className="font-['urbanist'] font-bold text-[9px] tracking-[0.15em] text-[#2c6a46] uppercase block mb-1">Director of Quality & Compliance</span>
                   <h4 className="font-['urbanist'] font-bold text-[16px] text-[#1a1c1e]">Dr. Rajesh Varma</h4>
-                  <p className="text-neutral-500 font-['Nunito'] font-normal text-[12px] leading-relaxed mt-2">
+                  <p className="text-neutral-500 font-['Nunito'] font-semibold text-[12px] leading-relaxed mt-2">
                     Dr. Varma leads our laboratory testing, pesticide analysis, organic certifications, and strict ASTA/FDA regulatory compliance audits.
                   </p>
                 </div>
@@ -918,7 +918,7 @@ const AboutCompany = () => {
                 <div>
                   <span className="font-['urbanist'] font-bold text-[9px] tracking-[0.15em] text-[#cca72f] uppercase block mb-1">VP of Global Trade Relations</span>
                   <h4 className="font-['urbanist'] font-bold text-[16px] text-[#1a1c1e]">Ms. Elena Rostova</h4>
-                  <p className="text-neutral-500 font-['Nunito'] font-normal text-[12px] leading-relaxed mt-2">
+                  <p className="text-neutral-500 font-['Nunito'] font-semibold text-[12px] leading-relaxed mt-2">
                     Elena manages import/export compliance, international client relations, contract fulfillment, and European & Middle Eastern market expansion.
                   </p>
                 </div>
@@ -938,7 +938,7 @@ const AboutCompany = () => {
                 <div>
                   <span className="font-['urbanist'] font-bold text-[9px] tracking-[0.15em] text-[#8f000d] uppercase block mb-1">Head of Sourcing & Logistics</span>
                   <h4 className="font-['urbanist'] font-bold text-[16px] text-[#1a1c1e]">Mr. Vikram Malhotra</h4>
-                  <p className="text-neutral-500 font-['Nunito'] font-normal text-[12px] leading-relaxed mt-2">
+                  <p className="text-neutral-500 font-['Nunito'] font-semibold text-[12px] leading-relaxed mt-2">
                     Vikram coordinates directly with Guntur farming clusters to secure high-quality yields and handles dry container logistics at ports.
                   </p>
                 </div>
@@ -958,7 +958,7 @@ const AboutCompany = () => {
             <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Our International Trade Network
             </h2>
-            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4">
               Operating directly from Guntur, India (the heart of the spice trade), Minha exports premium graded red chillies to global ports, ensuring strict compliance with international phytosanitary, pesticide, and ASTA guidelines.
             </p>
           </div>
@@ -1055,7 +1055,7 @@ const AboutCompany = () => {
             <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Our Simple Three-Step Process
             </h2>
-            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-xl mx-auto">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-xl mx-auto">
               We make it easy for global businesses to source premium red chillies from India with stable prices, clean quality, and fast shipping.
             </p>
           </div>
@@ -1149,7 +1149,7 @@ const AboutCompany = () => {
                   <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-[#2c6a46]/5 text-[#2c6a46] font-['urbanist'] font-bold text-[10px] tracking-wide uppercase">
                     20+ Farmer Groups
                   </div>
-                  <p className="font-['Nunito'] font-normal text-neutral-500 text-[14px] leading-relaxed pt-1 text-center">
+                  <p className="font-['Nunito'] font-semibold text-neutral-500 text-[14px] leading-relaxed pt-1 text-center">
                     We buy chillies directly from farmer groups in Guntur. This gives us better quality control, stable prices, and helps us support local farming communities.
                   </p>
                 </div>
@@ -1187,7 +1187,7 @@ const AboutCompany = () => {
                   <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-[#8f000d]/5 text-[#8f000d] font-['urbanist'] font-bold text-[10px] tracking-wide uppercase">
                     100% Safe Spices
                   </div>
-                  <p className="font-['Nunito'] font-normal text-neutral-500 text-[14px] leading-relaxed pt-1 text-center">
+                  <p className="font-['Nunito'] font-semibold text-neutral-500 text-[14px] leading-relaxed pt-1 text-center">
                     Every batch of chillies is tested in laboratories. We check for moisture, pesticide levels, and colors to make sure they match global health standards.
                   </p>
                 </div>
@@ -1225,7 +1225,7 @@ const AboutCompany = () => {
                   <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-[#cca72f]/5 text-[#cca72f] font-['urbanist'] font-bold text-[10px] tracking-wide uppercase">
                     15+ Countries Served
                   </div>
-                  <p className="font-['Nunito'] font-normal text-neutral-500 text-[14px] leading-relaxed pt-1 text-center">
+                  <p className="font-['Nunito'] font-semibold text-neutral-500 text-[14px] leading-relaxed pt-1 text-center">
                     We book fast cargo ships and take care of all export paperwork. Your orders arrive at your port on time with no customs delays.
                   </p>
                 </div>
@@ -1281,7 +1281,7 @@ const AboutCompany = () => {
               </h2>
 
               {/* Description */}
-              <p className="font-['Nunito'] font-normal text-white/80 text-[13.5px] leading-relaxed">
+              <p className="font-['Nunito'] font-semibold text-white/80 text-[13.5px] leading-relaxed">
                 Connect directly with our Guntur export desk. We offer custom packaging, strict pesticide compliance, and stable year-round shipping slots.
               </p>
 

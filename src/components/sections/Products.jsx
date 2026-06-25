@@ -49,7 +49,7 @@ const Products = () => {
           <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight mb-4">
             Premium Chilli Products for the <span className="text-[#8f000d]">Global Market</span>
           </h2>
-          <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
+          <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
             Sourced directly from Guntur, India's spice capital. We process and pack to the highest international quality standards.
           </p>
         </div>
@@ -76,7 +76,7 @@ const Products = () => {
             </h3>
 
             {/* Description */}
-            <p className="font-['nunito'] font-normal text-[#5a403e] text-[15px] leading-[1.7] mb-8 max-w-md">
+            <p className="font-['nunito'] font-semibold text-[#5a403e] text-[15px] leading-[1.7] mb-8 max-w-md">
               Handpicked from the best farms of Guntur. Rich color, high SHU and exceptional quality that the world trusts.
             </p>
 
@@ -152,7 +152,7 @@ const Products = () => {
             </h3>
 
             {/* Description */}
-            <p className="font-['nunito'] font-normal text-[#5a403e] text-[15px] leading-[1.7] mb-8 max-w-md">
+            <p className="font-['nunito'] font-semibold text-[#5a403e] text-[15px] leading-[1.7] mb-8 max-w-md">
               Finely ground using advanced technology to retain natural oils, color and pungency.
             </p>
 

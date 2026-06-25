@@ -148,7 +148,7 @@ const OurProcess = () => {
               </h3>
 
               {/* Description */}
-              <p className="font-['nunito'] font-normal text-[#5a403e] text-[13px] md:text-[14px] leading-[1.6] max-w-[260px]">
+              <p className="font-['nunito'] font-semibold text-[#5a403e] text-[13px] md:text-[14px] leading-[1.6] max-w-[260px]">
                 {step.text}
               </p>
 

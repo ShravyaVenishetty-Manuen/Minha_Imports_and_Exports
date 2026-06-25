@@ -215,7 +215,7 @@ const Certifications = () => {
           <h1 className="font-['urbanist'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             Certifications &amp; Compliance
           </h1>
-          <p className="font-['Nunito'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
+          <p className="font-['Nunito'] font-semibold text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
             Committed to International Standards and Trusted Export Practices
           </p>
         </div>
@@ -258,10 +258,10 @@ const Certifications = () => {
                 Upholding the Gold Standard in Spice Export
               </h2>
             </div>
-            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.7]">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[15px] md:text-[16px] leading-[1.7]">
               At Minha Imports &amp; Exports, quality is not just a promise — it is a verifiable standard. Our seed-to-shipment workflow is meticulously documented and audited to ensure every batch of Guntur Chillies meets the stringent requirements of global food safety authorities.
             </p>
-            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.7]">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[15px] md:text-[16px] leading-[1.7]">
               Our certifications span national food safety, international export regulations, and global trade authorizations — giving our partners complete confidence in every container.
             </p>
 
@@ -336,7 +336,7 @@ const Certifications = () => {
                 <p className="font-['urbanist'] font-semibold text-[10px] tracking-wider uppercase text-[#5a403e]/60 mb-3">
                   {cert.subtitle}
                 </p>
-                <p className="font-['Nunito'] font-normal text-[#5a403e] text-[13px] leading-relaxed flex-1">
+                <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[13px] leading-relaxed flex-1">
                   {cert.desc}
                 </p>
                 <div className="mt-4 pt-4 border-t border-neutral-100">
@@ -392,7 +392,7 @@ const Certifications = () => {
                 </div>
               </div>
 
-              <p className="font-['Nunito'] font-normal text-[#5a403e] text-[14px] sm:text-[15px] leading-relaxed max-w-md">
+              <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[14px] sm:text-[15px] leading-relaxed max-w-md">
                 Ensuring global quality through internationally recognized standards and rigorous processes at every stage of sourcing and export.
               </p>
 
@@ -539,7 +539,7 @@ const Certifications = () => {
                     <h4 className="font-['urbanist'] font-bold text-[11px] sm:text-[13px] md:text-[15px] text-[#1a1c1e] tracking-wide mb-1 leading-tight">
                       Product Safety
                     </h4>
-                    <p className="font-['Nunito'] font-normal text-[#5a403e] text-[8.5px] sm:text-[9.5px] md:text-[11px] leading-relaxed max-w-[115px] sm:max-w-[145px]">
+                    <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[8.5px] sm:text-[9.5px] md:text-[11px] leading-relaxed max-w-[115px] sm:max-w-[145px]">
                       Advanced testing for safe and residue-free products.
                     </p>
                   </div>
@@ -552,7 +552,7 @@ const Certifications = () => {
                     <h4 className="font-['urbanist'] font-bold text-[11px] sm:text-[13px] md:text-[15px] text-[#1a1c1e] tracking-wide mb-1 leading-tight">
                       Hygienic Handling
                     </h4>
-                    <p className="font-['Nunito'] font-normal text-[#5a403e] text-[8.5px] sm:text-[9.5px] md:text-[11px] leading-relaxed max-w-[115px] sm:max-w-[145px]">
+                    <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[8.5px] sm:text-[9.5px] md:text-[11px] leading-relaxed max-w-[115px] sm:max-w-[145px]">
                       Strict hygiene and controlled processing environments.
                     </p>
                   </div>
@@ -565,7 +565,7 @@ const Certifications = () => {
                     <h4 className="font-['urbanist'] font-bold text-[11px] sm:text-[13px] md:text-[15px] text-[#1a1c1e] tracking-wide mb-1 leading-tight">
                       Export Compliance
                     </h4>
-                    <p className="font-['Nunito'] font-normal text-[#5a403e] text-[8.5px] sm:text-[9.5px] md:text-[11px] leading-relaxed max-w-[115px] sm:max-w-[145px]">
+                    <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[8.5px] sm:text-[9.5px] md:text-[11px] leading-relaxed max-w-[115px] sm:max-w-[145px]">
                       Compliant with global MRL and phytosanitary regulations.
                     </p>
                   </div>
@@ -578,7 +578,7 @@ const Certifications = () => {
                     <h4 className="font-['urbanist'] font-bold text-[11px] sm:text-[13px] md:text-[15px] text-[#1a1c1e] tracking-wide mb-1 leading-tight">
                       Doc Accuracy
                     </h4>
-                    <p className="font-['Nunito'] font-normal text-[#5a403e] text-[8.5px] sm:text-[9.5px] md:text-[11px] leading-relaxed max-w-[115px] sm:max-w-[145px]">
+                    <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[8.5px] sm:text-[9.5px] md:text-[11px] leading-relaxed max-w-[115px] sm:max-w-[145px]">
                       Accurate and verifiable documents for seamless clearance.
                     </p>
                   </div>
@@ -620,7 +620,7 @@ const Certifications = () => {
                   </div>
                   <div>
                     <p className="font-['urbanist'] font-bold text-[15px] text-[#1a1c1e] mb-1">{pt.title}</p>
-                    <p className="font-['Nunito'] font-normal text-[#5a403e] text-[14px] leading-relaxed">{pt.desc}</p>
+                    <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[14px] leading-relaxed">{pt.desc}</p>
                   </div>
                 </motion.li>
               ))}
@@ -715,7 +715,7 @@ const Certifications = () => {
               </h2>
 
               {/* Description */}
-              <p className="font-['Nunito'] font-normal text-white/80 text-[13.5px] leading-relaxed">
+              <p className="font-['Nunito'] font-semibold text-white/80 text-[13.5px] leading-relaxed">
                 Partner with Minha for trusted sourcing with globally compliant documentation. We handle the complexity of compliance so you can focus on growth.
               </p>
 

@@ -163,7 +163,7 @@ const ChilliDetail = () => {
           <h1 className="font-['urbanist'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             {chilli.name}
           </h1>
-          <p className="font-['Nunito'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
+          <p className="font-['Nunito'] font-semibold text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
             Premium Export Grade Guntur Dry Red Chilli
           </p>
         </div>
@@ -222,7 +222,7 @@ const ChilliDetail = () => {
                   <div className="p-2 rounded-lg bg-red-50 text-[#8f000d]">
                     <FiTag className="text-[16px]" />
                   </div>
-                  <span className="text-neutral-500 font-bold text-[9px] uppercase tracking-wider">Variety Name</span>
+                  <span className="text-neutral-700 font-bold text-[10px] uppercase tracking-wider">Variety Name</span>
                 </div>
                 <div className="flex justify-between items-end">
                   <div>
@@ -239,7 +239,7 @@ const ChilliDetail = () => {
                   <div className="p-2 rounded-lg bg-red-50 text-[#8f000d]">
                     <GiChiliPepper className="text-[16px]" />
                   </div>
-                  <span className="text-neutral-500 font-bold text-[9px] uppercase tracking-wider">Heat Level</span>
+                  <span className="text-neutral-700 font-bold text-[10px] uppercase tracking-wider">Heat Level</span>
                 </div>
                 <div>
                   <div className="text-[#8f000d] font-bold text-[14px] md:text-[15px] leading-tight font-heading">{chilli.heatLevel}</div>
@@ -253,7 +253,7 @@ const ChilliDetail = () => {
                   <div className="p-2 rounded-lg bg-yellow-50 text-[#cca72f]">
                     <FiAward className="text-[16px]" />
                   </div>
-                  <span className="text-neutral-500 font-bold text-[9px] uppercase tracking-wider">Color value</span>
+                  <span className="text-neutral-700 font-bold text-[10px] uppercase tracking-wider">Color value</span>
                 </div>
                 <div>
                   <div className="text-[#cca72f] font-bold text-[14px] md:text-[15px] leading-tight font-heading">{chilli.colorValue}</div>
@@ -267,7 +267,7 @@ const ChilliDetail = () => {
                   <div className="p-2 rounded-lg bg-green-50 text-[#1f5e3b]">
                     <FiCheckCircle className="text-[16px]" />
                   </div>
-                  <span className="text-neutral-500 font-bold text-[9px] uppercase tracking-wider">Stem cut</span>
+                  <span className="text-neutral-700 font-bold text-[10px] uppercase tracking-wider">Stem cut</span>
                 </div>
                 <div>
                   <div className="text-[#1a1c1e] font-bold text-[14px] md:text-[15px] leading-tight font-heading">{chilli.stemType}</div>
@@ -281,7 +281,7 @@ const ChilliDetail = () => {
                   <div className="p-2 rounded-lg bg-blue-50 text-blue-600">
                     <FiDroplet className="text-[16px]" />
                   </div>
-                  <span className="text-neutral-500 font-bold text-[9px] uppercase tracking-wider">Moisture</span>
+                  <span className="text-neutral-700 font-bold text-[10px] uppercase tracking-wider">Moisture</span>
                 </div>
                 <div>
                   <div className="text-[#1a1c1e] font-bold text-[14px] md:text-[15px] leading-tight font-heading">{chilli.moisture}</div>
@@ -295,7 +295,7 @@ const ChilliDetail = () => {
                   <div className="p-2 rounded-lg bg-neutral-50 text-neutral-600">
                     <FiMapPin className="text-[16px]" />
                   </div>
-                  <span className="text-neutral-500 font-bold text-[9px] uppercase tracking-wider">Regional Origin</span>
+                  <span className="text-neutral-700 font-bold text-[10px] uppercase tracking-wider">Regional Origin</span>
                 </div>
                 <div className="flex justify-between items-end">
                   <div>
@@ -357,8 +357,8 @@ const ChilliDetail = () => {
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="text-center mb-8">
             <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Technical Datasheet</span>
-            <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight text-center">Export Quality Specifications</h2>
-            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] max-w-2xl mx-auto mt-3 text-center">
+            <h2 className="font-['urbanist'] font-extrabold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight text-center">Export Quality Specifications</h2>
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] max-w-2xl mx-auto mt-3 text-center">
               Standardized laboratory testing parameters verified for direct trade bulk cargo.
             </p>
           </div>
@@ -371,7 +371,7 @@ const ChilliDetail = () => {
               {/* Item 1 */}
               <div className="flex justify-between items-center pb-4 border-b border-neutral-100">
                 <div className="text-left">
-                  <span className="font-semibold text-neutral-800 text-[14px] md:text-[15px] block">Scoville Heat Units (SHU)</span>
+                  <span className="font-bold text-neutral-800 text-[14px] md:text-[15px] block">Scoville Heat Units (SHU)</span>
                   <span className="text-[11px] text-neutral-400 block mt-1">HPLC Analysis Method</span>
                 </div>
                 <span className="font-bold text-[#8f000d] text-[14px] md:text-[15px]">{chilli.heatLevel}</span>
@@ -380,7 +380,7 @@ const ChilliDetail = () => {
               {/* Item 2 */}
               <div className="flex justify-between items-center pb-4 border-b border-neutral-100">
                 <div className="text-left">
-                  <span className="font-semibold text-neutral-800 text-[14px] md:text-[15px] block">ASTA Color Value</span>
+                  <span className="font-bold text-neutral-800 text-[14px] md:text-[15px] block">ASTA Color Value</span>
                   <span className="text-[11px] text-neutral-400 block mt-1">Spectrophotometry</span>
                 </div>
                 <span className="font-bold text-[#cca72f] text-[14px] md:text-[15px]">{chilli.colorValue}</span>
@@ -389,7 +389,7 @@ const ChilliDetail = () => {
               {/* Item 3 */}
               <div className="flex justify-between items-center pb-4 border-b border-neutral-100">
                 <div className="text-left">
-                  <span className="font-semibold text-neutral-800 text-[14px] md:text-[15px] block">Moisture Content</span>
+                  <span className="font-bold text-neutral-800 text-[14px] md:text-[15px] block">Moisture Content</span>
                   <span className="text-[11px] text-neutral-400 block mt-1">Oven Drying Method</span>
                 </div>
                 <span className="font-bold text-neutral-800 text-[14px] md:text-[15px]">{chilli.moisture} Max</span>
@@ -403,7 +403,7 @@ const ChilliDetail = () => {
               {/* Item 4 */}
               <div className="flex justify-between items-center pb-4 border-b border-neutral-100">
                 <div className="text-left">
-                  <span className="font-semibold text-neutral-800 text-[14px] md:text-[15px] block">Purity Standard</span>
+                  <span className="font-bold text-neutral-800 text-[14px] md:text-[15px] block">Purity Standard</span>
                   <span className="text-[11px] text-neutral-400 block mt-1">Manual Sorting</span>
                 </div>
                 <span className="font-bold text-neutral-800 text-[14px] md:text-[15px]">99.5% Min</span>
@@ -412,7 +412,7 @@ const ChilliDetail = () => {
               {/* Item 5 */}
               <div className="flex justify-between items-center pb-4 border-b border-neutral-100">
                 <div className="text-left">
-                  <span className="font-semibold text-neutral-800 text-[14px] md:text-[15px] block">Foreign Matter</span>
+                  <span className="font-bold text-neutral-800 text-[14px] md:text-[15px] block">Foreign Matter</span>
                   <span className="text-[11px] text-neutral-400 block mt-1">Visual Inspection</span>
                 </div>
                 <span className="font-bold text-[#ba1a1a] text-[14px] md:text-[15px]">&lt; 1% Max</span>
@@ -421,7 +421,7 @@ const ChilliDetail = () => {
               {/* Item 6 */}
               <div className="flex justify-between items-center pb-4 border-b border-neutral-100">
                 <div className="text-left">
-                  <span className="font-semibold text-neutral-800 text-[14px] md:text-[15px] block">Shelf Life</span>
+                  <span className="font-bold text-neutral-800 text-[14px] md:text-[15px] block">Shelf Life</span>
                   <span className="text-[11px] text-neutral-400 block mt-1">Proper Dry Storage</span>
                 </div>
                 <span className="font-bold text-neutral-800 text-[14px] md:text-[15px]">12 - 18 Months</span>
@@ -454,7 +454,7 @@ const ChilliDetail = () => {
             <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Industrial Supply Scope</span>
             <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight text-center">Industrial Applications</h2>
             <p className="font-['
-            nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] max-w-2xl mx-auto mt-3 text-center">
+            nunito'] font-semibold text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] max-w-2xl mx-auto mt-3 text-center">
               Providing the raw material backbone for diverse food, spice processing, and extraction lines globally.
             </p>
           </div>

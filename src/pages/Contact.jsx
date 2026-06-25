@@ -195,7 +195,7 @@ const Contact = () => {
           <h1 className="font-['urbanist'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             Contact Us
           </h1>
-          <p className="font-['Nunito'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
+          <p className="font-['Nunito'] font-semibold text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
             Connect With Us for Premium Guntur Chilli Exports and Business Inquiries
           </p>
         </div>
@@ -216,7 +216,7 @@ const Contact = () => {
                   Global Export Partnerships
                 </h2>
                 <div className="w-10 h-[3px] bg-[#2E6F4F] mb-5 rounded-full" />
-                <p className="font-['Nunito'] font-normal text-[#6B7280] text-[13px] md:text-[14px] leading-[1.8]">
+                <p className="font-['Nunito'] font-semibold text-[#6B7280] text-[13px] md:text-[14px] leading-[1.8]">
                   We welcome importers, wholesalers, food manufacturers, and retail distributors worldwide. Our infrastructure is designed to handle large-scale international orders while maintaining strict quality standards and logistics transparency.
                 </p>
               </div>
@@ -294,7 +294,7 @@ const Contact = () => {
               Global Sourcing Gateway
             </h2>
             <div className="w-16 h-[3px] bg-[#cca72f] mx-auto my-5 rounded-full" />
-            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] leading-relaxed">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[15px] leading-relaxed">
               Experience our seamless digital procurement portal. Fill out our interactive inquiry form below to submit your custom spice requirements directly to our trade specialists.
             </p>
           </div>
@@ -353,7 +353,7 @@ const Contact = () => {
                       <h3 className="font-['urbanist'] font-extrabold text-[22px] leading-tight text-white mb-2">
                         Export Sourcing
                       </h3>
-                      <p className="font-['Nunito'] text-white/60 text-[12px] leading-relaxed mb-2">
+                      <p className="font-['Nunito'] font-semibold text-white text-[14px] leading-relaxed mb-2">
                         Partner with India's premier agricultural exporter. We secure premium quality dry red chilli varieties tailored to your exact specifications.
                       </p>
 
@@ -365,8 +365,8 @@ const Contact = () => {
                               {React.cloneElement(hl.icon, { className: "text-[#cca72f] text-[15px]" })}
                             </div>
                             <div>
-                              <h4 className="font-['urbanist'] font-bold text-[12px] text-white/90 tracking-wide leading-tight">{hl.title}</h4>
-                              <p className="font-['Nunito'] text-[11px] text-white/45 leading-snug mt-0.5">{hl.desc}</p>
+                              <h4 className="font-['urbanist'] font-bold text-[12px] text-white tracking-wide leading-tight">{hl.title}</h4>
+                              <p className="font-['Nunito'] font-semibold text-[11px] text-white/80 leading-snug mt-0.5">{hl.desc}</p>
                             </div>
                           </div>
                         ))}
@@ -376,12 +376,12 @@ const Contact = () => {
                     {/* Bottom Trade Details */}
                     <div className="mt-auto pt-3 border-t border-white/10 flex items-center justify-between">
                       <div className="text-left">
-                        <span className="font-['urbanist'] text-[8px] tracking-wider text-white/40 uppercase block">Avg Response</span>
+                        <span className="font-['urbanist'] text-[8px] tracking-wider text-white/70 uppercase block">Avg Response</span>
                         <span className="font-['urbanist'] text-[12px] font-bold text-white leading-none mt-0.5 block">&lt; 12 Hours</span>
                       </div>
                       <div className="text-right">
-                        <span className="font-['urbanist'] text-[8px] tracking-wider text-[#cca72f] uppercase block">Global Sourcing</span>
-                        <span className="font-['urbanist'] text-[12px] font-bold text-[#cca72f] leading-none mt-0.5 block">ASTA Compliant</span>
+                        <span className="font-['urbanist'] text-[8px] tracking-wider text-[#ffd966] uppercase block">Global Sourcing</span>
+                        <span className="font-['urbanist'] text-[12px] font-bold text-[#ffd966] leading-none mt-0.5 block">ASTA Compliant</span>
                       </div>
                     </div>
                   </div>
@@ -524,7 +524,7 @@ const Contact = () => {
                           Send Inquiry
                           <FiSend className="text-xs transition-transform group-hover:translate-x-1 group-hover:-translate-y-0.5 duration-300" />
                         </button>
-                        <p className="font-['Nunito'] font-normal text-neutral-600 text-[11px] leading-relaxed text-center sm:text-left max-w-xs">
+                        <p className="font-['Nunito'] font-semibold text-neutral-600 text-[11px] leading-relaxed text-center sm:text-left max-w-xs">
                           We respond to verified commercial inquiries within 12 business hours.
                         </p>
                       </div>
@@ -631,7 +631,7 @@ const Contact = () => {
                       Inquiry Transmitted Successfully
                     </h4>
 
-                    <p className="font-['Nunito'] font-normal text-neutral-500 text-[13px] sm:text-[14px] leading-relaxed mb-6">
+                    <p className="font-['Nunito'] font-semibold text-neutral-500 text-[13px] sm:text-[14px] leading-relaxed mb-6">
                       Thank you, <span className="font-semibold text-neutral-800">{formData.name || 'valued partner'}</span>. Our Guntur export desk trade executives have received your request and will follow up with pricing worksheets and product specifications within 12 hours.
                     </p>
 
@@ -725,7 +725,7 @@ const Contact = () => {
                         transition={{ duration: 0.25 }}
                         className="overflow-hidden"
                       >
-                        <p className="pb-4 px-4 pl-[48px] font-['Nunito'] font-normal text-neutral-500 text-[12px] leading-relaxed border-t border-neutral-100/50 pt-2.5">
+                        <p className="pb-4 px-4 pl-[48px] font-['Nunito'] font-semibold text-neutral-500 text-[12px] leading-relaxed border-t border-neutral-100/50 pt-2.5">
                           {faq.a}
                         </p>
                       </motion.div>
@@ -757,7 +757,7 @@ const Contact = () => {
               <h3 className="font-['urbanist'] font-extrabold text-[28px] text-neutral-900 mb-1 tracking-tight">
                 Visit Our Export Hub
               </h3>
-              <p className="font-['Nunito'] font-normal text-neutral-500 text-[14px] mb-6">
+              <p className="font-['Nunito'] font-semibold text-neutral-500 text-[14px] mb-6">
                 Located Beside SBI ATM, Arundalpet.
               </p>
 
@@ -855,7 +855,7 @@ const Contact = () => {
                         transition={{ duration: 0.25 }}
                         className="overflow-hidden"
                       >
-                        <p className="pb-4 px-4 pl-[48px] font-['Nunito'] font-normal text-neutral-500 text-[11px] sm:text-[12px] leading-relaxed border-t border-neutral-100/50 pt-2.5">
+                        <p className="pb-4 px-4 pl-[48px] font-['Nunito'] font-semibold text-neutral-500 text-[11px] sm:text-[12px] leading-relaxed border-t border-neutral-100/50 pt-2.5">
                           {faq.a}
                         </p>
                       </motion.div>
@@ -887,7 +887,7 @@ const Contact = () => {
               <h3 className="font-['urbanist'] font-extrabold text-[24px] text-neutral-900 mb-1 tracking-tight leading-none">
                 Visit Our Export Hub
               </h3>
-              <p className="font-['Nunito'] font-normal text-neutral-500 text-[13px] mb-5">
+              <p className="font-['Nunito'] font-semibold text-neutral-500 text-[13px] mb-5">
                 Located Beside SBI ATM, Arundalpet.
               </p>
 

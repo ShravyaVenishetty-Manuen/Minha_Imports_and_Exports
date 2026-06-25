@@ -74,7 +74,7 @@ const ChilliPowder = () => {
           <h1 className="font-['urbanist'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             Premium Chilli Powder
           </h1>
-          <p className="font-['Nunito'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
+          <p className="font-['Nunito'] font-semibold text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
             Hygienically processed and export-grade chilli powder meticulously sourced from the heart of Guntur for global retail and industrial markets.
           </p>
         </div>
@@ -131,7 +131,7 @@ const ChilliPowder = () => {
           <div className="text-center mb-12">
             <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Catalog Grades</span>
             <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight text-center">Our Premium Export Grades</h2>
-            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] max-w-2xl mx-auto mt-3">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] max-w-2xl mx-auto mt-3">
               Selected variants tailored for culinary excellence and industrial applications across the globe.
             </p>
           </div>
@@ -500,7 +500,7 @@ const ChilliPowder = () => {
                 <h2 className="font-['urbanist'] font-bold text-[22px] sm:text-[26px] md:text-[32px] leading-[1.2] text-white tracking-tight">
                   Looking for Premium <br className="hidden sm:inline" /> Chilli Powder Supply?
                 </h2>
-                <p className="font-['Nunito'] font-normal text-white/80 text-[13.5px] leading-relaxed">
+                <p className="font-['Nunito'] font-semibold text-white/80 text-[13.5px] leading-relaxed">
                   Partner with a trusted export leader. Get a customized quote for your specific grade and volume requirements today.
                 </p>
 
