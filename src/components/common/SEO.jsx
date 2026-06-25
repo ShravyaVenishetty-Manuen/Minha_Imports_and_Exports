@@ -24,7 +24,7 @@ const GLOBAL_SCHEMAS = [
     },
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+91-8185867999',
+      telephone: '+91-7288995777',
       contactType: 'sales',
       email: 'minhaimportsexports@gmail.com',
       availableLanguage: ['English', 'Telugu', 'Hindi'],

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/layout/Navbar'
 import Hero from './components/layout/Hero'
 import About from './components/sections/About'
+import FlagsMarquee from './components/layout/FlagsMarquee'
 import Products from './components/sections/Products'
 import OurProcess from './components/sections/OurProcess'
 import GlobalPresence from './components/sections/GlobalPresence'
@@ -19,6 +20,7 @@ import QualityAssurance from './pages/QualityAssurance'
 import Facility from './pages/Facility'
 import Certifications from './pages/Certifications'
 import SEO from './components/common/SEO'
+import WhatsAppFAB from './components/common/WhatsAppFAB'
 
 function App() {
   return (
@@ -43,6 +45,7 @@ function App() {
                   <Products />
                   <OurProcess />
                   <GlobalPresence />
+                  <FlagsMarquee />
                   <Testimonials />
                   <ContactSection />
                 </>
@@ -58,6 +61,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
+        <WhatsAppFAB />
         <Footer />
       </div>
     </Router>

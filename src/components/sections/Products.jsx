@@ -25,7 +25,7 @@ const Products = () => {
   };
 
   return (
-    <section id="products" className="py-10 md:py-24 px-6 md:px-12 bg-[#FAF8F4] relative overflow-hidden">
+    <section id="products" className="py-12 md:py-16 px-6 md:px-12 bg-[#FAF8F4] relative overflow-hidden">
 
       {/* Soft Leaf Illustrations (Organic background decoration with light opacity) */}
       <div className="absolute top-16 left-8 w-[240px] h-[240px] opacity-[0.03] text-[#1F5E3B] pointer-events-none z-0 select-none">
@@ -85,7 +85,7 @@ const Products = () => {
               {[
                 "Teja, S4, Byadgi & More",
                 "Strictly Graded & Sorted",
-                "12% Max Moisture",
+                "< 11% Moisture",
                 "Export to 25+ Countries"
               ].map((feature, fIdx) => (
                 <li key={fIdx} className="flex items-center gap-3">

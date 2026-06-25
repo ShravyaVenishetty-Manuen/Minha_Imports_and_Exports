@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowRight } from 'react-icons/fi';
-import globalMapFlat from '../../assets/global-map-flat.png';
+import worldMapClean from '../../assets/world-map-clean.png';
 
 const GlobalPresence = () => {
   const stats = [
@@ -28,7 +28,7 @@ const GlobalPresence = () => {
   ];
 
   return (
-    <section id="global-presence" className="pt-6 md:pt-12 pb-10 md:pb-24 px-6 md:px-12 bg-[#FAF8F4] relative overflow-hidden">
+    <section id="global-presence" className="py-12 md:py-16 px-6 md:px-12 bg-[#FAF8F4] relative overflow-hidden">
 
       {/* Decorative leaf outlines in background */}
       <div className="absolute top-12 left-6 w-[200px] h-[200px] opacity-[0.02] text-[#1F5E3B] pointer-events-none select-none z-0 hidden lg:block">
@@ -43,7 +43,7 @@ const GlobalPresence = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
 
           {/* Left Column: Heading & Button */}
-          <div className="lg:col-span-5 space-y-6 text-left pt-4 lg:pt-12">
+          <div className="lg:col-span-5 space-y-6 text-left pt-0 lg:pt-4">
             <span className="font-['Montserrat'] font-bold text-[12px] tracking-[0.2em] text-[#B22222] uppercase block">
               Global Footprint
             </span>
@@ -89,31 +89,30 @@ const GlobalPresence = () => {
               </div>
             </div>
 
-
           </div>
 
-          {/* Right Column: Flat Dotted Map with routes */}
+          {/* Right Column: Clean Map with routes */}
           <div className="lg:col-span-7 flex flex-col items-center gap-6 -mt-6 lg:-mt-16">
             <div className="relative w-full max-w-[650px] h-auto flex items-center justify-center">
               <img
-                src={globalMapFlat}
+                src={worldMapClean}
                 alt="Global Footprint Map"
                 className="w-full h-auto object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.02)]"
                 draggable="false"
               />
             </div>
 
-            {/* 4 Cards at the map bottom */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-[650px] relative z-20 -mt-16 sm:-mt-32 lg:-mt-48">
+            {/* 4 Stat Items at the map bottom (No Cards) */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 w-full max-w-[650px] relative z-20 mt-4 px-4">
               {stats.map((stat, idx) => (
                 <div
                   key={idx}
-                  className="bg-white border border-black/[0.03] rounded-xl p-4 md:p-5 shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:translate-y-[-2px] transition-all duration-300 flex flex-col items-center justify-center text-center"
+                  className="flex flex-col items-center justify-center text-center py-2"
                 >
-                  <span className={`font-['Montserrat'] font-extrabold text-[22px] md:text-[26px] leading-tight ${stat.colorClass}`}>
+                  <span className={`font-['Montserrat'] font-extrabold text-[24px] md:text-[30px] leading-none ${stat.colorClass}`}>
                     {stat.value}
                   </span>
-                  <span className="font-['Inter'] font-semibold text-[#5a403e]/70 text-[10px] md:text-[11px] mt-1.5 uppercase tracking-wider">
+                  <span className="font-['Inter'] font-semibold text-[#5a403e]/70 text-[10px] md:text-[11px] mt-2 uppercase tracking-wider">
                     {stat.label}
                   </span>
                 </div>

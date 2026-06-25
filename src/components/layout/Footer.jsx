@@ -132,9 +132,13 @@ const Footer = () => {
                 <FiMail className="w-4 h-4 text-[#cca72f] shrink-0" />
                 <span className="text-[#a0a5ad]/95 text-[12.5px]">minhaimportsexports@gmail.com</span>
               </a>
-              <a href="tel:+918185867999" className="flex items-center gap-3 hover:text-[#cca72f] transition-colors py-1 md:py-0">
+              <a href="tel:+919985728555" className="flex items-center gap-3 hover:text-[#cca72f] transition-colors py-1 md:py-0">
                 <FiPhone className="w-4 h-4 text-[#cca72f] shrink-0" />
-                <span className="text-[#a0a5ad]/95 text-[12.5px]">+91 81858 67999</span>
+                <span className="text-[#a0a5ad]/95 text-[12.5px]">+91 99857 28555 (WhatsApp)</span>
+              </a>
+              <a href="tel:+917288995777" className="flex items-center gap-3 hover:text-[#cca72f] transition-colors py-1 md:py-0">
+                <FiPhone className="w-4 h-4 text-[#cca72f] shrink-0" />
+                <span className="text-[#a0a5ad]/95 text-[12.5px]">+91 72889 95777</span>
               </a>
             </div>
           </div>

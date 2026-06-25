@@ -14,6 +14,7 @@ import {
 
 import chilliExportCta from '../assets/chilli-export-cta.png';
 import facilityHeroBg from '../assets/facility-hero.png';
+import market from '../assets/market-image.png';
 
 const Facility = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -69,10 +70,9 @@ const Facility = () => {
         <img
           ref={imgRef}
           alt="Sprawling high-tech industrial processing facility"
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-out ${
-            imageLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
-          src={facilityHeroBg}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-out ${imageLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
+          src={market}
           onLoad={() => setImageLoaded(true)}
           fetchpriority="high"
           loading="eager"

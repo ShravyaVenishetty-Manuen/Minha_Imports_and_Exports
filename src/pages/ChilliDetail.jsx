@@ -309,11 +309,8 @@ const ChilliDetail = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#inquire" className="flex-1 bg-[#8f000d] text-white py-4 rounded font-bold hover:bg-[#72000a] transition-all active:scale-95 text-center uppercase tracking-wider text-[11px] shadow-lg shadow-[#8f000d]/10">
+              <Link to="/contact" className="flex-1 bg-[#8f000d] text-white py-4 rounded font-bold hover:bg-[#72000a] transition-all active:scale-95 text-center uppercase tracking-wider text-[11px] shadow-lg shadow-[#8f000d]/10">
                 Send Inquiry
-              </a>
-              <Link to="/contact" className="flex-1 border border-neutral-200 text-[#1a1c1e] py-4 rounded font-bold hover:bg-neutral-50 transition-all active:scale-95 text-center uppercase tracking-wider text-[11px]">
-                Contact Us
               </Link>
             </div>
           </motion.div>
@@ -585,7 +582,7 @@ const ChilliDetail = () => {
                 Email Enquiry
               </a>
               <a
-                href="tel:+918185867999"
+                href="tel:+917288995777"
                 className="border border-[#8f000d]/20 text-[#8f000d] font-['Montserrat'] font-bold text-[12px] py-4 px-8 rounded-xl hover:bg-[#8f000d]/5 transition-all uppercase tracking-wider text-center hover:-translate-y-0.5 active:translate-y-0"
               >
                 Call Export Desk

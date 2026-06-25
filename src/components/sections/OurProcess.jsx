@@ -10,14 +10,14 @@ const OurProcess = () => {
     {
       id: "01",
       title: "Farm Visits",
-      text: "Direct collaboration with trusted farmers in Guntur for premium quality cultivation.",
+      text: "Direct collaboration with trusted farmers in Guntur since 2013 for premium quality cultivation.",
       image: step1Img,
       color: "bg-[#B22222]",
     },
     {
       id: "02",
       title: "Raw Material Selection",
-      text: "Handpicked and graded chillies ensuring vibrant color, high SHU and consistent quality.",
+      text: "Handpicked and graded by our experienced team, ensuring vibrant color, high SHU, and consistent quality.",
       image: step2Img,
       color: "bg-[#1F5E3B]",
     },
@@ -57,7 +57,7 @@ const OurProcess = () => {
   };
 
   return (
-    <section id="our-process" className="relative py-10 md:py-28 px-6 md:px-12 bg-white overflow-hidden">
+    <section id="our-process" className="relative py-12 md:py-16 px-6 md:px-12 bg-white overflow-hidden">
 
       {/* Decorative leaf illustrations in margins */}
       <div className="absolute top-12 left-2 w-[180px] h-[180px] opacity-[0.02] text-[#1F5E3B] pointer-events-none z-0 select-none hidden lg:block">

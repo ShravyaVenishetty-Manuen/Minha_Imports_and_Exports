@@ -277,12 +277,12 @@ const Varieties = () => {
                       >
                         <FiInfo className="text-[13px] flex-shrink-0" /> Details
                       </Link>
-                      <a
-                        href="#inquire"
+                      <Link
+                        to="/contact"
                         className="bg-[#8f000d] text-white py-2.5 rounded-lg font-['Montserrat'] font-bold text-[11px] leading-none uppercase tracking-wider hover:bg-[#72000a] transition-all duration-300 flex items-center justify-center gap-1.5 shadow-md hover:shadow-lg shadow-[#8f000d]/10 hover:-translate-y-0.5"
                       >
                         <FiMail className="text-[13px] flex-shrink-0" /> Inquire
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </motion.div>

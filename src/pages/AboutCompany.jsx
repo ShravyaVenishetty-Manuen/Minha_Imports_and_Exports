@@ -20,6 +20,8 @@ import aboutHeroBg from '../assets/about_hero_bg.png';
 import dryChilliSortingFacility from '../assets/dry_chilli_sorting_facility.png';
 import immersiveSpiceBg from '../assets/immersive_spice_bg.png';
 import worldMapSvg from '../assets/world-map.svg';
+import founder1 from '../assets/founder1.png';
+import founder2 from '../assets/founder2.png';
 
 const OdometerYear = ({ year, color }) => {
   const digits = year.split('');
@@ -314,9 +316,8 @@ const AboutCompany = () => {
         <img
           ref={imgRef}
           alt="Premium Chilli Sourcing Fields"
-          className={`absolute inset-0 w-full h-full object-cover object-[center_35%] transition-opacity duration-700 ease-out ${
-            imageLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`absolute inset-0 w-full h-full object-cover object-[center_35%] transition-opacity duration-700 ease-out ${imageLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
           src={aboutHeroBg}
           onLoad={() => setImageLoaded(true)}
           fetchpriority="high"
@@ -365,10 +366,13 @@ const AboutCompany = () => {
               <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">A Legacy of Precision & Pure Spices</h2>
             </div>
             <p className="text-on-surface-variant font-body-md text-body-md leading-relaxed text-justify">
-              Minha Imports & Exports stands at the forefront of the Guntur dry red chilli trade. Our expertise is rooted in decades of agricultural knowledge, combined with a modern approach to global logistics.
+              Minha Imports & Exports stands at the forefront of the Guntur dry red chilli trade, bridging the gap between local farming legacies and global food supply networks. Our operations are deeply integrated within Guntur, Asia's largest spice marketplace, allowing us to build direct collaborations with trusted local growers since 2013 and secure early-harvest access to premium crops.
             </p>
             <p className="text-on-surface-variant font-body-md text-body-md leading-relaxed text-justify">
-              We specialize in sourcing, grading, and exporting the finest varieties including Teja, S4, and Byadgi. Every batch undergoes rigorous quality checks to meet international standards (ASTA), ensuring that our global partners receive nothing but excellence.
+              We maintain a rigorous quality assurance protocol where our experienced team meticulously handpicks red chillies, discarding discolored, broken, or low-pungency pods. By ensuring tight control over raw materials, keeping moisture content strictly below 11% to prevent mold formation during long ocean transits, and sorting for uniform dimensions, we deliver a consistent product quality tailored to international market standards.
+            </p>
+            <p className="text-on-surface-variant font-body-md text-body-md leading-relaxed text-justify">
+              By maintaining certifications with FSSAI, APEDA, and ISO, we ensure complete transparency in export standards. Guided by our prime motto of absolute customer service, we guarantee timely B2B logistics and custom documentation support for every global shipment.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <Link
@@ -796,30 +800,56 @@ const AboutCompany = () => {
             </p>
           </div>
 
-          {/* Founder Feature Row */}
-          <div className="max-w-4xl mx-auto mb-10">
-            <div className="bg-white rounded-[2rem] overflow-hidden border border-neutral-100 shadow-premium-soft hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-500 flex flex-col md:flex-row text-left group">
-              <div className="w-full md:w-5/12 h-80 md:h-auto min-h-[360px] relative overflow-hidden">
+          {/* Founders Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
+            {/* Founder 1 Card */}
+            <div className="bg-white rounded-[2rem] overflow-hidden border border-neutral-100 shadow-premium-soft hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-500 flex flex-col text-left group">
+              <div className="aspect-[3/4] max-h-[340px] overflow-hidden relative bg-[#f0efec]">
                 <img
                   alt="Ms. Sarah Mitchell"
-                  className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAggM-W-9VZG7h_b-P4ToLPEawIZ9z3Iz-avbo9YHIETf1TcPy1Pl3SnyvplhEvS040CsQBaoOPKYV3I0n3CpEmXP1ku9m0cB-JHLOPWE1zJdX_N0rlR6SuKXD5i3zjGWQvgrAYR4-h7TWW2bMfSj9tCc4s5JeTN-bMuN5dEOhInKhyTNEXzDjsvEbYg2Tjipp1z-J1bslzmgFE8pciyyFYPl2wYslvN9TBh24TRXvAImYv4xFIz67jNrgpaoeygM-7r6I8v6pD54M"
+                  className="w-full h-full object-cover object-[50%_8%] group-hover:scale-[1.03] transition-transform duration-700"
+                  src={founder1}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 pointer-events-none" />
               </div>
-              <div className="w-full md:w-7/12 p-8 md:p-12 flex flex-col justify-center space-y-5">
-                <div>
-                  <span className="font-['Montserrat'] font-bold text-[10px] tracking-[0.2em] text-[#8f000d] uppercase block mb-2">Founder & Managing Director</span>
-                  <h3 className="font-['Montserrat'] font-extrabold text-[28px] text-[#1a1c1e] leading-tight">Ms. Sarah Mitchell</h3>
+              <div className="p-8 flex-grow flex flex-col justify-between space-y-4">
+                <div className="space-y-2">
+                  <span className="font-['Montserrat'] font-bold text-[10px] tracking-[0.2em] text-[#8f000d] uppercase block">Founder & Managing Director</span>
+                  <h3 className="font-['Montserrat'] font-extrabold text-[22px] text-[#1a1c1e] leading-tight">Ms. Sarah Mitchell</h3>
                 </div>
 
-                {/* Visual quote indicator */}
-                <div className="border-l-4 border-[#cca72f] pl-4 italic text-neutral-600 text-[14px] leading-relaxed font-['Inter']">
-                  "Our mission is to establish Minha as the synonym of trust, quality, and purity in the global chilli and spice market, directly connecting the hard work of Guntur farmers with global buyers."
+                <div className="border-l-4 border-[#cca72f] pl-4 italic text-neutral-600 text-[13px] leading-relaxed font-['Inter']">
+                  "Our mission is to establish Minha as the synonym of trust, quality, and purity in the global chilli market, connecting Guntur farmers with buyers."
                 </div>
 
-                <p className="text-on-surface-variant font-['Inter'] font-normal text-[14px] leading-relaxed">
-                  With over 20 years of experience in global agricultural exports, Sarah founded Minha Imports & Exports with a vision to bridge the gap between Indian spice heritage and global quality standards. She guides the company's long-term strategy and global relations.
+                <p className="text-on-surface-variant font-['Inter'] font-normal text-[13px] leading-relaxed">
+                  With over 20 years of experience in global agricultural exports, Sarah founded Minha with a vision to bridge the gap between Indian spice heritage and global quality standards. She guides the company's long-term strategy.
+                </p>
+              </div>
+            </div>
+
+            {/* Founder 2 Card */}
+            <div className="bg-white rounded-[2rem] overflow-hidden border border-neutral-100 shadow-premium-soft hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-500 flex flex-col text-left group">
+              <div className="aspect-[3/4] max-h-[340px] overflow-hidden relative bg-[#f0efec]">
+                <img
+                  alt="Mr. Arjun Mehta"
+                  className="w-full h-full object-cover object-[50%_8%] group-hover:scale-[1.03] transition-transform duration-700"
+                  src={founder2}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 pointer-events-none" />
+              </div>
+              <div className="p-8 flex-grow flex flex-col justify-between space-y-4">
+                <div className="space-y-2">
+                  <span className="font-['Montserrat'] font-bold text-[10px] tracking-[0.2em] text-[#8f000d] uppercase block">Co-Founder & Chief Executive Officer</span>
+                  <h3 className="font-['Montserrat'] font-extrabold text-[22px] text-[#1a1c1e] leading-tight">Mr. Arjun Mehta</h3>
+                </div>
+
+                <div className="border-l-4 border-[#cca72f] pl-4 italic text-neutral-600 text-[13px] leading-relaxed font-['Inter']">
+                  "Our goal is simple: to make Indian dry chillies the gold standard of quality and traceability in every international market we serve."
+                </div>
+
+                <p className="text-on-surface-variant font-['Inter'] font-normal text-[13px] leading-relaxed">
+                  With over 15 years of experience in supply chain technology and global trade, Arjun co-founded Minha to modernize agricultural exports. He oversees technology integration, logistics, and operational compliance.
                 </p>
               </div>
             </div>

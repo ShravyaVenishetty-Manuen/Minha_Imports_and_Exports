@@ -178,9 +178,8 @@ const Contact = () => {
         <div className="absolute inset-0 bg-black/60 z-10" />
         <img
           ref={imgRef}
-          className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700 ease-out ${
-            imageLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700 ease-out ${imageLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
           alt="International Cargo Port Sourcing"
           src={contactHeroBg}
           onLoad={() => setImageLoaded(true)}
@@ -244,7 +243,8 @@ const Contact = () => {
                     <div className="flex-1 min-w-0">
                       <div className="w-6 h-[2px] bg-[#2E6F4F] mb-1 rounded-full" />
                       <h4 className="font-['Montserrat'] font-bold text-[12px] text-[#111827] mb-0.5">Phone</h4>
-                      <a href="tel:+918185867999" className="block font-['Inter'] text-[11px] text-[#374151] hover:text-[#2E6F4F] transition-colors leading-[1.5]">+91 81858 67999</a>
+                      <a href="tel:+919985728555" className="block font-['Inter'] text-[11px] text-[#374151] hover:text-[#2E6F4F] transition-colors leading-[1.5]">+91 99857 28555 (WhatsApp)</a>
+                      <a href="tel:+917288995777" className="block font-['Inter'] text-[11px] text-[#374151] hover:text-[#2E6F4F] transition-colors leading-[1.5]">+91 72889 95777</a>
                     </div>
                   </div>
 
@@ -271,30 +271,15 @@ const Contact = () => {
                       <p className="font-['Inter'] text-[11px] text-[#374151] leading-[1.5]">Arundalpet 7/1,<br />Beside SBI ATM, Guntur, AP, India – 522002</p>
                     </div>
                   </div>
-
-                  {/* Working Hours */}
-                  <div className="flex items-center gap-2.5 px-3 py-2.5 bg-white rounded-lg shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 group">
-                    <div className="w-8 h-8 rounded-full border-[2px] border-[#A50F15] flex items-center justify-center shrink-0">
-                      <FiClock className="text-[#A50F15] text-[13px]" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="w-6 h-[2px] bg-[#2E6F4F] mb-1 rounded-full" />
-                      <h4 className="font-['Montserrat'] font-bold text-[12px] text-[#111827] mb-0.5">Working Hours</h4>
-                      <p className="font-['Inter'] text-[11px] text-[#374151] leading-[1.5]">Mon – Sat: 9 AM – 6 PM</p>
-                      <p className="font-['Inter'] text-[11px] text-[#A50F15] font-semibold leading-[1.5]">Closed on Sundays</p>
-                    </div>
-                  </div>
-
                 </div>
               </div>
-
             </div>
           </div>
         </div>
       </section>
 
       {/* ── 3. Inquiry Form & Highlights (3D Flipping Card) ─────────────────── */}
-      <section className="py-10 md:py-14 bg-[#f9f9fc] border-t border-b border-neutral-100 relative overflow-hidden">
+      <section className="py-8 md:py-10 bg-[#f9f9fc] border-t border-b border-neutral-100 relative overflow-hidden">
         {/* Soft background ambient glows */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#cca72f]/5 rounded-full pointer-events-none blur-3xl" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#8f000d]/4 rounded-full pointer-events-none blur-3xl" />
@@ -347,14 +332,14 @@ const Contact = () => {
                 className={`flex flex-col lg:flex-row ${isFlipped ? 'h-full' : ''}`}
               >
                 {/* Left Side: Sourcing highlights */}
-                <div className="w-full lg:w-5/12 bg-gradient-to-br from-[#8f000d] to-[#4c0005] text-white p-6 sm:p-8 md:p-12 flex flex-col justify-between relative overflow-hidden">
+                <div className="w-full lg:w-5/12 bg-gradient-to-br from-[#8f000d] to-[#4c0005] text-white p-6 sm:p-7 md:p-8 flex flex-col justify-between relative overflow-hidden">
                   <div className="absolute -top-20 -left-20 w-60 h-60 bg-[#cca72f]/10 rounded-full blur-3xl pointer-events-none" />
                   <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-[#8f000d]/20 rounded-full blur-3xl pointer-events-none" />
                   <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.005)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.005)_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none" />
 
-                  <div className="relative z-10 flex flex-col h-full justify-between gap-8">
+                  <div className="relative z-10 flex flex-col h-full justify-start gap-4">
                     <div>
-                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-['Montserrat'] font-bold text-[9px] tracking-widest uppercase mb-6 sm:mb-8">
+                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-['Montserrat'] font-bold text-[9px] tracking-widest uppercase mb-3 sm:mb-4">
                         <span className="relative flex h-2 w-2">
                           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                           <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -365,27 +350,23 @@ const Contact = () => {
                       <span className="font-['Montserrat'] font-semibold text-[10px] tracking-[0.2em] text-[#cca72f] uppercase block mb-1">
                         Minha Imports & Exports
                       </span>
-                      <h3 className="font-['Montserrat'] font-extrabold text-[26px] md:text-[30px] leading-tight text-white mb-4 sm:mb-5">
+                      <h3 className="font-['Montserrat'] font-extrabold text-[22px] leading-tight text-white mb-2">
                         Export Sourcing
                       </h3>
-                      <p className="font-['Inter'] font-normal text-white/70 text-[13px] md:text-[14px] leading-relaxed mb-6 sm:mb-8 max-w-sm text-left">
+                      <p className="font-['Inter'] text-white/60 text-[12px] leading-relaxed mb-2">
                         Partner with India's premier agricultural exporter. We secure premium quality dry red chilli varieties tailored to your exact specifications.
                       </p>
 
                       {/* Badges / Highlights */}
-                      <div className="space-y-5 sm:space-y-6">
+                      <div className="space-y-3">
                         {highlights.map((hl, i) => (
-                          <div key={i} className="flex gap-4 group">
-                            <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 text-[#cca72f] group-hover:scale-105 group-hover:bg-white/10 group-hover:border-[#cca72f]/30 transition-all duration-300">
-                              {React.cloneElement(hl.icon, { className: "text-[#cca72f] text-[20px]" })}
+                          <div key={i} className="flex items-start gap-3 group">
+                            <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-white/10 transition-all duration-300 mt-0.5">
+                              {React.cloneElement(hl.icon, { className: "text-[#cca72f] text-[15px]" })}
                             </div>
-                            <div className="text-left">
-                              <h4 className="font-['Montserrat'] font-bold text-[13px] sm:text-[14px] text-white tracking-wide">
-                                {hl.title}
-                              </h4>
-                              <p className="font-['Inter'] font-normal text-white/50 text-[11px] sm:text-[12px] leading-relaxed mt-0.5 max-w-xs">
-                                {hl.desc}
-                              </p>
+                            <div>
+                              <h4 className="font-['Montserrat'] font-bold text-[12px] text-white/90 tracking-wide leading-tight">{hl.title}</h4>
+                              <p className="font-['Inter'] text-[11px] text-white/45 leading-snug mt-0.5">{hl.desc}</p>
                             </div>
                           </div>
                         ))}
@@ -393,21 +374,21 @@ const Contact = () => {
                     </div>
 
                     {/* Bottom Trade Details */}
-                    <div className="pt-5 border-t border-white/10 flex items-center justify-between">
+                    <div className="mt-auto pt-3 border-t border-white/10 flex items-center justify-between">
                       <div className="text-left">
-                        <span className="font-['Montserrat'] text-[8px] sm:text-[9px] tracking-wider text-white/40 uppercase block">Average Response</span>
-                        <span className="font-['Montserrat'] text-[13px] sm:text-[14px] font-bold text-white leading-none mt-1 block">&lt; 12 Hours</span>
+                        <span className="font-['Montserrat'] text-[8px] tracking-wider text-white/40 uppercase block">Avg Response</span>
+                        <span className="font-['Montserrat'] text-[12px] font-bold text-white leading-none mt-0.5 block">&lt; 12 Hours</span>
                       </div>
                       <div className="text-right">
-                        <span className="font-['Montserrat'] text-[8px] sm:text-[9px] tracking-wider text-[#cca72f] uppercase block">Global Sourcing</span>
-                        <span className="font-['Montserrat'] text-[13px] sm:text-[14px] font-bold text-[#cca72f] leading-none mt-1 block">ASTA Compliant</span>
+                        <span className="font-['Montserrat'] text-[8px] tracking-wider text-[#cca72f] uppercase block">Global Sourcing</span>
+                        <span className="font-['Montserrat'] text-[12px] font-bold text-[#cca72f] leading-none mt-0.5 block">ASTA Compliant</span>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 {/* Right Side: Interactive Sourcing Inquiry Form */}
-                <div className="w-full lg:w-7/12 p-6 sm:p-8 md:p-10 flex flex-col justify-center relative overflow-hidden bg-white text-left">
+                <div className="w-full lg:w-7/12 p-5 md:p-6 flex flex-col justify-center relative overflow-hidden bg-white text-left">
                   {/* Background image watermark */}
                   <img
                     src={chilliBowlTable}
@@ -416,22 +397,17 @@ const Contact = () => {
                   />
 
                   <div className="relative z-10">
-                    <div className="mb-5 text-left">
-                      <h3 className="font-['Montserrat'] font-extrabold text-[20px] sm:text-[22px] text-[#1a1c1e] tracking-tight">
-                        Inquiry Form
-                      </h3>
-                      <p className="font-['Inter'] font-normal text-neutral-600 text-[12px] mt-0.5">
-                        Initiate verification of specifications.
-                      </p>
+                    <div className="mb-3 text-left">
+                      <h3 className="font-['Montserrat'] font-extrabold text-[18px] sm:text-[20px] text-[#1a1c1e] tracking-tight">Inquiry Form</h3>
                     </div>
 
-                    <form onSubmit={handleSubmit} className="space-y-4">
+                    <form onSubmit={handleSubmit} className="space-y-2.5">
 
                       {/* Grid for inputs */}
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
 
                         {/* Full Name */}
-                        <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-2xl px-4 py-2 transition-all duration-300 bg-white text-left shadow-sm">
+                        <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-xl px-3 py-1.5 transition-all duration-300 bg-white text-left shadow-sm">
                           <label className="block font-['Montserrat'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Full Name *</label>
                           <input
                             required
@@ -445,7 +421,7 @@ const Contact = () => {
                         </div>
 
                         {/* Company Name */}
-                        <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-2xl px-4 py-2 transition-all duration-300 bg-white text-left shadow-sm">
+                        <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-xl px-3 py-1.5 transition-all duration-300 bg-white text-left shadow-sm">
                           <label className="block font-['Montserrat'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Company Name</label>
                           <input
                             name="company"
@@ -458,7 +434,7 @@ const Contact = () => {
                         </div>
 
                         {/* Country */}
-                        <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-2xl px-4 py-2 transition-all duration-300 bg-white text-left shadow-sm">
+                        <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-xl px-3 py-1.5 transition-all duration-300 bg-white text-left shadow-sm">
                           <label className="block font-['Montserrat'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Country *</label>
                           <input
                             required
@@ -472,7 +448,7 @@ const Contact = () => {
                         </div>
 
                         {/* Email */}
-                        <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-2xl px-4 py-2 transition-all duration-300 bg-white text-left shadow-sm">
+                        <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-xl px-3 py-1.5 transition-all duration-300 bg-white text-left shadow-sm">
                           <label className="block font-['Montserrat'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Email Address *</label>
                           <input
                             required
@@ -526,7 +502,7 @@ const Contact = () => {
                       </div>
 
                       {/* Message TextArea */}
-                      <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-2xl px-4 py-3.5 transition-all duration-300 bg-white text-left shadow-sm">
+                      <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-xl px-3 py-1.5 transition-all duration-300 bg-white text-left shadow-sm">
                         <label className="block font-['Montserrat'] font-bold text-[9px] tracking-wider text-neutral-600 uppercase mb-1">Your Message *</label>
                         <textarea
                           required
@@ -535,7 +511,7 @@ const Contact = () => {
                           onChange={handleInputChange}
                           className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Inter'] placeholder-neutral-400 resize-none"
                           placeholder="Tell us about volume requirements, grades, target delivery dates..."
-                          rows={3}
+                          rows={2}
                         />
                       </div>
 

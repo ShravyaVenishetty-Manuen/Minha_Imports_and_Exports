@@ -2,12 +2,10 @@ import React, { useEffect, useState, useRef } from 'react';
 import SEO from '../components/common/SEO';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FiCheckCircle, FiAnchor, FiCompass, FiTruck, FiAward, FiCheck, FiLayers, FiTarget, FiActivity, FiShield, FiPackage } from 'react-icons/fi';
+import { FiCheckCircle, FiAnchor, FiCompass, FiTruck, FiAward, FiLayers, FiTarget, FiActivity, FiShield, FiPackage } from 'react-icons/fi';
 import { GiChiliPepper } from 'react-icons/gi';
 import chilliPackagingKraft from '../assets/chilli-packaging-kraft.png';
 import chilliProcessingFacility from '../assets/chilli-processing-facility.png';
-import floatingSpicesLeft from '../assets/floating-spices-left.png';
-import floatingSpicesRight from '../assets/floating-spices-right.png';
 import powderHeroBg from '../assets/powder-hero.png';
 
 const ChilliPowder = () => {
@@ -60,9 +58,8 @@ const ChilliPowder = () => {
         <img
           ref={imgRef}
           alt="Guntur Chilli Processing and Pulverizing"
-          className={`absolute inset-0 w-full h-full object-cover object-[center_35%] transition-opacity duration-700 ease-out ${
-            imageLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`absolute inset-0 w-full h-full object-cover object-[center_35%] transition-opacity duration-700 ease-out ${imageLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
           src={powderHeroBg}
           onLoad={() => setImageLoaded(true)}
           fetchpriority="high"
@@ -139,93 +136,78 @@ const ChilliPowder = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Card 1 */}
-            <div className="bg-white p-6 rounded-2xl border border-neutral-100 shadow-sm hover:shadow-md transition-all group flex flex-col justify-between">
-              <div>
-                <div className="relative mb-6 overflow-hidden rounded-xl bg-neutral-50">
-                  <span className="absolute top-4 right-4 bg-[#cca72f] text-white font-['Montserrat'] font-semibold text-[9px] tracking-wider px-3 py-1 z-10 rounded-md">GRADE A+</span>
-                  <img
-                    className="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl"
-                    alt="Premium Red Chilli Powder"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5VxluJfmzbKMtQDO7M9XKbCq1ClwfTkNkjAiCyJjJ-uD5nWqpIMLPsFfkdKs7yHAbTjUhefTGAMcCeMCk-moulsIG9hf7SRURTpPu1RskWlu_iY5U2tsfMYgdMjJIb-WwwvYwbOgMAyOqZcYcIpWFRZUeqBNZHLOGmgTmbEIQPUx6KWxdJbjext0NKvyNwthI54eoU06E-ZCXeyDF8Q_a8QlhUBTJbb3hSaWRuMTCouJyrK1LQKOIv0WA1Rq0ohBgR2ZyrODe3x0"
-                  />
-                </div>
-                <h3 className="font-heading font-bold text-[18px] text-[#1a1c1e] mb-2 text-left">Premium Red</h3>
-                <p className="font-body text-[13.5px] text-neutral-500 leading-relaxed mb-4 text-left">High color value with medium heat. Perfect for general culinary use and retail packaging.</p>
-              </div>
-              <div>
-                <div className="border-t border-neutral-100 pt-4 mb-6 flex flex-col gap-1.5 text-[12.5px] font-body text-neutral-600 text-left">
-                  <div className="flex justify-between"><span className="text-neutral-400 font-medium">Packaging:</span> 1kg, 5kg, 25kg</div>
-                  <div className="flex justify-between"><span className="text-neutral-400 font-medium">Heat Level:</span> Medium</div>
-                </div>
-                <a
-                  href="#inquire"
-                  className="block w-full py-3 text-center border border-[#8f000d] text-[#8f000d] font-bold text-xs uppercase tracking-wider rounded-lg hover:bg-[#8f000d] hover:text-white transition-all active:scale-95"
-                >
-                  Inquire
-                </a>
-              </div>
-            </div>
+          {(() => {
+            const powderGrades = [
+              {
+                badge: 'GRADE A+',
+                badgeColor: 'bg-[#cca72f]',
+                img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD5VxluJfmzbKMtQDO7M9XKbCq1ClwfTkNkjAiCyJjJ-uD5nWqpIMLPsFfkdKs7yHAbTjUhefTGAMcCeMCk-moulsIG9hf7SRURTpPu1RskWlu_iY5U2tsfMYgdMjJIb-WwwvYwbOgMAyOqZcYcIpWFRZUeqBNZHLOGmgTmbEIQPUx6KWxdJbjext0NKvyNwthI54eoU06E-ZCXeyDF8Q_a8QlhUBTJbb3hSaWRuMTCouJyrK1LQKOIv0WA1Rq0ohBgR2ZyrODe3x0',
+                alt: 'Premium Red Chilli Powder',
+                name: 'Premium Red',
+                description: 'High color value with medium heat. Perfect for general culinary use and retail packaging.',
+                packaging: '1kg, 5kg, 25kg',
+                heat: 'Medium',
+              },
+              {
+                badge: 'EXTRA HOT',
+                badgeColor: 'bg-[#8f000d]',
+                img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCUhvF9cAbSOzn9RopCFjbQiEatAGs8sWxJtPs0wcPNdWfzAXYEdsnbrU3cr_IDbqUsBE8fZyHTlIIcYc8Jw4EAu2aWVIQFkh3uIVcsJWfJJ3eK8WdyCKuxaotl1qEoIaEhvBgjGkTaoxqk894ewh5M6BEx-amctc_VMmq5fJJ59Or2zDg4_2vMkh0qfwgGmMTKu-wKaoaiAZmtwivKBXfEOZpbm4tBuJsuSYTXbRn_b4jOD72hBVfACVLP5JNvwC6rdQbH3AABFQM',
+                alt: 'Teja Intense Chilli Powder',
+                name: 'Teja Intense',
+                description: 'Derived from Teja S17, offering intense pungency and fiery red color for specialized recipes.',
+                packaging: '25kg, 50kg Bags',
+                heat: 'High',
+              },
+              {
+                badge: 'MILD',
+                badgeColor: 'bg-[#1f5e3b]',
+                img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAkgCOCJ8n7LySIdXlUHQWrYpcNdISjLMAgfU8ReQJsfgy9kFLFr7IXrQjOTvRne1UIL5vUaf2BQMJRa2Li5VpOHLJZaEehD7xfNzV91n2l0ltTsNgzfgAv9QpkOO0ol11QOSsD0k69N4qe1Ut6JkzVm65ZLRMlfasHhj3iQtAz7Sb8qu-_SBNZNExt85Rg7vjxdw-w4Bgh3sgkUEun45AC99aQzJFxKGXSWzN8fLizHYcx8UnRXlCUpLG0ZcRIpzNBRAef_Qv3TZo',
+                alt: 'Mild Kashmiri Type Powder',
+                name: 'Mild Kashmiri Type',
+                description: 'Rich, deep red color with very low heat. Ideal for color enhancement in food processing.',
+                packaging: 'Custom Bulk',
+                heat: 'Low',
+              },
+            ];
 
-            {/* Card 2 */}
-            <div className="bg-white p-6 rounded-2xl border border-neutral-100 shadow-sm hover:shadow-md transition-all group flex flex-col justify-between">
-              <div>
-                <div className="relative mb-6 overflow-hidden rounded-xl bg-neutral-50">
-                  <span className="absolute top-4 right-4 bg-[#8f000d] text-white font-['Montserrat'] font-semibold text-[9px] tracking-wider px-3 py-1 z-10 rounded-md">EXTRA HOT</span>
-                  <img
-                    className="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl"
-                    alt="Teja Intense Chilli Powder"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUhvF9cAbSOzn9RopCFjbQiEatAGs8sWxJtPs0wcPNdWfzAXYEdsnbrU3cr_IDbqUsBE8fZyHTlIIcYc8Jw4EAu2aWVIQFkh3uIVcsJWfJJ3eK8WdyCKuxaotl1qEoIaEhvBgjGkTaoxqk894ewh5M6BEx-amctc_VMmq5fJJ59Or2zDg4_2vMkh0qfwgGmMTKu-wKaoaiAZmtwivKBXfEOZpbm4tBuJsuSYTXbRn_b4jOD72hBVfACVLP5JNvwC6rdQbH3AABFQM"
-                  />
-                </div>
-                <h3 className="font-heading font-bold text-[18px] text-[#1a1c1e] mb-2 text-left">Teja Intense</h3>
-                <p className="font-body text-[13.5px] text-neutral-500 leading-relaxed mb-4 text-left">Derived from Teja S17, offering intense pungency and fiery red color for specialized recipes.</p>
+            return (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {powderGrades.map((grade, idx) => (
+                  <div key={idx} className="bg-white p-6 rounded-2xl border border-neutral-100 shadow-sm hover:shadow-md transition-all group flex flex-col justify-between">
+                    <div>
+                      <div className="relative mb-6 overflow-hidden rounded-xl bg-neutral-50">
+                        <span className={`absolute top-4 right-4 ${grade.badgeColor} text-white font-['Montserrat'] font-semibold text-[9px] tracking-wider px-3 py-1 z-10 rounded-md`}>
+                          {grade.badge}
+                        </span>
+                        <img
+                          className="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl"
+                          alt={grade.alt}
+                          src={grade.img}
+                        />
+                      </div>
+                      <h3 className="font-heading font-bold text-[18px] text-[#1a1c1e] mb-2 text-left">{grade.name}</h3>
+                      <p className="font-body text-[13.5px] text-neutral-500 leading-relaxed mb-4 text-left">{grade.description}</p>
+                    </div>
+                    <div>
+                      <div className="border-t border-neutral-100 pt-4 mb-6 flex flex-col gap-1.5 text-[12.5px] font-body text-neutral-600 text-left">
+                        <div className="flex justify-between"><span className="text-neutral-400 font-medium">Packaging:</span> {grade.packaging}</div>
+                        <div className="flex justify-between"><span className="text-neutral-400 font-medium">Heat Level:</span> {grade.heat}</div>
+                      </div>
+                      <Link
+                        to="/contact"
+                        className="block w-full py-3 text-center border border-[#8f000d] text-[#8f000d] font-bold text-xs uppercase tracking-wider rounded-lg hover:bg-[#8f000d] hover:text-white transition-all active:scale-95"
+                      >
+                        Inquire
+                      </Link>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div>
-                <div className="border-t border-neutral-100 pt-4 mb-6 flex flex-col gap-1.5 text-[12.5px] font-body text-neutral-600 text-left">
-                  <div className="flex justify-between"><span className="text-neutral-400 font-medium">Packaging:</span> 25kg, 50kg Bags</div>
-                  <div className="flex justify-between"><span className="text-neutral-400 font-medium">Heat Level:</span> High</div>
-                </div>
-                <a
-                  href="#inquire"
-                  className="block w-full py-3 text-center border border-[#8f000d] text-[#8f000d] font-bold text-xs uppercase tracking-wider rounded-lg hover:bg-[#8f000d] hover:text-white transition-all active:scale-95"
-                >
-                  Inquire
-                </a>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="bg-white p-6 rounded-2xl border border-neutral-100 shadow-sm hover:shadow-md transition-all group flex flex-col justify-between">
-              <div>
-                <div className="relative mb-6 overflow-hidden rounded-xl bg-neutral-50">
-                  <span className="absolute top-4 right-4 bg-[#1f5e3b] text-white font-['Montserrat'] font-semibold text-[9px] tracking-wider px-3 py-1 z-10 rounded-md">MILD</span>
-                  <img
-                    className="w-full h-60 object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl"
-                    alt="Mild Kashmiri Type Powder"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkgCOCJ8n7LySIdXlUHQWrYpcNdISjLMAgfU8ReQJsfgy9kFLFr7IXrQjOTvRne1UIL5vUaf2BQMJRa2Li5VpOHLJZaEehD7xfNzV91n2l0ltTsNgzfgAv9QpkOO0ol11QOSsD0k69N4qe1Ut6JkzVm65ZLRMlfasHhj3iQtAz7Sb8qu-_SBNZNExt85Rg7vjxdw-w4Bgh3sgkUEun45AC99aQzJFxKGXSWzN8fLizHYcx8UnRXlCUpLG0ZcRIpzNBRAef_Qv3TZo"
-                  />
-                </div>
-                <h3 className="font-heading font-bold text-[18px] text-[#1a1c1e] mb-2 text-left">Mild Kashmiri Type</h3>
-                <p className="font-body text-[13.5px] text-neutral-500 leading-relaxed mb-4 text-left">Rich, deep red color with very low heat. Ideal for color enhancement in food processing.</p>
-              </div>
-              <div>
-                <div className="border-t border-neutral-100 pt-4 mb-6 flex flex-col gap-1.5 text-[12.5px] font-body text-neutral-600 text-left">
-                  <div className="flex justify-between"><span className="text-neutral-400 font-medium">Packaging:</span> Custom Bulk</div>
-                  <div className="flex justify-between"><span className="text-neutral-400 font-medium">Heat Level:</span> Low</div>
-                </div>
-                <a
-                  href="#inquire"
-                  className="block w-full py-3 text-center border border-[#8f000d] text-[#8f000d] font-bold text-xs uppercase tracking-wider rounded-lg hover:bg-[#8f000d] hover:text-white transition-all active:scale-95"
-                >
-                  Inquire
-                </a>
-              </div>
-            </div>
-          </div>
+            );
+          })()}
         </div>
       </section>
+
 
       {/* 4. Technical Specifications */}
       <section className="py-10 md:py-14 bg-surface">
@@ -487,7 +469,7 @@ const ChilliPowder = () => {
             />
 
             <div className="relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-              
+
               {/* Left Column: Brand Quote (lg:col-span-5) */}
               <div className="relative space-y-4 text-center lg:text-left lg:border-r lg:border-white/10 lg:pr-8 xl:pr-12 lg:col-span-5 w-full z-10">
                 <span className="absolute -top-10 -left-2 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">

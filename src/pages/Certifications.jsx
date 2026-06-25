@@ -199,9 +199,8 @@ const Certifications = () => {
         <img
           ref={imgRef}
           alt="Certified Chilli Export Facility"
-          className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700 ease-out ${
-            imageLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700 ease-out ${imageLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
           src={certificationsHeroBg}
           onLoad={() => setImageLoaded(true)}
           fetchpriority="high"

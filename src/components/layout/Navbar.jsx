@@ -79,14 +79,13 @@ const Navbar = () => {
     <>
       {/* Main Navbar: Floating Dark/Light Dynamic Capsule */}
       <nav
-        className={`fixed left-1/2 -translate-x-1/2 z-50 h-[68px] px-7 flex items-center justify-between transition-all duration-500 ease-in-out ${
-          isScrolled
+        className={`fixed left-1/2 -translate-x-1/2 z-50 h-[68px] px-7 flex items-center justify-between transition-all duration-500 ease-in-out ${isScrolled
             ? 'top-3 w-[92%] max-w-[1240px] bg-white/95 border border-neutral-200/50 rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.08)]'
             : 'top-6 w-[95%] max-w-[1280px] bg-white/5 backdrop-blur-[20px] border border-white/10 rounded-[24px] shadow-sm'
-        }`}
+          }`}
       >
         <div className="flex items-center justify-between gap-4 w-full h-full">
-          
+
           {/* Logo Section */}
           <Link to="/" className="flex items-center focus:outline-none shrink-0 pl-1">
             <img
@@ -107,34 +106,31 @@ const Navbar = () => {
                   <Link
                     to={link.path}
                     onMouseEnter={() => handleLinkHover(link.path)}
-                    className={`font-heading text-[10px] xl:text-[11px] font-bold tracking-[0.06em] transition-all duration-300 relative py-1 px-0.5 ${
-                      isScrolled
+                    className={`font-heading text-[10px] xl:text-[11px] font-bold tracking-[0.06em] transition-all duration-300 relative py-1 px-0.5 ${isScrolled
                         ? isActive
                           ? 'text-[#111827]'
                           : 'text-[#374151] hover:text-brand-red font-semibold'
                         : isActive
                           ? 'text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]'
                           : 'text-white/80 hover:text-[#cca72f]'
-                    }`}
+                      }`}
                   >
                     {link.name}
-                    
+
                     {/* Active Gold/Red Underline */}
                     {isActive && (
                       <motion.span
                         layoutId="capsuleActiveUnderline"
-                        className={`absolute bottom-[-4px] left-0 w-full h-[3px] rounded-full ${
-                          isScrolled ? 'bg-brand-red' : 'bg-[#cca72f]'
-                        }`}
+                        className={`absolute bottom-[-4px] left-0 w-full h-[3px] rounded-full ${isScrolled ? 'bg-brand-red' : 'bg-[#cca72f]'
+                          }`}
                       />
                     )}
                   </Link>
 
                   {/* Vertical Separator */}
                   {idx < navLinks.length - 1 && (
-                    <span className={`h-3.5 w-[1px] self-center pointer-events-none ${
-                      isScrolled ? 'bg-neutral-950/10' : 'bg-white/10'
-                    }`} />
+                    <span className={`h-3.5 w-[1px] self-center pointer-events-none ${isScrolled ? 'bg-neutral-950/10' : 'bg-white/10'
+                      }`} />
                   )}
                 </React.Fragment>
               );
@@ -154,11 +150,10 @@ const Navbar = () => {
 
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`lg:hidden p-2 transition-colors focus:outline-none ${
-                isScrolled
+              className={`lg:hidden p-2 transition-colors focus:outline-none ${isScrolled
                   ? 'text-[#111827] hover:text-brand-red'
                   : 'text-white hover:text-[#cca72f]'
-              }`}
+                }`}
               aria-label="Toggle Navigation Menu"
             >
               {isOpen ? <FiX size={22} /> : <FiMenu size={22} />}
@@ -215,11 +210,10 @@ const Navbar = () => {
                         to={link.path}
                         onMouseEnter={() => handleLinkHover(link.path)}
                         onClick={() => setIsOpen(false)}
-                        className={`font-heading text-sm font-semibold tracking-[0.12em] uppercase transition-all py-3.5 block rounded-lg ${
-                          isActive
+                        className={`font-heading text-sm font-semibold tracking-[0.12em] uppercase transition-all py-3.5 block rounded-lg ${isActive
                             ? 'text-brand-gold bg-white/5 font-bold'
                             : 'text-white/80 hover:text-brand-gold hover:bg-white/5'
-                        }`}
+                          }`}
                       >
                         {link.name}
                       </Link>

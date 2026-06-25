@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FiArrowRight } from 'react-icons/fi';
 import { GiChiliPepper } from 'react-icons/gi';
 import chilliPowderImg from '../../assets/chilli-powder-hero.png';
 import heroSlide1Img from '../../assets/hero-slide1.png';
@@ -47,7 +46,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative w-full min-h-screen md:h-screen overflow-hidden flex items-center justify-center bg-black pt-20 md:pt-0">
+    <section className="relative w-full min-h-[90vh] md:h-[90vh] overflow-hidden flex items-end justify-center bg-black pb-8 md:pb-12 pt-28">
 
       {/* Background Image Slideshow with smooth crossfade and Ken Burns scale effect */}
       <div className="absolute inset-0 z-0">
@@ -73,8 +72,8 @@ const Hero = () => {
             />
           );
         })}
-        {/* Dark overlay (65% opacity for crisp text readability) */}
-        <div className="absolute inset-0 bg-black/65 z-10" />
+        {/* Dark overlay (45% opacity for crisp text readability) */}
+        <div className="absolute inset-0 bg-black/40 z-10" />
       </div>
 
       {/* Radial ambient glow to boost visual depth */}

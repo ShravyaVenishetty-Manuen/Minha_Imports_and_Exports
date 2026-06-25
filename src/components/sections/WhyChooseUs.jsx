@@ -70,7 +70,7 @@ const WhyChooseUs = () => {
 
         {/* Section Heading */}
         <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-white tracking-tight mb-2">
-          Why the World Chooses <span className="text-[#cca72f]">Minha</span>
+          Why the World Chooses <span className="text-[#cca72f]">Minha ?</span>
         </h2>
 
         {/* Tiny gold diamond separator */}
