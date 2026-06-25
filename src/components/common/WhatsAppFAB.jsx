@@ -21,7 +21,7 @@ const WhatsAppFAB = () => {
       {/* Tooltip label */}
       <span
         className={`
-          bg-white text-[#1a1c1e] font-['Montserrat'] font-bold text-[11px] tracking-wide
+          bg-white text-[#1a1c1e] font-['urbanist'] font-bold text-[11px] tracking-wide
           px-3 py-1.5 rounded-full shadow-lg whitespace-nowrap
           transition-all duration-300 pointer-events-none
           ${hovered ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-2'}

@@ -82,16 +82,16 @@ const Testimonials = () => {
           {/* Left Column: Heading, Rating Card, and Trust Info */}
           <div className="lg:col-span-5 space-y-6 text-left">
             <div>
-              <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.25em] text-[#8f000d] bg-[#8f000d]/10 px-3.5 py-1.5 rounded-full uppercase inline-block mb-3.5">
+              <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.25em] text-[#8f000d] bg-[#8f000d]/10 px-3.5 py-1.5 rounded-full uppercase inline-block mb-3.5">
                 Client Voices
               </span>
-              <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
+              <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
                 Trusted by India's <br />
                 <span className="text-[#1f5e3b]">Leading Food Brands</span>
               </h2>
             </div>
 
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
+            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
               We partner with India's largest domestic packers, food processors, and spice exporters to deliver consistent, certified dry red chilli varieties to global end-users.
             </p>
 
@@ -100,7 +100,7 @@ const Testimonials = () => {
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#cca72f]/10 rounded-full blur-2xl pointer-events-none" />
               <div className="relative z-10 flex items-center gap-5">
                 <div>
-                  <div className="font-['Montserrat'] font-black text-[38px] md:text-[46px] text-[#cca72f] leading-none">
+                  <div className="font-['urbanist'] font-black text-[38px] md:text-[46px] text-[#cca72f] leading-none">
                     4.9
                   </div>
                   <div className="flex text-[#cca72f] gap-0.5 mt-1">
@@ -111,10 +111,10 @@ const Testimonials = () => {
                 </div>
                 <div className="h-10 w-[1px] bg-white/10" />
                 <div className="text-left space-y-1">
-                  <div className="font-['Montserrat'] font-bold text-xs uppercase tracking-wider text-white/90">
+                  <div className="font-['urbanist'] font-bold text-xs uppercase tracking-wider text-white/90">
                     Average Supplier Rating
                   </div>
-                  <div className="font-['Inter'] text-[11px] text-white/60">
+                  <div className="font-['Nunito'] text-[11px] text-white/60">
                     Based on 120+ audited domestic & international trading transactions.
                   </div>
                 </div>
@@ -127,13 +127,13 @@ const Testimonials = () => {
                 <div className="w-5 h-5 rounded-full bg-[#1f5e3b]/10 flex items-center justify-center text-[#1f5e3b]">
                   <FiCheck className="text-xs stroke-[3px]" />
                 </div>
-                <span className="font-['Montserrat'] font-bold text-[11px] text-neutral-800 uppercase tracking-wide">FSSAI Certified</span>
+                <span className="font-['urbanist'] font-bold text-[11px] text-neutral-800 uppercase tracking-wide">FSSAI Certified</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-5 h-5 rounded-full bg-[#1f5e3b]/10 flex items-center justify-center text-[#1f5e3b]">
                   <FiCheck className="text-xs stroke-[3px]" />
                 </div>
-                <span className="font-['Montserrat'] font-bold text-[11px] text-neutral-800 uppercase tracking-wide">ASTA Standardized</span>
+                <span className="font-['urbanist'] font-bold text-[11px] text-neutral-800 uppercase tracking-wide">ASTA Standardized</span>
               </div>
             </div>
 
@@ -173,18 +173,18 @@ const Testimonials = () => {
                           <FiStar key={i} className="fill-[#cca72f] text-sm" />
                         ))}
                       </div>
-                      <span className="text-[10px] font-['Montserrat'] font-bold text-[#cca72f] bg-[#cca72f]/10 border border-[#cca72f]/20 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                      <span className="text-[10px] font-['urbanist'] font-bold text-[#cca72f] bg-[#cca72f]/10 border border-[#cca72f]/20 px-2.5 py-1 rounded-full uppercase tracking-wider">
                         100% Quality Verified
                       </span>
                     </div>
 
                     {/* Tagline */}
-                    <h3 className="font-['Montserrat'] font-extrabold text-[18px] sm:text-[20px] text-neutral-900 leading-snug text-left">
+                    <h3 className="font-['urbanist'] font-extrabold text-[18px] sm:text-[20px] text-neutral-900 leading-snug text-left">
                       "{reviews[activeIndex].tag}"
                     </h3>
 
                     {/* Review text */}
-                    <p className="font-['Inter'] font-normal text-[#5a403e] text-[14px] sm:text-[15.5px] leading-relaxed text-justify">
+                    <p className="font-['Nunito'] font-normal text-[#5a403e] text-[14px] sm:text-[15.5px] leading-relaxed text-justify">
                       {reviews[activeIndex].text}
                     </p>
                   </div>
@@ -195,15 +195,15 @@ const Testimonials = () => {
                   {/* Profile info and Location badge */}
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div className="text-left">
-                      <div className="font-['Montserrat'] font-black text-[14px] tracking-tight text-neutral-900">
+                      <div className="font-['urbanist'] font-black text-[14px] tracking-tight text-neutral-900">
                         {reviews[activeIndex].name}
                       </div>
-                      <div className="font-['Inter'] text-[12px] text-[#5a403e]/70 mt-0.5">
+                      <div className="font-['Nunito'] text-[12px] text-[#5a403e]/70 mt-0.5">
                         {reviews[activeIndex].role}, <span className="font-semibold text-[#1f5e3b]">{reviews[activeIndex].company}</span>
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-1.5 text-[11px] font-['Montserrat'] font-bold text-neutral-600 bg-[#FAF8F4] border border-neutral-100 px-3.5 py-1.5 rounded-full shadow-sm self-start sm:self-auto">
+                    <div className="flex items-center gap-1.5 text-[11px] font-['urbanist'] font-bold text-neutral-600 bg-[#FAF8F4] border border-neutral-100 px-3.5 py-1.5 rounded-full shadow-sm self-start sm:self-auto">
                       <FiMapPin className="text-[#8f000d]" />
                       <span>{reviews[activeIndex].location}</span>
                     </div>

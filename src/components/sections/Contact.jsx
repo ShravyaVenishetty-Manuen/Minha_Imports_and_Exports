@@ -41,10 +41,10 @@ const Contact = () => {
               <span className="absolute -top-10 -left-2 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
                 “
               </span>
-              <blockquote className="font-['Montserrat'] font-medium italic text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed text-white/95 relative z-10">
+              <blockquote className="font-['urbanist'] font-medium italic text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed text-white/95 relative z-10">
                 "From Guntur's rich farming heritage to global markets, we deliver products crafted with care and commitment.Every shipment reflects our dedication to quality, trust, and long-term relationships."
               </blockquote>
-              <div className="font-['Montserrat'] font-bold text-[9px] sm:text-[10px] tracking-widest uppercase text-[#cca72f] relative z-10">
+              <div className="font-['urbanist'] font-bold text-[9px] sm:text-[10px] tracking-widest uppercase text-[#cca72f] relative z-10">
                 — The Minha Imports & Exports Team
               </div>
               <span className="absolute -bottom-14 right-4 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
@@ -54,7 +54,7 @@ const Contact = () => {
 
             {/* Right Column: CTA Content (lg:col-span-7) */}
             <div className="space-y-5 text-center lg:text-left lg:col-span-7 w-full">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 border border-white/20 text-[#cca72f] font-['Montserrat'] font-bold text-[8.5px] sm:text-[9px] tracking-widest uppercase mx-auto lg:mx-0">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 border border-white/20 text-[#cca72f] font-['urbanist'] font-bold text-[8.5px] sm:text-[9px] tracking-widest uppercase mx-auto lg:mx-0">
                 <span className="relative flex h-1.5 w-1.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#cca72f] opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#cca72f]"></span>
@@ -62,11 +62,11 @@ const Contact = () => {
                 Partnership Opportunities
               </div>
 
-              <h2 className="font-['Montserrat'] font-bold text-[22px] sm:text-[26px] md:text-[30px] leading-[1.2] text-white tracking-tight">
+              <h2 className="font-['urbanist'] font-bold text-[22px] sm:text-[26px] md:text-[30px] leading-[1.2] text-white tracking-tight">
                 Looking for a Reliable <br className="hidden sm:inline" /> Chilli Buying Partner?
               </h2>
 
-              <p className="font-['Inter'] font-normal text-[13.5px] leading-relaxed text-white/80">
+              <p className="font-['nunito'] font-normal text-[13.5px] leading-relaxed text-white/80">
                 Looking to buy premium dry red chillies or high-quality chilli powder? Get in touch with us today for customized wholesale quotes, bulk orders, and direct sourcing inquiries.
               </p>
 
@@ -79,7 +79,7 @@ const Contact = () => {
                 ].map((text, idx) => (
                   <div key={idx} className="flex items-center gap-1.5 bg-white/5 border border-white/5 backdrop-blur-[2px] rounded-full px-3.5 py-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#cca72f] shrink-0" />
-                    <span className="font-['Montserrat'] font-bold text-[8.5px] sm:text-[9px] text-white/90 uppercase tracking-wider">
+                    <span className="font-['urbanist'] font-bold text-[8.5px] sm:text-[9px] text-white/90 uppercase tracking-wider">
                       {text}
                     </span>
                   </div>
@@ -92,7 +92,7 @@ const Contact = () => {
                   href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20bulk%20chilli%20supply.%20Please%20contact%20me%20with%20pricing%20and%20availability."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-white text-[#8f000d] font-['Montserrat'] font-bold text-[11.5px] sm:text-[12px] py-[12px] px-[26px] rounded-full shadow-[0_4px_15px_-2px_rgba(0,0,0,0.12)] hover:bg-neutral-50 hover:translate-y-[-2px] hover:shadow-[0_6px_20px_-2px_rgba(0,0,0,0.2)] active:scale-98 transition-all duration-300 uppercase tracking-wider group"
+                  className="inline-flex items-center gap-2 bg-white text-[#8f000d] font-['urbanist'] font-bold text-[11.5px] sm:text-[12px] py-[12px] px-[26px] rounded-full shadow-[0_4px_15px_-2px_rgba(0,0,0,0.12)] hover:bg-neutral-50 hover:translate-y-[-2px] hover:shadow-[0_6px_20px_-2px_rgba(0,0,0,0.2)] active:scale-98 transition-all duration-300 uppercase tracking-wider group"
                 >
                   Contact Us
                   <FiArrowRight className="text-xs transition-transform group-hover:translate-x-1 duration-300" />

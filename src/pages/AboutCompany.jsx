@@ -26,7 +26,7 @@ import founder2 from '../assets/founder2.png';
 const OdometerYear = ({ year, color }) => {
   const digits = year.split('');
   return (
-    <div className="flex font-['Montserrat'] font-black text-[72px] sm:text-[88px] lg:text-[108px] leading-none select-none tracking-tighter">
+    <div className="flex font-['urbanist'] font-black text-[72px] sm:text-[88px] lg:text-[108px] leading-none select-none tracking-tighter">
       {digits.map((digit, idx) => {
         const val = parseInt(digit) || 0;
         return (
@@ -324,15 +324,15 @@ const AboutCompany = () => {
           loading="eager"
         />
         <div className="relative z-20 w-full max-w-4xl mx-auto text-center space-y-6">
-          <nav className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['Montserrat'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">
+          <nav className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['urbanist'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">
             <Link className="hover:text-white transition-colors whitespace-nowrap" to="/">Home</Link>
             <span className="text-white/60">/</span>
             <span className="text-white whitespace-normal text-center">Our Company</span>
           </nav>
-          <h1 className="font-['Montserrat'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
+          <h1 className="font-['urbanist'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             About Minha <br className="hidden md:block" />Imports & Exports
           </h1>
-          <p className="font-['Inter'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
+          <p className="font-['Nunito'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
             Delivering Quality, Trust, and Excellence in Global Chilli Exports. We bridge the gap between local agricultural excellence and international demand.
           </p>
         </div>
@@ -363,7 +363,7 @@ const AboutCompany = () => {
             className="text-left space-y-6"
           >
             <div>
-              <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">A Legacy of Precision & Pure Spices</h2>
+              <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">A Legacy of Precision & Pure Spices</h2>
             </div>
             <p className="text-on-surface-variant font-body-md text-body-md leading-relaxed text-justify">
               Minha Imports & Exports stands at the forefront of the Guntur dry red chilli trade, bridging the gap between local farming legacies and global food supply networks. Our operations are deeply integrated within Guntur, Asia's largest spice marketplace, allowing us to build direct collaborations with trusted local growers since 2013 and secure early-harvest access to premium crops.
@@ -379,13 +379,13 @@ const AboutCompany = () => {
                 href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20am%20interested%20in%20a%20B2B%20partnership%20for%20chilli%20export.%20Please%20share%20your%20company%20profile%20and%20export%20terms."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#8f000d] text-white px-8 py-3.5 rounded-lg font-['Montserrat'] font-bold text-xs uppercase tracking-wider shadow-lg hover:bg-[#8f000d]/90 hover:shadow-primary/20 transition-all active:scale-95"
+                className="bg-[#8f000d] text-white px-8 py-3.5 rounded-lg font-['urbanist'] font-bold text-xs uppercase tracking-wider shadow-lg hover:bg-[#8f000d]/90 hover:shadow-primary/20 transition-all active:scale-95"
               >
                 Contact Us
               </a>
               <Link
                 to="/quality"
-                className="border-2 border-[#2c6a46] text-[#2c6a46] px-8 py-3 rounded-lg font-['Montserrat'] font-bold text-xs uppercase tracking-wider hover:bg-[#2c6a46]/5 transition-all active:scale-95"
+                className="border-2 border-[#2c6a46] text-[#2c6a46] px-8 py-3 rounded-lg font-['urbanist'] font-bold text-xs uppercase tracking-wider hover:bg-[#2c6a46]/5 transition-all active:scale-95"
               >
                 Export Process
               </Link>
@@ -399,9 +399,9 @@ const AboutCompany = () => {
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
 
           <div className="text-center mb-10">
-            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Our Foundation</span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">Mission, Policy & Commitment</h2>
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-2xl mx-auto">
+            <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Our Foundation</span>
+            <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">Mission, Policy & Commitment</h2>
+            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-2xl mx-auto">
               Discover our core frameworks, standards, and values that guide every export transaction and operational process.
             </p>
           </div>
@@ -423,7 +423,7 @@ const AboutCompany = () => {
 
               {/* Left Column Navigation Panel (1/3 Width) */}
               <div className="w-full lg:w-5/12 border-b lg:border-b-0 lg:border-r border-white/10 p-6 md:p-10 flex flex-col justify-center gap-3">
-                <span className="font-['Montserrat'] font-bold text-[10px] tracking-[0.2em] text-[#cca72f] uppercase block mb-4 text-left">
+                <span className="font-['urbanist'] font-bold text-[10px] tracking-[0.2em] text-[#cca72f] uppercase block mb-4 text-left">
                   Explore Foundations
                 </span>
 
@@ -435,7 +435,7 @@ const AboutCompany = () => {
                         key={pillar.id}
                         onClick={() => setActiveSection(idx)}
                         onMouseEnter={() => setActiveSection(idx)}
-                        className={`flex items-center gap-4 px-6 py-4 rounded-xl font-['Montserrat'] font-bold text-xs uppercase tracking-wider transition-all duration-300 w-full text-left focus:outline-none ${isActive
+                        className={`flex items-center gap-4 px-6 py-4 rounded-xl font-['urbanist'] font-bold text-xs uppercase tracking-wider transition-all duration-300 w-full text-left focus:outline-none ${isActive
                           ? 'bg-white/15 text-white border border-white/10 shadow-[0_4px_20px_rgba(255,255,255,0.05)]'
                           : 'text-white/60 hover:text-white hover:bg-white/5 border border-transparent'
                           }`}
@@ -471,13 +471,13 @@ const AboutCompany = () => {
                         {pillars[activeSection].icon}
                       </div>
                       <div>
-                        <span className="font-['Montserrat'] font-semibold text-[10px] tracking-[0.15em] text-[#cca72f] uppercase block">
+                        <span className="font-['urbanist'] font-semibold text-[10px] tracking-[0.15em] text-[#cca72f] uppercase block">
                           Minha imports & exports
                         </span>
                       </div>
                     </div>
 
-                    <h3 className="font-['Montserrat'] font-extrabold text-[28px] md:text-[34px] lg:text-[40px] leading-tight text-white border-l-4 border-[#cca72f] pl-6">
+                    <h3 className="font-['urbanist'] font-extrabold text-[28px] md:text-[34px] lg:text-[40px] leading-tight text-white border-l-4 border-[#cca72f] pl-6">
                       {pillars[activeSection].label}
                     </h3>
 
@@ -500,9 +500,9 @@ const AboutCompany = () => {
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 text-center relative z-10">
 
           <div className="text-center mb-10">
-            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">The Minha Way</span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">Core Values That Drive Us</h2>
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-2xl mx-auto">
+            <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">The Minha Way</span>
+            <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">Core Values That Drive Us</h2>
+            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-2xl mx-auto">
               Our operational principles, defining how we interact with customers, partners, and the global environment.
             </p>
           </div>
@@ -543,17 +543,17 @@ const AboutCompany = () => {
 
                   {/* Card Content */}
                   <div className="relative z-10 space-y-3">
-                    <h4 className="font-['Montserrat'] font-extrabold text-[20px] text-neutral-900 tracking-tight">
+                    <h4 className="font-['urbanist'] font-extrabold text-[20px] text-neutral-900 tracking-tight">
                       {val.title}
                     </h4>
-                    <p className="font-['Inter'] font-normal text-neutral-600 text-[14px] leading-relaxed">
+                    <p className="font-['Nunito'] font-normal text-neutral-600 text-[14px] leading-relaxed">
                       {val.desc}
                     </p>
                   </div>
 
                   {/* Backdrop Huge Number */}
                   <div
-                    className="absolute bottom-6 right-6 font-['Montserrat'] font-black text-[96px] leading-none select-none pointer-events-none opacity-[0.03] group-hover:opacity-[0.08] group-hover:scale-105 transition-all duration-500"
+                    className="absolute bottom-6 right-6 font-['urbanist'] font-black text-[96px] leading-none select-none pointer-events-none opacity-[0.03] group-hover:opacity-[0.08] group-hover:scale-105 transition-all duration-500"
                     style={{
                       color: val.accentColor,
                     }}
@@ -598,9 +598,9 @@ const AboutCompany = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-10"
           >
-            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Our Evolution</span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">Our Journey & Milestones</h2>
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-2xl mx-auto">
+            <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Our Evolution</span>
+            <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">Our Journey & Milestones</h2>
+            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-2xl mx-auto">
               Tracing the progress of Minha Imports & Exports from our founding roots to our current global presence.
             </p>
           </motion.div>
@@ -653,7 +653,7 @@ const AboutCompany = () => {
                 <button
                   key={item.year}
                   onClick={() => changeTimelineYear(idx)}
-                  className="absolute font-['Montserrat'] font-extrabold text-[13px] md:text-sm tracking-wider transition-all duration-300 select-none -translate-x-1/2 -translate-y-1/2 cursor-pointer focus:outline-none"
+                  className="absolute font-['urbanist'] font-extrabold text-[13px] md:text-sm tracking-wider transition-all duration-300 select-none -translate-x-1/2 -translate-y-1/2 cursor-pointer focus:outline-none"
                   style={{
                     left: leftPercent,
                     top: topVal,
@@ -684,7 +684,7 @@ const AboutCompany = () => {
                   className="relative z-10 flex flex-col items-center group focus:outline-none cursor-pointer"
                 >
                   <span
-                    className="absolute -top-7 font-['Montserrat'] font-extrabold text-[12px] tracking-wider transition-all duration-300"
+                    className="absolute -top-7 font-['urbanist'] font-extrabold text-[12px] tracking-wider transition-all duration-300"
                     style={{ color: isActive ? item.accent : '#9ca3af' }}
                   >
                     {item.year}
@@ -742,7 +742,7 @@ const AboutCompany = () => {
                   {/* Left Column (Huge Year Display) */}
                   <div className="w-full md:w-5/12 flex flex-col justify-center items-start text-left space-y-4">
                     <span
-                      className="px-4 py-1.5 rounded-full font-['Montserrat'] font-bold text-[10px] uppercase tracking-wider text-white"
+                      className="px-4 py-1.5 rounded-full font-['urbanist'] font-bold text-[10px] uppercase tracking-wider text-white"
                       style={{ backgroundColor: timelineData[activeTimelineYear].accent }}
                     >
                       {timelineData[activeTimelineYear].tag}
@@ -757,13 +757,13 @@ const AboutCompany = () => {
 
                   {/* Right Column (Milestone Details) */}
                   <div className="w-full md:w-7/12 flex flex-col justify-center text-left space-y-4">
-                    <span className="font-['Montserrat'] font-semibold text-[11px] tracking-[0.15em] text-[#cca72f] uppercase block">
+                    <span className="font-['urbanist'] font-semibold text-[11px] tracking-[0.15em] text-[#cca72f] uppercase block">
                       {timelineData[activeTimelineYear].subtitle}
                     </span>
-                    <h3 className="font-['Montserrat'] font-extrabold text-[24px] md:text-[32px] text-[#1a1c1e] leading-tight">
+                    <h3 className="font-['urbanist'] font-extrabold text-[24px] md:text-[32px] text-[#1a1c1e] leading-tight">
                       {timelineData[activeTimelineYear].title}
                     </h3>
-                    <p className="font-['Inter'] font-normal text-neutral-600 text-[15px] leading-relaxed">
+                    <p className="font-['Nunito'] font-normal text-neutral-600 text-[15px] leading-relaxed">
                       {timelineData[activeTimelineYear].desc}
                     </p>
                   </div>
@@ -795,9 +795,9 @@ const AboutCompany = () => {
       <section className="py-10 md:py-14 bg-surface">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 text-center">
           <div className="text-center mb-10">
-            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Leadership & Management</span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">Leadership & Visionary Management</h2>
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-2xl mx-auto">
+            <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Leadership & Management</span>
+            <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">Leadership & Visionary Management</h2>
+            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-2xl mx-auto">
               Guided by decades of experience in international trade, corporate relations, and agricultural excellence.
             </p>
           </div>
@@ -816,15 +816,15 @@ const AboutCompany = () => {
               </div>
               <div className="p-8 flex-grow flex flex-col justify-between space-y-4">
                 <div className="space-y-2">
-                  <span className="font-['Montserrat'] font-bold text-[10px] tracking-[0.2em] text-[#8f000d] uppercase block">Founder & Managing Director</span>
-                  <h3 className="font-['Montserrat'] font-extrabold text-[22px] text-[#1a1c1e] leading-tight">Mr. Shaik Jani Basha</h3>
+                  <span className="font-['urbanist'] font-bold text-[10px] tracking-[0.2em] text-[#8f000d] uppercase block">Founder & Managing Director</span>
+                  <h3 className="font-['urbanist'] font-extrabold text-[22px] text-[#1a1c1e] leading-tight">Mr. Shaik Jani Basha</h3>
                 </div>
 
-                <div className="border-l-4 border-[#cca72f] pl-4 italic text-neutral-600 text-[13px] leading-relaxed font-['Inter']">
+                <div className="border-l-4 border-[#cca72f] pl-4 italic text-neutral-600 text-[13px] leading-relaxed font-['Nunito']">
                   "Our mission is to establish Minha as the synonym of trust, quality, and purity in the global chilli market, connecting Guntur farmers with buyers."
                 </div>
 
-                <p className="text-on-surface-variant font-['Inter'] font-normal text-[13px] leading-relaxed">
+                <p className="text-on-surface-variant font-['Nunito'] font-normal text-[13px] leading-relaxed">
                   With over 20 years of experience in global agricultural exports, Mr. Shaik Jani Basha founded Minha with a vision to bridge the gap between Indian spice heritage and global quality standards. He guides the company's long-term strategy.
                 </p>
               </div>
@@ -842,15 +842,15 @@ const AboutCompany = () => {
               </div>
               <div className="p-8 flex-grow flex flex-col justify-between space-y-4">
                 <div className="space-y-2">
-                  <span className="font-['Montserrat'] font-bold text-[10px] tracking-[0.2em] text-[#8f000d] uppercase block">Co-Founder & Chief Executive Officer</span>
-                  <h3 className="font-['Montserrat'] font-extrabold text-[22px] text-[#1a1c1e] leading-tight">Mr. Moosa Maulavi Rafeekh</h3>
+                  <span className="font-['urbanist'] font-bold text-[10px] tracking-[0.2em] text-[#8f000d] uppercase block">Co-Founder & Chief Executive Officer</span>
+                  <h3 className="font-['urbanist'] font-extrabold text-[22px] text-[#1a1c1e] leading-tight">Mr. Moosa Maulavi Rafeekh</h3>
                 </div>
 
-                <div className="border-l-4 border-[#cca72f] pl-4 italic text-neutral-600 text-[13px] leading-relaxed font-['Inter']">
+                <div className="border-l-4 border-[#cca72f] pl-4 italic text-neutral-600 text-[13px] leading-relaxed font-['Nunito']">
                   "Our goal is simple: to make Indian dry chillies the gold standard of quality and traceability in every international market we serve."
                 </div>
 
-                <p className="text-on-surface-variant font-['Inter'] font-normal text-[13px] leading-relaxed">
+                <p className="text-on-surface-variant font-['Nunito'] font-normal text-[13px] leading-relaxed">
                   With over 15 years of experience in supply chain technology and global trade, Mr. Moosa Maulavi Rafeekh co-founded Minha to modernize agricultural exports. He oversees technology integration, logistics, and operational compliance.
                 </p>
               </div>
@@ -859,7 +859,7 @@ const AboutCompany = () => {
 
           {/* Executive Management Title */}
           <div className="text-center mb-12">
-            <h3 className="font-['Montserrat'] font-bold text-[20px] text-neutral-800 uppercase tracking-wider">Executive Management Board</h3>
+            <h3 className="font-['urbanist'] font-bold text-[20px] text-neutral-800 uppercase tracking-wider">Executive Management Board</h3>
             <div className="w-16 h-1 bg-[#cca72f] mx-auto mt-3 rounded-full" />
           </div>
 
@@ -876,9 +876,9 @@ const AboutCompany = () => {
               </div>
               <div className="p-6 flex-grow flex flex-col justify-between space-y-3">
                 <div>
-                  <span className="font-['Montserrat'] font-bold text-[9px] tracking-[0.15em] text-[#8f000d] uppercase block mb-1">Chief Operating Officer</span>
-                  <h4 className="font-['Montserrat'] font-bold text-[16px] text-[#1a1c1e]">Mr. David Chen</h4>
-                  <p className="text-neutral-500 font-['Inter'] font-normal text-[12px] leading-relaxed mt-2">
+                  <span className="font-['urbanist'] font-bold text-[9px] tracking-[0.15em] text-[#8f000d] uppercase block mb-1">Chief Operating Officer</span>
+                  <h4 className="font-['urbanist'] font-bold text-[16px] text-[#1a1c1e]">Mr. David Chen</h4>
+                  <p className="text-neutral-500 font-['Nunito'] font-normal text-[12px] leading-relaxed mt-2">
                     David oversees our global supply chain and logistics, ensuring that every shipment meets the stringent quality requirements of our international partners.
                   </p>
                 </div>
@@ -896,9 +896,9 @@ const AboutCompany = () => {
               </div>
               <div className="p-6 flex-grow flex flex-col justify-between space-y-3">
                 <div>
-                  <span className="font-['Montserrat'] font-bold text-[9px] tracking-[0.15em] text-[#2c6a46] uppercase block mb-1">Director of Quality & Compliance</span>
-                  <h4 className="font-['Montserrat'] font-bold text-[16px] text-[#1a1c1e]">Dr. Rajesh Varma</h4>
-                  <p className="text-neutral-500 font-['Inter'] font-normal text-[12px] leading-relaxed mt-2">
+                  <span className="font-['urbanist'] font-bold text-[9px] tracking-[0.15em] text-[#2c6a46] uppercase block mb-1">Director of Quality & Compliance</span>
+                  <h4 className="font-['urbanist'] font-bold text-[16px] text-[#1a1c1e]">Dr. Rajesh Varma</h4>
+                  <p className="text-neutral-500 font-['Nunito'] font-normal text-[12px] leading-relaxed mt-2">
                     Dr. Varma leads our laboratory testing, pesticide analysis, organic certifications, and strict ASTA/FDA regulatory compliance audits.
                   </p>
                 </div>
@@ -916,9 +916,9 @@ const AboutCompany = () => {
               </div>
               <div className="p-6 flex-grow flex flex-col justify-between space-y-3">
                 <div>
-                  <span className="font-['Montserrat'] font-bold text-[9px] tracking-[0.15em] text-[#cca72f] uppercase block mb-1">VP of Global Trade Relations</span>
-                  <h4 className="font-['Montserrat'] font-bold text-[16px] text-[#1a1c1e]">Ms. Elena Rostova</h4>
-                  <p className="text-neutral-500 font-['Inter'] font-normal text-[12px] leading-relaxed mt-2">
+                  <span className="font-['urbanist'] font-bold text-[9px] tracking-[0.15em] text-[#cca72f] uppercase block mb-1">VP of Global Trade Relations</span>
+                  <h4 className="font-['urbanist'] font-bold text-[16px] text-[#1a1c1e]">Ms. Elena Rostova</h4>
+                  <p className="text-neutral-500 font-['Nunito'] font-normal text-[12px] leading-relaxed mt-2">
                     Elena manages import/export compliance, international client relations, contract fulfillment, and European & Middle Eastern market expansion.
                   </p>
                 </div>
@@ -936,9 +936,9 @@ const AboutCompany = () => {
               </div>
               <div className="p-6 flex-grow flex flex-col justify-between space-y-3">
                 <div>
-                  <span className="font-['Montserrat'] font-bold text-[9px] tracking-[0.15em] text-[#8f000d] uppercase block mb-1">Head of Sourcing & Logistics</span>
-                  <h4 className="font-['Montserrat'] font-bold text-[16px] text-[#1a1c1e]">Mr. Vikram Malhotra</h4>
-                  <p className="text-neutral-500 font-['Inter'] font-normal text-[12px] leading-relaxed mt-2">
+                  <span className="font-['urbanist'] font-bold text-[9px] tracking-[0.15em] text-[#8f000d] uppercase block mb-1">Head of Sourcing & Logistics</span>
+                  <h4 className="font-['urbanist'] font-bold text-[16px] text-[#1a1c1e]">Mr. Vikram Malhotra</h4>
+                  <p className="text-neutral-500 font-['Nunito'] font-normal text-[12px] leading-relaxed mt-2">
                     Vikram coordinates directly with Guntur farming clusters to secure high-quality yields and handles dry container logistics at ports.
                   </p>
                 </div>
@@ -954,11 +954,11 @@ const AboutCompany = () => {
 
           {/* Header */}
           <div className="text-center mb-10 max-w-3xl mx-auto">
-            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Global Sourcing & Supply</span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
+            <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Global Sourcing & Supply</span>
+            <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Our International Trade Network
             </h2>
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4">
+            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4">
               Operating directly from Guntur, India (the heart of the spice trade), Minha exports premium graded red chillies to global ports, ensuring strict compliance with international phytosanitary, pesticide, and ASTA guidelines.
             </p>
           </div>
@@ -988,7 +988,7 @@ const AboutCompany = () => {
                 {/* Core dot */}
                 <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-[#8f000d] border-2 border-white shadow-md cursor-default" />
                 {/* Tooltip badge */}
-                <span className="mt-2.5 bg-neutral-900/90 text-white font-['Montserrat'] font-bold text-[9px] uppercase tracking-wider px-2.5 py-1 rounded-md shadow-lg pointer-events-none flex items-center gap-1.5 border border-white/10">
+                <span className="mt-2.5 bg-neutral-900/90 text-white font-['urbanist'] font-bold text-[9px] uppercase tracking-wider px-2.5 py-1 rounded-md shadow-lg pointer-events-none flex items-center gap-1.5 border border-white/10">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#cca72f] animate-pulse" />
                   Guntur Origin Hub
                 </span>
@@ -1000,40 +1000,40 @@ const AboutCompany = () => {
 
               <div className="space-y-1 md:border-r border-neutral-100 last:border-0">
                 <span className="block text-4xl font-extrabold text-[#8f000d]">15+</span>
-                <span className="font-['Montserrat'] font-bold text-[10px] uppercase tracking-widest text-neutral-500 block">
+                <span className="font-['urbanist'] font-bold text-[10px] uppercase tracking-widest text-neutral-500 block">
                   Export Destinations
                 </span>
-                <span className="font-['Inter'] text-[11px] text-neutral-400 block max-w-[180px] mx-auto">
+                <span className="font-['Nunito'] text-[11px] text-neutral-400 block max-w-[180px] mx-auto">
                   Active container shipping routes worldwide.
                 </span>
               </div>
 
               <div className="space-y-1 md:border-r border-neutral-100 last:border-0">
                 <span className="block text-4xl font-extrabold text-[#2c6a46]">200+</span>
-                <span className="font-['Montserrat'] font-bold text-[10px] uppercase tracking-widest text-neutral-500 block">
+                <span className="font-['urbanist'] font-bold text-[10px] uppercase tracking-widest text-neutral-500 block">
                   Containers / Year
                 </span>
-                <span className="font-['Inter'] text-[11px] text-neutral-400 block max-w-[180px] mx-auto">
+                <span className="font-['Nunito'] text-[11px] text-neutral-400 block max-w-[180px] mx-auto">
                   Consistent high-volume bulk supply logistics.
                 </span>
               </div>
 
               <div className="space-y-1 md:border-r border-neutral-100 last:border-0">
                 <span className="block text-4xl font-extrabold text-[#cca72f]">100%</span>
-                <span className="font-['Montserrat'] font-bold text-[10px] uppercase tracking-widest text-neutral-500 block">
+                <span className="font-['urbanist'] font-bold text-[10px] uppercase tracking-widest text-neutral-500 block">
                   Sourcing Traceability
                 </span>
-                <span className="font-['Inter'] text-[11px] text-neutral-400 block max-w-[180px] mx-auto">
+                <span className="font-['Nunito'] text-[11px] text-neutral-400 block max-w-[180px] mx-auto">
                   From Guntur farms to final shipment ports.
                 </span>
               </div>
 
               <div className="space-y-1 last:border-0">
                 <span className="block text-4xl font-extrabold text-[#8f000d]">24/7</span>
-                <span className="font-['Montserrat'] font-bold text-[10px] uppercase tracking-widest text-neutral-500 block">
+                <span className="font-['urbanist'] font-bold text-[10px] uppercase tracking-widest text-neutral-500 block">
                   Logistics Support
                 </span>
-                <span className="font-['Inter'] text-[11px] text-neutral-400 block max-w-[180px] mx-auto">
+                <span className="font-['Nunito'] text-[11px] text-neutral-400 block max-w-[180px] mx-auto">
                   Real-time custom clearance coordination.
                 </span>
               </div>
@@ -1051,11 +1051,11 @@ const AboutCompany = () => {
 
           {/* Header */}
           <div className="text-center mb-10">
-            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Why Partner With Us</span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
+            <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Why Partner With Us</span>
+            <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Our Simple Three-Step Process
             </h2>
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-xl mx-auto">
+            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-xl mx-auto">
               We make it easy for global businesses to source premium red chillies from India with stable prices, clean quality, and fast shipping.
             </p>
           </div>
@@ -1134,7 +1134,7 @@ const AboutCompany = () => {
                       animation: 'stage1Zoom 3.5s ease-in-out infinite'
                     }}
                   >
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#2c6a46] text-white text-[9px] font-['Montserrat'] font-bold py-0.5 px-2 rounded-full whitespace-nowrap">
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#2c6a46] text-white text-[9px] font-['urbanist'] font-bold py-0.5 px-2 rounded-full whitespace-nowrap">
                       STAGE 01
                     </span>
                     <FiLayers className="text-[20px] text-[#2c6a46]" />
@@ -1143,13 +1143,13 @@ const AboutCompany = () => {
 
                 {/* Content */}
                 <div className="space-y-3 px-4">
-                  <h3 className="font-['Montserrat'] font-extrabold text-[18px] md:text-[20px] text-neutral-900">
+                  <h3 className="font-['urbanist'] font-extrabold text-[18px] md:text-[20px] text-neutral-900">
                     Direct Sourcing
                   </h3>
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-[#2c6a46]/5 text-[#2c6a46] font-['Montserrat'] font-bold text-[10px] tracking-wide uppercase">
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-[#2c6a46]/5 text-[#2c6a46] font-['urbanist'] font-bold text-[10px] tracking-wide uppercase">
                     20+ Farmer Groups
                   </div>
-                  <p className="font-['Inter'] font-normal text-neutral-500 text-[14px] leading-relaxed pt-1 text-center">
+                  <p className="font-['Nunito'] font-normal text-neutral-500 text-[14px] leading-relaxed pt-1 text-center">
                     We buy chillies directly from farmer groups in Guntur. This gives us better quality control, stable prices, and helps us support local farming communities.
                   </p>
                 </div>
@@ -1172,7 +1172,7 @@ const AboutCompany = () => {
                       animation: 'stage2Zoom 3.5s ease-in-out infinite'
                     }}
                   >
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#8f000d] text-white text-[9px] font-['Montserrat'] font-bold py-0.5 px-2 rounded-full whitespace-nowrap">
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#8f000d] text-white text-[9px] font-['urbanist'] font-bold py-0.5 px-2 rounded-full whitespace-nowrap">
                       STAGE 02
                     </span>
                     <FiCheckCircle className="text-[20px] text-[#8f000d]" />
@@ -1181,13 +1181,13 @@ const AboutCompany = () => {
 
                 {/* Content */}
                 <div className="space-y-3 px-4">
-                  <h3 className="font-['Montserrat'] font-extrabold text-[18px] md:text-[20px] text-neutral-900">
+                  <h3 className="font-['urbanist'] font-extrabold text-[18px] md:text-[20px] text-neutral-900">
                     Tested Quality
                   </h3>
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-[#8f000d]/5 text-[#8f000d] font-['Montserrat'] font-bold text-[10px] tracking-wide uppercase">
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-[#8f000d]/5 text-[#8f000d] font-['urbanist'] font-bold text-[10px] tracking-wide uppercase">
                     100% Safe Spices
                   </div>
-                  <p className="font-['Inter'] font-normal text-neutral-500 text-[14px] leading-relaxed pt-1 text-center">
+                  <p className="font-['Nunito'] font-normal text-neutral-500 text-[14px] leading-relaxed pt-1 text-center">
                     Every batch of chillies is tested in laboratories. We check for moisture, pesticide levels, and colors to make sure they match global health standards.
                   </p>
                 </div>
@@ -1210,7 +1210,7 @@ const AboutCompany = () => {
                       animation: 'stage3Zoom 3.5s ease-in-out infinite'
                     }}
                   >
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#cca72f] text-white text-[9px] font-['Montserrat'] font-bold py-0.5 px-2 rounded-full whitespace-nowrap">
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#cca72f] text-white text-[9px] font-['urbanist'] font-bold py-0.5 px-2 rounded-full whitespace-nowrap">
                       STAGE 03
                     </span>
                     <FiTruck className="text-[20px] text-[#cca72f]" />
@@ -1219,13 +1219,13 @@ const AboutCompany = () => {
 
                 {/* Content */}
                 <div className="space-y-3 px-4">
-                  <h3 className="font-['Montserrat'] font-extrabold text-[18px] md:text-[20px] text-neutral-900">
+                  <h3 className="font-['urbanist'] font-extrabold text-[18px] md:text-[20px] text-neutral-900">
                     Fast Shipping
                   </h3>
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-[#cca72f]/5 text-[#cca72f] font-['Montserrat'] font-bold text-[10px] tracking-wide uppercase">
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-[#cca72f]/5 text-[#cca72f] font-['urbanist'] font-bold text-[10px] tracking-wide uppercase">
                     15+ Countries Served
                   </div>
-                  <p className="font-['Inter'] font-normal text-neutral-500 text-[14px] leading-relaxed pt-1 text-center">
+                  <p className="font-['Nunito'] font-normal text-neutral-500 text-[14px] leading-relaxed pt-1 text-center">
                     We book fast cargo ships and take care of all export paperwork. Your orders arrive at your port on time with no customs delays.
                   </p>
                 </div>
@@ -1253,10 +1253,10 @@ const AboutCompany = () => {
               <span className="absolute -top-10 -left-2 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
                 “
               </span>
-              <blockquote className="font-['Montserrat'] font-medium italic text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed text-white/95 relative z-10">
+              <blockquote className="font-['urbanist'] font-medium italic text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed text-white/95 relative z-10">
                 "Our story began in the fertile lands of Guntur with a simple belief—that the finest harvest deserves a place on the global stage. Today, every shipment we send carries the dedication of our farmers, the trust of our partners, and our promise of uncompromising quality."
               </blockquote>
-              <div className="font-['Montserrat'] font-bold text-[9px] sm:text-[10px] tracking-widest uppercase text-[#cca72f] relative z-10">
+              <div className="font-['urbanist'] font-bold text-[9px] sm:text-[10px] tracking-widest uppercase text-[#cca72f] relative z-10">
                 — The Minha Board of Directors
               </div>
               <span className="absolute -bottom-14 right-4 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
@@ -1270,18 +1270,18 @@ const AboutCompany = () => {
               {/* Tagline Badge */}
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mx-auto lg:mx-0">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#cca72f] animate-pulse" />
-                <span className="font-['Montserrat'] font-bold text-[8.5px] tracking-[0.2em] text-[#cca72f] uppercase">
+                <span className="font-['urbanist'] font-bold text-[8.5px] tracking-[0.2em] text-[#cca72f] uppercase">
                   Direct Export Cargo Sourcing
                 </span>
               </div>
 
               {/* Title */}
-              <h2 className="font-['Montserrat'] font-extrabold text-[22px] md:text-[30px] leading-tight text-white tracking-tight">
+              <h2 className="font-['urbanist'] font-extrabold text-[22px] md:text-[30px] leading-tight text-white tracking-tight">
                 Ready to Secure Your <span className="bg-gradient-to-r from-white via-white to-[#cca72f] bg-clip-text text-transparent">Chilli Supply?</span>
               </h2>
 
               {/* Description */}
-              <p className="font-['Inter'] font-normal text-white/80 text-[13.5px] leading-relaxed">
+              <p className="font-['Nunito'] font-normal text-white/80 text-[13.5px] leading-relaxed">
                 Connect directly with our Guntur export desk. We offer custom packaging, strict pesticide compliance, and stable year-round shipping slots.
               </p>
 
@@ -1291,14 +1291,14 @@ const AboutCompany = () => {
                   href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20would%20like%20to%20request%20a%20bulk%20export%20quote.%20Please%20share%20your%20pricing%2C%20custom%20packaging%20options%2C%20and%20pesticide%20compliance%20documentation."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#cca72f] text-[#140002] px-8 py-3.5 rounded-full font-['Montserrat'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-[#e0bc55] shadow-lg shadow-[#cca72f]/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
+                  className="bg-[#cca72f] text-[#140002] px-8 py-3.5 rounded-full font-['urbanist'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-[#e0bc55] shadow-lg shadow-[#cca72f]/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
                 >
                   Request Quote
                 </a>
               </div>
 
               {/* Trust Guarantee */}
-              <div className="text-[8.5px] font-['Montserrat'] tracking-widest text-white/40 uppercase pt-1">
+              <div className="text-[8.5px] font-['urbanist'] tracking-widest text-white/40 uppercase pt-1">
                 Export Desk Response Guarantee: Within 12 Hours
               </div>
 

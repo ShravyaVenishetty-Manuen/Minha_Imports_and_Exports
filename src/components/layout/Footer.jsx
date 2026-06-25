@@ -8,7 +8,7 @@ const Footer = () => {
   const [productsOpen, setProductsOpen] = useState(false);
 
   return (
-    <footer className="w-full bg-[#111315] text-[#a0a5ad] font-['Inter'] relative overflow-hidden border-t border-white/[0.02]">
+    <footer className="w-full bg-[#111315] text-[#a0a5ad] font-['nunito'] relative overflow-hidden border-t border-white/[0.02]">
 
       {/* Top Main Footer Area */}
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 pt-10 md:pt-20 pb-8 md:pb-12">
@@ -25,7 +25,7 @@ const Footer = () => {
                   <path d="M6 16h6v-4H8V8h4V6h4v6h2v4" />
                 </svg>
               </div>
-              <span className="font-['Montserrat'] font-bold text-[15px] tracking-wide text-white leading-tight">
+              <span className="font-['urbanist'] font-bold text-[15px] tracking-wide text-white leading-tight">
                 MINHA IMPORTS & EXPORTS
               </span>
             </div>
@@ -59,7 +59,7 @@ const Footer = () => {
               onClick={() => setLinksOpen(!linksOpen)}
               className="w-full flex justify-between items-center md:cursor-default md:pointer-events-none text-left focus:outline-none py-2 md:py-0"
             >
-              <h3 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
+              <h3 className="font-['urbanist'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
                 Quick Links
               </h3>
               <span className="lg:hidden text-white text-base">
@@ -91,7 +91,7 @@ const Footer = () => {
               onClick={() => setProductsOpen(!productsOpen)}
               className="w-full flex justify-between items-center md:cursor-default md:pointer-events-none text-left focus:outline-none py-2 md:py-0"
             >
-              <h3 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
+              <h3 className="font-['urbanist'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
                 Our Products
               </h3>
               <span className="lg:hidden text-white text-base">
@@ -117,7 +117,7 @@ const Footer = () => {
 
           {/* Column 4: Contact Us */}
           <div className="md:col-span-6 xl:col-span-1 space-y-3.5 text-left">
-            <h3 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
+            <h3 className="font-['urbanist'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
               Contact Us
             </h3>
             <div className="space-y-3 text-[13px]">
@@ -145,7 +145,7 @@ const Footer = () => {
 
           {/* Column 5: WeChat QR Connect Banner */}
           <div className="md:col-span-6 xl:col-span-1 space-y-3.5 text-left">
-            <h3 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
+            <h3 className="font-['urbanist'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
               WeChat Connect
             </h3>
 
@@ -171,7 +171,7 @@ const Footer = () => {
       <div className="w-full h-[3px] bg-gradient-to-r from-[#8f000d] to-[#cca72f]" />
 
       {/* Bottom Bar Area */}
-      <div className="w-full bg-[#0b0c0d] text-[12px] text-[#a0a5ad]/50 py-6 px-6 md:px-12 lg:px-16 font-['Montserrat']">
+      <div className="w-full bg-[#0b0c0d] text-[12px] text-[#a0a5ad]/50 py-6 px-6 md:px-12 lg:px-16 font-['urbanist']">
         <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-[#a0a5ad]/60 text-center md:text-left">
             © 2026 Minha Imports & Exports. All Rights Reserved.

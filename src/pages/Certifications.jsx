@@ -158,8 +158,8 @@ const Certifications = () => {
             {/* Modal Header */}
             <div className="flex items-center justify-between px-5 py-4 border-b border-neutral-100">
               <div>
-                <p className="font-['Montserrat'] font-extrabold text-[16px] text-[#1a1c1e]">{activeCert.name}</p>
-                <p className="font-['Montserrat'] font-semibold text-[10px] tracking-widest uppercase text-[#5a403e]/60">{activeCert.subtitle}</p>
+                <p className="font-['urbanist'] font-extrabold text-[16px] text-[#1a1c1e]">{activeCert.name}</p>
+                <p className="font-['urbanist'] font-semibold text-[10px] tracking-widest uppercase text-[#5a403e]/60">{activeCert.subtitle}</p>
               </div>
               <button
                 onClick={() => setActiveCert(null)}
@@ -178,13 +178,13 @@ const Certifications = () => {
             </div>
             {/* Modal Footer */}
             <div className="px-5 py-3 bg-white border-t border-neutral-100 flex items-center justify-between">
-              <p className="font-['Montserrat'] font-bold text-[10px] tracking-widest text-[#5a403e]/50 uppercase">
+              <p className="font-['urbanist'] font-bold text-[10px] tracking-widest text-[#5a403e]/50 uppercase">
                 Cert No: {activeCert.certNo} &nbsp;·&nbsp; {activeCert.issuedBy}
               </p>
               <a
                 href={activeCert.image}
                 download
-                className="text-[11px] font-['Montserrat'] font-bold text-[#8f000d] hover:underline"
+                className="text-[11px] font-['urbanist'] font-bold text-[#8f000d] hover:underline"
               >
                 Download
               </a>
@@ -207,15 +207,15 @@ const Certifications = () => {
           loading="eager"
         />
         <div className="relative z-20 w-full max-w-4xl mx-auto text-center space-y-5 px-6">
-          <nav className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['Montserrat'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">
+          <nav className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['urbanist'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">
             <Link className="hover:text-white transition-colors whitespace-nowrap" to="/">Home</Link>
             <span className="text-white/60">/</span>
             <span className="text-white whitespace-normal text-center">Certifications</span>
           </nav>
-          <h1 className="font-['Montserrat'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
+          <h1 className="font-['urbanist'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             Certifications &amp; Compliance
           </h1>
-          <p className="font-['Inter'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
+          <p className="font-['Nunito'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
             Committed to International Standards and Trusted Export Practices
           </p>
         </div>
@@ -251,17 +251,17 @@ const Certifications = () => {
             className="text-left space-y-6"
           >
             <div>
-              <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#2c6a46] bg-[#2c6a46]/10 px-3 py-1 rounded-sm uppercase inline-block mb-3">
+              <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#2c6a46] bg-[#2c6a46]/10 px-3 py-1 rounded-sm uppercase inline-block mb-3">
                 Global Assurance
               </span>
-              <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
+              <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
                 Upholding the Gold Standard in Spice Export
               </h2>
             </div>
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.7]">
+            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.7]">
               At Minha Imports &amp; Exports, quality is not just a promise — it is a verifiable standard. Our seed-to-shipment workflow is meticulously documented and audited to ensure every batch of Guntur Chillies meets the stringent requirements of global food safety authorities.
             </p>
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.7]">
+            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.7]">
               Our certifications span national food safety, international export regulations, and global trade authorizations — giving our partners complete confidence in every container.
             </p>
 
@@ -277,7 +277,7 @@ const Certifications = () => {
                 onClick={() => {
                   document.getElementById('all-certificates')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }}
-                className="inline-flex items-center gap-2 bg-[#8f000d] text-white px-8 py-3.5 rounded-lg font-['Montserrat'] font-bold text-xs uppercase tracking-wider shadow-lg hover:bg-[#8f000d]/90 transition-all active:scale-95"
+                className="inline-flex items-center gap-2 bg-[#8f000d] text-white px-8 py-3.5 rounded-lg font-['urbanist'] font-bold text-xs uppercase tracking-wider shadow-lg hover:bg-[#8f000d]/90 transition-all active:scale-95"
               >
                 View Documents
                 <FiArrowRight className="text-sm" />
@@ -299,10 +299,10 @@ const Certifications = () => {
             viewport={{ once: true }}
             className="text-center mb-10"
           >
-            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
+            <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
               Our Credentials
             </span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] text-[#1a1c1e] leading-[1.2] tracking-tight">
+            <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] text-[#1a1c1e] leading-[1.2] tracking-tight">
               Internationally Recognised Certifications
             </h2>
             <div className="w-20 h-1 bg-[#8f000d] mx-auto mt-4 rounded-full" />
@@ -330,23 +330,23 @@ const Certifications = () => {
                   {cert.icon}
                 </div>
 
-                <h3 className="font-['Montserrat'] font-extrabold text-[18px] md:text-[20px] text-[#1a1c1e] mb-1">
+                <h3 className="font-['urbanist'] font-extrabold text-[18px] md:text-[20px] text-[#1a1c1e] mb-1">
                   {cert.name}
                 </h3>
-                <p className="font-['Montserrat'] font-semibold text-[10px] tracking-wider uppercase text-[#5a403e]/60 mb-3">
+                <p className="font-['urbanist'] font-semibold text-[10px] tracking-wider uppercase text-[#5a403e]/60 mb-3">
                   {cert.subtitle}
                 </p>
-                <p className="font-['Inter'] font-normal text-[#5a403e] text-[13px] leading-relaxed flex-1">
+                <p className="font-['Nunito'] font-normal text-[#5a403e] text-[13px] leading-relaxed flex-1">
                   {cert.desc}
                 </p>
                 <div className="mt-4 pt-4 border-t border-neutral-100">
-                  <p className="font-['Montserrat'] font-bold text-[10px] tracking-widest text-[#5a403e]/50 uppercase mb-1">Certificate No.</p>
-                  <p className="font-['Montserrat'] font-bold text-[12px] text-[#1a1c1e]">{cert.certNo}</p>
-                  <p className="font-['Inter'] text-[11px] text-[#5a403e]/60 mt-1">{cert.issuedBy}</p>
+                  <p className="font-['urbanist'] font-bold text-[10px] tracking-widest text-[#5a403e]/50 uppercase mb-1">Certificate No.</p>
+                  <p className="font-['urbanist'] font-bold text-[12px] text-[#1a1c1e]">{cert.certNo}</p>
+                  <p className="font-['Nunito'] text-[11px] text-[#5a403e]/60 mt-1">{cert.issuedBy}</p>
                 </div>
                 <button
                   onClick={() => setActiveCert(cert)}
-                  className="mt-5 inline-flex items-center gap-1.5 text-[#8f000d] font-['Montserrat'] font-bold text-[12px] hover:underline underline-offset-2 transition-all"
+                  className="mt-5 inline-flex items-center gap-1.5 text-[#8f000d] font-['urbanist'] font-bold text-[12px] hover:underline underline-offset-2 transition-all"
                 >
                   <FiZoomIn className="text-[14px]" />
                   View Certificate
@@ -377,10 +377,10 @@ const Certifications = () => {
               className="lg:col-span-5 text-left space-y-6"
             >
               <div>
-                <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.25em] text-[#2c6a46] uppercase inline-block mb-2">
+                <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.25em] text-[#2c6a46] uppercase inline-block mb-2">
                   Compliance Standards
                 </span>
-                <h2 className="font-['Montserrat'] font-extrabold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
+                <h2 className="font-['urbanist'] font-extrabold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
                   Built on Four<br />Pillars of Trust
                 </h2>
 
@@ -392,7 +392,7 @@ const Certifications = () => {
                 </div>
               </div>
 
-              <p className="font-['Inter'] font-normal text-[#5a403e] text-[14px] sm:text-[15px] leading-relaxed max-w-md">
+              <p className="font-['Nunito'] font-normal text-[#5a403e] text-[14px] sm:text-[15px] leading-relaxed max-w-md">
                 Ensuring global quality through internationally recognized standards and rigorous processes at every stage of sourcing and export.
               </p>
 
@@ -401,7 +401,7 @@ const Certifications = () => {
                   onClick={() => {
                     document.getElementById('all-certificates')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                   }}
-                  className="inline-flex items-center gap-2 border-2 border-[#8f000d]/45 text-[#8f000d] hover:text-white hover:bg-[#8f000d] px-7 py-3 rounded-full font-['Montserrat'] font-bold text-xs uppercase tracking-wider transition-all duration-300 hover:shadow-lg hover:shadow-[#8f000d]/10 active:scale-95"
+                  className="inline-flex items-center gap-2 border-2 border-[#8f000d]/45 text-[#8f000d] hover:text-white hover:bg-[#8f000d] px-7 py-3 rounded-full font-['urbanist'] font-bold text-xs uppercase tracking-wider transition-all duration-300 hover:shadow-lg hover:shadow-[#8f000d]/10 active:scale-95"
                 >
                   Our Certifications
                   <FiArrowRight className="text-sm" />
@@ -524,8 +524,8 @@ const Certifications = () => {
                     {/* Dotted decorative inner circle */}
                     <circle cx="200" cy="220" r="29" fill="none" stroke="#fff3d1" strokeWidth="0.8" strokeDasharray="2.5 1.5" opacity="0.6" />
                     {/* Stamp Text */}
-                    <text x="200" y="214" textAnchor="middle" fill="#311f05" fontSize="8.5" fontWeight="900" fontFamily="Montserrat" letterSpacing="1.2">TRUST</text>
-                    <text x="200" y="228" textAnchor="middle" fill="#311f05" fontSize="6" fontWeight="800" fontFamily="Montserrat" letterSpacing="0.8">ASSURED</text>
+                    <text x="200" y="214" textAnchor="middle" fill="#311f05" fontSize="8.5" fontWeight="900" fontFamily="urbanist" letterSpacing="1.2">TRUST</text>
+                    <text x="200" y="228" textAnchor="middle" fill="#311f05" fontSize="6" fontWeight="800" fontFamily="urbanist" letterSpacing="0.8">ASSURED</text>
                   </g>
                 </svg>
 
@@ -536,10 +536,10 @@ const Certifications = () => {
                     <div className="text-emerald-600 mb-2 shrink-0">
                       <FiShield className="text-[20px] sm:text-[24px] md:text-[26px]" />
                     </div>
-                    <h4 className="font-['Montserrat'] font-bold text-[11px] sm:text-[13px] md:text-[15px] text-[#1a1c1e] tracking-wide mb-1 leading-tight">
+                    <h4 className="font-['urbanist'] font-bold text-[11px] sm:text-[13px] md:text-[15px] text-[#1a1c1e] tracking-wide mb-1 leading-tight">
                       Product Safety
                     </h4>
-                    <p className="font-['Inter'] font-normal text-[#5a403e] text-[8.5px] sm:text-[9.5px] md:text-[11px] leading-relaxed max-w-[115px] sm:max-w-[145px]">
+                    <p className="font-['Nunito'] font-normal text-[#5a403e] text-[8.5px] sm:text-[9.5px] md:text-[11px] leading-relaxed max-w-[115px] sm:max-w-[145px]">
                       Advanced testing for safe and residue-free products.
                     </p>
                   </div>
@@ -549,10 +549,10 @@ const Certifications = () => {
                     <div className="text-amber-600 mb-2 shrink-0">
                       <FiCheckCircle className="text-[20px] sm:text-[24px] md:text-[26px]" />
                     </div>
-                    <h4 className="font-['Montserrat'] font-bold text-[11px] sm:text-[13px] md:text-[15px] text-[#1a1c1e] tracking-wide mb-1 leading-tight">
+                    <h4 className="font-['urbanist'] font-bold text-[11px] sm:text-[13px] md:text-[15px] text-[#1a1c1e] tracking-wide mb-1 leading-tight">
                       Hygienic Handling
                     </h4>
-                    <p className="font-['Inter'] font-normal text-[#5a403e] text-[8.5px] sm:text-[9.5px] md:text-[11px] leading-relaxed max-w-[115px] sm:max-w-[145px]">
+                    <p className="font-['Nunito'] font-normal text-[#5a403e] text-[8.5px] sm:text-[9.5px] md:text-[11px] leading-relaxed max-w-[115px] sm:max-w-[145px]">
                       Strict hygiene and controlled processing environments.
                     </p>
                   </div>
@@ -562,10 +562,10 @@ const Certifications = () => {
                     <div className="text-blue-600 mb-2 shrink-0">
                       <FiGlobe className="text-[20px] sm:text-[24px] md:text-[26px]" />
                     </div>
-                    <h4 className="font-['Montserrat'] font-bold text-[11px] sm:text-[13px] md:text-[15px] text-[#1a1c1e] tracking-wide mb-1 leading-tight">
+                    <h4 className="font-['urbanist'] font-bold text-[11px] sm:text-[13px] md:text-[15px] text-[#1a1c1e] tracking-wide mb-1 leading-tight">
                       Export Compliance
                     </h4>
-                    <p className="font-['Inter'] font-normal text-[#5a403e] text-[8.5px] sm:text-[9.5px] md:text-[11px] leading-relaxed max-w-[115px] sm:max-w-[145px]">
+                    <p className="font-['Nunito'] font-normal text-[#5a403e] text-[8.5px] sm:text-[9.5px] md:text-[11px] leading-relaxed max-w-[115px] sm:max-w-[145px]">
                       Compliant with global MRL and phytosanitary regulations.
                     </p>
                   </div>
@@ -575,10 +575,10 @@ const Certifications = () => {
                     <div className="text-purple-600 mb-2 shrink-0">
                       <FiFileText className="text-[20px] sm:text-[24px] md:text-[26px]" />
                     </div>
-                    <h4 className="font-['Montserrat'] font-bold text-[11px] sm:text-[13px] md:text-[15px] text-[#1a1c1e] tracking-wide mb-1 leading-tight">
+                    <h4 className="font-['urbanist'] font-bold text-[11px] sm:text-[13px] md:text-[15px] text-[#1a1c1e] tracking-wide mb-1 leading-tight">
                       Doc Accuracy
                     </h4>
-                    <p className="font-['Inter'] font-normal text-[#5a403e] text-[8.5px] sm:text-[9.5px] md:text-[11px] leading-relaxed max-w-[115px] sm:max-w-[145px]">
+                    <p className="font-['Nunito'] font-normal text-[#5a403e] text-[8.5px] sm:text-[9.5px] md:text-[11px] leading-relaxed max-w-[115px] sm:max-w-[145px]">
                       Accurate and verifiable documents for seamless clearance.
                     </p>
                   </div>
@@ -604,10 +604,10 @@ const Certifications = () => {
             className="order-2 md:order-1 space-y-4"
           >
             <motion.div variants={fadeUp}>
-              <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#2c6a46] bg-[#2c6a46]/10 px-3 py-1 rounded-sm uppercase inline-block mb-2">
+              <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#2c6a46] bg-[#2c6a46]/10 px-3 py-1 rounded-sm uppercase inline-block mb-2">
                 Why It Matters
               </span>
-              <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
+              <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
                 Why Certified Sourcing Matters
               </h2>
             </motion.div>
@@ -619,8 +619,8 @@ const Certifications = () => {
                     <FiCheckCircle className="text-[#2c6a46] text-[16px]" />
                   </div>
                   <div>
-                    <p className="font-['Montserrat'] font-bold text-[15px] text-[#1a1c1e] mb-1">{pt.title}</p>
-                    <p className="font-['Inter'] font-normal text-[#5a403e] text-[14px] leading-relaxed">{pt.desc}</p>
+                    <p className="font-['urbanist'] font-bold text-[15px] text-[#1a1c1e] mb-1">{pt.title}</p>
+                    <p className="font-['Nunito'] font-normal text-[#5a403e] text-[14px] leading-relaxed">{pt.desc}</p>
                   </div>
                 </motion.li>
               ))}
@@ -648,7 +648,7 @@ const Certifications = () => {
       {/* ── 6. Trust Logo Strip ─────────────────────────────────────────────── */}
       <section className="py-10 md:py-14 bg-surface border-y border-neutral-100">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 text-center">
-          <p className="font-['Montserrat'] font-bold text-[10px] tracking-[0.25em] text-[#1a1c1e]/40 uppercase mb-8">
+          <p className="font-['urbanist'] font-bold text-[10px] tracking-[0.25em] text-[#1a1c1e]/40 uppercase mb-8">
             Certified Quality. Trusted Worldwide.
           </p>
 
@@ -687,10 +687,10 @@ const Certifications = () => {
               <span className="absolute -top-10 -left-2 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
                 “
               </span>
-              <blockquote className="font-['Montserrat'] font-medium italic text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed text-white/95 relative z-10">
+              <blockquote className="font-['urbanist'] font-medium italic text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed text-white/95 relative z-10">
                 "Compliance is our passport, and uncompromising safety is our path. Our certifications are not just medals on a wall, but a daily promise of purity built for the global stage."
               </blockquote>
-              <div className="font-['Montserrat'] font-bold text-[9px] sm:text-[10px] tracking-widest uppercase text-[#cca72f] relative z-10">
+              <div className="font-['urbanist'] font-bold text-[9px] sm:text-[10px] tracking-widest uppercase text-[#cca72f] relative z-10">
                 — The Minha Compliance Registry
               </div>
               <span className="absolute -bottom-14 right-4 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
@@ -704,18 +704,18 @@ const Certifications = () => {
               {/* Badge */}
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mx-auto lg:mx-0">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#cca72f] animate-pulse" />
-                <span className="font-['Montserrat'] font-bold text-[8.5px] tracking-[0.2em] text-[#cca72f] uppercase">
+                <span className="font-['urbanist'] font-bold text-[8.5px] tracking-[0.2em] text-[#cca72f] uppercase">
                   Certified Export Partner
                 </span>
               </div>
 
               {/* Title */}
-              <h2 className="font-['Montserrat'] font-extrabold text-[22px] md:text-[30px] leading-tight text-white tracking-tight">
+              <h2 className="font-['urbanist'] font-extrabold text-[22px] md:text-[30px] leading-tight text-white tracking-tight">
                 Looking for a Certified <br className="hidden sm:inline" /> Chilli Export Partner?
               </h2>
 
               {/* Description */}
-              <p className="font-['Inter'] font-normal text-white/80 text-[13.5px] leading-relaxed">
+              <p className="font-['Nunito'] font-normal text-white/80 text-[13.5px] leading-relaxed">
                 Partner with Minha for trusted sourcing with globally compliant documentation. We handle the complexity of compliance so you can focus on growth.
               </p>
 
@@ -725,14 +725,14 @@ const Certifications = () => {
                   href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20would%20like%20to%20receive%20your%20certification%20details%20and%20compliance%20documents."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-[#cca72f] text-[#140002] px-8 py-3.5 rounded-full font-['Montserrat'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-[#e0bc55] shadow-lg shadow-[#cca72f]/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
+                  className="inline-flex items-center justify-center gap-2 bg-[#cca72f] text-[#140002] px-8 py-3.5 rounded-full font-['urbanist'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-[#e0bc55] shadow-lg shadow-[#cca72f]/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
                 >
                   Request Certification Details
                 </a>
               </div>
 
               {/* Trust Guarantee */}
-              <div className="text-[8.5px] font-['Montserrat'] tracking-widest text-white/40 uppercase pt-1">
+              <div className="text-[8.5px] font-['urbanist'] tracking-widest text-white/40 uppercase pt-1">
                 Export Desk Response Guarantee: Within 12 Hours
               </div>
 

@@ -49,7 +49,7 @@ const FlagsMarquee = () => {
               </div>
               {/* Country details */}
               <div className="flex flex-col text-left">
-                <span className="font-['Montserrat'] font-bold text-[15px] text-[#1a1c1e] uppercase tracking-wide whitespace-nowrap">
+                <span className="font-['urbanist'] font-bold text-[15px] text-[#1a1c1e] uppercase tracking-wide whitespace-nowrap">
                   {country.name}
                 </span>
               </div>
@@ -77,7 +77,7 @@ const FlagsMarquee = () => {
               </div>
               {/* Country details */}
               <div className="flex flex-col text-left">
-                <span className="font-['Montserrat'] font-bold text-[15px] text-[#1a1c1e] uppercase tracking-wide whitespace-nowrap">
+                <span className="font-['urbanist'] font-bold text-[15px] text-[#1a1c1e] uppercase tracking-wide whitespace-nowrap">
                   {country.name}
                 </span>
               </div>

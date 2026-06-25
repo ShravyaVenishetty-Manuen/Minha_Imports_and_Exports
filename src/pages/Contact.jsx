@@ -187,15 +187,15 @@ const Contact = () => {
           loading="eager"
         />
         <div className="relative z-20 w-full max-w-4xl mx-auto text-center space-y-5 px-6">
-          <nav aria-label="Breadcrumb" className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['Montserrat'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">
+          <nav aria-label="Breadcrumb" className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['urbanist'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">
             <Link className="hover:text-white transition-colors whitespace-nowrap" to="/">Home</Link>
             <span className="text-white/60">/</span>
             <span className="text-white whitespace-normal text-center">Contact</span>
           </nav>
-          <h1 className="font-['Montserrat'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
+          <h1 className="font-['urbanist'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             Contact Us
           </h1>
-          <p className="font-['Inter'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
+          <p className="font-['Nunito'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
             Connect With Us for Premium Guntur Chilli Exports and Business Inquiries
           </p>
         </div>
@@ -209,14 +209,14 @@ const Contact = () => {
 
               {/* LEFT: Text Content */}
               <div className="w-full lg:w-[32%] shrink-0 flex flex-col justify-center px-8 md:px-10 py-10 border-b lg:border-b-0 lg:border-r border-neutral-100">
-                <span className="font-['Montserrat'] font-bold text-[10px] tracking-[0.25em] text-[#A50F15] uppercase mb-4 block">
+                <span className="font-['urbanist'] font-bold text-[10px] tracking-[0.25em] text-[#A50F15] uppercase mb-4 block">
                   OUR REACH
                 </span>
-                <h2 className="font-['Montserrat'] font-extrabold text-[26px] md:text-[32px] leading-[1.2] text-[#111827] mb-4 tracking-tight">
+                <h2 className="font-['urbanist'] font-extrabold text-[26px] md:text-[32px] leading-[1.2] text-[#111827] mb-4 tracking-tight">
                   Global Export Partnerships
                 </h2>
                 <div className="w-10 h-[3px] bg-[#2E6F4F] mb-5 rounded-full" />
-                <p className="font-['Inter'] font-normal text-[#6B7280] text-[13px] md:text-[14px] leading-[1.8]">
+                <p className="font-['Nunito'] font-normal text-[#6B7280] text-[13px] md:text-[14px] leading-[1.8]">
                   We welcome importers, wholesalers, food manufacturers, and retail distributors worldwide. Our infrastructure is designed to handle large-scale international orders while maintaining strict quality standards and logistics transparency.
                 </p>
               </div>
@@ -242,9 +242,9 @@ const Contact = () => {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="w-6 h-[2px] bg-[#2E6F4F] mb-1 rounded-full" />
-                      <h4 className="font-['Montserrat'] font-bold text-[10px] tracking-wider text-[#A50F15] uppercase mb-0.5">Phone</h4>
-                      <a href="tel:+919985728555" className="block font-['Inter'] text-[13px] font-bold text-[#111827] hover:text-[#2E6F4F] transition-colors leading-[1.5]">+91 99857 28555 (WhatsApp)</a>
-                      <a href="tel:+917288995777" className="block font-['Inter'] text-[13px] font-bold text-[#111827] hover:text-[#2E6F4F] transition-colors leading-[1.5]">+91 72889 95777</a>
+                      <h4 className="font-['urbanist'] font-bold text-[10px] tracking-wider text-[#A50F15] uppercase mb-0.5">Phone</h4>
+                      <a href="tel:+919985728555" className="block font-['Nunito'] text-[13px] font-bold text-[#111827] hover:text-[#2E6F4F] transition-colors leading-[1.5]">+91 99857 28555 (WhatsApp)</a>
+                      <a href="tel:+917288995777" className="block font-['Nunito'] text-[13px] font-bold text-[#111827] hover:text-[#2E6F4F] transition-colors leading-[1.5]">+91 72889 95777</a>
                     </div>
                   </div>
 
@@ -255,8 +255,8 @@ const Contact = () => {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="w-6 h-[2px] bg-[#2E6F4F] mb-1 rounded-full" />
-                      <h4 className="font-['Montserrat'] font-bold text-[10px] tracking-wider text-[#A50F15] uppercase mb-0.5">Email</h4>
-                      <a href="mailto:minhaimportsexports@gmail.com" className="block font-['Inter'] text-[13px] font-bold text-[#111827] hover:text-[#2E6F4F] transition-colors leading-[1.5] break-all">minhaimportsexports@gmail.com</a>
+                      <h4 className="font-['urbanist'] font-bold text-[10px] tracking-wider text-[#A50F15] uppercase mb-0.5">Email</h4>
+                      <a href="mailto:minhaimportsexports@gmail.com" className="block font-['Nunito'] text-[13px] font-bold text-[#111827] hover:text-[#2E6F4F] transition-colors leading-[1.5] break-all">minhaimportsexports@gmail.com</a>
                     </div>
                   </div>
 
@@ -267,8 +267,8 @@ const Contact = () => {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="w-6 h-[2px] bg-[#2E6F4F] mb-1 rounded-full" />
-                      <h4 className="font-['Montserrat'] font-bold text-[10px] tracking-wider text-[#A50F15] uppercase mb-0.5">Office Address</h4>
-                      <p className="font-['Inter'] text-[12.5px] font-bold text-[#111827] leading-[1.5]">Arundalpet 7/1,<br />Beside SBI ATM, Guntur, AP, India – 522002</p>
+                      <h4 className="font-['urbanist'] font-bold text-[10px] tracking-wider text-[#A50F15] uppercase mb-0.5">Office Address</h4>
+                      <p className="font-['Nunito'] text-[12.5px] font-bold text-[#111827] leading-[1.5]">Arundalpet 7/1,<br />Beside SBI ATM, Guntur, AP, India – 522002</p>
                     </div>
                   </div>
                 </div>
@@ -287,14 +287,14 @@ const Contact = () => {
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 relative z-10">
 
           <div className="text-center mb-8 max-w-2xl mx-auto">
-            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.25em] text-[#8f000d] bg-[#8f000d]/10 px-4 py-1.5 rounded-full uppercase inline-block mb-3">
+            <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.25em] text-[#8f000d] bg-[#8f000d]/10 px-4 py-1.5 rounded-full uppercase inline-block mb-3">
               Interactive Portal
             </span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-tight text-[#1a1c1e] tracking-tight">
+            <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-tight text-[#1a1c1e] tracking-tight">
               Global Sourcing Gateway
             </h2>
             <div className="w-16 h-[3px] bg-[#cca72f] mx-auto my-5 rounded-full" />
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] leading-relaxed">
+            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] leading-relaxed">
               Experience our seamless digital procurement portal. Fill out our interactive inquiry form below to submit your custom spice requirements directly to our trade specialists.
             </p>
           </div>
@@ -339,7 +339,7 @@ const Contact = () => {
 
                   <div className="relative z-10 flex flex-col h-full justify-start gap-4">
                     <div>
-                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-['Montserrat'] font-bold text-[9px] tracking-widest uppercase mb-3 sm:mb-4">
+                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-['urbanist'] font-bold text-[9px] tracking-widest uppercase mb-3 sm:mb-4">
                         <span className="relative flex h-2 w-2">
                           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                           <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -347,13 +347,13 @@ const Contact = () => {
                         Trade Desk Online
                       </div>
 
-                      <span className="font-['Montserrat'] font-semibold text-[10px] tracking-[0.2em] text-[#cca72f] uppercase block mb-1">
+                      <span className="font-['urbanist'] font-semibold text-[10px] tracking-[0.2em] text-[#cca72f] uppercase block mb-1">
                         Minha Imports & Exports
                       </span>
-                      <h3 className="font-['Montserrat'] font-extrabold text-[22px] leading-tight text-white mb-2">
+                      <h3 className="font-['urbanist'] font-extrabold text-[22px] leading-tight text-white mb-2">
                         Export Sourcing
                       </h3>
-                      <p className="font-['Inter'] text-white/60 text-[12px] leading-relaxed mb-2">
+                      <p className="font-['Nunito'] text-white/60 text-[12px] leading-relaxed mb-2">
                         Partner with India's premier agricultural exporter. We secure premium quality dry red chilli varieties tailored to your exact specifications.
                       </p>
 
@@ -365,8 +365,8 @@ const Contact = () => {
                               {React.cloneElement(hl.icon, { className: "text-[#cca72f] text-[15px]" })}
                             </div>
                             <div>
-                              <h4 className="font-['Montserrat'] font-bold text-[12px] text-white/90 tracking-wide leading-tight">{hl.title}</h4>
-                              <p className="font-['Inter'] text-[11px] text-white/45 leading-snug mt-0.5">{hl.desc}</p>
+                              <h4 className="font-['urbanist'] font-bold text-[12px] text-white/90 tracking-wide leading-tight">{hl.title}</h4>
+                              <p className="font-['Nunito'] text-[11px] text-white/45 leading-snug mt-0.5">{hl.desc}</p>
                             </div>
                           </div>
                         ))}
@@ -376,12 +376,12 @@ const Contact = () => {
                     {/* Bottom Trade Details */}
                     <div className="mt-auto pt-3 border-t border-white/10 flex items-center justify-between">
                       <div className="text-left">
-                        <span className="font-['Montserrat'] text-[8px] tracking-wider text-white/40 uppercase block">Avg Response</span>
-                        <span className="font-['Montserrat'] text-[12px] font-bold text-white leading-none mt-0.5 block">&lt; 12 Hours</span>
+                        <span className="font-['urbanist'] text-[8px] tracking-wider text-white/40 uppercase block">Avg Response</span>
+                        <span className="font-['urbanist'] text-[12px] font-bold text-white leading-none mt-0.5 block">&lt; 12 Hours</span>
                       </div>
                       <div className="text-right">
-                        <span className="font-['Montserrat'] text-[8px] tracking-wider text-[#cca72f] uppercase block">Global Sourcing</span>
-                        <span className="font-['Montserrat'] text-[12px] font-bold text-[#cca72f] leading-none mt-0.5 block">ASTA Compliant</span>
+                        <span className="font-['urbanist'] text-[8px] tracking-wider text-[#cca72f] uppercase block">Global Sourcing</span>
+                        <span className="font-['urbanist'] text-[12px] font-bold text-[#cca72f] leading-none mt-0.5 block">ASTA Compliant</span>
                       </div>
                     </div>
                   </div>
@@ -398,7 +398,7 @@ const Contact = () => {
 
                   <div className="relative z-10">
                     <div className="mb-3 text-left">
-                      <h3 className="font-['Montserrat'] font-extrabold text-[18px] sm:text-[20px] text-[#1a1c1e] tracking-tight">Inquiry Form</h3>
+                      <h3 className="font-['urbanist'] font-extrabold text-[18px] sm:text-[20px] text-[#1a1c1e] tracking-tight">Inquiry Form</h3>
                     </div>
 
                     <form onSubmit={handleSubmit} className="space-y-2.5">
@@ -408,13 +408,13 @@ const Contact = () => {
 
                         {/* Full Name */}
                         <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-xl px-3 py-1.5 transition-all duration-300 bg-white text-left shadow-sm">
-                          <label className="block font-['Montserrat'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Full Name *</label>
+                          <label className="block font-['urbanist'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Full Name *</label>
                           <input
                             required
                             name="name"
                             value={formData.name}
                             onChange={handleInputChange}
-                            className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Inter'] placeholder-neutral-400"
+                            className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Nunito'] placeholder-neutral-400"
                             placeholder="Enter Name"
                             type="text"
                           />
@@ -422,12 +422,12 @@ const Contact = () => {
 
                         {/* Company Name */}
                         <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-xl px-3 py-1.5 transition-all duration-300 bg-white text-left shadow-sm">
-                          <label className="block font-['Montserrat'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Company Name</label>
+                          <label className="block font-['urbanist'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Company Name</label>
                           <input
                             name="company"
                             value={formData.company}
                             onChange={handleInputChange}
-                            className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Inter'] placeholder-neutral-400"
+                            className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Nunito'] placeholder-neutral-400"
                             placeholder="Enter Company Name"
                             type="text"
                           />
@@ -435,13 +435,13 @@ const Contact = () => {
 
                         {/* Country */}
                         <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-xl px-3 py-1.5 transition-all duration-300 bg-white text-left shadow-sm">
-                          <label className="block font-['Montserrat'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Country *</label>
+                          <label className="block font-['urbanist'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Country *</label>
                           <input
                             required
                             name="country"
                             value={formData.country}
                             onChange={handleInputChange}
-                            className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Inter'] placeholder-neutral-400"
+                            className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Nunito'] placeholder-neutral-400"
                             placeholder="Enter Country Name"
                             type="text"
                           />
@@ -449,13 +449,13 @@ const Contact = () => {
 
                         {/* Email */}
                         <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-xl px-3 py-1.5 transition-all duration-300 bg-white text-left shadow-sm">
-                          <label className="block font-['Montserrat'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Email Address *</label>
+                          <label className="block font-['urbanist'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Email Address *</label>
                           <input
                             required
                             name="email"
                             value={formData.email}
                             onChange={handleInputChange}
-                            className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Inter'] placeholder-neutral-400"
+                            className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Nunito'] placeholder-neutral-400"
                             placeholder="Enter Email Address"
                             type="email"
                           />
@@ -463,13 +463,13 @@ const Contact = () => {
 
                         {/* Phone Number */}
                         <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-2xl px-4 py-2 transition-all duration-300 bg-white text-left md:col-span-2 shadow-sm">
-                          <label className="block font-['Montserrat'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Phone Number *</label>
+                          <label className="block font-['urbanist'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Phone Number *</label>
                           <input
                             required
                             name="phone"
                             value={formData.phone}
                             onChange={handleInputChange}
-                            className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Inter'] placeholder-neutral-400"
+                            className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Nunito'] placeholder-neutral-400"
                             placeholder="Enter Phone Number"
                             type="tel"
                           />
@@ -479,7 +479,7 @@ const Contact = () => {
 
                       {/* Requirement Type Selector */}
                       <div className="text-left space-y-2">
-                        <label className="block font-['Montserrat'] font-bold text-[9px] tracking-wider text-neutral-600 uppercase">Requirement Type *</label>
+                        <label className="block font-['urbanist'] font-bold text-[9px] tracking-wider text-neutral-600 uppercase">Requirement Type *</label>
                         <div className="flex flex-wrap gap-2">
                           {['Bulk Order', 'Export Inquiry', 'Partnership', 'General Support'].map((type) => {
                             const isSelected = formData.reqType === type;
@@ -488,7 +488,7 @@ const Contact = () => {
                                 key={type}
                                 type="button"
                                 onClick={() => setFormData(prev => ({ ...prev, reqType: type }))}
-                                className={`px-3.5 py-2 rounded-full font-['Montserrat'] text-[9px] sm:text-[10px] font-bold tracking-wide uppercase transition-all duration-300 border focus:outline-none cursor-pointer flex items-center gap-1.5 ${isSelected
+                                className={`px-3.5 py-2 rounded-full font-['urbanist'] text-[9px] sm:text-[10px] font-bold tracking-wide uppercase transition-all duration-300 border focus:outline-none cursor-pointer flex items-center gap-1.5 ${isSelected
                                   ? 'bg-[#8f000d] text-white border-[#8f000d] shadow-md shadow-[#8f000d]/10'
                                   : 'bg-white text-neutral-700 border-neutral-300 hover:bg-neutral-50'
                                   }`}
@@ -503,13 +503,13 @@ const Contact = () => {
 
                       {/* Message TextArea */}
                       <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-xl px-3 py-1.5 transition-all duration-300 bg-white text-left shadow-sm">
-                        <label className="block font-['Montserrat'] font-bold text-[9px] tracking-wider text-neutral-600 uppercase mb-1">Your Message *</label>
+                        <label className="block font-['urbanist'] font-bold text-[9px] tracking-wider text-neutral-600 uppercase mb-1">Your Message *</label>
                         <textarea
                           required
                           name="message"
                           value={formData.message}
                           onChange={handleInputChange}
-                          className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Inter'] placeholder-neutral-400 resize-none"
+                          className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Nunito'] placeholder-neutral-400 resize-none"
                           placeholder="Tell us about volume requirements, grades, target delivery dates..."
                           rows={2}
                         />
@@ -519,12 +519,12 @@ const Contact = () => {
                       <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
                         <button
                           type="submit"
-                          className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-[#8f000d] to-[#b22222] text-white font-['Montserrat'] font-bold text-xs uppercase tracking-widest rounded-full hover:shadow-lg hover:shadow-[#8f000d]/20 hover:-translate-y-0.5 transition-all active:scale-95 inline-flex items-center justify-center gap-2.5 cursor-pointer group"
+                          className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-[#8f000d] to-[#b22222] text-white font-['urbanist'] font-bold text-xs uppercase tracking-widest rounded-full hover:shadow-lg hover:shadow-[#8f000d]/20 hover:-translate-y-0.5 transition-all active:scale-95 inline-flex items-center justify-center gap-2.5 cursor-pointer group"
                         >
                           Send Inquiry
                           <FiSend className="text-xs transition-transform group-hover:translate-x-1 group-hover:-translate-y-0.5 duration-300" />
                         </button>
-                        <p className="font-['Inter'] font-normal text-neutral-600 text-[11px] leading-relaxed text-center sm:text-left max-w-xs">
+                        <p className="font-['Nunito'] font-normal text-neutral-600 text-[11px] leading-relaxed text-center sm:text-left max-w-xs">
                           We respond to verified commercial inquiries within 12 business hours.
                         </p>
                       </div>
@@ -559,54 +559,54 @@ const Contact = () => {
 
                   <div className="relative z-10 flex flex-col h-full justify-between gap-8">
                     <div>
-                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-[#cca72f] font-['Montserrat'] font-bold text-[9px] tracking-widest uppercase mb-6 sm:mb-8">
+                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-[#cca72f] font-['urbanist'] font-bold text-[9px] tracking-widest uppercase mb-6 sm:mb-8">
                         <FiCheckCircle className="text-xs" />
                         Verification Phase
                       </div>
 
-                      <span className="font-['Montserrat'] font-semibold text-[10px] tracking-[0.2em] text-[#cca72f] uppercase block mb-1">
+                      <span className="font-['urbanist'] font-semibold text-[10px] tracking-[0.2em] text-[#cca72f] uppercase block mb-1">
                         Procurement Guide
                       </span>
-                      <h3 className="font-['Montserrat'] font-extrabold text-[24px] text-white leading-tight mb-5 sm:mb-6">
+                      <h3 className="font-['urbanist'] font-extrabold text-[24px] text-white leading-tight mb-5 sm:mb-6">
                         Submission Steps
                       </h3>
 
                       {/* Timeline steps */}
                       <div className="space-y-5 sm:space-y-6 text-left">
                         <div className="flex gap-3">
-                          <div className="w-6 h-6 rounded-full bg-white/10 text-[#cca72f] flex items-center justify-center font-['Montserrat'] font-bold text-[11px] shrink-0">
+                          <div className="w-6 h-6 rounded-full bg-white/10 text-[#cca72f] flex items-center justify-center font-['urbanist'] font-bold text-[11px] shrink-0">
                             1
                           </div>
                           <div>
-                            <h5 className="font-['Montserrat'] font-bold text-[12px] text-white tracking-wide">Select Request Type</h5>
-                            <p className="font-['Inter'] text-[11px] text-white/50 leading-relaxed mt-0.5">Toggle between bulk buy, logistics options, or standard samples.</p>
+                            <h5 className="font-['urbanist'] font-bold text-[12px] text-white tracking-wide">Select Request Type</h5>
+                            <p className="font-['Nunito'] text-[11px] text-white/50 leading-relaxed mt-0.5">Toggle between bulk buy, logistics options, or standard samples.</p>
                           </div>
                         </div>
 
                         <div className="flex gap-3">
-                          <div className="w-6 h-6 rounded-full bg-white/10 text-[#cca72f] flex items-center justify-center font-['Montserrat'] font-bold text-[11px] shrink-0">
+                          <div className="w-6 h-6 rounded-full bg-white/10 text-[#cca72f] flex items-center justify-center font-['urbanist'] font-bold text-[11px] shrink-0">
                             2
                           </div>
                           <div>
-                            <h5 className="font-['Montserrat'] font-bold text-[12px] text-white tracking-wide">Provide Spec Details</h5>
-                            <p className="font-['Inter'] text-[11px] text-white/50 leading-relaxed mt-0.5">Mention custom moisture grade, ASTA standards, or packaging requirements.</p>
+                            <h5 className="font-['urbanist'] font-bold text-[12px] text-white tracking-wide">Provide Spec Details</h5>
+                            <p className="font-['Nunito'] text-[11px] text-white/50 leading-relaxed mt-0.5">Mention custom moisture grade, ASTA standards, or packaging requirements.</p>
                           </div>
                         </div>
 
                         <div className="flex gap-3">
-                          <div className="w-6 h-6 rounded-full bg-white/10 text-[#cca72f] flex items-center justify-center font-['Montserrat'] font-bold text-[11px] shrink-0">
+                          <div className="w-6 h-6 rounded-full bg-white/10 text-[#cca72f] flex items-center justify-center font-['urbanist'] font-bold text-[11px] shrink-0">
                             3
                           </div>
                           <div>
-                            <h5 className="font-['Montserrat'] font-bold text-[12px] text-white tracking-wide">Trade Review</h5>
-                            <p className="font-['Inter'] text-[11px] text-white/50 leading-relaxed mt-0.5">Our executives verify supply chains and confirm FOB/CIF pricing quotes.</p>
+                            <h5 className="font-['urbanist'] font-bold text-[12px] text-white tracking-wide">Trade Review</h5>
+                            <p className="font-['Nunito'] text-[11px] text-white/50 leading-relaxed mt-0.5">Our executives verify supply chains and confirm FOB/CIF pricing quotes.</p>
                           </div>
                         </div>
                       </div>
                     </div>
 
                     <div className="pt-5 border-t border-white/10 text-left">
-                      <p className="font-['Inter'] text-[11px] text-white/40 leading-relaxed">
+                      <p className="font-['Nunito'] text-[11px] text-white/40 leading-relaxed">
                         Confidentiality guaranteed. All specifications comply with international custom regulations.
                       </p>
                     </div>
@@ -627,22 +627,22 @@ const Contact = () => {
                       <FiCheckCircle className="text-[40px] animate-pulse" />
                     </div>
 
-                    <h4 className="font-['Montserrat'] font-extrabold text-[22px] sm:text-[24px] text-neutral-900 mb-3 tracking-tight">
+                    <h4 className="font-['urbanist'] font-extrabold text-[22px] sm:text-[24px] text-neutral-900 mb-3 tracking-tight">
                       Inquiry Transmitted Successfully
                     </h4>
 
-                    <p className="font-['Inter'] font-normal text-neutral-500 text-[13px] sm:text-[14px] leading-relaxed mb-6">
+                    <p className="font-['Nunito'] font-normal text-neutral-500 text-[13px] sm:text-[14px] leading-relaxed mb-6">
                       Thank you, <span className="font-semibold text-neutral-800">{formData.name || 'valued partner'}</span>. Our Guntur export desk trade executives have received your request and will follow up with pricing worksheets and product specifications within 12 hours.
                     </p>
 
                     <div className="w-full border-t border-b border-neutral-100 py-6 my-2 flex flex-col sm:flex-row items-center justify-between gap-4">
                       <div className="text-left w-full sm:w-auto">
-                        <span className="font-['Montserrat'] text-[9px] tracking-wider text-neutral-400 uppercase block">Submission Ref</span>
-                        <span className="font-['Montserrat'] text-[12px] font-bold text-neutral-700 leading-none mt-1 block">ME-739402</span>
+                        <span className="font-['urbanist'] text-[9px] tracking-wider text-neutral-400 uppercase block">Submission Ref</span>
+                        <span className="font-['urbanist'] text-[12px] font-bold text-neutral-700 leading-none mt-1 block">ME-739402</span>
                       </div>
                       <div className="text-right w-full sm:w-auto">
-                        <span className="font-['Montserrat'] text-[9px] tracking-wider text-neutral-400 uppercase block">Status</span>
-                        <span className="font-['Montserrat'] text-[12px] font-bold text-emerald-600 leading-none mt-1 block">Assigned to Trade Desk</span>
+                        <span className="font-['urbanist'] text-[9px] tracking-wider text-neutral-400 uppercase block">Status</span>
+                        <span className="font-['urbanist'] text-[12px] font-bold text-emerald-600 leading-none mt-1 block">Assigned to Trade Desk</span>
                       </div>
                     </div>
 
@@ -657,7 +657,7 @@ const Contact = () => {
                         />
                       )}
                     </div>
-                    <span className="font-['Montserrat'] text-[9px] tracking-wider text-neutral-400 uppercase mt-2">
+                    <span className="font-['urbanist'] text-[9px] tracking-wider text-neutral-400 uppercase mt-2">
                       Flipping back in a moment...
                     </span>
                   </div>
@@ -682,10 +682,10 @@ const Contact = () => {
 
             {/* LEFT PANEL: Frequently Asked Questions (Flat list of accordions) */}
             <div className="col-span-5 text-left">
-              <span className="text-[#2c6a46] font-['Montserrat'] font-bold text-[10px] tracking-[0.25em] uppercase mb-2 block">
+              <span className="text-[#2c6a46] font-['urbanist'] font-bold text-[10px] tracking-[0.25em] uppercase mb-2 block">
                 Support & Queries
               </span>
-              <h3 className="font-['Montserrat'] font-extrabold text-[28px] text-neutral-900 mb-6 tracking-tight">
+              <h3 className="font-['urbanist'] font-extrabold text-[28px] text-neutral-900 mb-6 tracking-tight">
                 Frequently Asked Questions
               </h3>
 
@@ -713,7 +713,7 @@ const Contact = () => {
                           <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-[13px] shrink-0 ${iconConfig.bg}`}>
                             {iconConfig.icon}
                           </div>
-                          <span className="font-['Montserrat'] font-bold text-[12.5px] text-neutral-800 leading-snug">
+                          <span className="font-['urbanist'] font-bold text-[12.5px] text-neutral-800 leading-snug">
                             {faq.q}
                           </span>
                         </div>
@@ -725,7 +725,7 @@ const Contact = () => {
                         transition={{ duration: 0.25 }}
                         className="overflow-hidden"
                       >
-                        <p className="pb-4 px-4 pl-[48px] font-['Inter'] font-normal text-neutral-500 text-[12px] leading-relaxed border-t border-neutral-100/50 pt-2.5">
+                        <p className="pb-4 px-4 pl-[48px] font-['Nunito'] font-normal text-neutral-500 text-[12px] leading-relaxed border-t border-neutral-100/50 pt-2.5">
                           {faq.a}
                         </p>
                       </motion.div>
@@ -735,7 +735,7 @@ const Contact = () => {
               </div>
 
               {/* Bottom Questions Action */}
-              <div className="mt-8 pt-4 border-t border-neutral-200 flex items-center justify-between text-[11px] font-['Montserrat'] font-bold">
+              <div className="mt-8 pt-4 border-t border-neutral-200 flex items-center justify-between text-[11px] font-['urbanist'] font-bold">
                 <span className="text-neutral-400">Still have questions?</span>
                 <a
                   href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20have%20a%20question%20for%20your%20team.%20Please%20get%20in%20touch."
@@ -751,13 +751,13 @@ const Contact = () => {
 
             {/* RIGHT PANEL: Visit Our Export Hub (Flat details & Map) */}
             <div className="col-span-7 text-left">
-              <span className="text-[#8f000d] font-['Montserrat'] font-bold text-[10px] tracking-[0.25em] uppercase mb-2 block">
+              <span className="text-[#8f000d] font-['urbanist'] font-bold text-[10px] tracking-[0.25em] uppercase mb-2 block">
                 Corporate Location
               </span>
-              <h3 className="font-['Montserrat'] font-extrabold text-[28px] text-neutral-900 mb-1 tracking-tight">
+              <h3 className="font-['urbanist'] font-extrabold text-[28px] text-neutral-900 mb-1 tracking-tight">
                 Visit Our Export Hub
               </h3>
-              <p className="font-['Inter'] font-normal text-neutral-500 text-[14px] mb-6">
+              <p className="font-['Nunito'] font-normal text-neutral-500 text-[14px] mb-6">
                 Located Beside SBI ATM, Arundalpet.
               </p>
 
@@ -783,7 +783,7 @@ const Contact = () => {
                     href="https://www.bing.com/maps/directions?ty=0&v=2&sV=1&rtp=%7Epos.16.30355453491211_80.43951416015625__Dry%2520Red%2520Chilli%2520Exporters%2520India%2520-%2520Minha%2520Imports%2520and%2520Exports_&cp=16.303555%7E80.439514&lvl=16&style=r"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-6 py-3.5 bg-[#8f000d] hover:bg-[#72000a] text-white font-['Montserrat'] font-bold text-[10px] tracking-wider uppercase rounded-xl transition-all duration-300 shadow-md text-center"
+                    className="px-6 py-3.5 bg-[#8f000d] hover:bg-[#72000a] text-white font-['urbanist'] font-bold text-[10px] tracking-wider uppercase rounded-xl transition-all duration-300 shadow-md text-center"
                   >
                     Get Directions
                   </a>
@@ -791,14 +791,14 @@ const Contact = () => {
                     href="https://www.bing.com/maps/directions?ty=0&v=2&sV=1&rtp=%7Epos.16.30355453491211_80.43951416015625__Dry%2520Red%2520Chilli%2520Exporters%2520India%2520-%2520Minha%2520Imports%2520and%2520Exports_&cp=16.303555%7E80.439514&lvl=16&style=r"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-6 py-3.5 border border-neutral-200 hover:bg-neutral-50 text-neutral-700 font-['Montserrat'] font-bold text-[10px] tracking-wider uppercase rounded-xl transition-all duration-300 text-center"
+                    className="px-6 py-3.5 border border-neutral-200 hover:bg-neutral-50 text-neutral-700 font-['urbanist'] font-bold text-[10px] tracking-wider uppercase rounded-xl transition-all duration-300 text-center"
                   >
                     View On Map
                   </a>
                 </div>
 
                 {/* Address details */}
-                <div className="flex gap-3 items-center border-t border-neutral-200 pt-4 text-[12.5px] text-neutral-600 font-['Inter'] leading-relaxed">
+                <div className="flex gap-3 items-center border-t border-neutral-200 pt-4 text-[12.5px] text-neutral-600 font-['Nunito'] leading-relaxed">
                   <FiMapPin className="text-[#2c6a46] text-[18px] shrink-0" />
                   <span>Arundalpet 7/1, Beside SBI ATM, Guntur, Andhra Pradesh – 522002, India</span>
                 </div>
@@ -812,10 +812,10 @@ const Contact = () => {
 
             {/* FAQ Block */}
             <div className="text-left">
-              <span className="text-[#2c6a46] font-['Montserrat'] font-bold text-[10px] tracking-[0.25em] uppercase mb-2 block">
+              <span className="text-[#2c6a46] font-['urbanist'] font-bold text-[10px] tracking-[0.25em] uppercase mb-2 block">
                 Support & Queries
               </span>
-              <h3 className="font-['Montserrat'] font-black text-[24px] text-neutral-900 mb-5 tracking-tight leading-none">
+              <h3 className="font-['urbanist'] font-black text-[24px] text-neutral-900 mb-5 tracking-tight leading-none">
                 Frequently Asked Questions
               </h3>
 
@@ -843,7 +843,7 @@ const Contact = () => {
                           <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-[13px] shrink-0 ${iconConfig.bg}`}>
                             {iconConfig.icon}
                           </div>
-                          <span className="font-['Montserrat'] font-bold text-[12px] sm:text-[12.5px] text-neutral-800 leading-snug">
+                          <span className="font-['urbanist'] font-bold text-[12px] sm:text-[12.5px] text-neutral-800 leading-snug">
                             {faq.q}
                           </span>
                         </div>
@@ -855,7 +855,7 @@ const Contact = () => {
                         transition={{ duration: 0.25 }}
                         className="overflow-hidden"
                       >
-                        <p className="pb-4 px-4 pl-[48px] font-['Inter'] font-normal text-neutral-500 text-[11px] sm:text-[12px] leading-relaxed border-t border-neutral-100/50 pt-2.5">
+                        <p className="pb-4 px-4 pl-[48px] font-['Nunito'] font-normal text-neutral-500 text-[11px] sm:text-[12px] leading-relaxed border-t border-neutral-100/50 pt-2.5">
                           {faq.a}
                         </p>
                       </motion.div>
@@ -865,7 +865,7 @@ const Contact = () => {
               </div>
 
               {/* Bottom Questions Action */}
-              <div className="mt-5 pt-4 border-t border-neutral-200 flex items-center justify-between text-[11px] font-['Montserrat'] font-bold">
+              <div className="mt-5 pt-4 border-t border-neutral-200 flex items-center justify-between text-[11px] font-['urbanist'] font-bold">
                 <span className="text-neutral-400">Still have questions?</span>
                 <a
                   href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20have%20a%20question%20for%20your%20team.%20Please%20get%20in%20touch."
@@ -881,13 +881,13 @@ const Contact = () => {
 
             {/* Visit Our Export Hub Block */}
             <div className="text-left border-t border-neutral-200 pt-6">
-              <span className="text-[#8f000d] font-['Montserrat'] font-bold text-[10px] tracking-[0.25em] uppercase mb-2 block">
+              <span className="text-[#8f000d] font-['urbanist'] font-bold text-[10px] tracking-[0.25em] uppercase mb-2 block">
                 Corporate Location
               </span>
-              <h3 className="font-['Montserrat'] font-extrabold text-[24px] text-neutral-900 mb-1 tracking-tight leading-none">
+              <h3 className="font-['urbanist'] font-extrabold text-[24px] text-neutral-900 mb-1 tracking-tight leading-none">
                 Visit Our Export Hub
               </h3>
-              <p className="font-['Inter'] font-normal text-neutral-500 text-[13px] mb-5">
+              <p className="font-['Nunito'] font-normal text-neutral-500 text-[13px] mb-5">
                 Located Beside SBI ATM, Arundalpet.
               </p>
 
@@ -913,7 +913,7 @@ const Contact = () => {
                     href="https://www.bing.com/maps/directions?ty=0&v=2&sV=1&rtp=%7Epos.16.30355453491211_80.43951416015625__Dry%2520Red%2520Chilli%2520Exporters%2520India%2520-%2520Minha%2520Imports%2520and%2520Exports_&cp=16.303555%7E80.439514&lvl=16&style=r"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-5 py-3.5 bg-[#8f000d] hover:bg-[#72000a] text-white font-['Montserrat'] font-bold text-[10px] tracking-wider uppercase rounded-xl transition-all duration-300 shadow-md text-center"
+                    className="px-5 py-3.5 bg-[#8f000d] hover:bg-[#72000a] text-white font-['urbanist'] font-bold text-[10px] tracking-wider uppercase rounded-xl transition-all duration-300 shadow-md text-center"
                   >
                     Get Directions
                   </a>
@@ -921,13 +921,13 @@ const Contact = () => {
                     href="https://www.bing.com/maps/directions?ty=0&v=2&sV=1&rtp=%7Epos.16.30355453491211_80.43951416015625__Dry%2520Red%2520Chilli%2520Exporters%2520India%2520-%2520Minha%2520Imports%2520and%2520Exports_&cp=16.303555%7E80.439514&lvl=16&style=r"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-5 py-3.5 border border-neutral-200 hover:bg-neutral-50 text-neutral-700 font-['Montserrat'] font-bold text-[10px] tracking-wider uppercase rounded-xl transition-all duration-300 text-center"
+                    className="px-5 py-3.5 border border-neutral-200 hover:bg-neutral-50 text-neutral-700 font-['urbanist'] font-bold text-[10px] tracking-wider uppercase rounded-xl transition-all duration-300 text-center"
                   >
                     View On Map
                   </a>
                 </div>
 
-                <div className="flex gap-3 items-center border-t border-neutral-200 pt-4 text-[12px] text-neutral-600 font-['Inter'] leading-relaxed">
+                <div className="flex gap-3 items-center border-t border-neutral-200 pt-4 text-[12px] text-neutral-600 font-['Nunito'] leading-relaxed">
                   <FiMapPin className="text-[#2c6a46] text-[16px] shrink-0" />
                   <span>Arundalpet 7/1, Beside SBI ATM, Guntur, Andhra Pradesh – 522002, India</span>
                 </div>

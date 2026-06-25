@@ -75,15 +75,15 @@ const OurProcess = () => {
 
         {/* Top Process Badge & Headings */}
         <div className="text-center mb-8 md:mb-16">
-          <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
+          <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
             Our Process
           </span>
 
-          <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
+          <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
             From <span className="text-[#B22222]">Guntur Farms</span> to <span className="text-[#1F5E3B]">Global Markets</span>
           </h2>
 
-          <p className="font-['Inter'] font-medium text-[#5a403e] text-[15px] md:text-[16px] mt-3">
+          <p className="font-['Nunito'] font-medium text-[#5a403e] text-[15px] md:text-[16px] mt-3">
             A seamless journey of quality, care and commitment.
           </p>
         </div>
@@ -138,17 +138,17 @@ const OurProcess = () => {
               </div>
 
               {/* Step Number Circle */}
-              <div className={`w-9 h-9 ${step.color} text-white font-['Montserrat'] font-bold text-[14px] rounded-full flex items-center justify-center mb-4 shadow-[0_4px_10px_rgba(0,0,0,0.06)] relative z-10`}>
+              <div className={`w-9 h-9 ${step.color} text-white font-['urbanist'] font-bold text-[14px] rounded-full flex items-center justify-center mb-4 shadow-[0_4px_10px_rgba(0,0,0,0.06)] relative z-10`}>
                 {step.id}
               </div>
 
               {/* Title */}
-              <h3 className="font-['Montserrat'] font-bold text-[16px] md:text-[18px] text-[#1a1c1e] mb-3 leading-snug">
+              <h3 className="font-['urbanist'] font-bold text-[16px] md:text-[18px] text-[#1a1c1e] mb-3 leading-snug">
                 {step.title}
               </h3>
 
               {/* Description */}
-              <p className="font-['Inter'] font-normal text-[#5a403e] text-[13px] md:text-[14px] leading-[1.6] max-w-[260px]">
+              <p className="font-['nunito'] font-normal text-[#5a403e] text-[13px] md:text-[14px] leading-[1.6] max-w-[260px]">
                 {step.text}
               </p>
 

@@ -66,15 +66,15 @@ const ChilliPowder = () => {
           loading="eager"
         />
         <div className="relative z-20 w-full max-w-4xl mx-auto text-center space-y-6">
-          <nav className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['Montserrat'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">
+          <nav className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['urbanist'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">
             <Link className="hover:text-white transition-colors whitespace-nowrap" to="/">Home</Link>
             <span className="text-white/60">/</span>
             <span className="text-white whitespace-normal text-center">Chilli Powder</span>
           </nav>
-          <h1 className="font-['Montserrat'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
+          <h1 className="font-['urbanist'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             Premium Chilli Powder
           </h1>
-          <p className="font-['Inter'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
+          <p className="font-['Nunito'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
             Hygienically processed and export-grade chilli powder meticulously sourced from the heart of Guntur for global retail and industrial markets.
           </p>
         </div>
@@ -104,8 +104,8 @@ const ChilliPowder = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-left space-y-6"
           >
-            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Manufacturing Excellence</span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
+            <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Manufacturing Excellence</span>
+            <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Hygienic Production & Global Supply
             </h2>
             <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed text-justify">
@@ -114,11 +114,11 @@ const ChilliPowder = () => {
             <div className="grid grid-cols-2 gap-8 pt-4">
               <div>
                 <div className="font-heading font-extrabold text-[32px] text-[#2c6a46] leading-none">99.5%</div>
-                <div className="font-['Montserrat'] font-semibold text-[10px] tracking-wider text-neutral-400 mt-2">PURITY LEVEL</div>
+                <div className="font-['urbanist'] font-semibold text-[10px] tracking-wider text-neutral-400 mt-2">PURITY LEVEL</div>
               </div>
               <div>
                 <div className="font-heading font-extrabold text-[32px] text-[#2c6a46] leading-none">ISO 22000</div>
-                <div className="font-['Montserrat'] font-semibold text-[10px] tracking-wider text-neutral-400 mt-2">CERTIFIED FACILITY</div>
+                <div className="font-['urbanist'] font-semibold text-[10px] tracking-wider text-neutral-400 mt-2">CERTIFIED FACILITY</div>
               </div>
             </div>
           </motion.div>
@@ -129,9 +129,9 @@ const ChilliPowder = () => {
       <section className="py-10 md:py-14 bg-surface-container-low">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
           <div className="text-center mb-12">
-            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Catalog Grades</span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight text-center">Our Premium Export Grades</h2>
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] max-w-2xl mx-auto mt-3">
+            <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Catalog Grades</span>
+            <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight text-center">Our Premium Export Grades</h2>
+            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] max-w-2xl mx-auto mt-3">
               Selected variants tailored for culinary excellence and industrial applications across the globe.
             </p>
           </div>
@@ -176,7 +176,7 @@ const ChilliPowder = () => {
                   <div key={idx} className="bg-white p-6 rounded-2xl border border-neutral-100 shadow-sm hover:shadow-md transition-all group flex flex-col justify-between">
                     <div>
                       <div className="relative mb-6 overflow-hidden rounded-xl bg-neutral-50">
-                        <span className={`absolute top-4 right-4 ${grade.badgeColor} text-white font-['Montserrat'] font-semibold text-[9px] tracking-wider px-3 py-1 z-10 rounded-md`}>
+                        <span className={`absolute top-4 right-4 ${grade.badgeColor} text-white font-['urbanist'] font-semibold text-[9px] tracking-wider px-3 py-1 z-10 rounded-md`}>
                           {grade.badge}
                         </span>
                         <img
@@ -213,8 +213,8 @@ const ChilliPowder = () => {
       <section className="py-10 md:py-14 bg-surface">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="lg:w-1/3 text-left flex flex-col justify-center">
-            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Datasheet</span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight mb-6">Technical Specifications</h2>
+            <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Datasheet</span>
+            <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight mb-6">Technical Specifications</h2>
             <p className="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
               Detailed chemical and physical analysis parameters to ensure consistency for bulk buyers and importers.
             </p>
@@ -232,7 +232,7 @@ const ChilliPowder = () => {
           <div className="lg:w-2/3">
             <div className="overflow-hidden border border-neutral-100 rounded-2xl shadow-sm">
               <table className="w-full text-left border-collapse">
-                <thead className="bg-[#FAF8F4] border-b border-neutral-100 font-['Montserrat'] font-bold text-[10px] tracking-wider text-neutral-400 uppercase">
+                <thead className="bg-[#FAF8F4] border-b border-neutral-100 font-['urbanist'] font-bold text-[10px] tracking-wider text-neutral-400 uppercase">
                   <tr>
                     <th className="p-5">PARAMETER</th>
                     <th className="p-5">EXPORT STANDARD</th>
@@ -273,10 +273,10 @@ const ChilliPowder = () => {
       {/* 5. Processing & Quality */}
       <section className="py-10 md:py-14 px-6 md:px-12 max-w-[1280px] mx-auto z-10 relative">
         <div className="relative rounded-3xl overflow-hidden py-16 px-6 md:px-12 text-center text-white shadow-2xl border border-white/[0.05] bg-gradient-to-br from-[#121315] via-[#2A080C] to-[#121315]">
-          <div className="inline-block px-3 py-1 bg-[#cca72f]/10 border border-[#cca72f]/30 text-[#cca72f] font-['Montserrat'] font-semibold text-[10px] uppercase tracking-[0.15em] rounded-md mb-4">
+          <div className="inline-block px-3 py-1 bg-[#cca72f]/10 border border-[#cca72f]/30 text-[#cca72f] font-['urbanist'] font-semibold text-[10px] uppercase tracking-[0.15em] rounded-md mb-4">
             Quality Assurance Flow
           </div>
-          <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-white mb-12">
+          <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-white mb-12">
             Seed-to-Shipment Quality Control
           </h2>
 
@@ -364,8 +364,8 @@ const ChilliPowder = () => {
       <section className="py-10 md:py-14 bg-surface-container-low">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="text-left space-y-6">
-            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Delivery Standards</span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
+            <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Delivery Standards</span>
+            <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Global Packaging & Logistics
             </h2>
             <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
@@ -475,10 +475,10 @@ const ChilliPowder = () => {
                 <span className="absolute -top-10 -left-2 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
                   “
                 </span>
-                <blockquote className="font-['Montserrat'] font-medium italic text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed text-white/95 relative z-10">
+                <blockquote className="font-['urbanist'] font-medium italic text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed text-white/95 relative z-10">
                   "Our chilli powder is processed utilizing advanced low-temperature grinding to lock in the volatile oils, natural pungency, and vivid color values that global food industries demand."
                 </blockquote>
-                <div className="font-['Montserrat'] font-bold text-[9px] sm:text-[10px] tracking-widest uppercase text-[#cca72f] relative z-10">
+                <div className="font-['urbanist'] font-bold text-[9px] sm:text-[10px] tracking-widest uppercase text-[#cca72f] relative z-10">
                   — The Minha Pulverizing Desk
                 </div>
                 <span className="absolute -bottom-14 right-4 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
@@ -489,7 +489,7 @@ const ChilliPowder = () => {
               {/* Right Column: CTA Content (lg:col-span-7) */}
               <div className="space-y-5 text-center lg:text-left lg:col-span-7 w-full">
                 {/* Tagline Badge */}
-                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 border border-white/20 text-[#cca72f] font-['Montserrat'] font-bold text-[8.5px] sm:text-[9px] tracking-widest uppercase mx-auto lg:mx-0">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 border border-white/20 text-[#cca72f] font-['urbanist'] font-bold text-[8.5px] sm:text-[9px] tracking-widest uppercase mx-auto lg:mx-0">
                   <span className="relative flex h-1.5 w-1.5">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#cca72f] opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#cca72f]"></span>
@@ -497,10 +497,10 @@ const ChilliPowder = () => {
                   Bulk Powder Sourcing
                 </div>
 
-                <h2 className="font-['Montserrat'] font-bold text-[22px] sm:text-[26px] md:text-[32px] leading-[1.2] text-white tracking-tight">
+                <h2 className="font-['urbanist'] font-bold text-[22px] sm:text-[26px] md:text-[32px] leading-[1.2] text-white tracking-tight">
                   Looking for Premium <br className="hidden sm:inline" /> Chilli Powder Supply?
                 </h2>
-                <p className="font-['Inter'] font-normal text-white/80 text-[13.5px] leading-relaxed">
+                <p className="font-['Nunito'] font-normal text-white/80 text-[13.5px] leading-relaxed">
                   Partner with a trusted export leader. Get a customized quote for your specific grade and volume requirements today.
                 </p>
 
@@ -513,7 +513,7 @@ const ChilliPowder = () => {
                   ].map((text, idx) => (
                     <div key={idx} className="flex items-center gap-1.5 bg-white/5 border border-white/5 backdrop-blur-[2px] rounded-full px-3.5 py-1">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#cca72f] shrink-0" />
-                      <span className="font-['Montserrat'] font-bold text-[8.5px] sm:text-[9px] text-white/90 uppercase tracking-wider">
+                      <span className="font-['urbanist'] font-bold text-[8.5px] sm:text-[9px] text-white/90 uppercase tracking-wider">
                         {text}
                       </span>
                     </div>
@@ -526,7 +526,7 @@ const ChilliPowder = () => {
                     href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20would%20like%20to%20request%20a%20wholesale%20quote%20for%20your%20premium%20Guntur%20chilli%20powder.%20Please%20share%20pricing%2C%20grades%2C%20and%20MOQ%20details."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 bg-[#cca72f] text-[#121315] font-['Montserrat'] font-bold text-[11px] sm:text-[11.5px] py-[12px] px-[22px] rounded-full shadow-lg shadow-[#cca72f]/20 hover:bg-white hover:text-black hover:border-white hover:-translate-y-[-2px] active:scale-98 transition-all duration-300 uppercase tracking-wider text-center whitespace-nowrap cursor-pointer"
+                    className="inline-flex items-center justify-center gap-2 bg-[#cca72f] text-[#121315] font-['urbanist'] font-bold text-[11px] sm:text-[11.5px] py-[12px] px-[22px] rounded-full shadow-lg shadow-[#cca72f]/20 hover:bg-white hover:text-black hover:border-white hover:-translate-y-[-2px] active:scale-98 transition-all duration-300 uppercase tracking-wider text-center whitespace-nowrap cursor-pointer"
                   >
                     Request a Quote
                   </a>
@@ -534,13 +534,13 @@ const ChilliPowder = () => {
                     href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20would%20like%20to%20request%20a%20product%20brochure%20for%20your%20premium%20Guntur%20chilli%20powder.%20Please%20send%20the%20catalogue%20and%20certification%20details."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/25 text-white font-['Montserrat'] font-bold text-[11px] sm:text-[11.5px] py-[12px] px-[22px] rounded-full shadow-md active:scale-98 transition-all duration-300 uppercase tracking-wider text-center whitespace-nowrap cursor-pointer"
+                    className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/25 text-white font-['urbanist'] font-bold text-[11px] sm:text-[11.5px] py-[12px] px-[22px] rounded-full shadow-md active:scale-98 transition-all duration-300 uppercase tracking-wider text-center whitespace-nowrap cursor-pointer"
                   >
                     Download Brochure
                   </a>
                 </div>
 
-                <div className="text-[8px] font-['Montserrat'] tracking-widest text-white/40 uppercase pt-2">
+                <div className="text-[8px] font-['urbanist'] tracking-widest text-white/40 uppercase pt-2">
                   Export Desk Response Guarantee: Within 12 Hours
                 </div>
               </div>

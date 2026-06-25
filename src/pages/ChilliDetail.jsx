@@ -153,17 +153,17 @@ const ChilliDetail = () => {
           src={chilli.image}
         />
         <div className="relative z-20 w-full max-w-4xl mx-auto text-center space-y-6">
-          <nav className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['Montserrat'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">
+          <nav className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['urbanist'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">
             <Link className="hover:text-white transition-colors whitespace-nowrap" to="/">Home</Link>
             <span className="text-white/60">/</span>
             <Link className="hover:text-white transition-colors whitespace-nowrap" to="/varieties">Chilli Varieties</Link>
             <span className="text-white/60">/</span>
             <span className="text-white whitespace-normal text-center">{chilli.name}</span>
           </nav>
-          <h1 className="font-['Montserrat'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
+          <h1 className="font-['urbanist'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             {chilli.name}
           </h1>
-          <p className="font-['Inter'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
+          <p className="font-['Nunito'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
             Premium Export Grade Guntur Dry Red Chilli
           </p>
         </div>
@@ -211,8 +211,8 @@ const ChilliDetail = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-5 flex flex-col justify-center text-left"
           >
-            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Export Grade {chilli.grade}</span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight mb-6">Technical Specifications</h2>
+            <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Export Grade {chilli.grade}</span>
+            <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight mb-6">Technical Specifications</h2>
 
             <div className="grid grid-cols-2 gap-3 md:gap-4 mb-8">
 
@@ -325,7 +325,7 @@ const ChilliDetail = () => {
 
             {/* Left Column: Text Content */}
             <div className="text-left space-y-6">
-              <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
+              <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
                 The {isByadgi ? "Pigmentation" : "Pungency"} King
               </h2>
               <p className="font-body-md text-body-md text-[#5a403e] leading-relaxed text-justify">
@@ -356,9 +356,9 @@ const ChilliDetail = () => {
       <section className="py-10 md:py-14 bg-white border-t border-b border-neutral-100">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="text-center mb-8">
-            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Technical Datasheet</span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight text-center">Export Quality Specifications</h2>
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] max-w-2xl mx-auto mt-3 text-center">
+            <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Technical Datasheet</span>
+            <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight text-center">Export Quality Specifications</h2>
+            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] max-w-2xl mx-auto mt-3 text-center">
               Standardized laboratory testing parameters verified for direct trade bulk cargo.
             </p>
           </div>
@@ -451,9 +451,10 @@ const ChilliDetail = () => {
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 
           <div className="text-center mb-8">
-            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Industrial Supply Scope</span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight text-center">Industrial Applications</h2>
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] max-w-2xl mx-auto mt-3 text-center">
+            <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">Industrial Supply Scope</span>
+            <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight text-center">Industrial Applications</h2>
+            <p className="font-['
+            nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] max-w-2xl mx-auto mt-3 text-center">
               Providing the raw material backbone for diverse food, spice processing, and extraction lines globally.
             </p>
           </div>
@@ -496,7 +497,7 @@ const ChilliDetail = () => {
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="bg-on-background text-white rounded-xl overflow-hidden flex flex-col md:flex-row-reverse">
             <div className="md:w-1/2 p-12 flex flex-col justify-center text-left">
-              <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-white tracking-tight mb-6">Logistics & Global Export</h2>
+              <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-white tracking-tight mb-6">Logistics & Global Export</h2>
               <ul className="space-y-4 font-body-md text-white/80">
                 <li className="flex gap-4">
                   <span className="text-secondary-fixed flex-shrink-0">✓</span>
@@ -526,7 +527,7 @@ const ChilliDetail = () => {
       {/* 7. Related Varieties */}
       <section className="py-10 md:py-14 bg-surface">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-          <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight mb-8 text-center">Explore Other Varieties</h2>
+          <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight mb-8 text-center">Explore Other Varieties</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter max-w-4xl mx-auto">
             {relatedChillies.map((relatedChilli, idx) => (
               <div key={idx} className="bg-white rounded-lg overflow-hidden ambient-shadow flex flex-col border border-outline-variant card-hover transition-all text-left">
@@ -565,13 +566,13 @@ const ChilliDetail = () => {
 
           {/* Right: Content & Action */}
           <div className="md:w-7/12 p-8 md:p-12 flex flex-col justify-center text-left space-y-6">
-            <div className="inline-block px-3 py-1 bg-[#8f000d]/10 text-[#8f000d] font-['Montserrat'] font-semibold text-[10px] uppercase tracking-[0.15em] rounded-md self-start">
+            <div className="inline-block px-3 py-1 bg-[#8f000d]/10 text-[#8f000d] font-['urbanist'] font-semibold text-[10px] uppercase tracking-[0.15em] rounded-md self-start">
               Direct Trade Supply
             </div>
-            <h2 className="font-['Montserrat'] font-bold text-[22px] sm:text-[26px] md:text-[30px] leading-[1.25] text-[#1a1c1e] tracking-tight">
+            <h2 className="font-['urbanist'] font-bold text-[22px] sm:text-[26px] md:text-[30px] leading-[1.25] text-[#1a1c1e] tracking-tight">
               Request Quote for <span className="text-[#8f000d] block mt-1">{chilli.name}</span>
             </h2>
-            <p className="font-['Inter'] text-[#5a403e] text-[14px] leading-relaxed">
+            <p className="font-['Nunito'] text-[#5a403e] text-[14px] leading-relaxed">
               Partner with India’s leading spice export desk. Request specialized bulk pricing, certificate reports (COA/Aflatoxin), and custom logistics parameters for this variety.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -579,13 +580,13 @@ const ChilliDetail = () => {
                 href={`https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20would%20like%20to%20request%20export%20details%2C%20COA%20%2F%20Aflatoxin%20certificates%2C%20and%20wholesale%20pricing%20for%20${encodeURIComponent(chilli.name)}.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#8f000d] text-white font-['Montserrat'] font-bold text-[12px] py-4 px-8 rounded-xl hover:bg-[#72000a] transition-all uppercase tracking-wider text-center shadow-lg shadow-[#8f000d]/20 hover:-translate-y-0.5 active:translate-y-0"
+                className="bg-[#8f000d] text-white font-['urbanist'] font-bold text-[12px] py-4 px-8 rounded-xl hover:bg-[#72000a] transition-all uppercase tracking-wider text-center shadow-lg shadow-[#8f000d]/20 hover:-translate-y-0.5 active:translate-y-0"
               >
                 WhatsApp Enquiry
               </a>
               <a
                 href="tel:+917288995777"
-                className="border border-[#8f000d]/20 text-[#8f000d] font-['Montserrat'] font-bold text-[12px] py-4 px-8 rounded-xl hover:bg-[#8f000d]/5 transition-all uppercase tracking-wider text-center hover:-translate-y-0.5 active:translate-y-0"
+                className="border border-[#8f000d]/20 text-[#8f000d] font-['urbanist'] font-bold text-[12px] py-4 px-8 rounded-xl hover:bg-[#8f000d]/5 transition-all uppercase tracking-wider text-center hover:-translate-y-0.5 active:translate-y-0"
               >
                 Call Export Desk
               </a>

@@ -115,15 +115,15 @@ const QualityAssurance = () => {
           src={dryChilliSortingFacility}
         />
         <div className="relative z-20 w-full max-w-4xl mx-auto text-center space-y-6">
-          <nav className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['Montserrat'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">
+          <nav className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['urbanist'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">
             <Link className="hover:text-white transition-colors whitespace-nowrap" to="/">Home</Link>
             <span className="text-white/60">/</span>
             <span className="text-white whitespace-normal text-center">Quality Assurance</span>
           </nav>
-          <h1 className="font-['Montserrat'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
+          <h1 className="font-['urbanist'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             Quality Assurance
           </h1>
-          <p className="font-['Inter'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
+          <p className="font-['Nunito'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
             Maintaining Excellence Through Every Stage of Export
           </p>
         </div>
@@ -158,7 +158,7 @@ const QualityAssurance = () => {
             className="text-left space-y-6"
           >
             <div>
-              <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">Premium Standards for Global Markets</h2>
+              <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">Premium Standards for Global Markets</h2>
             </div>
 
             <p className="text-on-surface-variant font-body-md text-body-md leading-relaxed text-justify">
@@ -204,10 +204,10 @@ const QualityAssurance = () => {
             transition={{ duration: 0.6 }}
             className="mb-8"
           >
-            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
+            <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
               Our Process
             </span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
+            <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Our 4-Stage Quality Process
             </h2>
             <div className="w-24 h-[3px] bg-[#8f000d] mx-auto mt-4 rounded-full"></div>
@@ -255,15 +255,15 @@ const QualityAssurance = () => {
                   </div>
 
                   {/* Stage status badge */}
-                  <div className={`w-6 h-6 rounded-full text-white flex items-center justify-center font-['Montserrat'] font-bold text-[11px] mt-6 shadow-md ${stage.badgeBgClass}`}>
+                  <div className={`w-6 h-6 rounded-full text-white flex items-center justify-center font-['urbanist'] font-bold text-[11px] mt-6 shadow-md ${stage.badgeBgClass}`}>
                     {stage.num}
                   </div>
 
                   {/* Heading & text */}
-                  <h3 className="font-['Montserrat'] font-bold text-[16px] text-neutral-900 mt-4 mb-2 uppercase tracking-wide">
+                  <h3 className="font-['urbanist'] font-bold text-[16px] text-neutral-900 mt-4 mb-2 uppercase tracking-wide">
                     {stage.title}
                   </h3>
-                  <p className="font-['Inter'] font-normal text-[#5a403e] text-[13px] md:text-[14px] leading-relaxed max-w-xs px-2">
+                  <p className="font-['Nunito'] font-normal text-[#5a403e] text-[13px] md:text-[14px] leading-relaxed max-w-xs px-2">
                     {stage.desc}
                   </p>
                 </motion.div>
@@ -285,13 +285,13 @@ const QualityAssurance = () => {
             transition={{ duration: 0.6 }}
             className="mb-8 text-left"
           >
-            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
+            <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
               Our Benchmarks
             </span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
+            <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Certified Quality Measures
             </h2>
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-2xl">
+            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-2xl">
               Rigorous laboratory analysis and inspections are implemented to monitor ASTA moisture, purity, safety index, and phytosanitary metrics.
             </p>
           </motion.div>
@@ -314,12 +314,12 @@ const QualityAssurance = () => {
                   <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center bg-white/5 shrink-0">
                     <FiShield className="text-white text-lg" />
                   </div>
-                  <h3 className="font-['Montserrat'] font-bold text-[18px] leading-tight text-white">
+                  <h3 className="font-['urbanist'] font-bold text-[18px] leading-tight text-white">
                     Quality First<br />Always
                   </h3>
                 </div>
 
-                <p className="font-['Inter'] font-normal text-white/80 text-[13.5px] leading-relaxed">
+                <p className="font-['Nunito'] font-normal text-white/80 text-[13.5px] leading-relaxed">
                   Every step is controlled, tested and certified. We implement strict multi-stage sorting, moisture management (10-12%), and laboratory inspection to meet international food safety benchmarks and preserve natural color and heat.
                 </p>
               </div>
@@ -344,15 +344,15 @@ const QualityAssurance = () => {
                   <div className="w-10 h-10 rounded-full bg-[#2c6a46]/10 text-[#2c6a46] flex items-center justify-center shrink-0">
                     <FiThermometer className="text-lg" />
                   </div>
-                  <h4 className="font-['Montserrat'] font-bold text-[15px] text-neutral-900 leading-tight">
+                  <h4 className="font-['urbanist'] font-bold text-[15px] text-neutral-900 leading-tight">
                     Moisture Control
                   </h4>
                 </div>
-                <p className="font-['Inter'] font-normal text-[#5a403e] text-[13px] leading-relaxed mt-4">
+                <p className="font-['Nunito'] font-normal text-[#5a403e] text-[13px] leading-relaxed mt-4">
                   10-12% maintained to prevent mold.
                 </p>
               </div>
-              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-['Montserrat'] font-bold w-max mt-4 text-[#2c6a46] bg-[#2c6a46]/10">
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-['urbanist'] font-bold w-max mt-4 text-[#2c6a46] bg-[#2c6a46]/10">
                 <span>✓</span> Controlled
               </div>
             </motion.div>
@@ -367,15 +367,15 @@ const QualityAssurance = () => {
                   <div className="w-10 h-10 rounded-full bg-[#8f000d]/10 text-[#8f000d] flex items-center justify-center shrink-0">
                     <FiDroplet className="text-lg" />
                   </div>
-                  <h4 className="font-['Montserrat'] font-bold text-[15px] text-neutral-900 leading-tight">
+                  <h4 className="font-['urbanist'] font-bold text-[15px] text-neutral-900 leading-tight">
                     Cleanliness
                   </h4>
                 </div>
-                <p className="font-['Inter'] font-normal text-[#5a403e] text-[13px] leading-relaxed mt-4">
+                <p className="font-['Nunito'] font-normal text-[#5a403e] text-[13px] leading-relaxed mt-4">
                   Product free from foreign matter.
                 </p>
               </div>
-              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-['Montserrat'] font-bold w-max mt-4 text-[#2c6a46] bg-[#2c6a46]/10">
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-['urbanist'] font-bold w-max mt-4 text-[#2c6a46] bg-[#2c6a46]/10">
                 <span>✓</span> Verified
               </div>
             </motion.div>
@@ -390,15 +390,15 @@ const QualityAssurance = () => {
                   <div className="w-10 h-10 rounded-full bg-[#2c6a46]/10 text-[#2c6a46] flex items-center justify-center shrink-0">
                     <FiAward className="text-lg" />
                   </div>
-                  <h4 className="font-['Montserrat'] font-bold text-[15px] text-neutral-900 leading-tight">
+                  <h4 className="font-['urbanist'] font-bold text-[15px] text-neutral-900 leading-tight">
                     Product Grading
                   </h4>
                 </div>
-                <p className="font-['Inter'] font-normal text-[#5a403e] text-[13px] leading-relaxed mt-4">
+                <p className="font-['Nunito'] font-normal text-[#5a403e] text-[13px] leading-relaxed mt-4">
                   SHU & ASTA standards for markets.
                 </p>
               </div>
-              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-['Montserrat'] font-bold w-max mt-4 text-[#2c6a46] bg-[#2c6a46]/10">
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-['urbanist'] font-bold w-max mt-4 text-[#2c6a46] bg-[#2c6a46]/10">
                 <span>✓</span> Certified
               </div>
             </motion.div>
@@ -413,15 +413,15 @@ const QualityAssurance = () => {
                   <div className="w-10 h-10 rounded-full bg-[#8f000d]/10 text-[#8f000d] flex items-center justify-center shrink-0">
                     <FiPackage className="text-lg" />
                   </div>
-                  <h4 className="font-['Montserrat'] font-bold text-[15px] text-neutral-900 leading-tight">
+                  <h4 className="font-['urbanist'] font-bold text-[15px] text-neutral-900 leading-tight">
                     Packaging Safety
                   </h4>
                 </div>
-                <p className="font-['Inter'] font-normal text-[#5a403e] text-[13px] leading-relaxed mt-4">
+                <p className="font-['Nunito'] font-normal text-[#5a403e] text-[13px] leading-relaxed mt-4">
                   Food-grade packaging for long freshness.
                 </p>
               </div>
-              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-['Montserrat'] font-bold w-max mt-4 text-[#2c6a46] bg-[#2c6a46]/10">
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-['urbanist'] font-bold w-max mt-4 text-[#2c6a46] bg-[#2c6a46]/10">
                 <span>✓</span> Validated
               </div>
             </motion.div>
@@ -436,15 +436,15 @@ const QualityAssurance = () => {
                   <div className="w-10 h-10 rounded-full bg-[#2c6a46]/10 text-[#2c6a46] flex items-center justify-center shrink-0">
                     <FiShield className="text-lg" />
                   </div>
-                  <h4 className="font-['Montserrat'] font-bold text-[15px] text-neutral-900 leading-tight">
+                  <h4 className="font-['urbanist'] font-bold text-[15px] text-neutral-900 leading-tight">
                     Export Compliance
                   </h4>
                 </div>
-                <p className="font-['Inter'] font-normal text-[#5a403e] text-[13px] leading-relaxed mt-4">
+                <p className="font-['Nunito'] font-normal text-[#5a403e] text-[13px] leading-relaxed mt-4">
                   Phytosanitary & MRL compliant.
                 </p>
               </div>
-              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-['Montserrat'] font-bold w-max mt-4 text-[#2c6a46] bg-[#2c6a46]/10">
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-['urbanist'] font-bold w-max mt-4 text-[#2c6a46] bg-[#2c6a46]/10">
                 <span>✓</span> Compliant
               </div>
             </motion.div>
@@ -465,15 +465,15 @@ const QualityAssurance = () => {
                   <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center bg-white/5 shrink-0">
                     <FiStar className="text-white text-lg fill-current" />
                   </div>
-                  <h4 className="font-['Montserrat'] font-bold text-[15px] text-white leading-tight">
+                  <h4 className="font-['urbanist'] font-bold text-[15px] text-white leading-tight">
                     Global Trust
                   </h4>
                 </div>
-                <p className="font-['Inter'] font-normal text-white/80 text-[13px] leading-relaxed mt-4">
+                <p className="font-['Nunito'] font-normal text-white/80 text-[13px] leading-relaxed mt-4">
                   Delivering premium quality to international spice hubs.
                 </p>
               </div>
-              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-['Montserrat'] font-bold w-max mt-4 text-emerald-400 bg-emerald-500/10 relative z-10">
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-['urbanist'] font-bold w-max mt-4 text-emerald-400 bg-emerald-500/10 relative z-10">
                 <span>✓</span> Trusted
               </div>
             </motion.div>
@@ -495,17 +495,17 @@ const QualityAssurance = () => {
           >
             {/* Heading */}
             <div className="space-y-3">
-              <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase block">
+              <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase block">
                 Global Sourcing Partner
               </span>
-              <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] tracking-tight text-[#1a1c1e]">
+              <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] tracking-tight text-[#1a1c1e]">
                 Quality You Can Trust
               </h2>
               <div className="w-16 h-[2.5px] bg-[#8f000d] mx-auto mt-4 rounded-full"></div>
             </div>
 
             {/* Description */}
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] max-w-3xl mx-auto">
+            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] max-w-3xl mx-auto">
               Our legacy is built on the consistency of our supply. By integrating technology with traditional farming wisdom, we provide a transparent bridge between Indian agriculture and global commerce. When you choose Minha, you choose a partner committed to your brand's integrity.
             </p>
 
@@ -517,40 +517,40 @@ const QualityAssurance = () => {
 
               {/* Stat 1 */}
               <div className="space-y-2 py-4 md:py-0 md:px-4 text-center">
-                <div className="font-['Montserrat'] font-black text-[40px] md:text-[48px] leading-none text-[#2c6a46] flex items-center justify-center gap-2">
+                <div className="font-['urbanist'] font-black text-[40px] md:text-[48px] leading-none text-[#2c6a46] flex items-center justify-center gap-2">
                   100%
                 </div>
-                <div className="font-['Montserrat'] font-bold text-[10.5px] tracking-[0.15em] text-neutral-800 uppercase">
+                <div className="font-['urbanist'] font-bold text-[10.5px] tracking-[0.15em] text-neutral-800 uppercase">
                   Certified Quality
                 </div>
-                <p className="text-[12.5px] text-[#5a403e]/80 font-['Inter'] max-w-[220px] mx-auto leading-relaxed mt-1">
+                <p className="text-[12.5px] text-[#5a403e]/80 font-['Nunito'] max-w-[220px] mx-auto leading-relaxed mt-1">
                   Every batch passes strict ASTA & chemical residue limits.
                 </p>
               </div>
 
               {/* Stat 2 */}
               <div className="space-y-2 py-4 md:py-0 md:px-4 text-center">
-                <div className="font-['Montserrat'] font-black text-[40px] md:text-[48px] leading-none text-[#2c6a46] flex items-center justify-center gap-2">
+                <div className="font-['urbanist'] font-black text-[40px] md:text-[48px] leading-none text-[#2c6a46] flex items-center justify-center gap-2">
                   50+
                 </div>
-                <div className="font-['Montserrat'] font-bold text-[10.5px] tracking-[0.15em] text-neutral-800 uppercase">
+                <div className="font-['urbanist'] font-bold text-[10.5px] tracking-[0.15em] text-neutral-800 uppercase">
                   Global Destinations
                 </div>
-                <p className="text-[12.5px] text-[#5a403e]/80 font-['Inter'] max-w-[220px] mx-auto leading-relaxed mt-1">
+                <p className="text-[12.5px] text-[#5a403e]/80 font-['Nunito'] max-w-[220px] mx-auto leading-relaxed mt-1">
                   Delivering dry red chilli imports to global port hubs.
                 </p>
               </div>
 
               {/* Stat 3 */}
               <div className="space-y-2 py-4 md:py-0 md:px-4 text-center">
-                <div className="font-['Montserrat'] font-black text-[40px] md:text-[48px] leading-none text-[#2c6a46] flex items-center justify-center gap-2">
+                <div className="font-['urbanist'] font-black text-[40px] md:text-[48px] leading-none text-[#2c6a46] flex items-center justify-center gap-2">
                   24/7
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 border border-emerald-600 animate-pulse shrink-0"></span>
                 </div>
-                <div className="font-['Montserrat'] font-bold text-[10.5px] tracking-[0.15em] text-neutral-800 uppercase">
+                <div className="font-['urbanist'] font-bold text-[10.5px] tracking-[0.15em] text-neutral-800 uppercase">
                   Supply Chain Visibility
                 </div>
-                <p className="text-[12.5px] text-[#5a403e]/80 font-['Inter'] max-w-[220px] mx-auto leading-relaxed mt-1">
+                <p className="text-[12.5px] text-[#5a403e]/80 font-['Nunito'] max-w-[220px] mx-auto leading-relaxed mt-1">
                   Real-time batch trace reports from farm blocks to delivery.
                 </p>
               </div>
@@ -584,10 +584,10 @@ const QualityAssurance = () => {
               <span className="absolute -top-10 -left-2 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
                 “
               </span>
-              <blockquote className="font-['Montserrat'] font-medium italic text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed text-white/95 relative z-10">
+              <blockquote className="font-['urbanist'] font-medium italic text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed text-white/95 relative z-10">
                 "Excellence is the only standard that travels without a passport. We don't just inspect our chillies; we trace, verify, and guarantee their legacy from Guntur's soil to your doorstep."
               </blockquote>
-              <div className="font-['Montserrat'] font-bold text-[9px] sm:text-[10px] tracking-widest uppercase text-[#cca72f] relative z-10">
+              <div className="font-['urbanist'] font-bold text-[9px] sm:text-[10px] tracking-widest uppercase text-[#cca72f] relative z-10">
                 — The Minha Quality Council
               </div>
               <span className="absolute -bottom-14 right-4 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
@@ -601,18 +601,18 @@ const QualityAssurance = () => {
               {/* Tagline Badge */}
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mx-auto lg:mx-0">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#cca72f] animate-pulse" />
-                <span className="font-['Montserrat'] font-bold text-[8.5px] tracking-[0.2em] text-[#cca72f] uppercase">
+                <span className="font-['urbanist'] font-bold text-[8.5px] tracking-[0.2em] text-[#cca72f] uppercase">
                   Premium Sourcing & Logistics
                 </span>
               </div>
 
               {/* Title */}
-              <h2 className="font-['Montserrat'] font-extrabold text-[22px] md:text-[30px] leading-tight text-white tracking-tight">
+              <h2 className="font-['urbanist'] font-extrabold text-[22px] md:text-[30px] leading-tight text-white tracking-tight">
                 Looking for Premium <br className="hidden sm:inline" /> Quality Chilli Exports?
               </h2>
 
               {/* Description */}
-              <p className="font-['Inter'] font-normal text-white/80 text-[13.5px] leading-relaxed">
+              <p className="font-['Nunito'] font-normal text-white/80 text-[13.5px] leading-relaxed">
                 Partner with Minha Imports & Exports for reliable, grade-A dry red chillies. Get a customized quote based on your specific requirements today.
               </p>
 
@@ -622,14 +622,14 @@ const QualityAssurance = () => {
                   href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20would%20like%20to%20know%20more%20about%20your%20quality%20standards%2C%20testing%20process%2C%20and%20certifications.%20Please%20share%20the%20details."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white text-[#2c6a46] px-8 py-3.5 rounded-full font-['Montserrat'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-neutral-100 hover:text-black shadow-lg shadow-black/10 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
+                  className="bg-white text-[#2c6a46] px-8 py-3.5 rounded-full font-['urbanist'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-neutral-100 hover:text-black shadow-lg shadow-black/10 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
                 >
                   Send Inquiry
                 </a>
               </div>
 
               {/* Trust Guarantee */}
-              <div className="text-[8.5px] font-['Montserrat'] tracking-widest text-white/40 uppercase pt-1">
+              <div className="text-[8.5px] font-['urbanist'] tracking-widest text-white/40 uppercase pt-1">
                 Export Desk Response Guarantee: Within 12 Hours
               </div>
 

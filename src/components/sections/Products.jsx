@@ -43,13 +43,13 @@ const Products = () => {
 
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-16 max-w-3xl mx-auto">
-          <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
+          <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
             Our Products
           </span>
-          <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight mb-4">
+          <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight mb-4">
             Premium Chilli Products for the <span className="text-[#8f000d]">Global Market</span>
           </h2>
-          <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
+          <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
             Sourced directly from Guntur, India's spice capital. We process and pack to the highest international quality standards.
           </p>
         </div>
@@ -66,17 +66,17 @@ const Products = () => {
             className="lg:col-span-4 flex flex-col items-center lg:items-start text-center lg:text-left z-10"
           >
             {/* Top Label */}
-            <span className="font-['Inter'] font-semibold text-[12px] uppercase tracking-[0.2em] text-[#C8A96A] mb-4">
+            <span className="font-['Nunito'] font-semibold text-[12px] uppercase tracking-[0.2em] text-[#C8A96A] mb-4">
               Premium Export Quality
             </span>
 
-            {/* Montserrat Heading */}
-            <h3 className="font-['Montserrat'] font-bold text-[28px] md:text-[34px] leading-[1.2] text-[#B22222] mb-6">
+            {/* urbanist Heading */}
+            <h3 className="font-['urbanist'] font-bold text-[28px] md:text-[34px] leading-[1.2] text-[#B22222] mb-6">
               Dry Red Chillies
             </h3>
 
             {/* Description */}
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] leading-[1.7] mb-8 max-w-md">
+            <p className="font-['nunito'] font-normal text-[#5a403e] text-[15px] leading-[1.7] mb-8 max-w-md">
               Handpicked from the best farms of Guntur. Rich color, high SHU and exceptional quality that the world trusts.
             </p>
 
@@ -90,7 +90,7 @@ const Products = () => {
               ].map((feature, fIdx) => (
                 <li key={fIdx} className="flex items-center gap-3">
                   <span className="text-[#B22222] font-semibold text-[18px] leading-none select-none">✓</span>
-                  <span className="font-['Inter'] font-medium text-[#1a1c1e] text-[15px] leading-none">
+                  <span className="font-['nunito'] font-medium text-[#1a1c1e] text-[15px] leading-none">
                     {feature}
                   </span>
                 </li>
@@ -98,7 +98,7 @@ const Products = () => {
             </ul>
 
             {/* Pill-shaped Button */}
-            <Link to="/varieties" className="bg-[#B22222] hover:bg-[#9c1e1e] text-white font-['Montserrat'] font-semibold text-[15px] tracking-wide py-4 px-10 rounded-full shadow-[0_4px_15px_rgba(178,34,34,0.15)] hover:shadow-[0_8px_25px_rgba(178,34,34,0.25)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 group cursor-pointer border-none">
+            <Link to="/varieties" className="bg-[#B22222] hover:bg-[#9c1e1e] text-white font-['urbanist'] font-semibold text-[15px] tracking-wide py-4 px-10 rounded-full shadow-[0_4px_15px_rgba(178,34,34,0.15)] hover:shadow-[0_8px_25px_rgba(178,34,34,0.25)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 group cursor-pointer border-none">
               <span>Explore Varieties</span>
               <FiGrid className="text-lg transition-all duration-500 group-hover:rotate-90 group-hover:scale-110" />
             </Link>
@@ -127,9 +127,9 @@ const Products = () => {
 
             {/* Circular Stamp Badge */}
             <div className="absolute top-[8%] right-[8%] bg-white border border-[#C8A96A] rounded-full w-[80px] h-[80px] flex flex-col items-center justify-center text-center shadow-[0_6px_20px_rgba(0,0,0,0.05)] rotate-[15deg] select-none z-30">
-              <span className="font-['Montserrat'] font-extrabold text-[16px] text-[#C8A96A] leading-none">100%</span>
-              <span className="font-['Inter'] font-extrabold text-[7px] uppercase tracking-[0.15em] text-[#C8A96A] mt-1.5 leading-none">Export</span>
-              <span className="font-['Inter'] font-extrabold text-[7px] uppercase tracking-[0.15em] text-[#C8A96A] leading-none mt-0.5">Quality</span>
+              <span className="font-['urbanist'] font-extrabold text-[16px] text-[#C8A96A] leading-none">100%</span>
+              <span className="font-['nunito'] font-extrabold text-[7px] uppercase tracking-[0.15em] text-[#C8A96A] mt-1.5 leading-none">Export</span>
+              <span className="font-['nunito'] font-extrabold text-[7px] uppercase tracking-[0.15em] text-[#C8A96A] leading-none mt-0.5">Quality</span>
             </div>
           </motion.div>
 
@@ -142,17 +142,17 @@ const Products = () => {
             className="lg:col-span-4 flex flex-col items-center lg:items-start text-center lg:text-left z-10"
           >
             {/* Top Label */}
-            <span className="font-['Inter'] font-semibold text-[12px] uppercase tracking-[0.2em] text-[#C8A96A] mb-4">
+            <span className="font-['nunito'] font-semibold text-[12px] uppercase tracking-[0.2em] text-[#C8A96A] mb-4">
               Pure & Natural
             </span>
 
-            {/* Montserrat Heading */}
-            <h3 className="font-['Montserrat'] font-bold text-[28px] md:text-[34px] leading-[1.2] text-[#1F5E3B] mb-6">
+            {/* urbanist Heading */}
+            <h3 className="font-['urbanist'] font-bold text-[28px] md:text-[34px] leading-[1.2] text-[#1F5E3B] mb-6">
               Chilli Powder
             </h3>
 
             {/* Description */}
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] leading-[1.7] mb-8 max-w-md">
+            <p className="font-['nunito'] font-normal text-[#5a403e] text-[15px] leading-[1.7] mb-8 max-w-md">
               Finely ground using advanced technology to retain natural oils, color and pungency.
             </p>
 
@@ -166,7 +166,7 @@ const Products = () => {
               ].map((feature, fIdx) => (
                 <li key={fIdx} className="flex items-center gap-3">
                   <span className="text-[#1F5E3B] font-semibold text-[18px] leading-none select-none">✓</span>
-                  <span className="font-['Inter'] font-medium text-[#1a1c1e] text-[15px] leading-none">
+                  <span className="font-['Nunito'] font-medium text-[#1a1c1e] text-[15px] leading-none">
                     {feature}
                   </span>
                 </li>
@@ -174,7 +174,7 @@ const Products = () => {
             </ul>
 
             {/* Pill-shaped Button */}
-            <Link to="/powder" className="bg-[#1F5E3B] hover:bg-[#184a2e] text-white font-['Montserrat'] font-semibold text-[15px] tracking-wide py-4 px-10 rounded-full shadow-[0_4px_15px_rgba(31,94,59,0.15)] hover:shadow-[0_8px_25px_rgba(31,94,59,0.25)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 group cursor-pointer border-none">
+            <Link to="/powder" className="bg-[#1F5E3B] hover:bg-[#184a2e] text-white font-['urbanist'] font-semibold text-[15px] tracking-wide py-4 px-10 rounded-full shadow-[0_4px_15px_rgba(31,94,59,0.15)] hover:shadow-[0_8px_25px_rgba(31,94,59,0.25)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 group cursor-pointer border-none">
               <span>Explore Product</span>
               <FiGrid className="text-lg transition-all duration-500 group-hover:rotate-90 group-hover:scale-110" />
             </Link>

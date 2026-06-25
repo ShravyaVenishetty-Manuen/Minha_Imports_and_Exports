@@ -44,15 +44,15 @@ const GlobalPresence = () => {
 
           {/* Left Column: Heading & Button */}
           <div className="lg:col-span-5 space-y-6 text-left pt-0 lg:pt-4">
-            <span className="font-['Montserrat'] font-bold text-[12px] tracking-[0.2em] text-[#B22222] uppercase block">
+            <span className="font-['urbanist'] font-bold text-[12px] tracking-[0.2em] text-[#B22222] uppercase block">
               Global Footprint
             </span>
 
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
+            <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Taking <span className="text-[#8f000d]">Guntur's Finest</span> to the World
             </h2>
 
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
+            <p className="font-['nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
               From Guntur to global markets, we ensure quality, consistency and trust in every shipment.
             </p>
 
@@ -61,7 +61,7 @@ const GlobalPresence = () => {
                 href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20am%20interested%20in%20importing%20your%20Guntur%20chillies%20to%20my%20country.%20Please%20share%20export%20details%20and%20logistics%20support."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#1F5E3B] text-white text-xs font-['Montserrat'] font-bold py-3.5 px-8 rounded-lg shadow-md hover:bg-[#17482d] hover:translate-y-[-2px] active:scale-95 transition-all duration-300 uppercase tracking-wider"
+                className="inline-flex items-center gap-2 bg-[#1F5E3B] text-white text-xs font-['urbanist'] font-bold py-3.5 px-8 rounded-lg shadow-md hover:bg-[#17482d] hover:translate-y-[-2px] active:scale-95 transition-all duration-300 uppercase tracking-wider"
               >
                 Contact Us
                 <FiArrowRight className="w-4 h-4" />
@@ -74,18 +74,18 @@ const GlobalPresence = () => {
             {/* Key Value Props */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               <div>
-                <span className="font-['Montserrat'] font-semibold text-[13px] text-[#1a1c1e] block mb-1">
+                <span className="font-['urbanist'] font-semibold text-[13px] text-[#1a1c1e] block mb-1">
                   Purity Guaranteed
                 </span>
-                <span className="font-['Inter'] text-[12px] text-[#5a403e]/80 leading-relaxed block">
+                <span className="font-['nunito'] text-[12px] text-[#5a403e]/80 leading-relaxed block">
                   Carefully selected crops processed in hygienic environments to preserve the rich, natural heat and color.
                 </span>
               </div>
               <div>
-                <span className="font-['Montserrat'] font-semibold text-[13px] text-[#1a1c1e] block mb-1">
+                <span className="font-['urbanist'] font-semibold text-[13px] text-[#1a1c1e] block mb-1">
                   Reliable Supply
                 </span>
-                <span className="font-['Inter'] text-[12px] text-[#5a403e]/80 leading-relaxed block">
+                <span className="font-['nunito'] text-[12px] text-[#5a403e]/80 leading-relaxed block">
                   Consistent year-round availability backed by robust cold storage facilities to support large-scale orders.
                 </span>
               </div>
@@ -111,10 +111,10 @@ const GlobalPresence = () => {
                   key={idx}
                   className="flex flex-col items-center justify-center text-center py-2"
                 >
-                  <span className={`font-['Montserrat'] font-extrabold text-[24px] md:text-[30px] leading-none ${stat.colorClass}`}>
+                  <span className={`font-['urbanist'] font-extrabold text-[24px] md:text-[30px] leading-none ${stat.colorClass}`}>
                     {stat.value}
                   </span>
-                  <span className="font-['Inter'] font-semibold text-[#5a403e]/70 text-[10px] md:text-[11px] mt-2 uppercase tracking-wider">
+                  <span className="font-['nunito'] font-semibold text-[#5a403e]/70 text-[10px] md:text-[11px] mt-2 uppercase tracking-wider">
                     {stat.label}
                   </span>
                 </div>

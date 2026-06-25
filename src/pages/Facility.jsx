@@ -78,15 +78,15 @@ const Facility = () => {
           loading="eager"
         />
         <div className="relative z-20 w-full max-w-4xl mx-auto text-center space-y-6 px-6">
-          <nav className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['Montserrat'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">
+          <nav className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1.5 font-['urbanist'] font-bold text-[10px] sm:text-[11px] tracking-[0.15em] sm:tracking-[0.2em] text-[#cca72f] uppercase mb-2 px-4">
             <Link className="hover:text-white transition-colors whitespace-nowrap" to="/">Home</Link>
             <span className="text-white/60">/</span>
             <span className="text-white whitespace-normal text-center">Facility</span>
           </nav>
-          <h1 className="font-['Montserrat'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
+          <h1 className="font-['urbanist'] font-bold text-[36px] sm:text-[46px] md:text-[56px] leading-[1.1] tracking-tight text-white">
             Our Facilities
           </h1>
-          <p className="font-['Inter'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
+          <p className="font-['Nunito'] font-normal text-white/85 text-[16px] sm:text-[18px] md:text-[20px] max-w-2xl mx-auto leading-relaxed">
             Modern Infrastructure for Safe, Hygienic, and Reliable Chilli Exports
           </p>
         </div>
@@ -105,18 +105,18 @@ const Facility = () => {
             className="text-left space-y-6"
           >
             <div>
-              <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#2c6a46] bg-[#2c6a46]/10 px-3 py-1 rounded-sm uppercase inline-block mb-3">
+              <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#2c6a46] bg-[#2c6a46]/10 px-3 py-1 rounded-sm uppercase inline-block mb-3">
                 World-Class Operations
               </span>
-              <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
+              <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
                 Precision Engineering for Agricultural Excellence
               </h2>
             </div>
 
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
+            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
               At Minha Imports & Exports, our facilities represent the pinnacle of "Seed-to-Shipment" logistics. We have invested in state-of-the-art infrastructure that integrates cold chain management, automated sorting, and multi-tier quality control labs to ensure every shipment meets the stringent standards of the international market.
             </p>
-            <p className="font-['Inter'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
+            <p className="font-['Nunito'] font-normal text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6]">
               Our operational capabilities are built around a central philosophy: transparency. From the moment the chillies arrive from the farms to the final dispatch, every step is documented and performed under strict hygienic conditions.
             </p>
 
@@ -125,7 +125,7 @@ const Facility = () => {
                 href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20would%20like%20to%20know%20more%20about%20your%20export%20facilities%20and%20processing%20capabilities.%20Please%20get%20in%20touch."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#8f000d] text-white px-8 py-3.5 rounded-lg font-['Montserrat'] font-bold text-xs uppercase tracking-wider shadow-lg hover:bg-[#8f000d]/95 hover:shadow-primary/20 transition-all active:scale-95"
+                className="inline-flex items-center gap-2 bg-[#8f000d] text-white px-8 py-3.5 rounded-lg font-['urbanist'] font-bold text-xs uppercase tracking-wider shadow-lg hover:bg-[#8f000d]/95 hover:shadow-primary/20 transition-all active:scale-95"
               >
                 Contact Us
                 <FiArrowRight className="text-sm" />
@@ -157,10 +157,10 @@ const Facility = () => {
 
         {/* Header */}
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 text-center mb-8 relative z-10">
-          <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
+          <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
             Workflow Stages
           </span>
-          <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
+          <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
             Our 4-Stage Operational Process
           </h2>
           <div className="w-20 h-1 bg-[#8f000d] mx-auto mt-4 rounded-full"></div>
@@ -180,7 +180,7 @@ const Facility = () => {
 
               {/* Timeline Center Node */}
               <div className="absolute left-12 md:left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-20 flex items-center justify-center">
-                <div className="w-10 h-10 rounded-full bg-white border-2 border-[#8f000d] flex items-center justify-center font-['Montserrat'] font-bold text-xs shadow-md relative z-10">
+                <div className="w-10 h-10 rounded-full bg-white border-2 border-[#8f000d] flex items-center justify-center font-['urbanist'] font-bold text-xs shadow-md relative z-10">
                   <span className="text-[#8f000d]">01</span>
                   <span className="absolute -inset-1.5 rounded-full border border-[#8f000d] opacity-40 animate-pulse text-[#8f000d]"></span>
                 </div>
@@ -195,26 +195,26 @@ const Facility = () => {
                 className="w-full order-1 pl-16 md:pl-0 text-left"
               >
                 <div className="bg-white border border-neutral-100/85 rounded-3xl p-6 md:p-8 shadow-premium-soft hover:-translate-y-1 hover:shadow-md transition-all duration-300 relative z-10">
-                  <span className="text-[#8f000d] font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] uppercase">
+                  <span className="text-[#8f000d] font-['urbanist'] font-bold text-[11px] tracking-[0.2em] uppercase">
                     Phase 01
                   </span>
-                  <h3 className="font-['Montserrat'] font-bold text-[22px] md:text-[26px] text-neutral-900 leading-tight mt-1">
+                  <h3 className="font-['urbanist'] font-bold text-[22px] md:text-[26px] text-neutral-900 leading-tight mt-1">
                     Advanced Cleaning &amp; Sorting
                   </h3>
                   <div className="w-12 h-[2.5px] bg-[#8f000d] rounded-full mt-3 mb-4"></div>
-                  <p className="font-['Inter'] text-[#5a403e] text-[14px] md:text-[15px] leading-relaxed mb-6">
+                  <p className="font-['Nunito'] text-[#5a403e] text-[14px] md:text-[15px] leading-relaxed mb-6">
                     Our cleaning units utilize magnetic separators and air-suction systems to remove foreign particles, stones, and dust. The sorting process is managed by high-resolution optical sorters that categorize chillies based on color consistency and size uniformity, ensuring only the highest grade S4 and Teja varieties move forward.
                   </p>
 
                   {/* Phase Metrics */}
                   <div className="grid grid-cols-2 gap-4 pt-4 border-t border-neutral-100">
                     <div>
-                      <h5 className="font-['Montserrat'] font-bold text-[11px] text-[#8f000d] uppercase tracking-wider">Daily Capacity</h5>
-                      <p className="font-['Inter'] text-neutral-800 text-[13px] font-semibold mt-0.5">50 Metric Tons / Day</p>
+                      <h5 className="font-['urbanist'] font-bold text-[11px] text-[#8f000d] uppercase tracking-wider">Daily Capacity</h5>
+                      <p className="font-['Nunito'] text-neutral-800 text-[13px] font-semibold mt-0.5">50 Metric Tons / Day</p>
                     </div>
                     <div>
-                      <h5 className="font-['Montserrat'] font-bold text-[11px] text-[#8f000d] uppercase tracking-wider">Technology</h5>
-                      <p className="font-['Inter'] text-neutral-800 text-[13px] font-semibold mt-0.5">Optical Sorters</p>
+                      <h5 className="font-['urbanist'] font-bold text-[11px] text-[#8f000d] uppercase tracking-wider">Technology</h5>
+                      <p className="font-['Nunito'] text-neutral-800 text-[13px] font-semibold mt-0.5">Optical Sorters</p>
                     </div>
                   </div>
                 </div>
@@ -244,7 +244,7 @@ const Facility = () => {
 
               {/* Timeline Center Node */}
               <div className="absolute left-12 md:left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-20 flex items-center justify-center">
-                <div className="w-10 h-10 rounded-full bg-white border-2 border-[#2c6a46] flex items-center justify-center font-['Montserrat'] font-bold text-xs shadow-md relative z-10">
+                <div className="w-10 h-10 rounded-full bg-white border-2 border-[#2c6a46] flex items-center justify-center font-['urbanist'] font-bold text-xs shadow-md relative z-10">
                   <span className="text-[#2c6a46]">02</span>
                   <span className="absolute -inset-1.5 rounded-full border border-[#2c6a46] opacity-40 animate-pulse text-[#2c6a46]"></span>
                 </div>
@@ -276,26 +276,26 @@ const Facility = () => {
                 className="w-full order-1 md:order-2 pl-16 md:pl-0 text-left"
               >
                 <div className="bg-white border border-neutral-100/85 rounded-3xl p-6 md:p-8 shadow-premium-soft hover:-translate-y-1 hover:shadow-md transition-all duration-300 relative z-10">
-                  <span className="text-[#2c6a46] font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] uppercase">
+                  <span className="text-[#2c6a46] font-['urbanist'] font-bold text-[11px] tracking-[0.2em] uppercase">
                     Phase 02
                   </span>
-                  <h3 className="font-['Montserrat'] font-bold text-[22px] md:text-[26px] text-neutral-900 leading-tight mt-1">
+                  <h3 className="font-['urbanist'] font-bold text-[22px] md:text-[26px] text-neutral-900 leading-tight mt-1">
                     Climate-Controlled Storage
                   </h3>
                   <div className="w-12 h-[2.5px] bg-[#2c6a46] rounded-full mt-3 mb-4"></div>
-                  <p className="font-['Inter'] text-[#5a403e] text-[14px] md:text-[15px] leading-relaxed mb-6">
+                  <p className="font-['Nunito'] text-[#5a403e] text-[14px] md:text-[15px] leading-relaxed mb-6">
                     To prevent moisture damage and maintain the pungency (SHU levels) of our chillies, we operate a 50,000 sq. ft. storage facility. The environment is strictly monitored for humidity and temperature, with dedicated pallets that keep the product away from floor contact, ensuring 100% pest-free storage.
                   </p>
 
                   {/* Phase Metrics */}
                   <div className="grid grid-cols-2 gap-4 pt-4 border-t border-neutral-100">
                     <div>
-                      <h5 className="font-['Montserrat'] font-bold text-[11px] text-[#2c6a46] uppercase tracking-wider">Facility Area</h5>
-                      <p className="font-['Inter'] text-neutral-800 text-[13px] font-semibold mt-0.5">50,000 Sq. Ft.</p>
+                      <h5 className="font-['urbanist'] font-bold text-[11px] text-[#2c6a46] uppercase tracking-wider">Facility Area</h5>
+                      <p className="font-['Nunito'] text-neutral-800 text-[13px] font-semibold mt-0.5">50,000 Sq. Ft.</p>
                     </div>
                     <div>
-                      <h5 className="font-['Montserrat'] font-bold text-[11px] text-[#2c6a46] uppercase tracking-wider">Purity Rating</h5>
-                      <p className="font-['Inter'] text-neutral-800 text-[13px] font-semibold mt-0.5">100% Pest-Free</p>
+                      <h5 className="font-['urbanist'] font-bold text-[11px] text-[#2c6a46] uppercase tracking-wider">Purity Rating</h5>
+                      <p className="font-['Nunito'] text-neutral-800 text-[13px] font-semibold mt-0.5">100% Pest-Free</p>
                     </div>
                   </div>
                 </div>
@@ -308,7 +308,7 @@ const Facility = () => {
 
               {/* Timeline Center Node */}
               <div className="absolute left-12 md:left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-20 flex items-center justify-center">
-                <div className="w-10 h-10 rounded-full bg-white border-2 border-[#cca72f] flex items-center justify-center font-['Montserrat'] font-bold text-xs shadow-md relative z-10">
+                <div className="w-10 h-10 rounded-full bg-white border-2 border-[#cca72f] flex items-center justify-center font-['urbanist'] font-bold text-xs shadow-md relative z-10">
                   <span className="text-[#cca72f]">03</span>
                   <span className="absolute -inset-1.5 rounded-full border border-[#cca72f] opacity-40 animate-pulse text-[#cca72f]"></span>
                 </div>
@@ -323,26 +323,26 @@ const Facility = () => {
                 className="w-full order-1 pl-16 md:pl-0 text-left"
               >
                 <div className="bg-white border border-neutral-100/85 rounded-3xl p-6 md:p-8 shadow-premium-soft hover:-translate-y-1 hover:shadow-md transition-all duration-300 relative z-10">
-                  <span className="text-[#cca72f] font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] uppercase">
+                  <span className="text-[#cca72f] font-['urbanist'] font-bold text-[11px] tracking-[0.2em] uppercase">
                     Phase 03
                   </span>
-                  <h3 className="font-['Montserrat'] font-bold text-[22px] md:text-[26px] text-neutral-900 leading-tight mt-1">
+                  <h3 className="font-['urbanist'] font-bold text-[22px] md:text-[26px] text-neutral-900 leading-tight mt-1">
                     Export-Grade Packaging
                   </h3>
                   <div className="w-12 h-[2.5px] bg-[#cca72f] rounded-full mt-3 mb-4"></div>
-                  <p className="font-['Inter'] text-[#5a403e] text-[14px] md:text-[15px] leading-relaxed mb-6">
+                  <p className="font-['Nunito'] text-[#5a403e] text-[14px] md:text-[15px] leading-relaxed mb-6">
                     We provide customized packaging solutions tailored to international shipping requirements. From 5kg vacuum-sealed pouches to 25kg PP bags, our automated machinery ensures airtight seals and accurate weight measurement. Every package features clear batch-tracking QR codes for total traceability.
                   </p>
 
                   {/* Phase Metrics */}
                   <div className="grid grid-cols-2 gap-4 pt-4 border-t border-neutral-100">
                     <div>
-                      <h5 className="font-['Montserrat'] font-bold text-[11px] text-[#cca72f] uppercase tracking-wider">Bag Sizes</h5>
-                      <p className="font-['Inter'] text-neutral-800 text-[13px] font-semibold mt-0.5">5kg to 25kg Pallets</p>
+                      <h5 className="font-['urbanist'] font-bold text-[11px] text-[#cca72f] uppercase tracking-wider">Bag Sizes</h5>
+                      <p className="font-['Nunito'] text-neutral-800 text-[13px] font-semibold mt-0.5">5kg to 25kg Pallets</p>
                     </div>
                     <div>
-                      <h5 className="font-['Montserrat'] font-bold text-[11px] text-[#cca72f] uppercase tracking-wider">Traceability</h5>
-                      <p className="font-['Inter'] text-neutral-800 text-[13px] font-semibold mt-0.5">QR Code Scans</p>
+                      <h5 className="font-['urbanist'] font-bold text-[11px] text-[#cca72f] uppercase tracking-wider">Traceability</h5>
+                      <p className="font-['Nunito'] text-neutral-800 text-[13px] font-semibold mt-0.5">QR Code Scans</p>
                     </div>
                   </div>
                 </div>
@@ -372,7 +372,7 @@ const Facility = () => {
 
               {/* Timeline Center Node */}
               <div className="absolute left-12 md:left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-20 flex items-center justify-center">
-                <div className="w-10 h-10 rounded-full bg-white border-2 border-[#b22222] flex items-center justify-center font-['Montserrat'] font-bold text-xs shadow-md relative z-10">
+                <div className="w-10 h-10 rounded-full bg-white border-2 border-[#b22222] flex items-center justify-center font-['urbanist'] font-bold text-xs shadow-md relative z-10">
                   <span className="text-[#b22222]">04</span>
                   <span className="absolute -inset-1.5 rounded-full border border-[#b22222] opacity-40 animate-pulse text-[#b22222]"></span>
                 </div>
@@ -404,26 +404,26 @@ const Facility = () => {
                 className="w-full order-1 md:order-2 pl-16 md:pl-0 text-left"
               >
                 <div className="bg-white border border-neutral-100/85 rounded-3xl p-6 md:p-8 shadow-premium-soft hover:-translate-y-1 hover:shadow-md transition-all duration-300 relative z-10">
-                  <span className="text-[#b22222] font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] uppercase">
+                  <span className="text-[#b22222] font-['urbanist'] font-bold text-[11px] tracking-[0.2em] uppercase">
                     Phase 04
                   </span>
-                  <h3 className="font-['Montserrat'] font-bold text-[22px] md:text-[26px] text-neutral-900 leading-tight mt-1">
+                  <h3 className="font-['urbanist'] font-bold text-[22px] md:text-[26px] text-neutral-900 leading-tight mt-1">
                     Logistics &amp; Global Dispatch
                   </h3>
                   <div className="w-12 h-[2.5px] bg-[#b22222] rounded-full mt-3 mb-4"></div>
-                  <p className="font-['Inter'] text-[#5a403e] text-[14px] md:text-[15px] leading-relaxed mb-6">
+                  <p className="font-['Nunito'] text-[#5a403e] text-[14px] md:text-[15px] leading-relaxed mb-6">
                     Located near major transport hubs, our logistics arm ensures rapid transit from facility to port. We handle all container stuffing on-site under high surveillance, ensuring that the integrity of the packaging is maintained until the doors are sealed for global shipping.
                   </p>
 
                   {/* Phase Metrics */}
                   <div className="grid grid-cols-2 gap-4 pt-4 border-t border-neutral-100">
                     <div>
-                      <h5 className="font-['Montserrat'] font-bold text-[11px] text-[#b22222] uppercase tracking-wider">Dispatch Hours</h5>
-                      <p className="font-['Inter'] text-neutral-800 text-[13px] font-semibold mt-0.5">24/7 Loading Bays</p>
+                      <h5 className="font-['urbanist'] font-bold text-[11px] text-[#b22222] uppercase tracking-wider">Dispatch Hours</h5>
+                      <p className="font-['Nunito'] text-neutral-800 text-[13px] font-semibold mt-0.5">24/7 Loading Bays</p>
                     </div>
                     <div>
-                      <h5 className="font-['Montserrat'] font-bold text-[11px] text-[#b22222] uppercase tracking-wider">Tracking</h5>
-                      <p className="font-['Inter'] text-neutral-800 text-[13px] font-semibold mt-0.5">Real-time GPS Logs</p>
+                      <h5 className="font-['urbanist'] font-bold text-[11px] text-[#b22222] uppercase tracking-wider">Tracking</h5>
+                      <p className="font-['Nunito'] text-neutral-800 text-[13px] font-semibold mt-0.5">Real-time GPS Logs</p>
                     </div>
                   </div>
                 </div>
@@ -447,10 +447,10 @@ const Facility = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
+            <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">
               Gallery
             </span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
+            <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Inside Our Operations
             </h2>
             <div className="w-20 h-1 bg-[#8f000d] mx-auto mt-4 rounded-full"></div>
@@ -496,7 +496,7 @@ const Facility = () => {
                   src={img.src}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent md:bg-[#8f000d]/60 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex items-end md:items-center justify-start md:justify-center p-3.5 md:p-0">
-                  <span className="text-white font-['Montserrat'] font-bold text-[11px] md:text-sm tracking-wider uppercase">
+                  <span className="text-white font-['urbanist'] font-bold text-[11px] md:text-sm tracking-wider uppercase">
                     {img.title}
                   </span>
                 </div>
@@ -512,13 +512,13 @@ const Facility = () => {
 
           {/* Centered Header */}
           <div className="text-center mb-16 space-y-3">
-            <span className="font-['Montserrat'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase block">
+            <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase block">
               Infrastructure
             </span>
-            <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
+            <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Built for Quality &amp; Reliability
             </h2>
-            <p className="font-['Inter'] font-normal text-[#5a403e] max-w-2xl mx-auto text-[15px] md:text-[16px] leading-[1.6]">
+            <p className="font-['Nunito'] font-normal text-[#5a403e] max-w-2xl mx-auto text-[15px] md:text-[16px] leading-[1.6]">
               Our infrastructure isn't just about high-tech machines; it's about the promise of safety, consistency, and promptness we deliver to your doorstep.
             </p>
             <div className="w-16 h-[2.5px] bg-[#8f000d] mx-auto mt-4 rounded-full" />
@@ -592,7 +592,7 @@ const Facility = () => {
                 className="p-8 md:p-10 border-b border-r border-neutral-100 flex flex-col justify-between min-h-[240px] relative group overflow-hidden text-left transition-colors duration-300"
               >
                 {/* Large Background Watermarked Number */}
-                <div className="absolute right-6 bottom-4 font-['Montserrat'] font-extrabold text-[80px] leading-none text-neutral-100/60 select-none group-hover:text-neutral-200/50 transition-colors duration-300 pointer-events-none z-0">
+                <div className="absolute right-6 bottom-4 font-['urbanist'] font-extrabold text-[80px] leading-none text-neutral-100/60 select-none group-hover:text-neutral-200/50 transition-colors duration-300 pointer-events-none z-0">
                   {value.num}
                 </div>
 
@@ -603,10 +603,10 @@ const Facility = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <h4 className="font-['Montserrat'] font-bold text-neutral-900 text-[16px] leading-tight">
+                    <h4 className="font-['urbanist'] font-bold text-neutral-900 text-[16px] leading-tight">
                       {value.title}
                     </h4>
-                    <p className="font-['Inter'] font-normal text-[#5a403e]/85 text-[13.5px] leading-relaxed max-w-xs">
+                    <p className="font-['Nunito'] font-normal text-[#5a403e]/85 text-[13.5px] leading-relaxed max-w-xs">
                       {value.desc}
                     </p>
                   </div>
@@ -642,10 +642,10 @@ const Facility = () => {
               <span className="absolute -top-10 -left-2 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
                 “
               </span>
-              <blockquote className="font-['Montserrat'] font-medium italic text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed text-white/95 relative z-10">
+              <blockquote className="font-['urbanist'] font-medium italic text-[14px] sm:text-[16px] md:text-[18px] leading-relaxed text-white/95 relative z-10">
                 "Behind every successful export is a strong infrastructure built for precision and consistency. Our facilities are carefully designed to maintain product quality, ensure hygienic handling, and support seamless global deliveries."
               </blockquote>
-              <div className="font-['Montserrat'] font-bold text-[9px] sm:text-[10px] tracking-widest uppercase text-[#cca72f] relative z-10">
+              <div className="font-['urbanist'] font-bold text-[9px] sm:text-[10px] tracking-widest uppercase text-[#cca72f] relative z-10">
                 — The Minha Infrastructure
               </div>
               <span className="absolute -bottom-14 right-4 text-white/10 text-8xl font-serif select-none pointer-events-none hidden lg:inline-block">
@@ -659,18 +659,18 @@ const Facility = () => {
               {/* Tagline Badge */}
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mx-auto lg:mx-0">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#cca72f] animate-pulse" />
-                <span className="font-['Montserrat'] font-bold text-[8.5px] tracking-[0.2em] text-[#cca72f] uppercase">
+                <span className="font-['urbanist'] font-bold text-[8.5px] tracking-[0.2em] text-[#cca72f] uppercase">
                   Direct Export Cargo Sourcing
                 </span>
               </div>
 
               {/* Title */}
-              <h2 className="font-['Montserrat'] font-extrabold text-[22px] md:text-[30px] leading-tight text-white tracking-tight">
+              <h2 className="font-['urbanist'] font-extrabold text-[22px] md:text-[30px] leading-tight text-white tracking-tight">
                 Partner With a Reliable Export Infrastructure
               </h2>
 
               {/* Description */}
-              <p className="font-['Inter'] font-normal text-white/80 text-[13.5px] leading-relaxed">
+              <p className="font-['Nunito'] font-normal text-white/80 text-[13.5px] leading-relaxed">
                 Experience the difference of a facility built for the demands of the global market. Request a virtual tour or a quote today.
               </p>
 
@@ -680,14 +680,14 @@ const Facility = () => {
                   href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20would%20like%20to%20request%20a%20quote%20for%20bulk%20Guntur%20chilli%20export.%20Please%20share%20pricing%2C%20packaging%20options%2C%20and%20shipping%20timelines."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#cca72f] text-[#140002] px-8 py-3.5 rounded-full font-['Montserrat'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-[#e0bc55] shadow-lg shadow-[#cca72f]/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
+                  className="bg-[#cca72f] text-[#140002] px-8 py-3.5 rounded-full font-['urbanist'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-[#e0bc55] shadow-lg shadow-[#cca72f]/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
                 >
                   Request a Quote
                 </a>
               </div>
 
               {/* Trust Guarantee */}
-              <div className="text-[8.5px] font-['Montserrat'] tracking-widest text-white/40 uppercase pt-1">
+              <div className="text-[8.5px] font-['urbanist'] tracking-widest text-white/40 uppercase pt-1">
                 Export Desk Response Guarantee: Within 12 Hours
               </div>
 

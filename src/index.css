@@ -15,11 +15,11 @@
   --color-text-muted: #777777;
 
   /* Typography Families */
-  --font-heading: 'Montserrat', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Urbanist', sans-serif;
+  --font-body: 'Nunito', sans-serif;
   --font-opensans: 'Open Sans', sans-serif;
-  --font-urbanist: 'Urbanist', sans-serif;
-  --font-nunito: 'Nunito', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-inter: 'Inter', sans-serif;
 
   /* Theme Presets */
   --radius-card: 16px;
