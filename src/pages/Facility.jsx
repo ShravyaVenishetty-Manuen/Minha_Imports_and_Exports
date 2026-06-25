@@ -121,13 +121,15 @@ const Facility = () => {
             </p>
 
             <div className="pt-2">
-              <Link
-                to="/contact"
+              <a
+                href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20would%20like%20to%20know%20more%20about%20your%20export%20facilities%20and%20processing%20capabilities.%20Please%20get%20in%20touch."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#8f000d] text-white px-8 py-3.5 rounded-lg font-['Montserrat'] font-bold text-xs uppercase tracking-wider shadow-lg hover:bg-[#8f000d]/95 hover:shadow-primary/20 transition-all active:scale-95"
               >
                 Contact Us
                 <FiArrowRight className="text-sm" />
-              </Link>
+              </a>
             </div>
           </motion.div>
 
@@ -674,12 +676,14 @@ const Facility = () => {
 
               {/* Action Buttons */}
               <div className="pt-2 flex justify-center lg:justify-start">
-                <Link
-                  to="/contact"
+                <a
+                  href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20would%20like%20to%20request%20a%20quote%20for%20bulk%20Guntur%20chilli%20export.%20Please%20share%20pricing%2C%20packaging%20options%2C%20and%20shipping%20timelines."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-[#cca72f] text-[#140002] px-8 py-3.5 rounded-full font-['Montserrat'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-[#e0bc55] shadow-lg shadow-[#cca72f]/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
                 >
                   Request a Quote
-                </Link>
+                </a>
               </div>
 
               {/* Trust Guarantee */}

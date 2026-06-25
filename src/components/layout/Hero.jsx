@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { GiChiliPepper } from 'react-icons/gi';
 import chilliPowderImg from '../../assets/chilli-powder-hero.png';
-import heroSlide1Img from '../../assets/hero-slide1.png';
+import heroSlide1Img from '../../assets/hero.png';
 
 const Hero = () => {
   const bgImages = [
@@ -80,7 +80,7 @@ const Hero = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#cca72f]/5 rounded-full blur-[120px] pointer-events-none z-15" />
 
       {/* Main Content */}
-      <div className="relative z-20 w-full max-w-5xl mx-auto px-6 text-center pt-4 pb-12 md:py-0">
+      <div className="relative z-20 w-full max-w-[1440px] mx-auto px-6 md:px-10 lg:px-12 text-center pt-4 pb-12 md:py-0">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -90,7 +90,7 @@ const Hero = () => {
           {/* Main Heading */}
           <motion.h1
             variants={itemVariants}
-            className="font-['Montserrat'] font-extrabold text-white text-[38px] sm:text-[48px] md:text-[62px] leading-[1.15] md:leading-[1.08] tracking-tight max-w-4xl"
+            className="font-['Montserrat'] font-extrabold text-white text-[38px] sm:text-[48px] md:text-[62px] leading-[1.15] md:leading-[1.08] tracking-tight max-w-4xl text-center"
           >
             Premium Guntur Dry Red Chillies <span className="bg-gradient-to-r from-[#ffdad6] via-[#cca72f] to-[#ffdad6] bg-clip-text text-transparent block mt-2">Exported Worldwide</span>
           </motion.h1>
@@ -98,7 +98,7 @@ const Hero = () => {
           {/* Subheading */}
           <motion.p
             variants={itemVariants}
-            className="font-['Inter'] font-normal text-white/85 text-[15px] sm:text-[17px] md:text-[19px] leading-relaxed max-w-2xl text-white/95"
+            className="font-['Inter'] font-normal text-[15px] sm:text-[17px] md:text-[19px] leading-relaxed max-w-2xl text-white/95 text-center"
           >
             Delivering Quality, Purity and Trust Across Global Markets. We are your premium gateway to the finest spices from India's chilli capital.
           </motion.p>
@@ -116,12 +116,14 @@ const Hero = () => {
               <GiChiliPepper className="text-[20px] transition-transform group-hover:translate-x-1 duration-300 scale-x-[-1] rotate-45" />
             </Link>
 
-            <Link
-              to="/contact"
+            <a
+              href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20am%20interested%20in%20your%20premium%20Guntur%20dry%20red%20chillies.%20Please%20share%20more%20details%20about%20your%20products%20and%20pricing."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center border border-white/30 backdrop-blur-sm text-white font-['Montserrat'] font-bold text-[13px] sm:text-[14px] py-4 px-9 rounded-full hover:bg-white hover:text-[#8f000d] hover:border-white hover:translate-y-[-2px] active:scale-98 transition-all duration-300 uppercase tracking-wider"
             >
               Contact Us
-            </Link>
+            </a>
           </motion.div>
         </motion.div>
       </div>

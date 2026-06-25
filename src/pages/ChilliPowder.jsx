@@ -523,13 +523,17 @@ const ChilliPowder = () => {
                 {/* Buttons Group */}
                 <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 relative z-10 pt-2">
                   <a
-                    href="mailto:minhaimportsexports@gmail.com?subject=Enquiry for Premium Chilli Powder&body=Hello Minha Desk,%0D%0A%0D%0AI would like to request details and wholesale pricing for Chilli Powder."
+                    href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20would%20like%20to%20request%20a%20wholesale%20quote%20for%20your%20premium%20Guntur%20chilli%20powder.%20Please%20share%20pricing%2C%20grades%2C%20and%20MOQ%20details."
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 bg-[#cca72f] text-[#121315] font-['Montserrat'] font-bold text-[11px] sm:text-[11.5px] py-[12px] px-[22px] rounded-full shadow-lg shadow-[#cca72f]/20 hover:bg-white hover:text-black hover:border-white hover:-translate-y-[-2px] active:scale-98 transition-all duration-300 uppercase tracking-wider text-center whitespace-nowrap cursor-pointer"
                   >
                     Request a Quote
                   </a>
                   <a
-                    href="mailto:minhaimportsexports@gmail.com?subject=Request Chilli Powder Brochure"
+                    href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20would%20like%20to%20request%20a%20product%20brochure%20for%20your%20premium%20Guntur%20chilli%20powder.%20Please%20send%20the%20catalogue%20and%20certification%20details."
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/25 text-white font-['Montserrat'] font-bold text-[11px] sm:text-[11.5px] py-[12px] px-[22px] rounded-full shadow-md active:scale-98 transition-all duration-300 uppercase tracking-wider text-center whitespace-nowrap cursor-pointer"
                   >
                     Download Brochure

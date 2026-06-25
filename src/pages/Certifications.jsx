@@ -721,12 +721,14 @@ const Certifications = () => {
 
               {/* Action Buttons */}
               <div className="pt-2 flex justify-center lg:justify-start">
-                <Link
-                  to="/contact"
-                  className="bg-[#cca72f] text-[#140002] px-8 py-3.5 rounded-full font-['Montserrat'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-[#e0bc55] shadow-lg shadow-[#cca72f]/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
+                <a
+                  href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20would%20like%20to%20receive%20your%20certification%20details%20and%20compliance%20documents."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-[#cca72f] text-[#140002] px-8 py-3.5 rounded-full font-['Montserrat'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-[#e0bc55] shadow-lg shadow-[#cca72f]/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
                 >
-                  Send Inquiry
-                </Link>
+                  Request Certification Details
+                </a>
               </div>
 
               {/* Trust Guarantee */}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowRight } from 'react-icons/fi';
-import worldMapClean from '../../assets/world-map-clean.png';
+import globalPresenceMap from '../../assets/global-presence-map-nobg.png';
 
 const GlobalPresence = () => {
   const stats = [
@@ -57,13 +57,15 @@ const GlobalPresence = () => {
             </p>
 
             <div className="pt-2">
-              <Link
-                to="/contact"
+              <a
+                href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20am%20interested%20in%20importing%20your%20Guntur%20chillies%20to%20my%20country.%20Please%20share%20export%20details%20and%20logistics%20support."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#1F5E3B] text-white text-xs font-['Montserrat'] font-bold py-3.5 px-8 rounded-lg shadow-md hover:bg-[#17482d] hover:translate-y-[-2px] active:scale-95 transition-all duration-300 uppercase tracking-wider"
               >
                 Contact Us
                 <FiArrowRight className="w-4 h-4" />
-              </Link>
+              </a>
             </div>
 
             {/* Divider */}
@@ -95,9 +97,9 @@ const GlobalPresence = () => {
           <div className="lg:col-span-7 flex flex-col items-center gap-6 -mt-6 lg:-mt-16">
             <div className="relative w-full max-w-[650px] h-auto flex items-center justify-center">
               <img
-                src={worldMapClean}
+                src={globalPresenceMap}
                 alt="Global Footprint Map"
-                className="w-full h-auto object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.02)]"
+                className="w-full h-auto object-contain"
                 draggable="false"
               />
             </div>

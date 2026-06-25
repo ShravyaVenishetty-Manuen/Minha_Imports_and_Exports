@@ -80,8 +80,8 @@ const Navbar = () => {
       {/* Main Navbar: Floating Dark/Light Dynamic Capsule */}
       <nav
         className={`fixed left-1/2 -translate-x-1/2 z-50 h-[68px] px-7 flex items-center justify-between transition-all duration-500 ease-in-out ${isScrolled
-            ? 'top-3 w-[92%] max-w-[1240px] bg-white/95 border border-neutral-200/50 rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.08)]'
-            : 'top-6 w-[95%] max-w-[1280px] bg-white/5 backdrop-blur-[20px] border border-white/10 rounded-[24px] shadow-sm'
+          ? 'top-3 w-[92%] max-w-[1240px] bg-white/95 border border-neutral-200/50 rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.08)]'
+          : 'top-6 w-[95%] max-w-[1280px] bg-white/5 backdrop-blur-[20px] border border-white/10 rounded-[24px] shadow-sm'
           }`}
       >
         <div className="flex items-center justify-between gap-4 w-full h-full">
@@ -107,12 +107,12 @@ const Navbar = () => {
                     to={link.path}
                     onMouseEnter={() => handleLinkHover(link.path)}
                     className={`font-heading text-[10px] xl:text-[11px] font-bold tracking-[0.06em] transition-all duration-300 relative py-1 px-0.5 ${isScrolled
-                        ? isActive
-                          ? 'text-[#111827]'
-                          : 'text-[#374151] hover:text-brand-red font-semibold'
-                        : isActive
-                          ? 'text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]'
-                          : 'text-white/80 hover:text-[#cca72f]'
+                      ? isActive
+                        ? 'text-[#111827]'
+                        : 'text-[#374151] hover:text-brand-red font-semibold'
+                      : isActive
+                        ? 'text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]'
+                        : 'text-white/80 hover:text-[#cca72f]'
                       }`}
                   >
                     {link.name}
@@ -144,15 +144,15 @@ const Navbar = () => {
               onMouseEnter={() => handleLinkHover('/contact')}
               className="hidden sm:inline-flex items-center gap-1.5 font-heading font-extrabold text-[10px] xl:text-[11px] py-2 px-5 rounded-lg transition-all duration-300 shadow-md uppercase tracking-wider group bg-gradient-to-r from-[#B22222] to-[#D62828] text-white border border-[#B22222]/10 hover:opacity-95 hover:-translate-y-0.5"
             >
-              Enquire Now
+              Contact Us
               <FiArrowRight className="text-xs transition-transform group-hover:translate-x-1 duration-300" />
             </Link>
 
             <button
               onClick={() => setIsOpen(!isOpen)}
               className={`lg:hidden p-2 transition-colors focus:outline-none ${isScrolled
-                  ? 'text-[#111827] hover:text-brand-red'
-                  : 'text-white hover:text-[#cca72f]'
+                ? 'text-[#111827] hover:text-brand-red'
+                : 'text-white hover:text-[#cca72f]'
                 }`}
               aria-label="Toggle Navigation Menu"
             >
@@ -211,8 +211,8 @@ const Navbar = () => {
                         onMouseEnter={() => handleLinkHover(link.path)}
                         onClick={() => setIsOpen(false)}
                         className={`font-heading text-sm font-semibold tracking-[0.12em] uppercase transition-all py-3.5 block rounded-lg ${isActive
-                            ? 'text-brand-gold bg-white/5 font-bold'
-                            : 'text-white/80 hover:text-brand-gold hover:bg-white/5'
+                          ? 'text-brand-gold bg-white/5 font-bold'
+                          : 'text-white/80 hover:text-brand-gold hover:bg-white/5'
                           }`}
                       >
                         {link.name}
@@ -233,7 +233,7 @@ const Navbar = () => {
                     onClick={() => setIsOpen(false)}
                     className="block bg-gradient-to-r from-brand-red to-[#901a1a] text-white text-[12px] font-heading font-bold py-3.5 px-8 rounded-lg shadow-lg text-center hover:opacity-95 hover:shadow-brand-red/20 tracking-wider uppercase active:scale-98 transition-all"
                   >
-                    Enquire Now
+                    Contact Us
                   </Link>
                 </motion.div>
               </div>

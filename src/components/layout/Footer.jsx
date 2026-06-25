@@ -66,7 +66,7 @@ const Footer = () => {
                 {linksOpen ? <FiChevronUp className="w-4 h-4" /> : <FiChevronDown className="w-4 h-4" />}
               </span>
             </button>
-            
+
             <ul className={`space-y-2 mt-3 md:block ${linksOpen ? 'block' : 'hidden'}`}>
               {[
                 { name: 'Home', path: '/' },
@@ -98,7 +98,7 @@ const Footer = () => {
                 {productsOpen ? <FiChevronUp className="w-4 h-4" /> : <FiChevronDown className="w-4 h-4" />}
               </span>
             </button>
-            
+
             <ul className={`space-y-2 mt-3 md:block ${productsOpen ? 'block' : 'hidden'}`}>
               {[
                 { name: 'Dry Red Chillies', path: '/varieties' },
@@ -148,7 +148,7 @@ const Footer = () => {
             <h3 className="font-['Montserrat'] font-bold text-[12px] tracking-[0.15em] text-[#cca72f] uppercase">
               WeChat Connect
             </h3>
-            
+
             <div className="flex items-center gap-4 bg-white/5 p-3.5 rounded-xl border border-white/10 w-full max-w-sm">
               <div className="p-1.5 bg-white rounded-lg shadow-md shrink-0 w-20 h-20 flex items-center justify-center">
                 <img

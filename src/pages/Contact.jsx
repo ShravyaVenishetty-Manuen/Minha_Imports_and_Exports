@@ -242,9 +242,9 @@ const Contact = () => {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="w-6 h-[2px] bg-[#2E6F4F] mb-1 rounded-full" />
-                      <h4 className="font-['Montserrat'] font-bold text-[12px] text-[#111827] mb-0.5">Phone</h4>
-                      <a href="tel:+919985728555" className="block font-['Inter'] text-[11px] text-[#374151] hover:text-[#2E6F4F] transition-colors leading-[1.5]">+91 99857 28555 (WhatsApp)</a>
-                      <a href="tel:+917288995777" className="block font-['Inter'] text-[11px] text-[#374151] hover:text-[#2E6F4F] transition-colors leading-[1.5]">+91 72889 95777</a>
+                      <h4 className="font-['Montserrat'] font-bold text-[10px] tracking-wider text-[#A50F15] uppercase mb-0.5">Phone</h4>
+                      <a href="tel:+919985728555" className="block font-['Inter'] text-[13px] font-bold text-[#111827] hover:text-[#2E6F4F] transition-colors leading-[1.5]">+91 99857 28555 (WhatsApp)</a>
+                      <a href="tel:+917288995777" className="block font-['Inter'] text-[13px] font-bold text-[#111827] hover:text-[#2E6F4F] transition-colors leading-[1.5]">+91 72889 95777</a>
                     </div>
                   </div>
 
@@ -255,8 +255,8 @@ const Contact = () => {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="w-6 h-[2px] bg-[#2E6F4F] mb-1 rounded-full" />
-                      <h4 className="font-['Montserrat'] font-bold text-[12px] text-[#111827] mb-0.5">Email</h4>
-                      <a href="mailto:minhaimportsexports@gmail.com" className="block font-['Inter'] text-[11px] text-[#374151] hover:text-[#2E6F4F] transition-colors leading-[1.5] break-all">minhaimportsexports@gmail.com</a>
+                      <h4 className="font-['Montserrat'] font-bold text-[10px] tracking-wider text-[#A50F15] uppercase mb-0.5">Email</h4>
+                      <a href="mailto:minhaimportsexports@gmail.com" className="block font-['Inter'] text-[13px] font-bold text-[#111827] hover:text-[#2E6F4F] transition-colors leading-[1.5] break-all">minhaimportsexports@gmail.com</a>
                     </div>
                   </div>
 
@@ -267,8 +267,8 @@ const Contact = () => {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="w-6 h-[2px] bg-[#2E6F4F] mb-1 rounded-full" />
-                      <h4 className="font-['Montserrat'] font-bold text-[12px] text-[#111827] mb-0.5">Office Address</h4>
-                      <p className="font-['Inter'] text-[11px] text-[#374151] leading-[1.5]">Arundalpet 7/1,<br />Beside SBI ATM, Guntur, AP, India – 522002</p>
+                      <h4 className="font-['Montserrat'] font-bold text-[10px] tracking-wider text-[#A50F15] uppercase mb-0.5">Office Address</h4>
+                      <p className="font-['Inter'] text-[12.5px] font-bold text-[#111827] leading-[1.5]">Arundalpet 7/1,<br />Beside SBI ATM, Guntur, AP, India – 522002</p>
                     </div>
                   </div>
                 </div>
@@ -738,7 +738,9 @@ const Contact = () => {
               <div className="mt-8 pt-4 border-t border-neutral-200 flex items-center justify-between text-[11px] font-['Montserrat'] font-bold">
                 <span className="text-neutral-400">Still have questions?</span>
                 <a
-                  href="mailto:minhaimportsexports@gmail.com"
+                  href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20have%20a%20question%20for%20your%20team.%20Please%20get%20in%20touch."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-[#8f000d] hover:text-[#cca72f] transition-colors inline-flex items-center gap-1 group"
                 >
                   Contact our team
@@ -866,7 +868,9 @@ const Contact = () => {
               <div className="mt-5 pt-4 border-t border-neutral-200 flex items-center justify-between text-[11px] font-['Montserrat'] font-bold">
                 <span className="text-neutral-400">Still have questions?</span>
                 <a
-                  href="mailto:minhaimportsexports@gmail.com"
+                  href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20have%20a%20question%20for%20your%20team.%20Please%20get%20in%20touch."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-[#8f000d] hover:text-[#cca72f] transition-colors inline-flex items-center gap-1 group"
                 >
                   Contact our team

@@ -576,10 +576,12 @@ const ChilliDetail = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <a
-                href={`mailto:minhaimportsexports@gmail.com?subject=Enquiry for ${chilli.name}&body=Hello Minha Desk,%0D%0A%0D%0AI would like to request export details, certificates, and wholesale pricing for ${chilli.name}.`}
+                href={`https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20would%20like%20to%20request%20export%20details%2C%20COA%20%2F%20Aflatoxin%20certificates%2C%20and%20wholesale%20pricing%20for%20${encodeURIComponent(chilli.name)}.`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-[#8f000d] text-white font-['Montserrat'] font-bold text-[12px] py-4 px-8 rounded-xl hover:bg-[#72000a] transition-all uppercase tracking-wider text-center shadow-lg shadow-[#8f000d]/20 hover:-translate-y-0.5 active:translate-y-0"
               >
-                Email Enquiry
+                WhatsApp Enquiry
               </a>
               <a
                 href="tel:+917288995777"

@@ -595,15 +595,19 @@ const Varieties = () => {
 
                 {/* Buttons Group */}
                 <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 relative z-10 pt-2">
-                  <Link
-                    to="/contact"
+                  <a
+                    href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20would%20like%20to%20send%20a%20bulk%20enquiry%20for%20your%20Guntur%20dry%20red%20chillies.%20Please%20share%20product%20grades%2C%20pricing%2C%20and%20MOQ%20details."
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#8f000d] to-[#b22222] hover:shadow-[0_6px_20px_-2px_rgba(143,0,13,0.3)] text-white font-['Montserrat'] font-bold text-[11px] sm:text-[11.5px] py-[12px] px-[22px] rounded-full shadow-lg shadow-[#8f000d]/20 hover:translate-y-[-2px] active:scale-98 transition-all duration-300 uppercase tracking-wider text-center group whitespace-nowrap cursor-pointer"
                   >
                     Send Enquiry
                     <FiArrowRight className="text-xs transition-transform group-hover:translate-x-1 duration-300" />
-                  </Link>
+                  </a>
                   <a
-                    href="mailto:minhaimportsexports@gmail.com"
+                    href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20am%20interested%20in%20your%20chilli%20varieties%20and%20would%20like%20to%20discuss%20pricing%2C%20certifications%2C%20and%20export%20availability."
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/25 text-white font-['Montserrat'] font-bold text-[11px] sm:text-[11.5px] py-[12px] px-[22px] rounded-full shadow-md active:scale-98 transition-all duration-300 uppercase tracking-wider text-center whitespace-nowrap cursor-pointer"
                   >
                     <FiMail className="text-sm shrink-0" />

@@ -66,23 +66,47 @@ const WhyChooseUs = () => {
     <section id="why-choose-us" className="relative pt-6 md:pt-12 pb-4 md:pb-8 bg-white overflow-hidden">
 
       {/* Red Header Section */}
-      <div className="relative pt-10 md:pt-14 pb-14 md:pb-22 px-6 text-center text-white bg-[#8f000d]">
+      <div className="relative pt-6 md:pt-8 pb-10 md:pb-12 px-6 text-center text-white bg-[#8f000d]">
 
         {/* Section Heading */}
-        <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-white tracking-tight mb-2">
+        <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-white tracking-tight mb-4">
           Why the World Chooses <span className="text-[#cca72f]">Minha ?</span>
         </h2>
 
-        {/* Tiny gold diamond separator */}
-        <div className="w-2 h-2 rotate-45 bg-[#cca72f] mx-auto mb-4" />
+        {/* Premium Compact Float Layout (No back card) */}
+        <div className="max-w-[600px] mx-auto flex flex-col items-center gap-1.5 mt-2">
+          
+          {/* Gold Promise Ribbon Badge */}
+          <div 
+            className="px-3.5 py-0.5 bg-gradient-to-r from-[#cca72f] via-[#ffe17d] to-[#cca72f] text-[#8f000d] font-['Montserrat'] font-extrabold tracking-wider text-[9px] sm:text-[10px] uppercase shadow-md flex items-center justify-center gap-1.5"
+            style={{ clipPath: 'polygon(6px 0%, calc(100% - 6px) 0%, 100% 50%, calc(100% - 6px) 100%, 6px 100%, 0% 50%)' }}
+          >
+            <span>✦</span>
+            <span>Our Promise</span>
+            <span>✦</span>
+          </div>
 
-        {/* Highlighted Motto Quote */}
-        <div className="max-w-2xl mx-auto flex items-center justify-center gap-2">
-          <span className="text-[#cca72f] text-[20px] font-bold font-serif leading-none select-none">“</span>
-          <p className="font-['Inter'] font-semibold italic text-white text-[15px] md:text-[16px] tracking-wide">
-            In <span className="font-extrabold not-italic">MINHA</span> customer service is our prime motto
+          {/* Main Quote Container with tight quotation marks */}
+          <div className="relative mt-1 px-8 py-1 flex items-center justify-center">
+            {/* Faded Giant Left Quote */}
+            <span className="absolute -left-2 -top-2 text-[#cca72f]/12 text-[42px] sm:text-[48px] font-serif leading-none select-none pointer-events-none">❝</span>
+            
+            <p className="font-['Montserrat'] font-extrabold text-white text-[14px] sm:text-[17px] md:text-[20px] leading-snug tracking-tight not-italic z-10 text-center">
+              In <span className="text-[#cca72f]">MINHA</span>, customer service is our prime motto.
+            </p>
+            
+            {/* Faded Giant Right Quote */}
+            <span className="absolute -right-2 -bottom-5 sm:-bottom-7 text-[#cca72f]/12 text-[42px] sm:text-[48px] font-serif leading-none select-none pointer-events-none">❞</span>
+          </div>
+
+          {/* Elegant Divider symbol */}
+          <span className="text-[#cca72f]/50 text-[12px] sm:text-[13px] my-0 select-none">❖</span>
+
+          {/* Subtitle / Caption */}
+          <p className="font-['Inter'] font-semibold text-white/75 text-[11px] sm:text-[12px] tracking-wide">
+            Delivering trust in every shipment.
           </p>
-          <span className="text-[#cca72f] text-[20px] font-bold font-serif leading-none select-none">”</span>
+
         </div>
 
         {/* Wave Separator */}
@@ -90,7 +114,7 @@ const WhyChooseUs = () => {
           <svg
             viewBox="0 0 1200 120"
             preserveAspectRatio="none"
-            className="relative block w-full h-[24px] md:h-[36px] fill-[#f8f8f8]"
+            className="relative block w-full h-[16px] md:h-[24px] fill-[#f8f8f8]"
           >
             <path d="M0,60 C300,110 900,110 1200,60 L1200,120 L0,120 Z"></path>
           </svg>

@@ -375,12 +375,14 @@ const AboutCompany = () => {
               By maintaining certifications with FSSAI, APEDA, and ISO, we ensure complete transparency in export standards. Guided by our prime motto of absolute customer service, we guarantee timely B2B logistics and custom documentation support for every global shipment.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <Link
-                to="/contact"
+              <a
+                href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20am%20interested%20in%20a%20B2B%20partnership%20for%20chilli%20export.%20Please%20share%20your%20company%20profile%20and%20export%20terms."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-[#8f000d] text-white px-8 py-3.5 rounded-lg font-['Montserrat'] font-bold text-xs uppercase tracking-wider shadow-lg hover:bg-[#8f000d]/90 hover:shadow-primary/20 transition-all active:scale-95"
               >
                 Contact Us
-              </Link>
+              </a>
               <Link
                 to="/quality"
                 className="border-2 border-[#2c6a46] text-[#2c6a46] px-8 py-3 rounded-lg font-['Montserrat'] font-bold text-xs uppercase tracking-wider hover:bg-[#2c6a46]/5 transition-all active:scale-95"
@@ -806,7 +808,7 @@ const AboutCompany = () => {
             <div className="bg-white rounded-[2rem] overflow-hidden border border-neutral-100 shadow-premium-soft hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-500 flex flex-col text-left group">
               <div className="aspect-[3/4] max-h-[340px] overflow-hidden relative bg-[#f0efec]">
                 <img
-                  alt="Ms. Sarah Mitchell"
+                  alt="Mr. Shaik Jani Basha"
                   className="w-full h-full object-cover object-[50%_8%] group-hover:scale-[1.03] transition-transform duration-700"
                   src={founder1}
                 />
@@ -815,7 +817,7 @@ const AboutCompany = () => {
               <div className="p-8 flex-grow flex flex-col justify-between space-y-4">
                 <div className="space-y-2">
                   <span className="font-['Montserrat'] font-bold text-[10px] tracking-[0.2em] text-[#8f000d] uppercase block">Founder & Managing Director</span>
-                  <h3 className="font-['Montserrat'] font-extrabold text-[22px] text-[#1a1c1e] leading-tight">Ms. Sarah Mitchell</h3>
+                  <h3 className="font-['Montserrat'] font-extrabold text-[22px] text-[#1a1c1e] leading-tight">Mr. Shaik Jani Basha</h3>
                 </div>
 
                 <div className="border-l-4 border-[#cca72f] pl-4 italic text-neutral-600 text-[13px] leading-relaxed font-['Inter']">
@@ -823,7 +825,7 @@ const AboutCompany = () => {
                 </div>
 
                 <p className="text-on-surface-variant font-['Inter'] font-normal text-[13px] leading-relaxed">
-                  With over 20 years of experience in global agricultural exports, Sarah founded Minha with a vision to bridge the gap between Indian spice heritage and global quality standards. She guides the company's long-term strategy.
+                  With over 20 years of experience in global agricultural exports, Mr. Shaik Jani Basha founded Minha with a vision to bridge the gap between Indian spice heritage and global quality standards. He guides the company's long-term strategy.
                 </p>
               </div>
             </div>
@@ -832,7 +834,7 @@ const AboutCompany = () => {
             <div className="bg-white rounded-[2rem] overflow-hidden border border-neutral-100 shadow-premium-soft hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-500 flex flex-col text-left group">
               <div className="aspect-[3/4] max-h-[340px] overflow-hidden relative bg-[#f0efec]">
                 <img
-                  alt="Mr. Arjun Mehta"
+                  alt="Mr. Moosa Maulavi Rafeekh"
                   className="w-full h-full object-cover object-[50%_8%] group-hover:scale-[1.03] transition-transform duration-700"
                   src={founder2}
                 />
@@ -841,7 +843,7 @@ const AboutCompany = () => {
               <div className="p-8 flex-grow flex flex-col justify-between space-y-4">
                 <div className="space-y-2">
                   <span className="font-['Montserrat'] font-bold text-[10px] tracking-[0.2em] text-[#8f000d] uppercase block">Co-Founder & Chief Executive Officer</span>
-                  <h3 className="font-['Montserrat'] font-extrabold text-[22px] text-[#1a1c1e] leading-tight">Mr. Arjun Mehta</h3>
+                  <h3 className="font-['Montserrat'] font-extrabold text-[22px] text-[#1a1c1e] leading-tight">Mr. Moosa Maulavi Rafeekh</h3>
                 </div>
 
                 <div className="border-l-4 border-[#cca72f] pl-4 italic text-neutral-600 text-[13px] leading-relaxed font-['Inter']">
@@ -849,7 +851,7 @@ const AboutCompany = () => {
                 </div>
 
                 <p className="text-on-surface-variant font-['Inter'] font-normal text-[13px] leading-relaxed">
-                  With over 15 years of experience in supply chain technology and global trade, Arjun co-founded Minha to modernize agricultural exports. He oversees technology integration, logistics, and operational compliance.
+                  With over 15 years of experience in supply chain technology and global trade, Mr. Moosa Maulavi Rafeekh co-founded Minha to modernize agricultural exports. He oversees technology integration, logistics, and operational compliance.
                 </p>
               </div>
             </div>
@@ -1285,12 +1287,14 @@ const AboutCompany = () => {
 
               {/* Action Buttons */}
               <div className="pt-2 flex justify-center lg:justify-start">
-                <Link
-                  to="/contact"
+                <a
+                  href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20would%20like%20to%20request%20a%20bulk%20export%20quote.%20Please%20share%20your%20pricing%2C%20custom%20packaging%20options%2C%20and%20pesticide%20compliance%20documentation."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-[#cca72f] text-[#140002] px-8 py-3.5 rounded-full font-['Montserrat'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-[#e0bc55] shadow-lg shadow-[#cca72f]/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
                 >
                   Request Quote
-                </Link>
+                </a>
               </div>
 
               {/* Trust Guarantee */}

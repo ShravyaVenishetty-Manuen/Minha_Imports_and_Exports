@@ -88,13 +88,15 @@ const Contact = () => {
 
               {/* Action Button */}
               <div className="pt-2 flex justify-center lg:justify-start">
-                <Link
-                  to="/contact"
+                <a
+                  href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20would%20like%20to%20get%20a%20quote%20for%20bulk%20chilli%20supply.%20Please%20contact%20me%20with%20pricing%20and%20availability."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-white text-[#8f000d] font-['Montserrat'] font-bold text-[11.5px] sm:text-[12px] py-[12px] px-[26px] rounded-full shadow-[0_4px_15px_-2px_rgba(0,0,0,0.12)] hover:bg-neutral-50 hover:translate-y-[-2px] hover:shadow-[0_6px_20px_-2px_rgba(0,0,0,0.2)] active:scale-98 transition-all duration-300 uppercase tracking-wider group"
                 >
                   Contact Us
                   <FiArrowRight className="text-xs transition-transform group-hover:translate-x-1 duration-300" />
-                </Link>
+                </a>
               </div>
             </div>
 

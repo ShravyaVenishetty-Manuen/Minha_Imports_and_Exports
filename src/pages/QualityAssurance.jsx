@@ -597,7 +597,7 @@ const QualityAssurance = () => {
 
             {/* Right Column: CTA Content (lg:col-span-7) */}
             <div className="space-y-5 text-center lg:text-left lg:col-span-7 w-full">
-              
+
               {/* Tagline Badge */}
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mx-auto lg:mx-0">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#cca72f] animate-pulse" />
@@ -618,12 +618,14 @@ const QualityAssurance = () => {
 
               {/* Action Buttons */}
               <div className="pt-2 flex justify-center lg:justify-start">
-                <Link
-                  to="/contact"
+                <a
+                  href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20would%20like%20to%20know%20more%20about%20your%20quality%20standards%2C%20testing%20process%2C%20and%20certifications.%20Please%20share%20the%20details."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-white text-[#2c6a46] px-8 py-3.5 rounded-full font-['Montserrat'] font-extrabold text-[12px] uppercase tracking-wider hover:bg-neutral-100 hover:text-black shadow-lg shadow-black/10 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 text-center whitespace-nowrap"
                 >
                   Send Inquiry
-                </Link>
+                </a>
               </div>
 
               {/* Trust Guarantee */}

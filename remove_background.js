@@ -36,19 +36,9 @@ async function removeBackgroundGlobally(imagePath, outputPath, threshold) {
 
 async function main() {
   const assetsDir = "./src/assets";
-  
-  const branchSrc = "C:/Users/DELL/.gemini/antigravity-ide/brain/21cb19d8-7c78-4207-ad23-a10ba66a611d/plant_sketch_fg_1781346753920.png";
-  const podSrc = "C:/Users/DELL/.gemini/antigravity-ide/brain/21cb19d8-7c78-4207-ad23-a10ba66a611d/pod_sketch_fg_1781346796986.png";
-  const twineSrc = "C:/Users/DELL/.gemini/antigravity-ide/brain/21cb19d8-7c78-4207-ad23-a10ba66a611d/twines_sketch_bg_1781346838130.png";
-  
-  const branchDest = path.join(assetsDir, "chilli-branch-sketch.png");
-  const podDest = path.join(assetsDir, "chilli-pod-sketch.png");
-  const twineDest = path.join(assetsDir, "chilli-twine-sketch-bg.png");
-  
-  // We use a threshold of 240/238 to remove the pure/near-white backgrounds
-  await removeBackgroundGlobally(branchSrc, branchDest, 238);
-  await removeBackgroundGlobally(podSrc, podDest, 238);
-  await removeBackgroundGlobally(twineSrc, twineDest, 238);
+  const src = path.join(assetsDir, "global-presence-map.png");
+  const dest = path.join(assetsDir, "global-presence-map-nobg.png");
+  await removeBackgroundGlobally(src, dest, 238);
 }
 
 main();

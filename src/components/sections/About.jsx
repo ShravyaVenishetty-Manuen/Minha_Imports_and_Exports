@@ -39,28 +39,28 @@ const About = () => {
           className="space-y-6 flex flex-col items-start"
         >
           {/* Badge */}
-          <div className="inline-block py-1 px-3 bg-[#adeec1] text-[#0e5130] rounded font-['Inter'] font-semibold text-[12px] tracking-[0.08em] uppercase">
+          <div className="inline-block py-1 px-3 bg-[#adeec1] text-[#0e5130] rounded font-['nunito'] font-semibold text-[12px] tracking-[0.08em] uppercase">
             ESTABLISHED TRADITION
           </div>
 
           {/* Heading */}
-          <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
+          <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
             Our Commitment to <span className="text-[#8f000d]">Quality</span>
           </h2>
 
           {/* Body Paragraphs */}
-          <p className="font-['Inter'] font-normal text-[#5a403e] text-[16px] leading-[1.6]">
+          <p className="font-['nunito'] font-normal text-[#5a403e] text-[16px] leading-[1.6]">
             Minha Imports & Exports stands at the forefront of the global spice trade, specializing in the legendary Guntur Dry Red Chillies. We bridge the gap between local precision farming and international export standards.
           </p>
 
-          <p className="font-['Inter'] font-normal text-[#5a403e] text-[16px] leading-[1.6]">
+          <p className="font-['nunito'] font-normal text-[#5a403e] text-[16px] leading-[1.6]">
             Our rigorous selection process ensures that only the finest, most pungent, and color-rich chillies reach our global partners. With a legacy built on trust and a future-focused approach to logistics, we are more than just exporters—we are your strategic partners in the spice industry.
           </p>
 
           {/* Text CTA Link */}
           <Link
             to="/about"
-            className="inline-block border-b-2 border-[#8f000d] text-[#8f000d] font-['Montserrat'] font-semibold text-[14px] pb-1 hover:opacity-70 transition-opacity focus:outline-none cursor-pointer"
+            className="inline-block border-b-2 border-[#8f000d] text-[#8f000d] font-['urbanist'] font-semibold text-[14px] pb-1 hover:opacity-70 transition-opacity focus:outline-none cursor-pointer"
           >
             Learn More About Our Legacy
           </Link>
