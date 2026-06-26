@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
 import globalPresenceMap from '../../assets/global-presence-map-nobg.png';
 
@@ -27,6 +28,11 @@ const GlobalPresence = () => {
     }
   ];
 
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.75, ease: [0.16, 1, 0.3, 1] } }
+  }
+
   return (
     <section id="global-presence" className="py-12 md:py-16 px-6 md:px-12 bg-[#FAF8F4] relative overflow-hidden">
 
@@ -43,7 +49,13 @@ const GlobalPresence = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
 
           {/* Left Column: Heading & Button */}
-          <div className="lg:col-span-5 space-y-6 text-left pt-0 lg:pt-4">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={sectionVariants}
+            className="lg:col-span-5 space-y-6 text-left pt-0 lg:pt-4"
+          >
             <span className="font-['urbanist'] font-bold text-[12px] tracking-[0.2em] text-[#B22222] uppercase block">
               Global Footprint
             </span>
@@ -91,24 +103,35 @@ const GlobalPresence = () => {
               </div>
             </div>
 
-          </div>
+          </motion.div>
 
           {/* Right Column: Clean Map with routes */}
-          <div className="lg:col-span-7 flex flex-col items-center gap-6 -mt-6 lg:-mt-16">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={sectionVariants}
+            className="lg:col-span-7 flex flex-col items-center gap-6 -mt-6 lg:-mt-16"
+          >
             <div className="relative w-full max-w-[650px] h-auto flex items-center justify-center">
-              <img
+              <motion.img
                 src={globalPresenceMap}
                 alt="Global Footprint Map"
                 className="w-full h-auto object-contain"
                 draggable="false"
+                initial={{ opacity: 0, scale: 0.98 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               />
             </div>
 
             {/* 4 Stat Items at the map bottom (No Cards) */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 w-full max-w-[650px] relative z-20 mt-4 px-4">
               {stats.map((stat, idx) => (
-                <div
+                <motion.div
                   key={idx}
+                  whileHover={{ y: -3, scale: 1.02 }}
+                  transition={{ duration: 0.25 }}
                   className="flex flex-col items-center justify-center text-center py-2"
                 >
                   <span className={`font-['urbanist'] font-extrabold text-[24px] md:text-[30px] leading-none ${stat.colorClass}`}>
@@ -117,10 +140,10 @@ const GlobalPresence = () => {
                   <span className="font-['nunito'] font-semibold text-[#5a403e]/70 text-[10px] md:text-[11px] mt-2 uppercase tracking-wider">
                     {stat.label}
                   </span>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
         </div>
 

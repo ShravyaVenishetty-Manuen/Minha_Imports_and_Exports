@@ -145,6 +145,8 @@ const WhyChooseUs = () => {
               <motion.div
                 key={idx}
                 variants={cardVariants}
+                whileHover={{ y: -6, scale: 1.01 }}
+                transition={{ duration: 0.3 }}
                 className="relative flex flex-col items-center text-center px-2"
               >
                 {/* Connecting Line & Diamond (between columns on desktop) */}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const FlagsMarquee = () => {
   // Row 1 countries
@@ -24,8 +25,19 @@ const FlagsMarquee = () => {
   const scrollRow1 = [...row1Countries, ...row1Countries, ...row1Countries];
   const scrollRow2 = [...row2Countries, ...row2Countries, ...row2Countries];
 
+  const rowVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
+  }
+
   return (
-    <div className="relative w-full py-6 bg-[#FAF8F4] overflow-hidden z-20 flex flex-col gap-6">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: '-80px' }}
+      variants={rowVariants}
+      className="relative w-full py-6 bg-[#FAF8F4] overflow-hidden z-20 flex flex-col gap-6"
+    >
       {/* Soft edge gradient masks for fade out */}
       <div className="absolute top-0 bottom-0 left-0 w-16 md:w-32 bg-gradient-to-r from-[#FAF8F4] via-[#FAF8F4]/80 to-transparent z-10 pointer-events-none" />
       <div className="absolute top-0 bottom-0 right-0 w-16 md:w-32 bg-gradient-to-l from-[#FAF8F4] via-[#FAF8F4]/80 to-transparent z-10 pointer-events-none" />
@@ -85,7 +97,7 @@ const FlagsMarquee = () => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

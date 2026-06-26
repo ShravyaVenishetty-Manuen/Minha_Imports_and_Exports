@@ -45,6 +45,9 @@ const Hero = () => {
     }
   };
 
+  const MotionLink = motion(Link);
+  const MotionAnchor = motion.a;
+
   return (
     <section className="relative w-full min-h-[90vh] md:h-[90vh] overflow-hidden flex items-end justify-center bg-black pb-8 md:pb-12 pt-28">
 
@@ -108,22 +111,26 @@ const Hero = () => {
             variants={itemVariants}
             className="flex flex-col sm:flex-row gap-4 pt-4 justify-center w-full sm:w-auto"
           >
-            <Link
+              <MotionLink
               to="/varieties"
-              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#8f000d] to-[#b22222] text-white font-['urbanist'] font-bold text-[13px] sm:text-[14px] py-4 px-9 rounded-full shadow-lg shadow-[#8f000d]/30 hover:shadow-[#8f000d]/50 hover:translate-y-[-2px] active:scale-98 transition-all duration-300 uppercase tracking-wider group"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#8f000d] to-[#b22222] text-white font-['urbanist'] font-bold text-[13px] sm:text-[14px] py-4 px-9 rounded-full shadow-lg shadow-[#8f000d]/30 hover:shadow-[#8f000d]/50 transition-all duration-300 uppercase tracking-wider group"
             >
               Explore Varieties
               <GiChiliPepper className="text-[20px] transition-transform group-hover:translate-x-1 duration-300 scale-x-[-1] rotate-45" />
-            </Link>
+            </MotionLink>
 
-            <a
+            <MotionAnchor
               href="https://wa.me/919985728555?text=Hi%20Minha%20Imports%20%26%20Exports%2C%20I%20am%20interested%20in%20your%20premium%20Guntur%20dry%20red%20chillies.%20Please%20share%20more%20details%20about%20your%20products%20and%20pricing."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center border border-white/30 backdrop-blur-sm text-white font-['urbanist'] font-bold text-[13px] sm:text-[14px] py-4 px-9 rounded-full hover:bg-white hover:text-[#8f000d] hover:border-white hover:translate-y-[-2px] active:scale-98 transition-all duration-300 uppercase tracking-wider"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center justify-center border border-white/30 backdrop-blur-sm text-white font-['urbanist'] font-bold text-[13px] sm:text-[14px] py-4 px-9 rounded-full hover:bg-white hover:text-[#8f000d] hover:border-white transition-all duration-300 uppercase tracking-wider"
             >
               Contact Us
-            </a>
+            </MotionAnchor>
           </motion.div>
         </motion.div>
       </div>

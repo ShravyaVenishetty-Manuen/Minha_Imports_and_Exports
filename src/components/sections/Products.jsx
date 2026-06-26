@@ -121,7 +121,7 @@ const Products = () => {
                 src={chilliBasketImg}
                 alt="Premium Guntur Dry Red Chillies in a Basket"
                 loading="lazy"
-                className="w-[95%] h-[95%] object-contain scale-[1.02] group-hover:scale-108 transition-transform duration-700"
+                className="w-[95%] h-[95%] object-contain scale-[1.02] group-hover:scale-[1.08] transition-transform duration-700"
               />
             </div>
 

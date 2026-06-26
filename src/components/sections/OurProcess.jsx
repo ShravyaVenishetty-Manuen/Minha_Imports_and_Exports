@@ -125,6 +125,8 @@ const OurProcess = () => {
             <motion.div
               key={idx}
               variants={stepVariants}
+              whileHover={{ y: -8, scale: 1.01 }}
+              transition={{ duration: 0.3 }}
               className="relative flex flex-col items-center text-center group"
             >
 

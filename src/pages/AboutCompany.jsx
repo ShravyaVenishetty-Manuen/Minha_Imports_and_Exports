@@ -245,23 +245,23 @@ const AboutCompany = () => {
 
   const timelineData = [
     {
-      year: '2018',
+      year: '2013',
+      title: 'Export Origins',
+      subtitle: 'Started with export focus',
+      desc: 'Minha began as an export-first business, helping Guntur growers reach overseas markets with premium dry red chillies and building its initial export partner base.',
+      tag: 'Export Launch',
+      accent: '#8f000d',
+    },
+    {
+      year: '2016',
       title: 'Company Establishment',
       subtitle: 'Streamlining Guntur chilli trade',
       desc: 'Founded with a vision to streamline the dry red chilli export market from Guntur and resolve supply chain fragmentation. We set up our initial sourcing channels and defined our standard operating procedures.',
       tag: 'Launch Milestone',
-      accent: '#8f000d',
-    },
-    {
-      year: '2019',
-      title: 'Sourcing Growth',
-      subtitle: 'Empowering local farmers',
-      desc: 'Partnered with over 500 local farmers in the Guntur region, securing a reliable, direct supply chain of top-grade raw crops and establishing fair-trade pricing that supports the local community.',
-      tag: 'Sourcing Milestone',
       accent: '#2c6a46',
     },
     {
-      year: '2021',
+      year: '2019',
       title: 'Export Expansion',
       subtitle: 'State-of-the-art facilities',
       desc: 'Established full-scale state-of-the-art processing and grading units. Successfully fulfilled major international contracts in SE Asia and scaled operations under strict export guidelines.',
@@ -269,12 +269,20 @@ const AboutCompany = () => {
       accent: '#cca72f',
     },
     {
-      year: '2023',
+      year: '2022',
       title: 'Global Reach',
       subtitle: 'Expanding to 15+ countries',
       desc: 'Extended distribution and trade routes, exporting premium products to over 15 countries across Europe, the Middle East, and the Americas, while securing compliance certifications for every port.',
       tag: 'Global Scale',
       accent: '#8f000d',
+    },
+    {
+      year: '2026',
+      title: 'Domestic Market Entry',
+      subtitle: 'Now serving India too',
+      desc: 'After years of export success, Minha expanded into the domestic market in 2026, delivering quality Guntur chillies across India while continuing to serve global customers.',
+      tag: 'Domestic Expansion',
+      accent: '#1f5e3b',
     }
   ];
 
@@ -297,7 +305,7 @@ const AboutCompany = () => {
     <div className="bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container min-h-screen relative overflow-hidden">
       <SEO
         title="About Us | Minha Imports & Exports"
-        description="Learn about Minha Imports & Exports — Guntur's leading dry red chilli and spice export company. FSSAI, APEDA & ISO certified. Direct farm-to-port supply chain since 2018."
+        description="Learn about Minha Imports & Exports — Guntur's leading dry red chilli and spice exporter and domestic supplier. FSSAI, APEDA & ISO certified. Direct farm-to-port supply chain since 2013."
         keywords="Minha Imports Exports, About Minha, Guntur Chilli Exporter, Indian Spice Company, Chilli Exporter India, APEDA certified exporter"
         url="/about"
         schemas={[{
@@ -610,22 +618,23 @@ const AboutCompany = () => {
             <svg viewBox="0 0 800 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
               <defs>
                 <linearGradient id="wavy-timeline-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="12.5%" stopColor="#8f000d" />
-                  <stop offset="37.5%" stopColor="#2c6a46" />
-                  <stop offset="62.5%" stopColor="#cca72f" />
-                  <stop offset="87.5%" stopColor="#8f000d" />
+                  <stop offset="10%" stopColor="#8f000d" />
+                  <stop offset="30%" stopColor="#2c6a46" />
+                  <stop offset="50%" stopColor="#cca72f" />
+                  <stop offset="70%" stopColor="#8f000d" />
+                  <stop offset="90%" stopColor="#1f5e3b" />
                 </linearGradient>
               </defs>
               {/* Background Path line */}
               <path
-                d="M 50,90 L 100,90 C 180,90 220,90 300,90 C 380,90 420,30 500,30 C 580,30 620,90 700,90 L 750,90"
+                d="M 50,90 L 100,90 C 170,90 210,90 250,90 C 320,90 360,30 400,30 C 440,30 480,90 550,90 C 620,90 660,90 700,90 L 750,90"
                 stroke="#e5e7eb"
                 strokeWidth="4"
                 strokeLinecap="round"
               />
               {/* Dynamic Gradient Path */}
               <path
-                d="M 50,90 L 100,90 C 180,90 220,90 300,90 C 380,90 420,30 500,30 C 580,30 620,90 700,90 L 750,90"
+                d="M 50,90 L 100,90 C 170,90 210,90 250,90 C 320,90 360,30 400,30 C 440,30 480,90 550,90 C 620,90 660,90 700,90 L 750,90"
                 stroke="url(#wavy-timeline-gradient)"
                 strokeWidth="4"
                 strokeLinecap="round"
@@ -633,7 +642,7 @@ const AboutCompany = () => {
               {/* Interactive Nodes */}
               {timelineData.map((item, idx) => {
                 const isActive = idx === activeTimelineYear;
-                const cx = idx === 0 ? 100 : idx === 1 ? 300 : idx === 2 ? 500 : 700;
+                const cx = [100, 250, 400, 550, 700][idx];
                 const cy = idx === 2 ? 30 : 90;
                 return (
                   <g key={item.year} className="cursor-pointer group" onClick={() => changeTimelineYear(idx)}>
@@ -647,7 +656,7 @@ const AboutCompany = () => {
             {/* Year Labels Overlay absolute */}
             {timelineData.map((item, idx) => {
               const isActive = idx === activeTimelineYear;
-              const leftPercent = idx === 0 ? '12.5%' : idx === 1 ? '37.5%' : idx === 2 ? '62.5%' : '87.5%';
+              const leftPercent = ['12.5%', '27.5%', '47.5%', '67.5%', '87.5%'][idx];
               const topVal = idx === 2 ? '50%' : '45%';
               return (
                 <button
@@ -803,54 +812,54 @@ const AboutCompany = () => {
           </div>
 
           {/* Founders Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-16">
             {/* Founder 1 Card */}
-            <div className="bg-white rounded-[2rem] overflow-hidden border border-neutral-100 shadow-premium-soft hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-500 flex flex-col text-left group">
-              <div className="aspect-[3/4] max-h-[340px] overflow-hidden relative bg-[#f0efec]">
+            <div className="bg-white rounded-[1.75rem] overflow-hidden border border-neutral-100 shadow-premium-soft hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-500 flex flex-col text-left group">
+              <div className="aspect-[3/4] max-h-[300px] overflow-hidden relative bg-[#f0efec]">
                 <img
                   alt="Mr. Shaik Jani Basha"
-                  className="w-full h-full object-cover object-[50%_8%] group-hover:scale-[1.03] transition-transform duration-700"
+                  className="w-full h-full object-cover object-[50%_8%] group-hover:scale-[1.02] transition-transform duration-700"
                   src={founder1}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent opacity-60 pointer-events-none" />
               </div>
-              <div className="p-8 flex-grow flex flex-col justify-between space-y-4">
-                <div className="space-y-2">
-                  <span className="font-['urbanist'] font-bold text-[10px] tracking-[0.2em] text-[#8f000d] uppercase block">Founder & Managing Director</span>
-                  <h3 className="font-['urbanist'] font-extrabold text-[22px] text-[#1a1c1e] leading-tight">Mr. Shaik Jani Basha</h3>
+              <div className="p-6 flex-grow flex flex-col justify-between space-y-3">
+                <div className="space-y-1.5">
+                  <span className="font-['urbanist'] font-bold text-[9px] tracking-[0.18em] text-[#8f000d] uppercase block">Founder & Managing Director</span>
+                  <h3 className="font-['urbanist'] font-extrabold text-[20px] text-[#1a1c1e] leading-tight">Mr. Shaik Jani Basha</h3>
                 </div>
 
-                <div className="border-l-4 border-[#cca72f] pl-4 italic text-neutral-600 text-[13px] leading-relaxed font-['Nunito']">
+                <div className="border-l-4 border-[#cca72f] pl-4 italic text-neutral-600 text-[12px] leading-relaxed font-['Nunito']">
                   "Our mission is to establish Minha as the synonym of trust, quality, and purity in the global chilli market, connecting Guntur farmers with buyers."
                 </div>
 
-                <p className="text-on-surface-variant font-['Nunito'] font-semibold text-[13px] leading-relaxed">
+                <p className="text-on-surface-variant font-['Nunito'] font-semibold text-[12px] leading-relaxed">
                   With over 20 years of experience in global agricultural exports, Mr. Shaik Jani Basha founded Minha with a vision to bridge the gap between Indian spice heritage and global quality standards. He guides the company's long-term strategy.
                 </p>
               </div>
             </div>
 
             {/* Founder 2 Card */}
-            <div className="bg-white rounded-[2rem] overflow-hidden border border-neutral-100 shadow-premium-soft hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-500 flex flex-col text-left group">
-              <div className="aspect-[3/4] max-h-[340px] overflow-hidden relative bg-[#f0efec]">
+            <div className="bg-white rounded-[1.75rem] overflow-hidden border border-neutral-100 shadow-premium-soft hover:shadow-premium-hover hover:-translate-y-1 transition-all duration-500 flex flex-col text-left group">
+              <div className="aspect-[3/4] max-h-[300px] overflow-hidden relative bg-[#f0efec]">
                 <img
                   alt="Mr. Moosa Maulavi Rafeekh"
-                  className="w-full h-full object-cover object-[50%_8%] group-hover:scale-[1.03] transition-transform duration-700"
+                  className="w-full h-full object-cover object-[50%_8%] group-hover:scale-[1.02] transition-transform duration-700"
                   src={founder2}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent opacity-60 pointer-events-none" />
               </div>
-              <div className="p-8 flex-grow flex flex-col justify-between space-y-4">
-                <div className="space-y-2">
-                  <span className="font-['urbanist'] font-bold text-[10px] tracking-[0.2em] text-[#8f000d] uppercase block">Co-Founder & Chief Executive Officer</span>
-                  <h3 className="font-['urbanist'] font-extrabold text-[22px] text-[#1a1c1e] leading-tight">Mr. Moosa Maulavi Rafeekh</h3>
+              <div className="p-6 flex-grow flex flex-col justify-between space-y-3">
+                <div className="space-y-1.5">
+                  <span className="font-['urbanist'] font-bold text-[9px] tracking-[0.18em] text-[#8f000d] uppercase block">Co-Founder & Chief Executive Officer</span>
+                  <h3 className="font-['urbanist'] font-extrabold text-[20px] text-[#1a1c1e] leading-tight">Mr. Moosa Maulavi Rafeekh</h3>
                 </div>
 
-                <div className="border-l-4 border-[#cca72f] pl-4 italic text-neutral-600 text-[13px] leading-relaxed font-['Nunito']">
+                <div className="border-l-4 border-[#cca72f] pl-4 italic text-neutral-600 text-[12px] leading-relaxed font-['Nunito']">
                   "Our goal is simple: to make Indian dry chillies the gold standard of quality and traceability in every international market we serve."
                 </div>
 
-                <p className="text-on-surface-variant font-['Nunito'] font-semibold text-[13px] leading-relaxed">
+                <p className="text-on-surface-variant font-['Nunito'] font-semibold text-[12px] leading-relaxed">
                   With over 15 years of experience in supply chain technology and global trade, Mr. Moosa Maulavi Rafeekh co-founded Minha to modernize agricultural exports. He oversees technology integration, logistics, and operational compliance.
                 </p>
               </div>
