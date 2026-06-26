@@ -66,7 +66,6 @@ const Navbar = () => {
   }, [isOpen]);
 
   const navLinks = [
-    { name: 'HOME', path: '/' },
     { name: 'CHILLI VARIETIES', path: '/varieties' },
     { name: 'CHILLI POWDER', path: '/powder' },
     { name: 'OUR COMPANY', path: '/about' },
