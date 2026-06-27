@@ -15,6 +15,7 @@ import {
 import chilliExportCta from '../assets/chilli-export-cta.png';
 import facilityHeroBg from '../assets/facility-hero.png';
 import market from '../assets/market-image.png';
+import facilityTool from '../assets/facility-tool.png';
 
 const Facility = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -145,7 +146,7 @@ const Facility = () => {
             <img
               alt="High-precision quality control equipment laboratory"
               className="relative rounded-xl shadow-2xl w-full h-[400px] md:h-[500px] object-cover transition-transform duration-500 hover:scale-[1.01]"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiRkTV-zYvEfZX4Y2CKcXLkJMn4BQXjP-1e3ES_rDiwgW6X4VHc_z5pg5oFUJMpTdqVrHzmp3qRmlb29AMmq9-92m-pgtNSjPkRwC3djOdY6SkEElyc7EP9YKpfMh1IcCjmhDN4znmm2h3QIunm-qcZnFlDSCGHFzSRdO_iBWo2mUS9m7HYGth0sne6QN0zef0O2iKVwUXPX3EVIrVn0qrVAN0hFJs_-JuQ0AXlqyy5XQTsz5fnjX3XO55oMoRwvpJZ8rmQJ_js_o"
+              src={facilityTool}
             />
           </motion.div>
 
