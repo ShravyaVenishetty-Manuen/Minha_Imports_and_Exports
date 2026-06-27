@@ -999,7 +999,7 @@ const AboutCompany = () => {
                 {/* Tooltip badge */}
                 <span className="mt-2.5 bg-neutral-900/90 text-white font-['urbanist'] font-bold text-[9px] uppercase tracking-wider px-2.5 py-1 rounded-md shadow-lg pointer-events-none flex items-center gap-1.5 border border-white/10">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#cca72f] animate-pulse" />
-                  Guntur Origin Hub
+                  Guntur origin
                 </span>
               </div>
             </div>
