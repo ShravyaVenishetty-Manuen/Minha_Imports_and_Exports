@@ -41,7 +41,7 @@ const About = () => {
           className="space-y-6 flex flex-col items-start"
         >
           {/* Badge */}
-          <div className="inline-block py-1 px-3 bg-[#adeec1] text-[#0e5130] rounded font-['Roboto'] font-semibold text-[12px] tracking-[0.08em] uppercase">
+          <div className="inline-block py-1 px-3 bg-[#adeec1] text-[#0e5130] rounded font-['Nunito'] font-semibold text-[12px] tracking-[0.08em] uppercase">
             ESTABLISHED TRADITION
           </div>
 
@@ -51,11 +51,11 @@ const About = () => {
           </h2>
 
           {/* Body Paragraphs */}
-          <p className="font-['Roboto'] font-medium text-[#5a403e] text-[16px] leading-[1.6]">
+          <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[16px] leading-[1.6]">
             Minha Imports & Exports stands at the forefront of the global spice trade, specializing in the legendary Guntur Dry Red Chillies. We bridge the gap between local precision farming and international export standards.
           </p>
 
-          <p className="font-['Roboto'] font-medium text-[#5a403e] text-[16px] leading-[1.6]">
+          <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[16px] leading-[1.6]">
             Our rigorous selection process ensures that only the finest, most pungent, and color-rich chillies reach our global partners. With a legacy built on trust and a future-focused approach to logistics, we are more than just exporters—we are your strategic partners in the spice industry.
           </p>
 

@@ -108,7 +108,7 @@ const ChilliPowder = () => {
             <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">
               Hygienic Production & Global Supply
             </h2>
-            <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed text-justify">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[16px] leading-[1.6] text-justify">
               Our chilli powder is processed in our state-of-the-art facility, ensuring the highest standards of food safety. We utilize cold-grinding technology to preserve the natural oils, aroma, and pungency of the chillies, delivering a product that meets international phytosanitary requirements.
             </p>
             <div className="grid grid-cols-2 gap-8 pt-4">

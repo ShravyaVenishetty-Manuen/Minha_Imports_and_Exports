@@ -13,7 +13,6 @@ import {
 } from 'react-icons/fi';
 
 import dryChilliSortingFacility from '../assets/dry_chilli_sorting_facility.png';
-import qaInspector from '../assets/qa_inspector.png';
 
 // Import custom generated step timeline images
 import qaStepFarm from '../assets/qa_step_farm.png';
@@ -22,6 +21,7 @@ import qaStepProcessing from '../assets/qa_step_processing.png';
 import qaStepShipping from '../assets/qa_step_shipping.png';
 import chilliExportCta from '../assets/chilli-export-cta.png';
 import glowingChilliPremiumRemoveBg from '../assets/glowing-chilli-premium-remove-bg-io.png';
+import chilliSorting from '../assets/chilli-sorting.jpg';
 
 const QualityAssurance = () => {
   // Scroll to top on page mount
@@ -145,7 +145,7 @@ const QualityAssurance = () => {
             <img
               alt="Expert Quality Grading Red Chillies"
               className="relative rounded-xl shadow-xl w-full h-[400px] md:h-[500px] object-cover transition-transform duration-500 hover:scale-[1.01]"
-              src={qaInspector}
+              src={chilliSorting}
             />
           </motion.div>
 
@@ -161,29 +161,29 @@ const QualityAssurance = () => {
               <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">Premium Standards for Global Markets</h2>
             </div>
 
-            <p className="text-on-surface-variant font-body-md text-body-md leading-relaxed text-justify">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[16px] leading-[1.6] text-justify">
               At Minha Imports & Exports, quality is not just a department—it is our core identity. We specialize in the high-stakes export of Guntur Dry Red Chillies, where precision in grading and hygiene determines global competitiveness.
             </p>
-            <p className="text-on-surface-variant font-body-md text-body-md leading-relaxed text-justify">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[16px] leading-[1.6] text-justify">
               Every consignment undergoes rigorous multi-tier testing. From field-level crop monitoring to final airtight packaging, our protocols ensure that our clients receive produce that meets the strictest international food safety and aesthetic standards.
             </p>
 
             <ul className="space-y-4 pt-2">
               <li className="flex items-start gap-3">
                 <FiCheckCircle className="text-[#2c6a46] text-xl shrink-0 mt-0.5" />
-                <span className="text-on-surface-variant font-body-md text-body-md leading-normal text-justify">
+                <span className="font-['Nunito'] font-semibold text-[#5a403e] text-[16px] leading-[1.6] text-justify">
                   Zero-tolerance policy on cross-contamination and impurities.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <FiCheckCircle className="text-[#2c6a46] text-xl shrink-0 mt-0.5" />
-                <span className="text-on-surface-variant font-body-md text-body-md leading-normal text-justify">
+                <span className="font-['Nunito'] font-semibold text-[#5a403e] text-[16px] leading-[1.6] text-justify">
                   Advanced moisture-level monitoring for extended shelf life.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <FiCheckCircle className="text-[#2c6a46] text-xl shrink-0 mt-0.5" />
-                <span className="text-on-surface-variant font-body-md text-body-md leading-normal text-justify">
+                <span className="font-['Nunito'] font-semibold text-[#5a403e] text-[16px] leading-[1.6] text-justify">
                   Ethical sourcing directly from certified Guntur farming clusters.
                 </span>
               </li>

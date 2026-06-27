@@ -22,6 +22,7 @@ import immersiveSpiceBg from '../assets/immersive_spice_bg.png';
 import worldMapSvg from '../assets/world-map.svg';
 import founder1 from '../assets/founder1.png';
 import founder2 from '../assets/founder2.png';
+import CountUp from '../components/common/CountUp';
 
 const OdometerYear = ({ year, color }) => {
   const digits = year.split('');
@@ -373,13 +374,13 @@ const AboutCompany = () => {
             <div>
               <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">A Legacy of Precision & Pure Spices</h2>
             </div>
-            <p className="text-on-surface-variant font-body-md text-body-md leading-relaxed text-justify">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[16px] leading-[1.6] text-justify">
               Minha Imports & Exports stands at the forefront of the Guntur dry red chilli trade, bridging the gap between local farming legacies and global food supply networks. Our operations are deeply integrated within Guntur, Asia's largest spice marketplace, allowing us to build direct collaborations with trusted local growers since 2013 and secure early-harvest access to premium crops.
             </p>
-            <p className="text-on-surface-variant font-body-md text-body-md leading-relaxed text-justify">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[16px] leading-[1.6] text-justify">
               We maintain a rigorous quality assurance protocol where our experienced team meticulously handpicks red chillies, discarding discolored, broken, or low-pungency pods. By ensuring tight control over raw materials, keeping moisture content strictly below 11% to prevent mold formation during long ocean transits, and sorting for uniform dimensions, we deliver a consistent product quality tailored to international market standards.
             </p>
-            <p className="text-on-surface-variant font-body-md text-body-md leading-relaxed text-justify">
+            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[16px] leading-[1.6] text-justify">
               By maintaining certifications with FSSAI, APEDA, and ISO, we ensure complete transparency in export standards. Guided by our prime motto of absolute customer service, we guarantee timely B2B logistics and custom documentation support for every global shipment.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
@@ -1005,10 +1006,10 @@ const AboutCompany = () => {
             </div>
 
             {/* Integrated Dividers Statistics Bar */}
-            <div className="border-t border-neutral-100 w-full pt-8 grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-6 text-center">
+              <div className="border-t border-neutral-100 w-full pt-8 grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-6 text-center">
 
               <div className="space-y-1 md:border-r border-neutral-100 last:border-0">
-                <span className="block text-4xl font-extrabold text-[#8f000d]">15+</span>
+                <span className="block text-4xl font-extrabold text-[#8f000d]"><CountUp end={15} suffix="+" duration={1.6} className="inline-block" /></span>
                 <span className="font-['urbanist'] font-bold text-[10px] uppercase tracking-widest text-neutral-500 block">
                   Export Destinations
                 </span>
@@ -1018,7 +1019,7 @@ const AboutCompany = () => {
               </div>
 
               <div className="space-y-1 md:border-r border-neutral-100 last:border-0">
-                <span className="block text-4xl font-extrabold text-[#2c6a46]">200+</span>
+                <span className="block text-4xl font-extrabold text-[#2c6a46]"><CountUp end={200} suffix="+" duration={1.6} className="inline-block" /></span>
                 <span className="font-['urbanist'] font-bold text-[10px] uppercase tracking-widest text-neutral-500 block">
                   Containers / Year
                 </span>
@@ -1028,7 +1029,7 @@ const AboutCompany = () => {
               </div>
 
               <div className="space-y-1 md:border-r border-neutral-100 last:border-0">
-                <span className="block text-4xl font-extrabold text-[#cca72f]">100%</span>
+                <span className="block text-4xl font-extrabold text-[#cca72f]"><CountUp end={100} suffix="%" duration={1.6} className="inline-block" /></span>
                 <span className="font-['urbanist'] font-bold text-[10px] uppercase tracking-widest text-neutral-500 block">
                   Sourcing Traceability
                 </span>

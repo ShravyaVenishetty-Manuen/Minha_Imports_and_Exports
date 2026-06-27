@@ -3,29 +3,14 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
 import globalPresenceMap from '../../assets/global-presence-map-nobg.png';
+import CountUp from '../common/CountUp';
 
 const GlobalPresence = () => {
   const stats = [
-    {
-      value: "50+",
-      label: "Global Clients",
-      colorClass: "text-[#B22222]"
-    },
-    {
-      value: "5000+",
-      label: "MT Annual Capacity",
-      colorClass: "text-[#1F5E3B]"
-    },
-    {
-      value: "100%",
-      label: "Export Quality",
-      colorClass: "text-[#C8A96A]"
-    },
-    {
-      value: "14+",
-      label: "Chilli Varieties",
-      colorClass: "text-[#B22222]"
-    }
+    { end: 50, suffix: '+', label: 'Global Clients', colorClass: 'text-[#B22222]' },
+    { end: 5000, suffix: '+', label: 'MT Annual Capacity', colorClass: 'text-[#1F5E3B]' },
+    { end: 100, suffix: '%', label: 'Export Quality', colorClass: 'text-[#C8A96A]' },
+    { end: 14, suffix: '+', label: 'Chilli Varieties', colorClass: 'text-[#B22222]' }
   ];
 
   const sectionVariants = {
@@ -135,7 +120,7 @@ const GlobalPresence = () => {
                   className="flex flex-col items-center justify-center text-center py-2"
                 >
                   <span className={`font-['urbanist'] font-extrabold text-[24px] md:text-[30px] leading-none ${stat.colorClass}`}>
-                    {stat.value}
+                    <CountUp end={stat.end} suffix={stat.suffix} duration={1.6} className="inline-block" />
                   </span>
                   <span className="font-['nunito'] font-semibold text-[#5a403e]/70 text-[10px] md:text-[11px] mt-2 uppercase tracking-wider">
                     {stat.label}
