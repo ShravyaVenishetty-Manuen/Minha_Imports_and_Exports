@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import aboutHarvestImg from '../../assets/about-harvest.png';
+import harvest from '../../assets/hero-about.png';
 
 const About = () => {
   const imageUrl = aboutHarvestImg;
@@ -28,7 +29,7 @@ const About = () => {
             alt="Chilli Harvest"
             loading="lazy"
             className="relative rounded-lg shadow-2xl w-full h-[500px] object-cover"
-            src={imageUrl}
+            src={harvest}
           />
         </motion.div>
 
