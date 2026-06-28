@@ -69,7 +69,7 @@ const Testimonials = () => {
   }, [isHovered, reviews.length]);
 
   return (
-    <section id="testimonials" className="py-12 md:py-16 px-6 md:px-12 bg-[#FAF8F4] relative overflow-hidden">
+    <section id="testimonials" className="py-12 md:py-16 px-6 md:px-12 bg-surface-container-low relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-[#cca72f]/[0.02] rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[450px] h-[450px] bg-[#8f000d]/[0.02] rounded-full blur-[120px] pointer-events-none" />

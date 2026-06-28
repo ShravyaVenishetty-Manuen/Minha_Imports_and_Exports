@@ -9,7 +9,7 @@ const About = () => {
   const MotionLink = motion(Link);
 
   return (
-    <section id="about" className="py-12 md:py-16 px-6 md:px-16 bg-[#f9f9fc]">
+    <section id="about" className="py-12 md:py-16 px-6 md:px-16 bg-surface-container-low">
       <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
         {/* Left Side: Animated Image Showcase */}

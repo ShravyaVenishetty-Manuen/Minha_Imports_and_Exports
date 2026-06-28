@@ -135,7 +135,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="bg-[#f9f9fc] text-[#1a1c1e] font-body">
+    <div className="bg-surface text-[#1a1c1e] font-body">
       <SEO
         title="Contact Us | Minha Imports & Exports"
         description="Get in touch with Minha Imports & Exports for bulk dry red chilli inquiries. WhatsApp, email, and phone support. Guntur, India. Export inquiry response within 12 hours."
@@ -279,7 +279,7 @@ const Contact = () => {
       </section>
 
       {/* ── 3. Inquiry Form & Highlights (3D Flipping Card) ─────────────────── */}
-      <section className="py-8 md:py-10 bg-[#f9f9fc] border-t border-b border-neutral-100 relative overflow-hidden">
+      <section className="py-8 md:py-10 bg-surface-container-low border-t border-b border-neutral-100 relative overflow-hidden">
         {/* Soft background ambient glows */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#cca72f]/5 rounded-full pointer-events-none blur-3xl" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#8f000d]/4 rounded-full pointer-events-none blur-3xl" />
@@ -671,7 +671,7 @@ const Contact = () => {
       </section>
 
       {/* ── 4. FAQ & Map Integrated Section (Desktop: Side-by-side Flat Split, Mobile: Clean Stacked) ──────────────────── */}
-      <section className="py-10 md:py-14 bg-gradient-to-b from-white to-[#faf8f5] border-b border-neutral-200/60 relative overflow-hidden">
+      <section className="py-10 md:py-14 bg-gradient-to-b from-white to-surface-container-low border-b border-neutral-200/60 relative overflow-hidden">
         {/* Soft background ambient decorations */}
         <div className="absolute top-1/2 left-0 w-[300px] h-[300px] bg-[#cca72f]/3 rounded-full blur-[120px] pointer-events-none" />
 

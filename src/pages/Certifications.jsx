@@ -288,7 +288,7 @@ const Certifications = () => {
       </section>
 
       {/* ── 3. Certifications Showcase ──────────────────────────────────────── */}
-      <section id="all-certificates" className="py-10 md:py-14 bg-[#f3f3f6]">
+      <section id="all-certificates" className="py-10 md:py-14 bg-surface-container-low">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
 
           {/* Header */}
@@ -592,7 +592,7 @@ const Certifications = () => {
       </section>
 
       {/* ── 5. Why Certifications Matter ────────────────────────────────────── */}
-      <section className="py-5 md:py-6 bg-[#f3f3f6]">
+      <section className="py-5 md:py-6 bg-surface-container-low">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* Left: Points */}

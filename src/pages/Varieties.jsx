@@ -71,7 +71,7 @@ const Varieties = () => {
   };
 
   return (
-    <div className="bg-[#FAF8F4] min-h-screen font-['Nunito'] text-[#1a1c1e] relative overflow-hidden">
+    <div className="bg-surface min-h-screen font-['Nunito'] text-[#1a1c1e] relative overflow-hidden">
       <SEO
         title="Guntur Dry Red Chilli Varieties | Minha Imports & Exports"
         description="Explore premium Guntur Dry Red Chilli varieties — Teja S17, S4/334, S10, Byadgi. Bulk Chilli Exporter India with APEDA certification. Custom grades for global spice industries."
@@ -156,7 +156,7 @@ const Varieties = () => {
       </section>
 
       {/* 3. Chilli Varieties Showcase catalog */}
-      <section className="py-10 md:py-14 bg-[#f8f8fc] border-t border-[#1a1c1e]/[0.02] border-b border-[#1a1c1e]/[0.02]">
+      <section className="py-10 md:py-14 bg-surface-container-low border-t border-[#1a1c1e]/[0.02] border-b border-[#1a1c1e]/[0.02]">
         <div className="px-6 md:px-12 max-w-[1280px] mx-auto">
 
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
@@ -238,7 +238,7 @@ const Varieties = () => {
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.4 }}
                   key={chilli.id}
-                  className="bg-white rounded-2xl overflow-hidden shadow-[0_10px_30px_-5px_rgba(0,0,0,0.04)] border border-neutral-100 flex flex-col justify-between group hover:-translate-y-2.5 hover:shadow-[0_20px_45px_-10px_rgba(143,0,13,0.08)] transition-all duration-500"
+                  className="bg-white rounded-2xl overflow-hidden shadow-[0_10px_30px_-5px_rgba(0,0,0,0.04)] border border-neutral-100 flex flex-col justify-between group  hover:shadow-[0_20px_45px_-10px_rgba(178,34,34,0.18)] transition-all duration-500"
                 >
                   {/* Image container */}
                   <Link to={`/varieties/${chilli.id}`} className="relative h-48 overflow-hidden bg-neutral-100 block">
@@ -367,7 +367,7 @@ const Varieties = () => {
       </section>
 
       {/* 5. Quality Standards & Sourcing Ethics */}
-      <section className="py-10 md:py-14 bg-[#FAF8F4] relative overflow-hidden">
+      <section className="py-10 md:py-14 bg-surface-container-low relative overflow-hidden">
         {/* Soft elegant background blur graphics */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#B22222]/[0.02] rounded-full blur-[100px] pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#1F5E3B]/[0.02] rounded-full blur-[100px] pointer-events-none" />
@@ -525,7 +525,7 @@ const Varieties = () => {
       </section>
 
       {/* 6. Inquiry CTA Section */}
-      <section id="inquire" className="relative bg-[#FAF8F4] py-12 md:py-16 overflow-hidden border-t border-neutral-100">
+      <section id="inquire" className="relative bg-surface py-12 md:py-16 overflow-hidden border-t border-neutral-100">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 relative z-10">
 
           <motion.div

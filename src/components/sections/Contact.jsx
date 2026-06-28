@@ -7,7 +7,7 @@ const Contact = () => {
   const redBgStyle = {
     backgroundImage: `
       radial-gradient(rgba(255, 255, 255, 0.035) 1.5px, transparent 1.5px),
-      linear-gradient(135deg, #8f000d 0%, #a50f15 50%, #5a0006 100%)
+      linear-gradient(135deg, #8f000d 0%, #a50f15 70%, #5a0006 100%)
     `,
     backgroundSize: '24px 24px, 100% 100%',
   };

@@ -16,10 +16,69 @@ import chilliExportCta from '../assets/chilli-export-cta.png';
 import facilityHeroBg from '../assets/facility-hero.png';
 import market from '../assets/market-image.png';
 import facilityTool from '../assets/facility-tool.png';
+import useStageProgress from '../hooks/useStageProgress';
 
 const Facility = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const imgRef = useRef(null);
+
+  // Interactive 4-stage workflow timeline — driven by scroll position.
+  // The fill traces down the line to a "playhead" at the middle of the viewport;
+  // each node lights up (and glows) as the playhead passes it. Clicking a node
+  // smooth-scrolls it to the playhead.
+  const flow = useStageProgress(4, { autoPlay: false });
+  const { goToStage } = flow; // stable reference (memoized) for the scroll effect
+  const lineRef = useRef(null);
+  const fillRef = useRef(null);
+  const nodeRefs = useRef([]);
+  const activeRef = useRef(0);
+
+  const scrollToStage = (i) => {
+    nodeRefs.current[i]?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+
+  useEffect(() => {
+    const PLAYHEAD = 0.5; // viewport fraction that acts as the timeline playhead
+    let raf = 0;
+    const compute = () => {
+      raf = 0;
+      const line = lineRef.current;
+      if (!line) return;
+      const lineRect = line.getBoundingClientRect();
+      const playheadY = window.innerHeight * PLAYHEAD;
+      // Fill tracks the playhead as it travels down the line
+      if (fillRef.current) {
+        const h = Math.max(0, Math.min(playheadY - lineRect.top, lineRect.height));
+        fillRef.current.style.height = `${h}px`;
+      }
+      // Active stage = the last node the playhead has passed
+      let next = 0;
+      for (let i = 0; i < nodeRefs.current.length; i++) {
+        const node = nodeRefs.current[i];
+        if (!node) continue;
+        const r = node.getBoundingClientRect();
+        if (r.top + r.height / 2 <= playheadY) next = i;
+      }
+      if (next !== activeRef.current) {
+        activeRef.current = next;
+        goToStage(next); // updates active stage + replays the glow
+      }
+    };
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(compute);
+    };
+    compute();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(onScroll) : null;
+    if (ro && lineRef.current) ro.observe(lineRef.current);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+      if (ro) ro.disconnect();
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, [goToStage]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -170,8 +229,17 @@ const Facility = () => {
         {/* Timeline container */}
         <div className="relative max-w-[1100px] mx-auto px-6 md:px-12 pb-4 z-10">
 
-          {/* Vertical Connecting Line */}
-          <div className="absolute left-12 md:left-1/2 top-4 bottom-4 w-[2px] bg-gradient-to-b from-[#8f000d] via-[#2c6a46] to-[#cca72f] opacity-25 transform -translate-x-1/2 z-0"></div>
+          {/* Vertical Connecting Line (faint base track) */}
+          <div ref={lineRef} className="absolute left-12 md:left-1/2 top-4 bottom-4 w-[2px] bg-neutral-200 transform -translate-x-1/2 z-0"></div>
+          {/* Animated progress fill — flows down to the active stage */}
+          <div
+            ref={fillRef}
+            className="absolute left-12 md:left-1/2 top-4 w-[3px] -translate-x-1/2 rounded-full z-[1] pointer-events-none"
+            style={{
+              height: 0,
+              background: 'linear-gradient(180deg, #8f000d, #2c6a46, #cca72f, #b22222)',
+            }}
+          ></div>
 
           {/* Timeline Items */}
           <div className="space-y-10 md:space-y-14">
@@ -181,10 +249,24 @@ const Facility = () => {
 
               {/* Timeline Center Node */}
               <div className="absolute left-12 md:left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-20 flex items-center justify-center">
-                <div className="w-10 h-10 rounded-full bg-white border-2 border-[#8f000d] flex items-center justify-center font-['urbanist'] font-bold text-xs shadow-md relative z-10">
-                  <span className="text-[#8f000d]">01</span>
-                  <span className="absolute -inset-1.5 rounded-full border border-[#8f000d] opacity-40 animate-pulse text-[#8f000d]"></span>
-                </div>
+                <button
+                  type="button"
+                  ref={(el) => (nodeRefs.current[0] = el)}
+                  onClick={() => scrollToStage(0)}
+                  aria-label="Show Phase 01: Advanced Cleaning & Sorting"
+                  className="w-10 h-10 rounded-full flex items-center justify-center font-['urbanist'] font-bold text-xs shadow-md relative z-10 border-2 cursor-pointer transition-all duration-300 focus:outline-none"
+                  style={{
+                    borderColor: flow.activeStage >= 0 ? '#8f000d' : '#d4d4d4',
+                    backgroundColor: flow.activeStage === 0 ? '#8f000d' : '#ffffff',
+                    transform: flow.activeStage === 0 ? 'scale(1.15)' : undefined,
+                    boxShadow: flow.activeStage === 0 ? '0 8px 22px -6px rgba(143,0,13,0.45)' : undefined,
+                  }}
+                >
+                  <span style={{ color: flow.activeStage === 0 ? '#ffffff' : '#8f000d' }}>01</span>
+                  {flow.activeStage === 0 && (
+                    <span key={flow.glowKey} className="absolute inset-0 rounded-full pointer-events-none" style={{ border: '2px solid #8f000d', animation: 'stageGlow 0.7s ease-out' }}></span>
+                  )}
+                </button>
               </div>
 
               {/* Left Column: Content Card */}
@@ -245,10 +327,24 @@ const Facility = () => {
 
               {/* Timeline Center Node */}
               <div className="absolute left-12 md:left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-20 flex items-center justify-center">
-                <div className="w-10 h-10 rounded-full bg-white border-2 border-[#2c6a46] flex items-center justify-center font-['urbanist'] font-bold text-xs shadow-md relative z-10">
-                  <span className="text-[#2c6a46]">02</span>
-                  <span className="absolute -inset-1.5 rounded-full border border-[#2c6a46] opacity-40 animate-pulse text-[#2c6a46]"></span>
-                </div>
+                <button
+                  type="button"
+                  ref={(el) => (nodeRefs.current[1] = el)}
+                  onClick={() => scrollToStage(1)}
+                  aria-label="Show Phase 02: Climate-Controlled Storage"
+                  className="w-10 h-10 rounded-full flex items-center justify-center font-['urbanist'] font-bold text-xs shadow-md relative z-10 border-2 cursor-pointer transition-all duration-300 focus:outline-none"
+                  style={{
+                    borderColor: flow.activeStage >= 1 ? '#2c6a46' : '#d4d4d4',
+                    backgroundColor: flow.activeStage === 1 ? '#2c6a46' : '#ffffff',
+                    transform: flow.activeStage === 1 ? 'scale(1.15)' : undefined,
+                    boxShadow: flow.activeStage === 1 ? '0 8px 22px -6px rgba(44,106,70,0.45)' : undefined,
+                  }}
+                >
+                  <span style={{ color: flow.activeStage === 1 ? '#ffffff' : (flow.activeStage >= 1 ? '#2c6a46' : '#9ca3af') }}>02</span>
+                  {flow.activeStage === 1 && (
+                    <span key={flow.glowKey} className="absolute inset-0 rounded-full pointer-events-none" style={{ border: '2px solid #2c6a46', animation: 'stageGlow 0.7s ease-out' }}></span>
+                  )}
+                </button>
               </div>
 
               {/* Left Column: Image Card */}
@@ -309,10 +405,24 @@ const Facility = () => {
 
               {/* Timeline Center Node */}
               <div className="absolute left-12 md:left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-20 flex items-center justify-center">
-                <div className="w-10 h-10 rounded-full bg-white border-2 border-[#cca72f] flex items-center justify-center font-['urbanist'] font-bold text-xs shadow-md relative z-10">
-                  <span className="text-[#cca72f]">03</span>
-                  <span className="absolute -inset-1.5 rounded-full border border-[#cca72f] opacity-40 animate-pulse text-[#cca72f]"></span>
-                </div>
+                <button
+                  type="button"
+                  ref={(el) => (nodeRefs.current[2] = el)}
+                  onClick={() => scrollToStage(2)}
+                  aria-label="Show Phase 03: Export-Grade Packaging"
+                  className="w-10 h-10 rounded-full flex items-center justify-center font-['urbanist'] font-bold text-xs shadow-md relative z-10 border-2 cursor-pointer transition-all duration-300 focus:outline-none"
+                  style={{
+                    borderColor: flow.activeStage >= 2 ? '#cca72f' : '#d4d4d4',
+                    backgroundColor: flow.activeStage === 2 ? '#cca72f' : '#ffffff',
+                    transform: flow.activeStage === 2 ? 'scale(1.15)' : undefined,
+                    boxShadow: flow.activeStage === 2 ? '0 8px 22px -6px rgba(204,167,47,0.5)' : undefined,
+                  }}
+                >
+                  <span style={{ color: flow.activeStage === 2 ? '#ffffff' : (flow.activeStage >= 2 ? '#cca72f' : '#9ca3af') }}>03</span>
+                  {flow.activeStage === 2 && (
+                    <span key={flow.glowKey} className="absolute inset-0 rounded-full pointer-events-none" style={{ border: '2px solid #cca72f', animation: 'stageGlow 0.7s ease-out' }}></span>
+                  )}
+                </button>
               </div>
 
               {/* Left Column: Content Card */}
@@ -373,10 +483,24 @@ const Facility = () => {
 
               {/* Timeline Center Node */}
               <div className="absolute left-12 md:left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-20 flex items-center justify-center">
-                <div className="w-10 h-10 rounded-full bg-white border-2 border-[#b22222] flex items-center justify-center font-['urbanist'] font-bold text-xs shadow-md relative z-10">
-                  <span className="text-[#b22222]">04</span>
-                  <span className="absolute -inset-1.5 rounded-full border border-[#b22222] opacity-40 animate-pulse text-[#b22222]"></span>
-                </div>
+                <button
+                  type="button"
+                  ref={(el) => (nodeRefs.current[3] = el)}
+                  onClick={() => scrollToStage(3)}
+                  aria-label="Show Phase 04: Logistics & Global Dispatch"
+                  className="w-10 h-10 rounded-full flex items-center justify-center font-['urbanist'] font-bold text-xs shadow-md relative z-10 border-2 cursor-pointer transition-all duration-300 focus:outline-none"
+                  style={{
+                    borderColor: flow.activeStage >= 3 ? '#b22222' : '#d4d4d4',
+                    backgroundColor: flow.activeStage === 3 ? '#b22222' : '#ffffff',
+                    transform: flow.activeStage === 3 ? 'scale(1.15)' : undefined,
+                    boxShadow: flow.activeStage === 3 ? '0 8px 22px -6px rgba(178,34,34,0.45)' : undefined,
+                  }}
+                >
+                  <span style={{ color: flow.activeStage === 3 ? '#ffffff' : (flow.activeStage >= 3 ? '#b22222' : '#9ca3af') }}>04</span>
+                  {flow.activeStage === 3 && (
+                    <span key={flow.glowKey} className="absolute inset-0 rounded-full pointer-events-none" style={{ border: '2px solid #b22222', animation: 'stageGlow 0.7s ease-out' }}></span>
+                  )}
+                </button>
               </div>
 
               {/* Left Column: Image Card */}
@@ -508,7 +632,7 @@ const Facility = () => {
       </section>
 
       {/* 9. Why Our Infrastructure Matters */}
-      <section className="py-10 md:py-14 bg-[#f9f9fc]">
+      <section className="py-10 md:py-14 bg-surface-container-low">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
 
           {/* Centered Header */}

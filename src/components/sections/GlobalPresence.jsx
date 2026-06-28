@@ -19,7 +19,7 @@ const GlobalPresence = () => {
   }
 
   return (
-    <section id="global-presence" className="py-12 md:py-16 px-6 md:px-12 bg-[#FAF8F4] relative overflow-hidden">
+    <section id="global-presence" className="py-12 md:py-16 px-6 md:px-12 bg-surface-container-low relative overflow-hidden">
 
       {/* Decorative leaf outlines in background */}
       <div className="absolute top-12 left-6 w-[200px] h-[200px] opacity-[0.02] text-[#1F5E3B] pointer-events-none select-none z-0 hidden lg:block">

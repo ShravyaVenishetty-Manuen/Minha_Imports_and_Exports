@@ -447,7 +447,7 @@ const ChilliDetail = () => {
       </section>
 
       {/* 5. Applications Section */}
-      <section className="py-10 md:py-14 bg-[#FAF8F4] border-t border-b border-neutral-100">
+      <section className="py-10 md:py-14 bg-surface-container-low border-t border-b border-neutral-100">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 
           <div className="text-center mb-8">
@@ -552,7 +552,7 @@ const ChilliDetail = () => {
       </section>
 
       {/* 8. Dynamic Inquiry Form */}
-      <section id="inquire" className="py-10 md:py-14 px-6 md:px-12 bg-[#FAF8F4]">
+      <section id="inquire" className="py-10 md:py-14 px-6 md:px-12 bg-surface-container-low">
         <div className="max-w-5xl mx-auto bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col md:flex-row border border-neutral-100">
           {/* Left: Image Showcase */}
           <div className="md:w-5/12 relative min-h-[250px] md:min-h-full">

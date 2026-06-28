@@ -70,7 +70,7 @@ const Hero = () => {
                 scale: { duration: 5.0, ease: "easeOut" }
               }}
               className="absolute inset-0 w-full h-full object-cover"
-              fetchpriority={index === 0 ? "high" : "low"}
+              fetchPriority={index === 0 ? "high" : "low"}
               loading={index === 0 ? "eager" : "lazy"}
             />
           );
