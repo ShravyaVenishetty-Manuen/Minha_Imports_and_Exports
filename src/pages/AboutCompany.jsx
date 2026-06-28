@@ -329,7 +329,7 @@ const AboutCompany = () => {
             }`}
           src={aboutHeroBg}
           onLoad={() => setImageLoaded(true)}
-          fetchpriority="high"
+          fetchPriority="high"
           loading="eager"
         />
         <div className="relative z-20 w-full max-w-4xl mx-auto text-center space-y-6">

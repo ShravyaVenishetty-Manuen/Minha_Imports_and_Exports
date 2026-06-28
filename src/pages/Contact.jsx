@@ -183,7 +183,7 @@ const Contact = () => {
           alt="International Cargo Port Sourcing"
           src={contactHeroBg}
           onLoad={() => setImageLoaded(true)}
-          fetchpriority="high"
+          fetchPriority="high"
           loading="eager"
         />
         <div className="relative z-20 w-full max-w-4xl mx-auto text-center space-y-5 px-6">
@@ -302,7 +302,7 @@ const Contact = () => {
           {/* 3D Perspective Card Wrapper Container */}
           <div
             style={{ perspective: '2000px', width: '100%' }}
-            className="relative w-full transition-all duration-300"
+            className="relative w-full max-w-4xl mx-auto transition-all duration-300"
           >
             <div
               style={{
@@ -332,14 +332,14 @@ const Contact = () => {
                 className={`flex flex-col lg:flex-row ${isFlipped ? 'h-full' : ''}`}
               >
                 {/* Left Side: Sourcing highlights */}
-                <div className="w-full lg:w-5/12 bg-gradient-to-br from-[#8f000d] to-[#4c0005] text-white p-6 sm:p-7 md:p-8 flex flex-col justify-between relative overflow-hidden">
+                <div className="w-full lg:w-5/12 bg-gradient-to-br from-[#8f000d] to-[#4c0005] text-white p-5 sm:p-6 flex flex-col justify-between relative overflow-hidden">
                   <div className="absolute -top-20 -left-20 w-60 h-60 bg-[#cca72f]/10 rounded-full blur-3xl pointer-events-none" />
                   <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-[#8f000d]/20 rounded-full blur-3xl pointer-events-none" />
                   <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.005)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.005)_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none" />
 
-                  <div className="relative z-10 flex flex-col h-full justify-start gap-4">
+                  <div className="relative z-10 flex flex-col h-full justify-start gap-3.5">
                     <div>
-                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-['urbanist'] font-bold text-[9px] tracking-widest uppercase mb-3 sm:mb-4">
+                      <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-['urbanist'] font-bold text-[8.5px] tracking-widest uppercase mb-2 sm:mb-3">
                         <span className="relative flex h-2 w-2">
                           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                           <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -347,26 +347,26 @@ const Contact = () => {
                         Trade Desk Online
                       </div>
 
-                      <span className="font-['urbanist'] font-semibold text-[10px] tracking-[0.2em] text-[#cca72f] uppercase block mb-1">
+                      <span className="font-['urbanist'] font-semibold text-[9.5px] tracking-[0.2em] text-[#cca72f] uppercase block mb-0.5">
                         Minha Imports & Exports
                       </span>
-                      <h3 className="font-['urbanist'] font-extrabold text-[22px] leading-tight text-white mb-2">
+                      <h3 className="font-['urbanist'] font-extrabold text-[20px] leading-tight text-white mb-1.5">
                         Export Sourcing
                       </h3>
-                      <p className="font-['Nunito'] font-semibold text-white text-[14px] leading-relaxed mb-2">
+                      <p className="font-['Nunito'] font-semibold text-white text-[13px] leading-relaxed mb-2.5">
                         Partner with India's premier agricultural exporter. We secure premium quality dry red chilli varieties tailored to your exact specifications.
                       </p>
 
                       {/* Badges / Highlights */}
-                      <div className="space-y-3">
+                      <div className="space-y-2.5">
                         {highlights.map((hl, i) => (
-                          <div key={i} className="flex items-start gap-3 group">
-                            <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-white/10 transition-all duration-300 mt-0.5">
-                              {React.cloneElement(hl.icon, { className: "text-[#cca72f] text-[15px]" })}
+                          <div key={i} className="flex items-start gap-2.5 group">
+                            <div className="w-7 h-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-white/10 transition-all duration-300 mt-0.5">
+                              {React.cloneElement(hl.icon, { className: "text-[#cca72f] text-[14px]" })}
                             </div>
                             <div>
-                              <h4 className="font-['urbanist'] font-bold text-[12px] text-white tracking-wide leading-tight">{hl.title}</h4>
-                              <p className="font-['Nunito'] font-semibold text-[11px] text-white/80 leading-snug mt-0.5">{hl.desc}</p>
+                              <h4 className="font-['urbanist'] font-bold text-[11.5px] text-white tracking-wide leading-tight">{hl.title}</h4>
+                              <p className="font-['Nunito'] font-semibold text-[10.5px] text-white/80 leading-snug mt-0.5">{hl.desc}</p>
                             </div>
                           </div>
                         ))}
@@ -374,21 +374,21 @@ const Contact = () => {
                     </div>
 
                     {/* Bottom Trade Details */}
-                    <div className="mt-auto pt-3 border-t border-white/10 flex items-center justify-between">
+                    <div className="mt-auto pt-2.5 border-t border-white/10 flex items-center justify-between">
                       <div className="text-left">
-                        <span className="font-['urbanist'] text-[8px] tracking-wider text-white/70 uppercase block">Avg Response</span>
-                        <span className="font-['urbanist'] text-[12px] font-bold text-white leading-none mt-0.5 block">&lt; 12 Hours</span>
+                        <span className="font-['urbanist'] text-[7.5px] tracking-wider text-white/70 uppercase block">Avg Response</span>
+                        <span className="font-['urbanist'] text-[11px] font-bold text-white leading-none mt-0.5 block">&lt; 12 Hours</span>
                       </div>
                       <div className="text-right">
-                        <span className="font-['urbanist'] text-[8px] tracking-wider text-[#ffd966] uppercase block">Global Sourcing</span>
-                        <span className="font-['urbanist'] text-[12px] font-bold text-[#ffd966] leading-none mt-0.5 block">ASTA Compliant</span>
+                        <span className="font-['urbanist'] text-[7.5px] tracking-wider text-[#ffd966] uppercase block">Global Sourcing</span>
+                        <span className="font-['urbanist'] text-[11px] font-bold text-[#ffd966] leading-none mt-0.5 block">ASTA Compliant</span>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 {/* Right Side: Interactive Sourcing Inquiry Form */}
-                <div className="w-full lg:w-7/12 p-5 md:p-6 flex flex-col justify-center relative overflow-hidden bg-white text-left">
+                <div className="w-full lg:w-7/12 p-4 sm:p-5 flex flex-col justify-center relative overflow-hidden bg-white text-left">
                   {/* Background image watermark */}
                   <img
                     src={chilliBowlTable}
@@ -397,79 +397,79 @@ const Contact = () => {
                   />
 
                   <div className="relative z-10">
-                    <div className="mb-3 text-left">
-                      <h3 className="font-['urbanist'] font-extrabold text-[18px] sm:text-[20px] text-[#1a1c1e] tracking-tight">Inquiry Form</h3>
+                    <div className="mb-2 text-left">
+                      <h3 className="font-['urbanist'] font-extrabold text-[16px] text-[#1a1c1e] tracking-tight">Inquiry Form</h3>
                     </div>
 
-                    <form onSubmit={handleSubmit} className="space-y-2.5">
+                    <form onSubmit={handleSubmit} className="space-y-1.5">
 
                       {/* Grid for inputs */}
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-1.5">
 
                         {/* Full Name */}
-                        <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-xl px-3 py-1.5 transition-all duration-300 bg-white text-left shadow-sm">
-                          <label className="block font-['urbanist'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Full Name *</label>
+                        <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-xl px-3 py-1 transition-all duration-300 bg-white text-left shadow-sm">
+                          <label className="block font-['urbanist'] font-black text-[8px] tracking-wider text-neutral-500 uppercase mb-0.5">Full Name *</label>
                           <input
                             required
                             name="name"
                             value={formData.name}
                             onChange={handleInputChange}
-                            className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Nunito'] placeholder-neutral-400"
+                            className="w-full border-none p-0 bg-transparent text-[12.5px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Nunito'] placeholder-neutral-400 font-semibold"
                             placeholder="Enter Name"
                             type="text"
                           />
                         </div>
 
                         {/* Company Name */}
-                        <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-xl px-3 py-1.5 transition-all duration-300 bg-white text-left shadow-sm">
-                          <label className="block font-['urbanist'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Company Name</label>
+                        <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-xl px-3 py-1 transition-all duration-300 bg-white text-left shadow-sm">
+                          <label className="block font-['urbanist'] font-black text-[8px] tracking-wider text-neutral-500 uppercase mb-0.5">Company Name</label>
                           <input
                             name="company"
                             value={formData.company}
                             onChange={handleInputChange}
-                            className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Nunito'] placeholder-neutral-400"
+                            className="w-full border-none p-0 bg-transparent text-[12.5px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Nunito'] placeholder-neutral-400 font-semibold"
                             placeholder="Enter Company Name"
                             type="text"
                           />
                         </div>
 
                         {/* Country */}
-                        <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-xl px-3 py-1.5 transition-all duration-300 bg-white text-left shadow-sm">
-                          <label className="block font-['urbanist'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Country *</label>
+                        <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-xl px-3 py-1 transition-all duration-300 bg-white text-left shadow-sm">
+                          <label className="block font-['urbanist'] font-black text-[8px] tracking-wider text-neutral-500 uppercase mb-0.5">Country *</label>
                           <input
                             required
                             name="country"
                             value={formData.country}
                             onChange={handleInputChange}
-                            className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Nunito'] placeholder-neutral-400"
+                            className="w-full border-none p-0 bg-transparent text-[12.5px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Nunito'] placeholder-neutral-400 font-semibold"
                             placeholder="Enter Country Name"
                             type="text"
                           />
                         </div>
 
                         {/* Email */}
-                        <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-xl px-3 py-1.5 transition-all duration-300 bg-white text-left shadow-sm">
-                          <label className="block font-['urbanist'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Email Address *</label>
+                        <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-xl px-3 py-1 transition-all duration-300 bg-white text-left shadow-sm">
+                          <label className="block font-['urbanist'] font-black text-[8px] tracking-wider text-neutral-500 uppercase mb-0.5">Email Address *</label>
                           <input
                             required
                             name="email"
                             value={formData.email}
                             onChange={handleInputChange}
-                            className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Nunito'] placeholder-neutral-400"
+                            className="w-full border-none p-0 bg-transparent text-[12.5px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Nunito'] placeholder-neutral-400 font-semibold"
                             placeholder="Enter Email Address"
                             type="email"
                           />
                         </div>
 
                         {/* Phone Number */}
-                        <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-2xl px-4 py-2 transition-all duration-300 bg-white text-left md:col-span-2 shadow-sm">
-                          <label className="block font-['urbanist'] font-bold text-[9px] tracking-wider text-neutral-500 uppercase mb-0.5">Phone Number *</label>
+                        <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-xl px-3 py-1 transition-all duration-300 bg-white text-left md:col-span-2 shadow-sm">
+                          <label className="block font-['urbanist'] font-black text-[8px] tracking-wider text-neutral-500 uppercase mb-0.5">Phone Number *</label>
                           <input
                             required
                             name="phone"
                             value={formData.phone}
                             onChange={handleInputChange}
-                            className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Nunito'] placeholder-neutral-400"
+                            className="w-full border-none p-0 bg-transparent text-[12.5px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Nunito'] placeholder-neutral-400 font-semibold"
                             placeholder="Enter Phone Number"
                             type="tel"
                           />
@@ -478,9 +478,9 @@ const Contact = () => {
                       </div>
 
                       {/* Requirement Type Selector */}
-                      <div className="text-left space-y-2">
-                        <label className="block font-['urbanist'] font-bold text-[9px] tracking-wider text-neutral-600 uppercase">Requirement Type *</label>
-                        <div className="flex flex-wrap gap-2">
+                      <div className="text-left space-y-1">
+                        <label className="block font-['urbanist'] font-black text-[8.5px] tracking-wider text-neutral-600 uppercase">Requirement Type *</label>
+                        <div className="flex flex-wrap gap-1">
                           {['Bulk Order', 'Export Inquiry', 'Partnership', 'General Support'].map((type) => {
                             const isSelected = formData.reqType === type;
                             return (
@@ -488,8 +488,8 @@ const Contact = () => {
                                 key={type}
                                 type="button"
                                 onClick={() => setFormData(prev => ({ ...prev, reqType: type }))}
-                                className={`px-3.5 py-2 rounded-full font-['urbanist'] text-[9px] sm:text-[10px] font-bold tracking-wide uppercase transition-all duration-300 border focus:outline-none cursor-pointer flex items-center gap-1.5 ${isSelected
-                                  ? 'bg-[#8f000d] text-white border-[#8f000d] shadow-md shadow-[#8f000d]/10'
+                                className={`px-2.5 py-1 rounded-full font-['urbanist'] text-[8.5px] sm:text-[9px] font-bold tracking-wide uppercase transition-all duration-300 border focus:outline-none cursor-pointer flex items-center gap-1 ${isSelected
+                                  ? 'bg-[#8f000d] text-white border-[#8f000d] shadow-sm shadow-[#8f000d]/10'
                                   : 'bg-white text-neutral-700 border-neutral-300 hover:bg-neutral-50'
                                   }`}
                               >
@@ -502,29 +502,29 @@ const Contact = () => {
                       </div>
 
                       {/* Message TextArea */}
-                      <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-xl px-3 py-1.5 transition-all duration-300 bg-white text-left shadow-sm">
-                        <label className="block font-['urbanist'] font-bold text-[9px] tracking-wider text-neutral-600 uppercase mb-1">Your Message *</label>
+                      <div className="relative border border-neutral-300 focus-within:border-[#8f000d] focus-within:ring-1 focus-within:ring-[#8f000d] rounded-xl px-3 py-1 transition-all duration-300 bg-white text-left shadow-sm">
+                        <label className="block font-['urbanist'] font-black text-[8.5px] tracking-wider text-neutral-600 uppercase mb-0.5">Your Message *</label>
                         <textarea
                           required
                           name="message"
                           value={formData.message}
                           onChange={handleInputChange}
-                          className="w-full border-none p-0 bg-transparent text-[13px] sm:text-[14px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Nunito'] placeholder-neutral-400 resize-none"
+                          className="w-full border-none p-0 bg-transparent text-[12.5px] text-[#1a1c1e] focus:outline-none focus:ring-0 font-['Nunito'] placeholder-neutral-400 resize-none font-semibold"
                           placeholder="Tell us about volume requirements, grades, target delivery dates..."
                           rows={2}
                         />
                       </div>
 
                       {/* Submit Row */}
-                      <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+                      <div className="pt-1.5 flex flex-col sm:flex-row items-center justify-between gap-3">
                         <button
                           type="submit"
-                          className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-[#8f000d] to-[#b22222] text-white font-['urbanist'] font-bold text-xs uppercase tracking-widest rounded-full hover:shadow-lg hover:shadow-[#8f000d]/20 hover:-translate-y-0.5 transition-all active:scale-95 inline-flex items-center justify-center gap-2.5 cursor-pointer group"
+                          className="w-full sm:w-auto px-6 py-2.5 bg-gradient-to-r from-[#8f000d] to-[#b22222] text-white font-['urbanist'] font-bold text-[11px] uppercase tracking-widest rounded-full hover:shadow-lg hover:shadow-[#8f000d]/20 hover:-translate-y-0.5 transition-all active:scale-95 inline-flex items-center justify-center gap-2 cursor-pointer group"
                         >
                           Send Inquiry
                           <FiSend className="text-xs transition-transform group-hover:translate-x-1 group-hover:-translate-y-0.5 duration-300" />
                         </button>
-                        <p className="font-['Nunito'] font-semibold text-neutral-600 text-[11px] leading-relaxed text-center sm:text-left max-w-xs">
+                        <p className="font-['Nunito'] font-semibold text-neutral-600 text-[10px] leading-relaxed text-center sm:text-left max-w-[240px]">
                           We respond to verified commercial inquiries within 12 business hours.
                         </p>
                       </div>
@@ -552,14 +552,14 @@ const Contact = () => {
                 className={`flex flex-col lg:flex-row ${isFlipped ? '' : 'h-full'}`}
               >
                 {/* Left Side: Deep Green Sourcing Guidelines */}
-                <div className="w-full lg:w-5/12 bg-gradient-to-br from-[#1F5E3B] to-[#0d2a1b] text-white p-6 sm:p-8 md:p-10 flex flex-col justify-between relative overflow-hidden">
+                <div className="w-full lg:w-5/12 bg-gradient-to-br from-[#1F5E3B] to-[#0d2a1b] text-white p-5 sm:p-6 flex flex-col justify-between relative overflow-hidden">
                   <div className="absolute -top-20 -left-20 w-60 h-60 bg-[#cca72f]/10 rounded-full blur-3xl pointer-events-none" />
                   <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-[#1F5E3B]/20 rounded-full blur-3xl pointer-events-none" />
                   <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.005)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.005)_1px,transparent_1px)] bg-[size:16px_16px] pointer-events-none" />
 
-                  <div className="relative z-10 flex flex-col h-full justify-between gap-8">
+                  <div className="relative z-10 flex flex-col h-full justify-between gap-6">
                     <div>
-                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-[#cca72f] font-['urbanist'] font-bold text-[9px] tracking-widest uppercase mb-6 sm:mb-8">
+                      <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/10 border border-white/20 text-[#cca72f] font-['urbanist'] font-bold text-[8.5px] tracking-widest uppercase mb-4 sm:mb-6">
                         <FiCheckCircle className="text-xs" />
                         Verification Phase
                       </div>
@@ -567,46 +567,46 @@ const Contact = () => {
                       <span className="font-['urbanist'] font-semibold text-[10px] tracking-[0.2em] text-[#cca72f] uppercase block mb-1">
                         Procurement Guide
                       </span>
-                      <h3 className="font-['urbanist'] font-extrabold text-[24px] text-white leading-tight mb-5 sm:mb-6">
+                      <h3 className="font-['urbanist'] font-extrabold text-[20px] text-white leading-tight mb-3 sm:mb-4">
                         Submission Steps
                       </h3>
 
                       {/* Timeline steps */}
-                      <div className="space-y-5 sm:space-y-6 text-left">
-                        <div className="flex gap-3">
-                          <div className="w-6 h-6 rounded-full bg-white/10 text-[#cca72f] flex items-center justify-center font-['urbanist'] font-bold text-[11px] shrink-0">
+                      <div className="space-y-4 text-left">
+                        <div className="flex gap-2.5">
+                          <div className="w-5.5 h-5.5 rounded-full bg-white/10 text-[#cca72f] flex items-center justify-center font-['urbanist'] font-bold text-[10px] shrink-0">
                             1
                           </div>
                           <div>
-                            <h5 className="font-['urbanist'] font-bold text-[12px] text-white tracking-wide">Select Request Type</h5>
-                            <p className="font-['Nunito'] text-[11px] text-white/50 leading-relaxed mt-0.5">Toggle between bulk buy, logistics options, or standard samples.</p>
+                            <h5 className="font-['urbanist'] font-bold text-[11.5px] text-white tracking-wide">Select Request Type</h5>
+                            <p className="font-['Nunito'] text-[10.5px] text-white/50 leading-relaxed mt-0.5">Toggle between bulk buy, logistics options, or standard samples.</p>
                           </div>
                         </div>
 
-                        <div className="flex gap-3">
-                          <div className="w-6 h-6 rounded-full bg-white/10 text-[#cca72f] flex items-center justify-center font-['urbanist'] font-bold text-[11px] shrink-0">
+                        <div className="flex gap-2.5">
+                          <div className="w-5.5 h-5.5 rounded-full bg-white/10 text-[#cca72f] flex items-center justify-center font-['urbanist'] font-bold text-[10px] shrink-0">
                             2
                           </div>
                           <div>
-                            <h5 className="font-['urbanist'] font-bold text-[12px] text-white tracking-wide">Provide Spec Details</h5>
-                            <p className="font-['Nunito'] text-[11px] text-white/50 leading-relaxed mt-0.5">Mention custom moisture grade, ASTA standards, or packaging requirements.</p>
+                            <h5 className="font-['urbanist'] font-bold text-[11.5px] text-white tracking-wide">Provide Spec Details</h5>
+                            <p className="font-['Nunito'] text-[10.5px] text-white/50 leading-relaxed mt-0.5">Mention custom moisture grade, ASTA standards, or packaging requirements.</p>
                           </div>
                         </div>
 
-                        <div className="flex gap-3">
-                          <div className="w-6 h-6 rounded-full bg-white/10 text-[#cca72f] flex items-center justify-center font-['urbanist'] font-bold text-[11px] shrink-0">
+                        <div className="flex gap-2.5">
+                          <div className="w-5.5 h-5.5 rounded-full bg-white/10 text-[#cca72f] flex items-center justify-center font-['urbanist'] font-bold text-[10px] shrink-0">
                             3
                           </div>
                           <div>
-                            <h5 className="font-['urbanist'] font-bold text-[12px] text-white tracking-wide">Trade Review</h5>
-                            <p className="font-['Nunito'] text-[11px] text-white/50 leading-relaxed mt-0.5">Our executives verify supply chains and confirm FOB/CIF pricing quotes.</p>
+                            <h5 className="font-['urbanist'] font-bold text-[11.5px] text-white tracking-wide">Trade Review</h5>
+                            <p className="font-['Nunito'] text-[10.5px] text-white/50 leading-relaxed mt-0.5">Our executives verify supply chains and confirm FOB/CIF pricing quotes.</p>
                           </div>
                         </div>
                       </div>
                     </div>
 
-                    <div className="pt-5 border-t border-white/10 text-left">
-                      <p className="font-['Nunito'] text-[11px] text-white/40 leading-relaxed">
+                    <div className="pt-4 border-t border-white/10 text-left">
+                      <p className="font-['Nunito'] text-[10.5px] text-white/40 leading-relaxed">
                         Confidentiality guaranteed. All specifications comply with international custom regulations.
                       </p>
                     </div>
@@ -614,7 +614,7 @@ const Contact = () => {
                 </div>
 
                 {/* Right Side: Inquiry Transmitted Success Dashboard */}
-                <div className="w-full lg:w-7/12 p-6 sm:p-8 md:p-10 flex flex-col justify-center items-center text-center relative overflow-hidden bg-white">
+                <div className="w-full lg:w-7/12 p-4 sm:p-5 flex flex-col justify-center items-center text-center relative overflow-hidden bg-white">
                   {/* Background image watermark */}
                   <img
                     src={chilliBowlTable}
@@ -623,26 +623,26 @@ const Contact = () => {
                   />
 
                   <div className="relative z-10 flex flex-col items-center justify-center max-w-md w-full">
-                    <div className="w-20 h-20 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 flex items-center justify-center mb-6 shadow-lg shadow-emerald-500/5">
-                      <FiCheckCircle className="text-[40px] animate-pulse" />
+                    <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 flex items-center justify-center mb-4 shadow-md shadow-emerald-500/5">
+                      <FiCheckCircle className="text-[32px] animate-pulse" />
                     </div>
 
-                    <h4 className="font-['urbanist'] font-extrabold text-[22px] sm:text-[24px] text-neutral-900 mb-3 tracking-tight">
+                    <h4 className="font-['urbanist'] font-extrabold text-[18px] sm:text-[20px] text-neutral-900 mb-2 tracking-tight">
                       Inquiry Transmitted Successfully
                     </h4>
 
-                    <p className="font-['Nunito'] font-semibold text-neutral-500 text-[13px] sm:text-[14px] leading-relaxed mb-6">
+                    <p className="font-['Nunito'] font-semibold text-neutral-500 text-[12px] sm:text-[13px] leading-relaxed mb-4">
                       Thank you, <span className="font-semibold text-neutral-800">{formData.name || 'valued partner'}</span>. Our Guntur export desk trade executives have received your request and will follow up with pricing worksheets and product specifications within 12 hours.
                     </p>
 
-                    <div className="w-full border-t border-b border-neutral-100 py-6 my-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div className="w-full border-t border-b border-neutral-100 py-4 my-1 flex flex-col sm:flex-row items-center justify-between gap-3">
                       <div className="text-left w-full sm:w-auto">
-                        <span className="font-['urbanist'] text-[9px] tracking-wider text-neutral-400 uppercase block">Submission Ref</span>
-                        <span className="font-['urbanist'] text-[12px] font-bold text-neutral-700 leading-none mt-1 block">ME-739402</span>
+                        <span className="font-['urbanist'] text-[8.5px] tracking-wider text-neutral-400 uppercase block">Submission Ref</span>
+                        <span className="font-['urbanist'] text-[11px] font-bold text-neutral-700 leading-none mt-0.5 block">ME-739402</span>
                       </div>
                       <div className="text-right w-full sm:w-auto">
-                        <span className="font-['urbanist'] text-[9px] tracking-wider text-neutral-400 uppercase block">Status</span>
-                        <span className="font-['urbanist'] text-[12px] font-bold text-emerald-600 leading-none mt-1 block">Assigned to Trade Desk</span>
+                        <span className="font-['urbanist'] text-[8.5px] tracking-wider text-neutral-400 uppercase block">Status</span>
+                        <span className="font-['urbanist'] text-[11px] font-bold text-emerald-600 leading-none mt-0.5 block">Assigned to Trade Desk</span>
                       </div>
                     </div>
 
