@@ -32,12 +32,18 @@
   --color-secondary-fixed: #b0f1c3;
   --color-on-error: #ffffff;
   --color-on-primary-container: #ffc8c2;
-  --color-surface-container-high: #e8e8ea;
+
+  /* Section background ladder (warm cream undertone — used to alternate
+     section backgrounds across all pages):
+       bg-surface                -> #FFFFFF  base / "white" sections
+       bg-surface-container-low  -> #FAF8F4  cream tint (the alternating stripe)
+       bg-surface-container-high -> #F4EFE7  deeper cream for emphasis sections */
+  --color-surface-container-high: #f4efe7;
   --color-primary: #8f000d;
   --color-on-primary: #ffffff;
   --color-outline-variant: #e2beba;
   --color-on-secondary-container: #316e4a;
-  --color-surface: #f9f9fc;
+  --color-surface: #ffffff;
   --color-primary-fixed-dim: #ffb4ac;
   --color-on-secondary: #ffffff;
   --color-on-tertiary-fixed: #241a00;
@@ -62,7 +68,7 @@
   --color-surface-tint: #b52424;
   --color-on-surface: #1a1c1e;
   --color-on-secondary-fixed-variant: #0e5130;
-  --color-surface-container-low: #f3f3f6;
+  --color-surface-container-low: #faf8f4;
   --color-surface-container-lowest: #ffffff;
   --color-on-tertiary: #ffffff;
   --color-surface-container: #eeeef0;
@@ -510,4 +516,21 @@
   -webkit-backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
+}
+
+/* Glow ring that fires on each stage activation in the interactive
+   stage pipelines (About "Why Partner With Us", Facility workflow).
+   Replayed by remounting a keyed element on every click. */
+@keyframes stageGlow {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.75;
+  }
+  70% {
+    opacity: 0.25;
+  }
+  100% {
+    transform: scale(2.3);
+    opacity: 0;
+  }
 }

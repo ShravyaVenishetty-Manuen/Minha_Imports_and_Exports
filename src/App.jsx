@@ -25,7 +25,7 @@ import WhatsAppFAB from './components/common/WhatsAppFAB'
 function App() {
   return (
     <Router basename={import.meta.env.BASE_URL}>
-      <div className="min-h-screen bg-bg-light font-body text-text-dark flex flex-col justify-between w-full overflow-x-hidden">
+      <div className="min-h-screen bg-surface font-body text-text-dark flex flex-col justify-between w-full overflow-x-hidden">
         <Navbar />
         <main className="flex-grow">
           <Routes>

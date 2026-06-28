@@ -23,6 +23,7 @@ import worldMapSvg from '../assets/world-map.svg';
 import founder1 from '../assets/founder1.png';
 import founder2 from '../assets/founder2.png';
 import CountUp from '../components/common/CountUp';
+import useStageProgress from '../hooks/useStageProgress';
 
 const OdometerYear = ({ year, color }) => {
   const digits = year.split('');
@@ -78,6 +79,9 @@ const AboutCompany = () => {
   const [slideDirection, setSlideDirection] = useState(1);
   const [imageLoaded, setImageLoaded] = useState(false);
   const imgRef = useRef(null);
+
+  // Interactive "Why Partner With Us" pipeline (auto-advances, click to control)
+  const partner = useStageProgress(3, { autoPlay: true, interval: 2800 });
 
   // Scroll to top on page mount
   useEffect(() => {
@@ -424,7 +428,13 @@ const AboutCompany = () => {
                 className="w-full h-full object-cover opacity-35"
                 src={immersiveSpiceBg}
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-black/60 lg:to-black/35"></div>
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "linear-gradient(90deg, rgba(0,0,0,.38) 0%, rgba(0,0,0,.32) 40%, rgba(0,0,0,.35) 100%)"
+                }}
+              />
             </div>
 
             {/* Inner Content Grid */}
@@ -475,7 +485,7 @@ const AboutCompany = () => {
                     transition={{ duration: 0.35, ease: 'easeOut' }}
                     className="space-y-6"
                   >
-                    <div className="flex items-center gap-3">
+                    {/* <div className="flex items-center gap-3">
                       <div className={`p-3 rounded-xl bg-white/10 text-[#cca72f] border border-white/5 shadow-sm`}>
                         {pillars[activeSection].icon}
                       </div>
@@ -484,7 +494,7 @@ const AboutCompany = () => {
                           Minha imports & exports
                         </span>
                       </div>
-                    </div>
+                    </div> */}
 
                     <h3 className="font-['urbanist'] font-extrabold text-[28px] md:text-[34px] lg:text-[40px] leading-tight text-white border-l-4 border-[#cca72f] pl-6">
                       {pillars[activeSection].label}
@@ -504,85 +514,118 @@ const AboutCompany = () => {
       </section>
 
       {/* 4. Our Values - Staggered Wave Grid */}
-      <section className="py-10 md:py-14 bg-surface relative overflow-hidden border-y border-neutral-100">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neutral-50/50 via-surface to-surface pointer-events-none z-0"></div>
-        <div className="max-w-[1280px] mx-auto px-6 md:px-12 text-center relative z-10">
+      <section className="py-12 md:py-14 bg-surface border-y border-neutral-200 relative overflow-hidden">
 
-          <div className="text-center mb-10">
-            <span className="font-['urbanist'] font-bold text-[11px] tracking-[0.2em] text-[#8f000d] uppercase inline-block mb-3">The Minha Way</span>
-            <h2 className="font-['urbanist'] font-bold text-[32px] md:text-[40px] leading-[1.2] text-[#1a1c1e] tracking-tight">Core Values That Drive Us</h2>
-            <p className="font-['Nunito'] font-semibold text-[#5a403e] text-[15px] md:text-[16px] leading-[1.6] mt-4 max-w-2xl mx-auto">
-              Our operational principles, defining how we interact with customers, partners, and the global environment.
+        {/* Subtle Background Texture */}
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
+          <div
+            className="w-full h-full"
+            style={{
+              backgroundImage:
+                "linear-gradient(rgba(0,0,0,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,.05) 1px, transparent 1px)",
+              backgroundSize: "80px 80px",
+            }}
+          />
+        </div>
+
+        <div className="max-w-[1280px] mx-auto px-6 md:px-12 relative z-10">
+
+          {/* Header */}
+          <div className="max-w-3xl mb-10">
+
+            <span className="font-['urbanist'] font-bold uppercase tracking-[0.22em] text-[11px] text-[#8f000d]">
+              The Minha Way
+            </span>
+
+            <h2 className="mt-2 font-['urbanist'] font-bold text-[32px] md:text-[38px] text-[#1a1c1e] leading-tight">
+              Core Values That Drive Us
+            </h2>
+
+            <div className="w-16 h-[2px] bg-[#C8A96A] mt-4 mb-4" />
+
+            <p className="font-['Nunito'] text-[15px] md:text-[16px] leading-7 text-[#5a403e] max-w-2xl">
+              Our operational principles define every relationship we build—from farmers
+              and suppliers to customers across global markets.
             </p>
+
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 pb-6 md:pb-8">
-            {values.map((val, index) => {
-              // Stagger cards in the middle column (index 1 and index 4) on md and lg screens
-              const isStaggered = index === 1 || index === 4;
-              return (
+          {/* Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7">
+
+            {values.map((val) => (
+
+              <div
+                key={val.id}
+                className="group border-neutral-200 rounded-xl p-7 md:p-8 transition-all duration-300 hover:bg-[#FFFDF9] hover:border-neutral-300 hover:shadow-[0_16px_35px_-24px_rgba(0,0,0,0.12)]"
+              >
+
+                {/* Accent Bar */}
                 <div
-                  key={val.id}
-                  className={`group relative bg-white rounded-[2rem] border border-neutral-100 p-8 md:p-10 shadow-sm hover:shadow-premium-hover hover:border-neutral-300/80 transition-all duration-500 ease-out text-left flex flex-col justify-between overflow-hidden ${isStaggered ? 'md:translate-y-8' : ''
-                    }`}
+                  className="w-10 h-[3px] rounded-full mb-5"
                   style={{
-                    borderTop: `4px solid ${val.accentColor}`,
+                    backgroundColor: val.accentColor,
+                  }}
+                />
+
+                {/* Icon */}
+                <div
+                  className="w-11 h-11 rounded-lg flex items-center justify-center mb-5 transition-colors duration-300"
+                  style={{
+                    color: val.accentColor,
+                    backgroundColor: `${val.accentColor}10`,
                   }}
                 >
-                  {/* Subtle Background Hover Glow */}
-                  <div
-                    className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
-                    style={{
-                      background: `radial-gradient(circle at top left, ${val.accentColor}0a, transparent 70%)`
-                    }}
-                  />
+                  {val.icon}
+                </div>
 
-                  {/* Card Header (Icon) */}
-                  <div className="relative z-10 flex justify-between items-center w-full mb-6">
-                    <div
-                      className="p-3.5 rounded-xl transition-transform duration-300 group-hover:scale-110"
-                      style={{
-                        color: val.accentColor,
-                        backgroundColor: `${val.accentColor}12`, // 7% opacity
-                      }}
-                    >
-                      {val.icon}
-                    </div>
-                  </div>
+                {/* Title */}
+                <h4
+                  className="font-['urbanist'] font-bold text-[20px] mb-3 leading-tight transition-colors duration-300"
+                  style={{
+                    color: '#1a1c1e',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = val.accentColor;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = '#1a1c1e';
+                  }}
+                >
+                  {val.title}
+                </h4>
 
-                  {/* Card Content */}
-                  <div className="relative z-10 space-y-3">
-                    <h4 className="font-['urbanist'] font-extrabold text-[20px] text-neutral-900 tracking-tight">
-                      {val.title}
-                    </h4>
-                    <p className="font-['Nunito'] font-semibold text-neutral-600 text-[14px] leading-relaxed">
-                      {val.desc}
-                    </p>
-                  </div>
+                {/* Description */}
+                <p className="font-['Nunito'] text-[14px] leading-6 text-[#5f5b58] mb-6">
+                  {val.desc}
+                </p>
 
-                  {/* Backdrop Huge Number */}
-                  <div
-                    className="absolute bottom-6 right-6 font-['urbanist'] font-black text-[96px] leading-none select-none pointer-events-none opacity-[0.03] group-hover:opacity-[0.08] group-hover:scale-105 transition-all duration-500"
+                {/* Footer */}
+                <div className="flex items-center justify-between pt-4 border-t border-neutral-100">
+
+                  <span
+                    className="font-['urbanist'] font-semibold text-[12px] uppercase tracking-[0.16em]"
                     style={{
                       color: val.accentColor,
                     }}
                   >
-                    {val.num}
-                  </div>
+                    Principle
+                  </span>
 
-                  {/* Bottom Accent Slide Line */}
-                  <div
-                    className="absolute bottom-0 left-0 w-full h-[4px] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
-                    style={{
-                      background: `linear-gradient(to right, ${val.accentColor}33, ${val.accentColor})`
-                    }}
-                  />
+                  <span className="font-['urbanist'] text-neutral-300 font-bold text-base">
+                    {val.num}
+                  </span>
+
                 </div>
-              );
-            })}
+
+              </div>
+
+            ))}
+
           </div>
 
         </div>
+
       </section>
 
       {/* 5. Journey Timeline - Interactive Horizontal Slider */}
@@ -1006,7 +1049,7 @@ const AboutCompany = () => {
             </div>
 
             {/* Integrated Dividers Statistics Bar */}
-              <div className="border-t border-neutral-100 w-full pt-8 grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-6 text-center">
+            <div className="border-t border-neutral-100 w-full pt-8 grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-6 text-center">
 
               <div className="space-y-1 md:border-r border-neutral-100 last:border-0">
                 <span className="block text-4xl font-extrabold text-[#8f000d]"><CountUp end={15} suffix="+" duration={1.6} className="inline-block" /></span>
@@ -1056,7 +1099,7 @@ const AboutCompany = () => {
       </section>
 
       {/* 8. Why Partner With Us (Horizontal Value Chain Pipeline) */}
-      <section className="py-10 md:py-14 bg-[#fafafa] border-t border-neutral-100 overflow-hidden">
+      <section className="py-10 md:py-14 bg-surface border-t border-neutral-100 overflow-hidden">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
 
           {/* Header */}
@@ -1072,54 +1115,13 @@ const AboutCompany = () => {
 
           {/* Pipeline Container */}
           <div className="relative w-full">
-            <style>{`
-                @keyframes lineFlow {
-                  0% { left: -15%; }
-                  100% { left: 100%; }
-                }
-                @keyframes stage1Zoom {
-                  0%, 1.7% { transform: scale(1); }
-                  6.5% { transform: scale(1.25); }
-                  13%, 100% { transform: scale(1); }
-                }
-                @keyframes stage1Ring {
-                  0% { transform: scale(1); opacity: 0; }
-                  6.5% { transform: scale(1.1); opacity: 0.8; }
-                  13% { transform: scale(2.2); opacity: 0; }
-                  100% { transform: scale(2.2); opacity: 0; }
-                }
-                @keyframes stage2Zoom {
-                  0%, 42% { transform: scale(1); }
-                  50% { transform: scale(1.25); }
-                  58%, 100% { transform: scale(1); }
-                }
-                @keyframes stage2Ring {
-                  0%, 42% { transform: scale(1); opacity: 0; }
-                  50% { transform: scale(1.1); opacity: 0.8; }
-                  58% { transform: scale(2.2); opacity: 0; }
-                  100% { transform: scale(2.2); opacity: 0; }
-                }
-                @keyframes stage3Zoom {
-                  0%, 85.5% { transform: scale(1); }
-                  93.5% { transform: scale(1.25); }
-                  100% { transform: scale(1); }
-                }
-                @keyframes stage3Ring {
-                  0%, 85.5% { transform: scale(1); opacity: 0; }
-                  93.5% { transform: scale(1.1); opacity: 0.8; }
-                  100% { transform: scale(2.2); opacity: 0; }
-                }
-              `}</style>
-
-            {/* Horizontal Track Line (Visible on Desktop) */}
-            <div className="absolute top-8 left-[16%] right-[16%] h-[2px] bg-neutral-200 -z-0 hidden lg:block overflow-hidden">
+            {/* Horizontal progress track (desktop) — fills up to the active stage */}
+            <div className="absolute top-8 left-[16%] right-[16%] h-[3px] bg-neutral-200 rounded-full -z-0 hidden lg:block">
               <div
-                className="absolute top-0 bottom-0 pointer-events-none"
+                className="h-full rounded-full transition-[width] duration-700 ease-out"
                 style={{
-                  width: "15%",
-                  left: "-15%",
-                  background: 'linear-gradient(90deg, transparent, #2c6a46, #8f000d, #cca72f, transparent)',
-                  animation: 'lineFlow 3.5s linear infinite'
+                  width: `${(partner.activeStage / 2) * 100}%`,
+                  background: 'linear-gradient(90deg, #2c6a46, #8f000d, #cca72f)',
                 }}
               />
             </div>
@@ -1129,27 +1131,42 @@ const AboutCompany = () => {
 
               {/* Stage 1: Sourcing */}
               <div className="text-center space-y-6 group">
-                <div className="w-16 h-16 mx-auto relative transition-transform duration-300 hover:scale-115 cursor-pointer">
-                  {/* Outer pulse echo ring - animated independently as sibling */}
-                  <div
-                    className="absolute inset-0 rounded-full border-2 border-[#2c6a46] pointer-events-none"
+                <button
+                  type="button"
+                  onClick={() => partner.goToStage(0)}
+                  aria-label="Show stage: Direct Sourcing"
+                  className="w-16 h-16 mx-auto relative block rounded-full cursor-pointer transition-transform duration-300 hover:scale-110 focus:outline-none"
+                  style={{ transform: partner.activeStage === 0 ? 'scale(1.12)' : undefined }}
+                >
+                  {/* Glow ring — replays on every click via keyed remount */}
+                  {partner.activeStage === 0 && (
+                    <span
+                      key={partner.glowKey}
+                      className="absolute inset-0 rounded-full pointer-events-none"
+                      style={{ border: '2px solid #2c6a46', animation: 'stageGlow 0.7s ease-out' }}
+                    />
+                  )}
+                  {/* Core circle node */}
+                  <span
+                    className="w-full h-full rounded-full border-2 flex items-center justify-center relative z-10 transition-colors duration-300"
                     style={{
-                      animation: 'stage1Ring 3.5s ease-out infinite'
-                    }}
-                  />
-                  {/* Core scaling circle node */}
-                  <div
-                    className="w-full h-full rounded-full bg-white border-2 border-[#2c6a46] shadow-sm flex items-center justify-center relative z-10"
-                    style={{
-                      animation: 'stage1Zoom 3.5s ease-in-out infinite'
+                      borderColor: partner.activeStage >= 0 ? '#2c6a46' : '#d4d4d4',
+                      backgroundColor: partner.activeStage === 0 ? '#2c6a46' : '#ffffff',
+                      boxShadow: partner.activeStage === 0 ? '0 8px 24px -6px rgba(44,106,70,0.4)' : '0 1px 2px rgba(0,0,0,0.05)',
                     }}
                   >
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#2c6a46] text-white text-[9px] font-['urbanist'] font-bold py-0.5 px-2 rounded-full whitespace-nowrap">
+                    <span
+                      className="absolute -top-3 left-1/2 -translate-x-1/2 text-white text-[9px] font-['urbanist'] font-bold py-0.5 px-2 rounded-full whitespace-nowrap transition-colors duration-300"
+                      style={{ backgroundColor: partner.activeStage >= 0 ? '#2c6a46' : '#d4d4d4' }}
+                    >
                       STAGE 01
                     </span>
-                    <FiLayers className="text-[20px] text-[#2c6a46]" />
-                  </div>
-                </div>
+                    <FiLayers
+                      className="text-[20px] transition-colors duration-300"
+                      style={{ color: partner.activeStage === 0 ? '#ffffff' : '#2c6a46' }}
+                    />
+                  </span>
+                </button>
 
                 {/* Content */}
                 <div className="space-y-3 px-4">
@@ -1167,27 +1184,42 @@ const AboutCompany = () => {
 
               {/* Stage 2: Quality */}
               <div className="text-center space-y-6 group">
-                <div className="w-16 h-16 mx-auto relative transition-transform duration-300 hover:scale-115 cursor-pointer">
-                  {/* Outer pulse echo ring - animated independently as sibling */}
-                  <div
-                    className="absolute inset-0 rounded-full border-2 border-[#8f000d] pointer-events-none"
+                <button
+                  type="button"
+                  onClick={() => partner.goToStage(1)}
+                  aria-label="Show stage: Tested Quality"
+                  className="w-16 h-16 mx-auto relative block rounded-full cursor-pointer transition-transform duration-300 hover:scale-110 focus:outline-none"
+                  style={{ transform: partner.activeStage === 1 ? 'scale(1.12)' : undefined }}
+                >
+                  {/* Glow ring — replays on every click via keyed remount */}
+                  {partner.activeStage === 1 && (
+                    <span
+                      key={partner.glowKey}
+                      className="absolute inset-0 rounded-full pointer-events-none"
+                      style={{ border: '2px solid #8f000d', animation: 'stageGlow 0.7s ease-out' }}
+                    />
+                  )}
+                  {/* Core circle node */}
+                  <span
+                    className="w-full h-full rounded-full border-2 flex items-center justify-center relative z-10 transition-colors duration-300"
                     style={{
-                      animation: 'stage2Ring 3.5s ease-out infinite'
-                    }}
-                  />
-                  {/* Core scaling circle node */}
-                  <div
-                    className="w-full h-full rounded-full bg-white border-2 border-[#8f000d] shadow-sm flex items-center justify-center relative z-10"
-                    style={{
-                      animation: 'stage2Zoom 3.5s ease-in-out infinite'
+                      borderColor: partner.activeStage >= 1 ? '#8f000d' : '#d4d4d4',
+                      backgroundColor: partner.activeStage === 1 ? '#8f000d' : '#ffffff',
+                      boxShadow: partner.activeStage === 1 ? '0 8px 24px -6px rgba(143,0,13,0.4)' : '0 1px 2px rgba(0,0,0,0.05)',
                     }}
                   >
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#8f000d] text-white text-[9px] font-['urbanist'] font-bold py-0.5 px-2 rounded-full whitespace-nowrap">
+                    <span
+                      className="absolute -top-3 left-1/2 -translate-x-1/2 text-white text-[9px] font-['urbanist'] font-bold py-0.5 px-2 rounded-full whitespace-nowrap transition-colors duration-300"
+                      style={{ backgroundColor: partner.activeStage >= 1 ? '#8f000d' : '#d4d4d4' }}
+                    >
                       STAGE 02
                     </span>
-                    <FiCheckCircle className="text-[20px] text-[#8f000d]" />
-                  </div>
-                </div>
+                    <FiCheckCircle
+                      className="text-[20px] transition-colors duration-300"
+                      style={{ color: partner.activeStage === 1 ? '#ffffff' : (partner.activeStage >= 1 ? '#8f000d' : '#9ca3af') }}
+                    />
+                  </span>
+                </button>
 
                 {/* Content */}
                 <div className="space-y-3 px-4">
@@ -1205,27 +1237,42 @@ const AboutCompany = () => {
 
               {/* Stage 3: Logistics */}
               <div className="text-center space-y-6 group">
-                <div className="w-16 h-16 mx-auto relative transition-transform duration-300 hover:scale-115 cursor-pointer">
-                  {/* Outer pulse echo ring - animated independently as sibling */}
-                  <div
-                    className="absolute inset-0 rounded-full border-2 border-[#cca72f] pointer-events-none"
+                <button
+                  type="button"
+                  onClick={() => partner.goToStage(2)}
+                  aria-label="Show stage: Fast Shipping"
+                  className="w-16 h-16 mx-auto relative block rounded-full cursor-pointer transition-transform duration-300 hover:scale-110 focus:outline-none"
+                  style={{ transform: partner.activeStage === 2 ? 'scale(1.12)' : undefined }}
+                >
+                  {/* Glow ring — replays on every click via keyed remount */}
+                  {partner.activeStage === 2 && (
+                    <span
+                      key={partner.glowKey}
+                      className="absolute inset-0 rounded-full pointer-events-none"
+                      style={{ border: '2px solid #cca72f', animation: 'stageGlow 0.7s ease-out' }}
+                    />
+                  )}
+                  {/* Core circle node */}
+                  <span
+                    className="w-full h-full rounded-full border-2 flex items-center justify-center relative z-10 transition-colors duration-300"
                     style={{
-                      animation: 'stage3Ring 3.5s ease-out infinite'
-                    }}
-                  />
-                  {/* Core scaling circle node */}
-                  <div
-                    className="w-full h-full rounded-full bg-white border-2 border-[#cca72f] shadow-sm flex items-center justify-center relative z-10"
-                    style={{
-                      animation: 'stage3Zoom 3.5s ease-in-out infinite'
+                      borderColor: partner.activeStage >= 2 ? '#cca72f' : '#d4d4d4',
+                      backgroundColor: partner.activeStage === 2 ? '#cca72f' : '#ffffff',
+                      boxShadow: partner.activeStage === 2 ? '0 8px 24px -6px rgba(204,167,47,0.45)' : '0 1px 2px rgba(0,0,0,0.05)',
                     }}
                   >
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#cca72f] text-white text-[9px] font-['urbanist'] font-bold py-0.5 px-2 rounded-full whitespace-nowrap">
+                    <span
+                      className="absolute -top-3 left-1/2 -translate-x-1/2 text-white text-[9px] font-['urbanist'] font-bold py-0.5 px-2 rounded-full whitespace-nowrap transition-colors duration-300"
+                      style={{ backgroundColor: partner.activeStage >= 2 ? '#cca72f' : '#d4d4d4' }}
+                    >
                       STAGE 03
                     </span>
-                    <FiTruck className="text-[20px] text-[#cca72f]" />
-                  </div>
-                </div>
+                    <FiTruck
+                      className="text-[20px] transition-colors duration-300"
+                      style={{ color: partner.activeStage === 2 ? '#ffffff' : (partner.activeStage >= 2 ? '#cca72f' : '#9ca3af') }}
+                    />
+                  </span>
+                </button>
 
                 {/* Content */}
                 <div className="space-y-3 px-4">

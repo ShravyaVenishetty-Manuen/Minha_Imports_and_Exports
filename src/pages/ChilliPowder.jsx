@@ -452,7 +452,7 @@ const ChilliPowder = () => {
       </section>
 
       {/* 8. Inquiry CTA */}
-      <section id="inquire" className="py-16 relative bg-[#FAF8F4] w-full z-10 border-t border-neutral-100/40">
+      <section id="inquire" className="py-16 relative bg-surface-container-low w-full z-10 border-t border-neutral-100/40">
 
         {/* Subtle center glow behind the card */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-to-r from-[#cca72f]/10 to-[#8f000d]/10 rounded-full blur-[80px] pointer-events-none select-none z-0"></div>
