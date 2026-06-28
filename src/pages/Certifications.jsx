@@ -233,10 +233,10 @@ const Certifications = () => {
             transition={{ duration: 0.6 }}
             className="relative group"
           >
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#cca72f]/15 rounded-xl rotate-2 -z-10 group-hover:rotate-0 transition-transform duration-500" />
+            <div className="absolute -inset-4 bg-[#cca72f]/10 rounded-xl rotate-2 group-hover:rotate-0 transition-transform duration-500" />
             <img
               alt="Official trade and compliance documents"
-              className="relative rounded-xl shadow-2xl w-full h-[400px] md:h-[480px] object-cover transition-transform duration-500 hover:scale-[1.01]"
+              className="relative rounded-xl shadow-xl w-full h-[400px] md:h-[480px] object-cover transition-transform duration-500 hover:scale-[1.01]"
               src={chilliBowlTable}
             />
 

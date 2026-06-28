@@ -325,11 +325,11 @@ const QualityAssurance = () => {
               </div>
 
               {/* Background removed chilli bowl image at bottom part of card */}
-              <div className="absolute bottom-0 left-0 right-0 h-[48%] pointer-events-none select-none z-0">
+              <div className="absolute bottom-0 left-0 right-0 h-[42%] pointer-events-none select-none z-0">
                 <img
                   src={glowingChilliPremiumRemoveBg}
                   alt="Quality Red Chillies Bowl"
-                  className="w-full h-full object-contain object-bottom"
+                  className="w-full h-full object-contain object-bottom scale-95"
                 />
               </div>
             </motion.div>

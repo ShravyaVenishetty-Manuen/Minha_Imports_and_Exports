@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import SEO from '../components/common/SEO';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiArrowRight, FiCheck, FiFilter, FiInfo, FiMail, FiDroplet, FiFileText, FiShield, FiCheckCircle } from 'react-icons/fi';
@@ -11,8 +11,23 @@ import chilliSpotlightDry from '../assets/chilli-spotlight-dry.png';
 import chilliBowlTable from '../assets/chilli-bowl-table.png';
 
 const Varieties = () => {
+  const location = useLocation();
   const [activeFilter, setActiveFilter] = useState('All');
   const [isExpanded, setIsExpanded] = useState(false);
+
+  // Handle category filtering from navigation state
+  useEffect(() => {
+    if (location.state && location.state.category) {
+      setActiveFilter(location.state.category);
+      // Jump instantly to the catalog to avoid landing at the top of the page
+      setTimeout(() => {
+        const element = document.getElementById('varieties-catalog');
+        if (element) {
+          element.scrollIntoView({ behavior: 'auto', block: 'start' });
+        }
+      }, 0);
+    }
+  }, [location.state]);
 
   const redBgStyle = {
     backgroundImage: `
@@ -36,9 +51,11 @@ const Varieties = () => {
     }
   };
 
-  // Scroll to top on mount
+  // Scroll to top on mount only if not filtering
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (!location.state || !location.state.category) {
+      window.scrollTo(0, 0);
+    }
   }, []);
 
   // Reset expansion when filter changes
@@ -142,21 +159,20 @@ const Varieties = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative group"
           >
-            <div className="absolute -top-4 -left-4 w-24 h-24 bg-[#1F5E3B]/10 rounded-xl -z-10 transition-transform duration-300 group-hover:scale-105" />
+            <div className="absolute -inset-4 bg-[#8f000d]/10 rounded-xl -rotate-2 group-hover:rotate-0 transition-transform duration-500" />
             <img
               alt="Systematic Grading of Guntur Chillies"
               loading="lazy"
-              className="rounded-2xl shadow-2xl w-full object-cover aspect-[4/3] relative z-10 border border-white/40"
+              className="relative rounded-xl shadow-xl w-full object-cover aspect-[4/3] transition-transform duration-500 hover:scale-[1.01]"
               src={chilliIntroDry}
             />
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-[#8f000d]/5 rounded-xl -z-10 transition-transform duration-300 group-hover:scale-105" />
           </motion.div>
 
         </div>
       </section>
 
       {/* 3. Chilli Varieties Showcase catalog */}
-      <section className="py-10 md:py-14 bg-surface-container-low border-t border-[#1a1c1e]/[0.02] border-b border-[#1a1c1e]/[0.02]">
+      <section id="varieties-catalog" className="py-10 md:py-14 bg-surface-container-low border-t border-[#1a1c1e]/[0.02] border-b border-[#1a1c1e]/[0.02]">
         <div className="px-6 md:px-12 max-w-[1280px] mx-auto">
 
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">

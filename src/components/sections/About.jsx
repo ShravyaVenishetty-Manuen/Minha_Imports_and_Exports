@@ -22,13 +22,13 @@ const About = () => {
           className="relative group"
         >
           {/* Decorative ambient glowing green background wash */}
-          <div className="absolute -inset-4 bg-[#2c6a46]/10 rounded-xl transition-transform duration-500 group-hover:scale-105" />
+          <div className="absolute -inset-4 bg-[#2c6a46]/10 rounded-xl -rotate-2 group-hover:rotate-0 transition-transform duration-500" />
 
           {/* Main Image */}
           <img
             alt="Chilli Harvest"
             loading="lazy"
-            className="relative rounded-lg shadow-2xl w-full h-[500px] object-cover"
+            className="relative rounded-xl shadow-xl w-full h-[500px] object-cover transition-transform duration-500 hover:scale-[1.01]"
             src={harvest}
           />
         </motion.div>

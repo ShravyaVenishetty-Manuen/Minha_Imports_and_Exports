@@ -88,11 +88,11 @@ const ChilliPowder = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative"
+            className="relative group"
           >
-            <div className="absolute -top-4 -left-4 w-24 h-24 bg-[#cca72f]/10 -z-10 rounded"></div>
+            <div className="absolute -inset-4 bg-[#cca72f]/10 rounded-xl -rotate-2 group-hover:rotate-0 transition-transform duration-500" />
             <img
-              className="w-full h-[400px] md:h-[450px] object-cover rounded shadow-xl"
+              className="relative rounded-xl shadow-xl w-full h-[400px] md:h-[450px] object-cover transition-transform duration-500 hover:scale-[1.01]"
               alt="Hygienic Spice Processing"
               src={chilliProcessingFacility}
             />

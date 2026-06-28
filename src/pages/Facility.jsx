@@ -201,10 +201,10 @@ const Facility = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative group"
           >
-            <div className="absolute -top-4 -left-4 w-24 h-24 bg-[#cca72f]/20 rounded-xl -rotate-2 -z-10 group-hover:rotate-0 transition-transform duration-500"></div>
+            <div className="absolute -inset-4 bg-[#cca72f]/10 rounded-xl -rotate-2 group-hover:rotate-0 transition-transform duration-500" />
             <img
               alt="High-precision quality control equipment laboratory"
-              className="relative rounded-xl shadow-2xl w-full h-[400px] md:h-[500px] object-cover transition-transform duration-500 hover:scale-[1.01]"
+              className="relative rounded-xl shadow-xl w-full h-[400px] md:h-[500px] object-cover transition-transform duration-500 hover:scale-[1.01]"
               src={facilityTool}
             />
           </motion.div>
@@ -713,8 +713,7 @@ const Facility = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.05 }}
-                whileHover={{ backgroundColor: '#fafafb' }}
-                className="p-8 md:p-10 border-b border-r border-neutral-100 flex flex-col justify-between min-h-[240px] relative group overflow-hidden text-left transition-colors duration-300"
+                className="p-8 md:p-10 border-b border-r border-neutral-100 flex flex-col justify-between min-h-[240px] relative group overflow-hidden text-left bg-white hover:bg-neutral-50 transition-colors duration-150"
               >
                 {/* Large Background Watermarked Number */}
                 <div className="absolute right-6 bottom-4 font-['urbanist'] font-extrabold text-[80px] leading-none text-neutral-100/60 select-none group-hover:text-neutral-200/50 transition-colors duration-300 pointer-events-none z-0">
