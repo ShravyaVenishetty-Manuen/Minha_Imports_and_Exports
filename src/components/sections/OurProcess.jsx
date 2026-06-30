@@ -48,8 +48,20 @@ const stepVariants = {
 
 const OurProcess = () => {
   return (
-    <section id="our-process" className="py-16 md:py-24 px-6 md:px-12 bg-white">
-      <div className="max-w-[1280px] mx-auto">
+    <section id="our-process" className="relative py-16 md:py-24 px-6 md:px-12 bg-white overflow-hidden">
+      {/* Decorative leaf illustrations in margins */}
+      <div className="absolute top-12 left-2 w-[180px] h-[180px] opacity-[0.02] text-[#1F5E3B] pointer-events-none z-0 select-none hidden lg:block">
+        <svg viewBox="0 0 100 100" fill="currentColor">
+          <path d="M10,90 C25,65 45,55 85,15 C60,45 55,65 10,90 Z" />
+        </svg>
+      </div>
+      <div className="absolute bottom-12 right-2 w-[180px] h-[180px] opacity-[0.02] text-[#1F5E3B] pointer-events-none z-0 select-none hidden lg:block">
+        <svg viewBox="0 0 100 100" fill="currentColor">
+          <path d="M10,90 C25,65 45,55 85,15 C60,45 55,65 10,90 Z" />
+        </svg>
+      </div>
+
+      <div className="max-w-[1280px] mx-auto relative z-10">
 
         <SectionHeading
           align="center"
@@ -64,8 +76,30 @@ const OurProcess = () => {
         />
 
         <div className="relative mt-16">
-          {/* Single hairline connector behind the number badges (desktop) */}
-          <div className="hidden lg:block absolute top-[136px] left-[12.5%] right-[12.5%] h-px bg-neutral-200" />
+          {/* Timeline Connector Arrows */}
+          <div className="hidden lg:block absolute top-[80px] left-0 w-full pointer-events-none z-0">
+            {/* Arrow 1: between Col 1 and Col 2 */}
+            <div className="absolute left-[25%] -translate-x-1/2 w-[80px] flex items-center justify-center">
+              <svg className="w-full h-4" fill="none" viewBox="0 0 100 20">
+                <path d="M 5,10 L 85,10" stroke="#1f5e3b" strokeWidth="1.5" strokeDasharray="4,4" />
+                <path d="M 80,6 L 88,10 L 80,14" fill="#1f5e3b" stroke="#1f5e3b" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+            {/* Arrow 2: between Col 2 and Col 3 */}
+            <div className="absolute left-[50%] -translate-x-1/2 w-[80px] flex items-center justify-center">
+              <svg className="w-full h-4" fill="none" viewBox="0 0 100 20">
+                <path d="M 5,10 L 85,10" stroke="#cca72f" strokeWidth="1.5" strokeDasharray="4,4" />
+                <path d="M 80,6 L 88,10 L 80,14" fill="#cca72f" stroke="#cca72f" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+            {/* Arrow 3: between Col 3 and Col 4 */}
+            <div className="absolute left-[75%] -translate-x-1/2 w-[80px] flex items-center justify-center">
+              <svg className="w-full h-4" fill="none" viewBox="0 0 100 20">
+                <path d="M 5,10 L 85,10" stroke="#8f000d" strokeWidth="1.5" strokeDasharray="4,4" />
+                <path d="M 80,6 L 88,10 L 80,14" fill="#8f000d" stroke="#8f000d" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+          </div>
 
           <motion.div
             variants={containerVariants}
@@ -78,25 +112,34 @@ const OurProcess = () => {
               <motion.div
                 key={step.id}
                 variants={stepVariants}
-                className="relative flex flex-col items-center text-center"
+                whileHover={{ y: -8, scale: 1.01 }}
+                transition={{ duration: 0.3 }}
+                className="relative flex flex-col items-center text-center group"
               >
-                {/* Image */}
-                <div className="w-full h-[150px] mb-6 flex items-center justify-center">
-                  <img src={step.image} alt={step.title} className="max-h-full object-contain" />
+                {/* Step Illustration */}
+                <div className="w-[240px] h-[160px] mb-6 relative flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105">
+                  <img
+                    src={step.image}
+                    alt={step.title}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
 
-                {/* Number node */}
+                {/* Step Number Circle */}
                 <div
-                  className="relative z-10 w-11 h-11 rounded-full text-white font-['urbanist'] font-bold text-[13px] flex items-center justify-center mb-5 ring-4 ring-white"
+                  className="w-9 h-9 text-white font-['urbanist'] font-bold text-[14px] rounded-full flex items-center justify-center mb-4 shadow-[0_4px_10px_rgba(0,0,0,0.06)] relative z-10"
                   style={{ backgroundColor: step.color }}
                 >
                   {step.id}
                 </div>
 
-                <h3 className="font-['urbanist'] font-bold text-[18px] text-[#1a1c1e] mb-2.5 leading-snug">
+                {/* Title */}
+                <h3 className="font-['urbanist'] font-bold text-[18px] text-[#1a1c1e] mb-3 leading-snug">
                   {step.title}
                 </h3>
-                <p className="font-['Nunito'] font-semibold text-[#5f5b58] text-[14px] leading-[1.6] max-w-[260px]">
+
+                {/* Description */}
+                <p className="font-['nunito'] font-semibold text-[#5f5b58] text-[14px] leading-[1.6] max-w-[260px]">
                   {step.text}
                 </p>
               </motion.div>

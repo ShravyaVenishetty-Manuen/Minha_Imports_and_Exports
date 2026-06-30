@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
 import SectionHeading from '../common/SectionHeading';
-import chilliBasketImg from '../../assets/chilli-basket-featured.png';
+import chilliBasketImg from '../../assets/chilli-bowl-table.png';
 import powderImg from '../../assets/chilli-powder-hero.png';
 
 const products = [
@@ -11,7 +11,7 @@ const products = [
     name: 'Dry Red Chillies',
     color: '#8f000d',
     image: chilliBasketImg,
-    fit: 'contain',
+    fit: 'cover',
     desc: "Handpicked from Guntur's finest farms — rich color, high pungency, graded to your spec.",
     specs: ['Teja · S4 · Byadgi', '< 11% moisture', 'Stem / stemless'],
     to: '/varieties',

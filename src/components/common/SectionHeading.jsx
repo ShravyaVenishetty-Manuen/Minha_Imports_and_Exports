@@ -10,6 +10,8 @@ const SectionHeading = ({
   align = 'left',
   tone = 'dark', // 'dark' = on light bg · 'light' = on dark bg
   kickerColor,
+  showLeftLine = true,
+  showRightLine = true,
   className = '',
 }) => {
   const center = align === 'center';
@@ -20,11 +22,11 @@ const SectionHeading = ({
   return (
     <div className={`${center ? 'text-center mx-auto' : 'text-left'} max-w-2xl ${className}`}>
       <div className={`flex items-center gap-3 mb-4 ${center ? 'justify-center' : ''}`}>
-        <span className="h-px w-7 bg-[#cca72f]" />
+        {showLeftLine && <span className="h-px w-7 bg-[#cca72f]" />}
         <span className="font-mono text-[11px] tracking-[0.22em] uppercase" style={{ color: kColor }}>
           {kicker}
         </span>
-        {center && <span className="h-px w-7 bg-[#cca72f]" />}
+        {showRightLine && center && <span className="h-px w-7 bg-[#cca72f]" />}
       </div>
       <h2 className={`font-['urbanist'] font-extrabold tracking-tight text-[30px] md:text-[38px] leading-[1.15] ${titleColor}`}>
         {title}
