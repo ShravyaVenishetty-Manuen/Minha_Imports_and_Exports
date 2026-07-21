@@ -6,6 +6,7 @@ import WhyChooseUs from '../components/sections/WhyChooseUs';
 import Products from '../components/sections/Products';
 import OurProcess from '../components/sections/OurProcess';
 import GlobalPresence from '../components/sections/GlobalPresence';
+import DomesticMarket from '../components/sections/DomesticMarket';
 import FlagsMarquee from '../components/layout/FlagsMarquee';
 import Testimonials from '../components/sections/Testimonials';
 import ContactSection from '../components/sections/Contact';
@@ -25,6 +26,7 @@ const Home = () => {
       <Products />
       <OurProcess />
       <GlobalPresence />
+      <DomesticMarket />
       <FlagsMarquee />
       <Testimonials />
       <ContactSection />
